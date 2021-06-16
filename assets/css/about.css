@@ -64,7 +64,7 @@ a.nav-link {
 .author img {
     width: 220px;
     height: 220px;
-    margin-top: -400%;
+    margin-top: -350%;
     padding: 5%;
     align-items: center;
     border-radius: 30% !important;
@@ -76,15 +76,16 @@ a.nav-link {
 
 .author h5 {
     font-family: Nunito;
-    margin-top: -150%;
+    margin-top: -120%;
     color: #fff;
     text-align: center;
     font-weight: bold;
 }
 
 .author p {
-    margin-left: 20px;
+    margin-left: 2%;
     max-width: 10%;
     margin-top: 1%;
+    align-items: center;
     text-align: center !important;
 }
