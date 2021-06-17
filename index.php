@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -23,7 +24,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="../Freeletics/assets/images/logo.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -43,9 +45,15 @@
         <div class="container">
             <div class="d-flex justify-content-center">
                 <h1 class="title-1">ABOUT US</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos! Lorem ipsum,
-                    dolor sit amet consectetur adipisicing elit. Quod rem laudantium veniam repudiandae quibusdam aperiam laboriosam animi nulla nobis, eum est mollitia perspiciatis sint unde odio iusto fugiat itaque earum. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Eos, voluptas! Voluptatibus nesciunt animi aut impedit harum vel possimus, qui consequatur, ad maxime placeat voluptatum nisi quibusdam tenetur fugiat. Nihil, reiciendis.
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem
+                    reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit
+                    sit dolorum illo quam dignissimos! Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Quod rem laudantium veniam repudiandae quibusdam
+                    aperiam laboriosam animi nulla nobis, eum est mollitia perspiciatis sint unde odio iusto fugiat
+                    itaque earum. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Eos, voluptas! Voluptatibus nesciunt animi aut impedit harum vel
+                    possimus, qui consequatur, ad maxime placeat voluptatum nisi quibusdam tenetur fugiat. Nihil,
+                    reiciendis.
                 </p>
                 <h1 class="title-2">MEET THE AUTHOR</h1>
             </div>
@@ -94,9 +102,15 @@
                 </div>
                 <div class="d-flex justify-content-end">
                     <div class="caption">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus perspiciatis excepturi iste, ipsa quas deleniti eius error harum modi repellendus, fugiat mollitia ut consequuntur necessitatibus sunt itaque quis. Ad, dolorum.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatibus nihil impedit, laudantium officiis deleniti porro animi at ipsum, quo, odio ex omnis numquam? Facere asperiores eligendi harum saepe dicta! Lorem,
-                            ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero, sed amet distinctio ipsa fuga consectetur. Similique assumenda consectetur, sint, harum sequi modi necessitatibus cumque reiciendis ipsa repudiandae pariatur
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus perspiciatis excepturi
+                            iste, ipsa quas deleniti eius error harum modi repellendus, fugiat mollitia ut consequuntur
+                            necessitatibus sunt itaque quis. Ad, dolorum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatibus nihil
+                            impedit, laudantium officiis deleniti porro animi at ipsum, quo, odio ex omnis numquam?
+                            Facere asperiores eligendi harum saepe dicta! Lorem,
+                            ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero, sed amet distinctio ipsa
+                            fuga consectetur. Similique assumenda consectetur, sint, harum sequi modi necessitatibus
+                            cumque reiciendis ipsa repudiandae pariatur
                             aspernatur!
                         </p>
                     </div>
@@ -126,13 +140,7 @@
     </section>
     <!-- mask workout -->
 
-    <!-- fun run -->
-    <section class="run">
-        <div class="bg-run">
-            <img src="../Freeletics/assets/images/funrun.png" class="img-fluid" alt='image-responsive'>
-        </div>
-    </section>
-    <!-- fun run -->
+
 
 
 
@@ -146,26 +154,29 @@
     <!-- Initialize Swiper -->
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../Freeletics/assets/js/funrun.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "flip",
-            grabCursor: true,
-            pagination: {
-                el: ".swiper-pagination",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
+    var swiper = new Swiper(".mySwiper", {
+        effect: "flip",
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
     </script>
     <!-- 
     -->
