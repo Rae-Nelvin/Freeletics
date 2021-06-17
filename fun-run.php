@@ -30,34 +30,36 @@
                 <div class="d-flex justify-content-center">
                     <h1 class="judul-funrun">FUN RUN</h1>
                 </div>
+
                 <div class="d-flex justify-content-center">
                     <div class="box"></div>
-                    <!-- Swiper -->
-                    <div class="swiper-container mySwiperr" id="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" id="swiper-slide">
-                                <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
-                            </div>
-                            <div class="swiper-slide" id="swiper-slide">
-                                <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
-                            </div>
-                            <div class="swiper-slide" id="swiper-slide">
-                                <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
-                            </div>
-                            <div class="swiper-slide" id="swiper-slide">
-                                <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
-                            </div>
-                            <div class="swiper-slide" id="swiper-slide">
-                                <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
-                            </div>
-                            <div class="swiper-slide" id="swiper-slide">
-                                <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
-                            </div>
+                </div>
+                <!-- Swiper -->
+
+                <div class="swiper-container mySwiperr" id="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" id="swiper-slide">
+                            <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
                         </div>
-                        <div class="swiper-button-next" id="swiper-button-next"></div>
-                        <div class="swiper-button-prev" id="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide" id="swiper-slide">
+                            <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide" id="swiper-slide">
+                            <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide" id="swiper-slide">
+                            <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide" id="swiper-slide">
+                            <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
+                        </div>
+                        <div class="swiper-slide" id="swiper-slide">
+                            <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
+                        </div>
                     </div>
+                    <div class="swiper-button-next" id="swiper-button-next"></div>
+                    <div class="swiper-button-prev" id="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
 
                 </div>
             </div>

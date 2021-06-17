@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/about.css">
     <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/maskworkout.css">
-    <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/funrun.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/funrun.css"> -->
     <title>Freeletics</title>
 </head>
 

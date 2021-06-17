@@ -29,7 +29,7 @@
 }
 
 #swiper-container {
-    max-width: 70%;
+    max-width: 60%;
     margin-top: -55%;
 }
 
@@ -52,12 +52,16 @@
 
 .swiper-button-prev {
     color: #FDCD22;
-    margin-top: -25%;
+    margin-top: -37%;
 }
 
 .swiper-button-next {
     color: #FDCD22;
-    margin-top: -25%;
+    margin-top: -37%;
+}
+
+.swiper-pagination {
+    margin-top: -30% !important;
 }
 
 .box {
@@ -67,8 +71,8 @@
     position: absolute;
     display: block;
     opacity: 40%;
-    width: 70%;
-    height: 280px;
+    width: 60%;
+    height: 250px;
     background-color: #000;
     margin-top: -50%;
     border-radius: 20px;
@@ -76,4 +80,30 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+
+.caption-funrun p {
+    color: #fff;
+    position: absolute;
+    margin-top: -55%;
+    z-index: 1;
+    align-items: center;
+    max-width: 100%;
+}
+
+.form-control {
+    background-color: #FDCD22 !important;
+    text-align: center;
+    border: none !important;
+    position: absolute;
+    z-index: 1;
+    margin-top: -53%;
+    max-width: 20%;
+    border-radius: 20px !important;
+    margin-left: 14%;
+    align-items: flex-start !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
 }
