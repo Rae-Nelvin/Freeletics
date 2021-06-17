@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/funrun.css">
+    <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/12weeks.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
@@ -20,70 +20,72 @@
 </head>
 
 <body>
-    <!-- fun run -->
-    <section class="run">
-        <div class="bg-run">
-            <img src="../Freeletics/assets/images/funrun.png" class="img-fluid" alt='image-responsive'>
+    <!-- 12 weeks -->
+    <section class="12-weeks">
+        <div class="bg-week">
+            <img src="../Freeletics/assets/images/12weeks.png" class="img-fluid" alt='image-responsive'>
         </div>
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <h1 class="judul-funrun">FUN RUN</h1>
+                    <h1 class="judul-week">12 WEEKS</h1>
+                    <p class="caption-week">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima id officia
+                        cum
+                        doloremque ad
+                        vitae, explicabo harum fugiat nesciunt debitis, eos nulla quas minus iure, ex qui vel
+                        aperiam expedita? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Exercitationem maxime soluta nihil esse? Natus commodi saepe perferendis fuga incidunt
+                        delectus soluta, aliquam ex veniam optio ea consequuntur? Accusamus, veritatis non.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus officia magnam in
+                        ex dicta quaerat ipsa dolorum a facilis, iusto voluptatibus vero. Incidunt ea fugit
+                        mollitia dolore cupiditate sequi maxime?</p>
                 </div>
 
                 <div class="d-flex justify-content-center">
-                    <div class="box" id="box-fun"></div>
+                    <div class="box" id="box-week"></div>
                 </div>
                 <!-- Swiper -->
                 <div class="d-flex justify-content-start">
-                    <input type="date" class="form-control" name="birthday" id="date-fun">
+                    <input type="date" class="form-control" name="birthday" id="date-week">
                 </div>
-                <div class="swiper-container mySwiperr" id="swiper-container-run">
+
+                <div class="swiper-container mySwiperrr" id="swiper-container-week">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" id="swiper-slide">
-                            <img src="../Freeletics/assets/images/run1.png" class="img-fluid">
+                            <img src="../Freeletics/assets/images/week1.png" class="img-fluid">
                         </div>
                         <div class="swiper-slide" id="swiper-slide">
-                            <img src="../Freeletics/assets/images/run2.png" class="img-fluid">
+                            <img src="../Freeletics/assets/images/week2.png" class="img-fluid">
                         </div>
                         <div class="swiper-slide" id="swiper-slide">
-                            <img src="../Freeletics/assets/images/run3.png" class="img-fluid">
+                            <img src="../Freeletics/assets/images/week3.png" class="img-fluid">
                         </div>
                         <div class="swiper-slide" id="swiper-slide">
-                            <img src="../Freeletics/assets/images/run1.png" class="img-fluid">
+                            <img src="../Freeletics/assets/images/week1.png" class="img-fluid">
                         </div>
                         <div class="swiper-slide" id="swiper-slide">
-                            <img src="../Freeletics/assets/images/run2.png" class="img-fluid">
+                            <img src="../Freeletics/assets/images/week2.png" class="img-fluid">
                         </div>
                         <div class="swiper-slide" id="swiper-slide">
-                            <img src="../Freeletics/assets/images/run3.png" class="img-fluid">
+                            <img src="../Freeletics/assets/images/week3.png" class="img-fluid">
                         </div>
                     </div>
-                    <div class="swiper-button-next" id="btn-fun"></div>
-                    <div class="swiper-button-prev" id="btn-fun"></div>
+                    <div class="swiper-button-next" id="btn-week"></div>
+                    <div class="swiper-button-prev" id="btn-week"></div>
                     <div class="swiper-pagination"></div>
-                    <div class="caption-funrun" id="caption-funrun">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima id officia cum
-                            doloremque ad
-                            vitae, explicabo harum fugiat nesciunt debitis, eos nulla quas minus iure, ex qui vel
-                            aperiam expedita? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Exercitationem maxime soluta nihil esse? Natus commodi saepe perferendis fuga incidunt
-                            delectus soluta, aliquam ex veniam optio ea consequuntur? Accusamus, veritatis non.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus officia magnam in
-                            ex dicta quaerat ipsa dolorum a facilis, iusto voluptatibus vero. Incidunt ea fugit
-                            mollitia dolore cupiditate sequi maxime?</p>
-                    </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- fun run -->
+    <!-- 12 weeks -->
+
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script> -->
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="../Freeletics/assets/js/funrun.js"></script>
+    <script src="../Freeletics/assets/js/12weeks.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Swiper JS -->

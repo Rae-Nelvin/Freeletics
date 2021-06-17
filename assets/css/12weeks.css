@@ -1,4 +1,4 @@
-.bg-run img {
+.bg-week img {
     width: 100%;
     height: 100%;
     position: relative;
@@ -6,33 +6,31 @@
     z-index: 1;
 }
 
-.bg-run::after {
-    margin-top: 0%;
+.bg-week::after {
     z-index: 1;
     content: '';
     display: block;
     width: 100%;
     height: 66.5em;
-    /* background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
-    background-color: black;
-    opacity: 70%;
+    background-image: linear-gradient(to right, rgba(1, 1, 1, 1), rgba(0, 0, 0, 0));
     position: absolute;
     margin-top: -70%;
     bottom: 1;
 }
 
-.judul-funrun {
-    margin-top: -60%;
+.judul-week {
+    margin-top: -57% !important;
     z-index: 1;
     position: absolute;
     color: #FDCD22;
+    margin-top: 3%;
     font-family: Nunito;
     font-weight: bold;
 }
 
-#swiper-container-run {
+#swiper-container-week {
     max-width: 60%;
-    margin-top: -55%;
+    margin-top: -35% !important;
 }
 
 #swiper-slide {
@@ -52,32 +50,26 @@
     -o-border-radius: 30px;
 }
 
-#btn-fun {
+#btn-week {
     color: #FDCD22;
-    margin-top: -37%;
+    margin-top: -20%;
 }
 
-#btn-fun {
-    color: #FDCD22;
-    margin-top: -37%;
-}
-
-
-/* .swiper-pagination {
+.swiper-pagination {
     margin-top: -30% !important;
-} */
+}
 
-#box-fun {
+#box-week {
     align-items: center;
     content: '';
     z-index: 1;
     position: absolute;
     display: block;
-    opacity: 40%;
+    opacity: 60%;
     width: 60%;
     height: 250px;
     background-color: #000;
-    margin-top: -50%;
+    margin-top: -33%;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -85,22 +77,22 @@
     -o-border-radius: 20px;
 }
 
-#caption-funrun p {
+.caption-week {
     color: #fff;
     position: absolute;
-    margin-top: -55%;
     z-index: 1;
-    align-items: center;
-    max-width: 100%;
+    margin-top: -50%;
+    max-width: 50% !important;
+    text-align: center;
 }
 
-#date-fun {
+#date-week {
     background-color: #FDCD22 !important;
     text-align: center;
     border: none !important;
     position: absolute;
     z-index: 1;
-    margin-top: -53%;
+    margin-top: -36%;
     max-width: 20%;
     border-radius: 20px !important;
     margin-left: 14%;

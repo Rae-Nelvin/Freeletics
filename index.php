@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-        <input type="date" id="birthday" class="form-control" name="birthday">
+        <input type="date" class="form-control" name="birthday" id="date-mask">
         <!-- Swiper -->
         <div class="swiper-container mySwiper" id="mask">
             <div class="swiper-wrapper">
@@ -142,6 +142,10 @@
     <!-- fun run -->
     <?php include('fun-run.php')?>
     <!-- fun run -->
+
+    <!-- 12 weeks -->
+    <?php include('12-weeks.php')?>
+    <!-- 12 weeks -->
 
 
 
