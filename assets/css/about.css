@@ -1,4 +1,6 @@
-@media (min-width: 992px) {
+/* Laptops and above mode */
+@media only screen and (min-width: 1130px) {
+    
     a.nav-link {
         align-items: center !important;
         text-align: center !important;
@@ -18,6 +20,15 @@
     }
 }
 
+.bg-about{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/about.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
 a.nav-link {
     font-size: 20px;
     font-family: Nunito;
@@ -29,63 +40,244 @@ a.nav-link {
     /* margin-left: 50px; */
 }
 
-.bg-about img {
-    width: 100%;
-    height: 100%;
-}
-
-.title-1 {
-    color: #FDCD22;
-    font-family: Nunito;
-    position: absolute;
-    z-index: 1;
-    margin-top: 5%;
-    font-weight: bold;
-}
-
-.about p {
-    margin-top: 10%;
-    position: absolute;
-    z-index: 1;
-    color: #fff;
-    max-width: 50%;
-    text-align: center;
-}
-
-.title-2 {
-    color: #FDCD22;
-    font-family: Nunito;
-    position: absolute;
-    z-index: 1;
-    margin-top: 25%;
-    font-weight: bold;
+.author {
+    padding-top: 22%;
 }
 
 .author img {
+    margin-top: 20%;
+    margin-left: 33%;
+    margin-bottom: 10%;
     width: 220px;
     height: 220px;
-    margin-top: -350%;
-    padding: 5%;
     align-items: center;
     border-radius: 30% !important;
     -webkit-border-radius: 30% !important;
     -moz-border-radius: 30% !important;
     -ms-border-radius: 30% !important;
     -o-border-radius: 30% !important;
+    display: block;
 }
 
 .author h5 {
     font-family: Nunito;
-    margin-top: -120%;
-    color: #fff;
+    color: #FDCD22;
     text-align: center;
     font-weight: bold;
+    font-size: 30px;
 }
 
 .author p {
-    margin-left: 2%;
-    max-width: 10%;
-    margin-top: 1%;
     align-items: center;
     text-align: center !important;
+    color: #fff;
+}
+
+.read-more-btn{
+    background-color: #FDCD22;
+}
+
+button.read-more-btn {
+    display: none;
+}
+
+.text-box{
+    font-family: Nunito;
+    color: #fff;
+    width: 70%;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    color: #FDCD22;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10%;
+}
+
+/* Tablet Mode Vertical */
+@media all and (min-width: 590px) and (max-width: 1130px){
+    .text-box{
+        top: 20%;
+    }
+
+    a.navbar-brand img {
+        max-width: 18vh;
+    }
+
+    .moreText{
+        display: none;
+    }
+
+    button.read-more-btn{
+        display: inline;
+        margin-bottom: 10%;
+    }
+
+    .text.show-more .moreText{
+        display: inline;
+    }
+
+    .text-box h1{
+        font-size: 50px;
+    }
+
+    .text-box p{
+        margin-top: 4%;
+        font-size: 25px;
+        margin-bottom: 7%;
+    }
+
+    .author{
+        padding-top: 32%;
+    }
+
+    .author img{
+        margin-top: 33%;
+        margin-left: 10%;
+        margin-bottom: 10%;
+        width: 250px;
+        height: 250px;
+        align-items: center;
+        border-radius: 30% !important;
+        -webkit-border-radius: 30% !important;
+        -moz-border-radius: 30% !important;
+        -ms-border-radius: 30% !important;
+        -o-border-radius: 30% !important;
+        display: block;
+    }
+
+    .author h5 {
+        font-family: Nunito;
+        color: #FDCD22;
+        text-align: center;
+        font-weight: bold;
+        font-size: 35px;
+    }
+    
+    .author p {
+        align-items: center;
+        text-align: center !important;
+        color: #fff;
+        font-size: 22px;
+        margin: 12px 0px 0 0;
+    }
+
+}
+
+/* Tablet Mode Horizontal & Laptops */
+@media all and (min-width: 1130px) and (max-width: 1366px){
+    .author{
+        padding-top: 30%;
+    }
+
+    .author img{
+        margin-top: 33%;
+        margin-left: 27%;
+        margin-bottom: 10%;
+        width: 200px;
+        height: 200px;
+        align-items: center;
+        border-radius: 30% !important;
+        -webkit-border-radius: 30% !important;
+        -moz-border-radius: 30% !important;
+        -ms-border-radius: 30% !important;
+        -o-border-radius: 30% !important;
+        display: block;
+    }
+
+    .author h5 {
+        font-family: Nunito;
+        color: #FDCD22;
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    
+    .author p {
+        align-items: center;
+        text-align: center !important;
+        color: #fff;
+        font-size: 20px;
+        margin: 12px 0px 0 0;
+    }
+
+}
+
+/* Phone Mode */
+@media all and (max-width: 590px){
+
+    .text-box {
+        top: 30%;
+    }
+
+    a.navbar-brand img {
+        max-width: 10vh;
+    }
+
+    .moreText{
+        display: none;
+    }
+
+    button.read-more-btn{
+        display: inline;
+        margin-bottom: 10%;
+    }
+
+    .text.show-more .moreText{
+        display: inline;
+    }
+
+    .text-box p{
+        font-size: 15px;
+    }
+
+    .text-box h1{
+        font-size: 40px;
+    }
+
+    .author{
+        padding-top: 90%;
+    }
+
+    .author img{
+        margin-top: 20%;
+        margin-left: 5%;
+        margin-bottom: 10%;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        border-radius: 30% !important;
+        -webkit-border-radius: 30% !important;
+        -moz-border-radius: 30% !important;
+        -ms-border-radius: 30% !important;
+        -o-border-radius: 30% !important;
+        display: block;
+    }
+
+    .author h5 {
+        font-family: Nunito;
+        color: #FDCD22;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .author p {
+        align-items: center;
+        text-align: center !important;
+        color: #fff;
+        font-size: 13px;
+        margin: 10px 10px 0 0;
+    }
 }
