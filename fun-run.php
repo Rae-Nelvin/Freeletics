@@ -35,7 +35,9 @@
                     <div class="box"></div>
                 </div>
                 <!-- Swiper -->
-
+                <div class="d-flex justify-content-start">
+                    <input type="date" id="birthday" class="form-control" name="birthday">
+                </div>
                 <div class="swiper-container mySwiperr" id="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" id="swiper-slide">
