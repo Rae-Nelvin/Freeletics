@@ -60,7 +60,17 @@
                     <div class="swiper-button-next" id="swiper-button-next"></div>
                     <div class="swiper-button-prev" id="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
-
+                    <div class="caption-funrun">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima id officia cum
+                            doloremque ad
+                            vitae, explicabo harum fugiat nesciunt debitis, eos nulla quas minus iure, ex qui vel
+                            aperiam expedita? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Exercitationem maxime soluta nihil esse? Natus commodi saepe perferendis fuga incidunt
+                            delectus soluta, aliquam ex veniam optio ea consequuntur? Accusamus, veritatis non.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus officia magnam in
+                            ex dicta quaerat ipsa dolorum a facilis, iusto voluptatibus vero. Incidunt ea fugit
+                            mollitia dolore cupiditate sequi maxime?</p>
+                    </div>
                 </div>
             </div>
         </div>
