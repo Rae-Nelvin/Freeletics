@@ -38,7 +38,7 @@
                 <div class="d-flex justify-content-start">
                     <input type="date" id="birthday" class="form-control" name="birthday">
                 </div>
-                <div class="swiper-container mySwiperr" id="swiper-container">
+                <div class="swiper-container mySwiperr" id="swiper-container-run">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" id="swiper-slide">
                             <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
@@ -59,10 +59,10 @@
                             <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid">
                         </div>
                     </div>
-                    <div class="swiper-button-next" id="swiper-button-next"></div>
-                    <div class="swiper-button-prev" id="swiper-button-prev"></div>
+                    <div class="swiper-button-next" id="btn-fun"></div>
+                    <div class="swiper-button-prev" id="btn-fun"></div>
                     <div class="swiper-pagination"></div>
-                    <div class="caption-funrun">
+                    <div class="caption-funrun" id="caption-funrun">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima id officia cum
                             doloremque ad
                             vitae, explicabo harum fugiat nesciunt debitis, eos nulla quas minus iure, ex qui vel

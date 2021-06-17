@@ -12,7 +12,6 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/about.css">
     <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/maskworkout.css">
     <!-- <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/funrun.css"> -->
@@ -117,29 +116,32 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-start">
-            <input type="date" id="birthday" class="form-control" name="birthday">
-            <!-- Swiper -->
-            <div class="swiper-container mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid" alt="image-responsive">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../Freeletics/assets/images/author1.jpg" class="img-fluid" alt="image-responsive">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../Freeletics/assets/images/jungkook.jpg" class="img-fluid" alt="image-responsive">
-                    </div>
+        <input type="date" id="birthday" class="form-control" name="birthday">
+        <!-- Swiper -->
+        <div class="swiper-container mySwiper" id="mask">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="swiper-mask">
+                    <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid" alt="image-responsive">
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide" id="swiper-mask">
+                    <img src="../Freeletics/assets/images/author1.jpg" class="img-fluid" alt="image-responsive">
+                </div>
+                <div class="swiper-slide" id="swiper-mask">
+                    <img src="../Freeletics/assets/images/jungkook.jpg" class="img-fluid" alt="image-responsive">
+                </div>
             </div>
+            <div class="swiper-button-next" id="btn-mask"></div>
+            <div class="swiper-button-prev" id="btn-mask"></div>
+            <div class="swiper-pagination" id="btn-mask"></div>
+        </div>
+        <div class="d-flex justify-content-start">
         </div>
     </section>
     <!-- mask workout -->
 
+    <!-- fun run -->
+    <?php include('fun-run.php')?>
+    <!-- fun run -->
 
 
 

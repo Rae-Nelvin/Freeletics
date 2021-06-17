@@ -28,7 +28,7 @@
     color: #FDCD22;
 }
 
-#swiper-container {
+#swiper-container-run {
     max-width: 60%;
     margin-top: -55%;
 }
@@ -50,12 +50,12 @@
     -o-border-radius: 30px;
 }
 
-.swiper-button-prev {
+#btn-fun {
     color: #FDCD22;
     margin-top: -37%;
 }
 
-.swiper-button-next {
+#btn-fun {
     color: #FDCD22;
     margin-top: -37%;
 }
@@ -82,7 +82,7 @@
     -o-border-radius: 20px;
 }
 
-.caption-funrun p {
+#caption-funrun p {
     color: #fff;
     position: absolute;
     margin-top: -55%;
