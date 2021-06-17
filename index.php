@@ -147,6 +147,10 @@
     <?php include('12-weeks.php')?>
     <!-- 12 weeks -->
 
+    <!-- event -->
+    <?php include('event.php')?>
+    <!-- event -->
+
 
 
 
