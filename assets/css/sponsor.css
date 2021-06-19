@@ -10,3 +10,37 @@
     font-weight: bold;
     margin-top: 5%;
 }
+
+
+/* slider */
+
+#swiper-container-sponsor {
+    width: 100%;
+    height: 100%;
+}
+
+#swiper-slide img {
+    margin-top: 25%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#swiper-slide {
+    max-width: 250px;
+    max-height: 170px;
+}
+
+#btn-sponsor {
+    color: #fff;
+    margin-top: 1%;
+}
+
+
+/* slider */
