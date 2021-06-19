@@ -19,27 +19,26 @@
     height: 100%;
 }
 
-#swiper-slide img {
+#swiper-slide-sponsor img {
     margin-top: 25%;
     display: block;
-    width: 100%;
-    height: 100%;
+    max-width: 325px;
+    max-height: 120px;
     object-fit: cover;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
 }
 
-#swiper-slide {
-    max-width: 250px;
-    max-height: 170px;
+#swiper-slide-sponsor {
+    max-width: 325px;
 }
 
 #btn-sponsor {
-    color: #fff;
-    margin-top: 1%;
+    color: #FDCD22;
+    margin-top: 2%;
 }
 
 

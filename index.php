@@ -210,22 +210,22 @@
                 <h1>SPONSORSHIP</h1>
                 <div class="swiper-container mySwipper" id="swiper-container-sponsor">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-sponsor">
                             <img src="../Freeletics/assets/images/s1.png">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-sponsor">
                             <img src="../Freeletics/assets/images/s3.png">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-sponsor">
                             <img src="../Freeletics/assets/images/s3.png">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-sponsor">
                             <img src="../Freeletics/assets/images/s1.png">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-sponsor">
                             <img src="../Freeletics/assets/images/s3.png">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-sponsor">
                             <img src="../Freeletics/assets/images/s3.png">
                         </div>
                     </div>
