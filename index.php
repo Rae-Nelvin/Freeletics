@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/about.css">
     <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/maskworkout.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/funrun.css"> -->
+    <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/testimonal.css">
+    <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/sponsor.css">
     <title>Freeletics</title>
 </head>
 
@@ -61,27 +62,29 @@
         <div class="bg-about">
             <img src="../Freeletics/assets/images/about.png" class="rounded mx-auto d-block">
         </div>
-        <div class="d-flex justify-content-center">
-            <div class="row">
-                <div class="col-4">
-                    <div class="author">
-                        <img src="../Freeletics/assets/images/author1.jpg">
-                        <h5>Wahyu Hidayat</h5>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="author text-center">
+                            <img src="../Freeletics/assets/images/author1.jpg">
+                            <h5>Wahyu Hidayat</h5>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="author">
-                        <img src="../Freeletics/assets/images/author2.jpg">
-                        <h5>Wahyu Hidayat</h5>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                    <div class="col-4">
+                        <div class="author text-center">
+                            <img src="../Freeletics/assets/images/author2.jpg">
+                            <h5>Wahyu Hidayat</h5>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="author">
-                        <img src="../Freeletics/assets/images/author3.png">
-                        <h5>Wahyu Hidayat</h5>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                    <div class="col-4">
+                        <div class="author text-center">
+                            <img src="../Freeletics/assets/images/author3.png">
+                            <h5>Wahyu Hidayat</h5>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,6 +154,81 @@
     <?php include('event.php')?>
     <!-- event -->
 
+    <!-- testimonal -->
+    <section class="testi">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                    <h1>TESTIMONAL</h1>
+                </div>
+                <div class="col-lg-3">
+                    <div class="testi-img text-center">
+                        <img src="../Freeletics/assets/images/jungkook.jpg">
+                        <h2>Alex Jr</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias earum repellat
+                            cumque ullam, nulla ab magni fuga unde harum inventore iusto deserunt voluptatibus maiores
+                            incidunt distinctio, doloremque delectus sint.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="testi-img text-center">
+                        <img src="../Freeletics/assets/images/jungkook.jpg">
+                        <h2>Alex Jr</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias earum repellat
+                            cumque ullam, nulla ab magni fuga unde harum inventore iusto deserunt voluptatibus maiores
+                            incidunt distinctio, doloremque delectus sint.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="testi-img text-center">
+                        <img src="../Freeletics/assets/images/jungkook.jpg">
+                        <h2>Alex Jr</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias earum repellat
+                            cumque ullam, nulla ab magni fuga unde harum inventore iusto deserunt voluptatibus maiores
+                            incidunt distinctio, doloremque delectus sint.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="testi-img text-center">
+                        <img src="../Freeletics/assets/images/jungkook.jpg">
+                        <h2>Alex Jr</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias earum repellat
+                            cumque ullam, nulla ab magni fuga unde harum inventore iusto deserunt voluptatibus maiores
+                            incidunt distinctio, doloremque delectus sint.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- testimonal -->
+
+    <!-- sponsor -->
+    <section class="sponsor">
+        <div class="container">
+            <div class="row">
+                <h1>SPONSORSHIP</h1>
+                <div class="swiper-container mySwipper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next" id="btn-fun"></div>
+                    <div class="swiper-button-prev" id="btn-fun"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sponsor -->
+
 
 
 
@@ -165,6 +243,7 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../Freeletics/assets/js/funrun.js"></script>
+    <script src="../Freeletics/assets/js/sponsor.js"></script>
 
     <!-- Initialize Swiper -->
     <script>

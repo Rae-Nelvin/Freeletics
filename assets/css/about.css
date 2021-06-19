@@ -84,8 +84,7 @@ a.nav-link {
 
 .author p {
     margin-left: 2%;
-    max-width: 10%;
+    width: 10%;
     margin-top: 1%;
-    align-items: center;
     text-align: center !important;
 }

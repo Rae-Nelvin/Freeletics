@@ -1,0 +1,12 @@
+.sponsor {
+    background-color: #000;
+    height: 400px;
+}
+
+.sponsor h1 {
+    color: #FDCD22;
+    text-align: center;
+    font-family: Nunito;
+    font-weight: bold;
+    margin-top: 5%;
+}
