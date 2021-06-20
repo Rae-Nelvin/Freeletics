@@ -38,7 +38,7 @@ a.nav-link {
     font-weight: bold;
 }
 
-.about-p{
+#about-p{
     margin-top: 2%;
     font-family: Nunito;
     font-size: 40px;
@@ -69,6 +69,7 @@ button.read-more-btn {
     text-align: center !important;
     color: #fff;
     font-size: 25px;
+    margin-bottom: 25%;
 }
 
 .author img{
@@ -122,8 +123,13 @@ button.read-more-btn {
         height: 220px;
     }
 
+    .author h2{
+        font-size: 38px;
+    }
+
     .author p{
         font-size: 20px;
+        margin-bottom: 25%;
     }
 }
 
@@ -176,5 +182,6 @@ button.read-more-btn {
     .author p{
         margin-bottom: 12%;
         font-size: 17px;
+        margin-bottom: 25%;
     }
 }

@@ -1,72 +1,108 @@
-.bg-mask img {
+.bg-mass{
+    min-height: 100vh;
     width: 100%;
-    height: 100%;
-    margin-top: -2%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/maskworkout.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
-.judul {
-    color: #FDCD22;
-    margin-top: -58%;
+#mass-h1{
     font-family: Nunito;
+    color: #FDCD22;
+    font-size: 100px;
     font-weight: bold;
+    font-stretch: ultra-expanded;
+    margin-top: 3%;
 }
 
-.caption p {
-    margin-top: -45%;
-    color: #fff;
-    max-width: 60%;
-    margin-left: auto;
+#mass-p{
+    font-family: Nunito;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 40%;
 }
 
-
-/* .image-slide img {
-    max-width: 450px;
-    max-height: 500px;
-    margin-top: -38%;
-    position: absolute;
-    z-index: 1;
-    margin-left: 5% !important;
-    object-fit: cover;
-    display: block;
-} */
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
+#mass-date{
+    margin-top: 6%;
+    margin-bottom: 3%;
+    margin-left: 5%;
 }
 
-.swiper-slide {
-    max-width: 450px;
-    max-height: 500px;
+#mass-swipper{
+    margin-left: 5%;
 }
 
-.swiper-container {
-    max-width: 450px;
-    max-height: 500px;
-    margin-top: -38%;
-    margin-right: 65%;
-}
-
-.swiper-button-prev {
-    color: #FDCD22;
-}
-
-.swiper-button-next {
-    color: #FDCD22;
+#img-swipper{
+    margin-top: 14px;
 }
 
 .form-control {
+    font-size: 25px;
     background-color: #FDCD22;
     text-align: center;
     border: none;
-    position: absolute;
-    z-index: 1;
-    margin-top: -42%;
-    width: 450px;
+    width: 100%;
     border-radius: 20px;
-    margin-left: 5%;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+
+/* Table Mode */
+@media all and (min-width: 768px) and (max-width: 1366px){
+
+    #mass-h1{
+        font-size: 70px;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+
+    #mass-p{
+        margin-top: 5%;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    #mass-date{
+        display: none;
+    }
+
+    #mass-swipper{
+        margin: 0;
+    }
+
+    #mass-p.show-more .moreText{
+        display: inline;
+    }
+
+}
+/* Phone Mode */
+@media all and (max-width: 768px){
+
+    #mass-h1{
+        font-size: 45px;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+
+    #mass-p{
+        margin-top: 5%;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    #mass-date{
+        display: none;
+    }
+
+    #mass-swipper{
+        margin: 0;
+    }
+
+    #mass-p.show-more .moreText{
+        display: inline;
+    }
+    
 }
