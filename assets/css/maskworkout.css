@@ -37,6 +37,14 @@
     margin-top: 14px;
 }
 
+.img-fluid{
+    border-radius: 5% !important;
+    -webkit-border-radius: 5% !important;
+    -moz-border-radius: 5% !important;
+    -ms-border-radius: 5% !important;
+    -o-border-radius: 5% !important;
+}
+
 .form-control {
     font-size: 25px;
     background-color: #FDCD22;
@@ -73,10 +81,6 @@
         margin: 0;
     }
 
-    #mass-p.show-more .moreText{
-        display: inline;
-    }
-
 }
 /* Phone Mode */
 @media all and (max-width: 768px){
@@ -101,8 +105,4 @@
         margin: 0;
     }
 
-    #mass-p.show-more .moreText{
-        display: inline;
-    }
-    
 }

@@ -129,33 +129,43 @@
             <input type="date" class="form-control" name="birthday" id="date-funrun">
         </div>
         <!-- Swipper  -->
-        <div class="swiper-container mySwiperr" id="swiper-container-run">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" id="swiper-slide">
-                    <img src="../Freeletics/assets/images/run1.png" class="img-fluid">
+        <div class="justify-content-center ">
+            <div class="box" id="box-fun"></div>
+                <div class="col-xl-12" id="img-funrun">
+                    <div class="swiper-container mySwiperr" id="swiper-container-run">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="swiper-slide">
+                                <img src="../Freeletics/assets/images/run1.png" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide" id="swiper-slide">
+                                <img src="../Freeletics/assets/images/run2.png" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide" id="swiper-slide">
+                                <img src="../Freeletics/assets/images/run3.png" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide" id="swiper-slide">
+                                <img src="../Freeletics/assets/images/run1.png" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide" id="swiper-slide">
+                                <img src="../Freeletics/assets/images/run2.png" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide" id="swiper-slide">
+                                <img src="../Freeletics/assets/images/run3.png" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next" id="btn-fun"></div>
+                        <div class="swiper-button-prev" id="btn-fun"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="caption-funrun" id="caption-funrun">
+                    </div>
                 </div>
-                <div class="swiper-slide" id="swiper-slide">
-                    <img src="../Freeletics/assets/images/run2.png" class="img-fluid">
-                </div>
-                <div class="swiper-slide" id="swiper-slide">
-                    <img src="../Freeletics/assets/images/run3.png" class="img-fluid">
-                </div>
-                <div class="swiper-slide" id="swiper-slide">
-                    <img src="../Freeletics/assets/images/run1.png" class="img-fluid">
-                </div>
-                <div class="swiper-slide" id="swiper-slide">
-                    <img src="../Freeletics/assets/images/run2.png" class="img-fluid">
-                </div>
-                <div class="swiper-slide" id="swiper-slide">
-                    <img src="../Freeletics/assets/images/run3.png" class="img-fluid">
-                </div>
-            </div>
-            <div class="swiper-button-next" id="btn-fun"></div>
-            <div class="swiper-button-prev" id="btn-fun"></div>
-            <div class="swiper-pagination"></div>
-            <div class="caption-funrun" id="caption-funrun">
         </div>
         <!--  End of Swipper -->
+        <div class="col-xl-6">
+            <p class="lead font-weight-normal text" id="funrun-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class ="moreText">Lorem ipsum,
+                dolor sit amet consectetur adipisicing elit.</span>
+            </p><button class="btn btn-outline-warning read-more-btn">Read More</button>
+        </div>
     </div>
     <!-- End of Fun Run -->
     
@@ -169,23 +179,11 @@
     </script>
 
      <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-          effect: "flip",
-          grabCursor: true,
-          pagination: {
-              el: ".swiper-pagination",
-          },
-          navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-          },
-      });
-      </script>
+
       <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         
-    <script src="assets/js/main.js"></script>
+    <script src="../Freeletics/assets/js/main.js"></script>
 </body>
 
 </html>

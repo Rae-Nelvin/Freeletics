@@ -36,6 +36,7 @@ a.nav-link {
     color: #FDCD22;
     font-size: 100px;
     font-weight: bold;
+    font-stretch: extra-condensed;
 }
 
 #about-p{
@@ -98,7 +99,7 @@ button.read-more-btn {
         font-size: 50px;
     }
 
-    .about-p{
+    #about-p{
         margin-top: 5%;
         font-size: 30px;
     }
@@ -113,7 +114,7 @@ button.read-more-btn {
         margin-bottom: 10%;
     }
 
-    .about-p.show-more .moreText{
+    .text.show-more .moreText{
         display: inline;
     }
 
@@ -150,7 +151,7 @@ button.read-more-btn {
         font-size: 39px;
     }
 
-    .about-p{
+    #about-p{
         margin-top: 5%;
         font-size: 20px;
     }
