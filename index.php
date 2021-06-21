@@ -41,56 +41,52 @@
     <!-- end navbar -->
 
     <!-- about -->
-    <section class="about">
-        <div class="container">
-            <div class="d-flex justify-content-center">
-                <h1 class="title-1">ABOUT US</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem
-                    reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit
-                    sit dolorum illo quam dignissimos! Lorem ipsum,
-                    dolor sit amet consectetur adipisicing elit. Quod rem laudantium veniam repudiandae quibusdam
-                    aperiam laboriosam animi nulla nobis, eum est mollitia perspiciatis sint unde odio iusto fugiat
-                    itaque earum. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Eos, voluptas! Voluptatibus nesciunt animi aut impedit harum vel
-                    possimus, qui consequatur, ad maxime placeat voluptatum nisi quibusdam tenetur fugiat. Nihil,
-                    reiciendis.
-                </p>
-                <h1 class="title-2">MEET THE AUTHOR</h1>
-            </div>
-
+    <div class="position-relative overflow-hidden text-center bg-about">
+        <div class="col-md-7 p-lg-4 mx-auto my-5">
+            <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
+            <p class="lead font-weight-normal about-p text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
+                magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class="moreText">Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit.</span>
+            </p><button class="btn btn-outline-warning read-more-btn">Read More</button>
+            <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
         </div>
-        <div class="bg-about">
-            <img src="../Freeletics/assets/images/about.png" class="rounded mx-auto d-block">
-        </div>
-        <div class="container">
-            <div class="d-flex justify-content-center">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="author text-center">
-                            <img src="../Freeletics/assets/images/author1.jpg">
-                            <h5>Wahyu Hidayat</h5>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="author text-center">
-                            <img src="../Freeletics/assets/images/author2.jpg">
-                            <h5>Wahyu Hidayat</h5>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="author text-center">
-                            <img src="../Freeletics/assets/images/author3.png">
-                            <h5>Wahyu Hidayat</h5>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                        </div>
-                    </div>
+        <div class="container author">
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="rounded author" src="../Freeletics/assets/images/author1.jpg"
+                        alt="Generic placeholder image" width="250" height="250">
+                    <h2 class="author-h2">Wahyu Hidayat</h2>
+                    <p class="author-p">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id
+                        dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
+                        vestibulum at eros. Praesent commodo cursus magna.</p>
                 </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded author" src="../Freeletics/assets/images/author2.jpg"
+                        alt="Generic placeholder image" width="250" height="250">
+                    <h2 class="author">Wahyu Hidayat</h2>
+                    <p class="author">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
+                        sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus
+                        commodo, tortor mauris condimentum nibh.</p>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded author" src="../Freeletics/assets/images/author3.png"
+                        alt="Generic placeholder image" width="250" height="250">
+                    <h2 class="author">Wahyu Hidayat</h2>
+                    <p class="author">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                        Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor
+                        mauris condimentum nibh, ut fermentum massa justo sit
+                        amet risus.</p>
+                </div>
+                <!-- /.col-lg-4 -->
             </div>
+            <!-- /.row -->
         </div>
-    </section>
-    <!-- end about -->
+    </div>
+    <!-- End of About -->
 
     <!-- mask workout -->
     <section class="mask">
@@ -197,7 +193,6 @@
                             incidunt distinctio, doloremque delectus sint.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

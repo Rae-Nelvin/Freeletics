@@ -1,24 +1,18 @@
-@media (min-width: 992px) {
-    a.nav-link {
-        align-items: center !important;
-        text-align: center !important;
-        flex: center;
-        position: relative;
-        left: 40%;
-        float: none;
-        top: 5%;
-        margin-left: 50px;
-        font-size: 20px;
-        font-family: Nunito;
-        font-weight: bold;
-    }
-    nav {
-        background-color: #000000;
-        display: block;
-    }
+nav {
+    /* background-color: #FDCD22!important; */
+    display: block;
 }
 
 a.nav-link {
+    color: #fff;
+    align-items: center !important;
+    text-align: center !important;
+    flex: center;
+    position: relative;
+    left: 40%;
+    float: none;
+    top: 5%;
+    margin-left: 50px;
     font-size: 20px;
     font-family: Nunito;
     font-weight: bold;
@@ -26,47 +20,68 @@ a.nav-link {
 
 .navbar-nav a {
     color: #FDCD22 !important;
+    /* color: #fff; */
     /* margin-left: 50px; */
 }
 
-.bg-about img {
+.bg-about {
+    min-height: 100vh;
     width: 100%;
-    height: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
-.title-1 {
-    color: #FDCD22;
+.about-h1 {
     font-family: Nunito;
-    position: absolute;
-    z-index: 1;
-    margin-top: 5%;
+    color: #FDCD22;
     font-weight: bold;
 }
 
-.about p {
+.author-h1 {
+    font-family: Nunito;
+    color: #FDCD22;
+    font-weight: bold;
+    margin-top: -30%;
+}
+
+.about-p {
+    margin-top: 12%;
+    font-family: Nunito;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 40%;
+}
+
+button.read-more-btn {
+    display: none;
+}
+
+.text.show-more .moreText {
+    display: inline;
+}
+
+.author h2 {
     margin-top: 10%;
-    position: absolute;
-    z-index: 1;
-    color: #fff;
-    max-width: 50%;
+    font-family: Nunito;
+    color: #FDCD22;
     text-align: center;
+    font-weight: bold;
+    font-size: 30px;
 }
 
-.title-2 {
-    color: #FDCD22;
-    font-family: Nunito;
-    position: absolute;
-    z-index: 1;
-    margin-top: 25%;
-    font-weight: bold;
+.author p {
+    margin-top: 5%;
+    align-items: center;
+    text-align: center !important;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 25%;
 }
 
 .author img {
-    width: 220px;
-    height: 220px;
-    margin-top: -350%;
-    padding: 5%;
-    align-items: center;
+    margin-top: -5%;
     border-radius: 30% !important;
     -webkit-border-radius: 30% !important;
     -moz-border-radius: 30% !important;
@@ -74,17 +89,91 @@ a.nav-link {
     -o-border-radius: 30% !important;
 }
 
-.author h5 {
-    font-family: Nunito;
-    margin-top: -120%;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
+
+/* Tabled Mode */
+
+@media all and (min-width: 768px) and (max-width: 1366px) {
+    a.navbar-brand img {
+        max-width: 13vh;
+    }
+    a.nav-link {
+        font-size: 20px;
+        font-family: Nunito;
+        font-weight: bold;
+    }
+    .about-h1 {
+        font-size: 50px;
+    }
+    .about-p {
+        margin-top: 5%;
+        font-size: 30px;
+    }
+    .moreText {
+        display: none;
+    }
+    button.read-more-btn {
+        margin-top: -60%;
+        display: inline;
+        margin-bottom: 10%;
+    }
+    .about-p.show-more .moreText {
+        display: inline;
+    }
+    .author img {
+        margin-top: -17%;
+        width: 220px;
+        height: 220px;
+    }
+    .author h2 {
+        font-size: 38px;
+    }
+    .author p {
+        font-size: 20px;
+        margin-bottom: 25%;
+    }
 }
 
-.author p {
-    margin-left: 2%;
-    width: 10%;
-    margin-top: 1%;
-    text-align: center !important;
+
+/* Phone Mode */
+
+@media all and (max-width: 768px) {
+    a.navbar-brand img {
+        max-width: 12vh;
+    }
+    a.nav-link {
+        font-size: 20px;
+        font-family: Nunito;
+        font-weight: bold;
+    }
+    .about-h1 {
+        font-size: 39px;
+    }
+    .about-p {
+        margin-top: 5%;
+        font-size: 20px;
+    }
+    .moreText {
+        display: none;
+    }
+    button.read-more-btn {
+        margin-top: -60%;
+        display: inline;
+        margin-bottom: 10%;
+    }
+    .text.show-more .moreText {
+        display: inline;
+    }
+    .author img {
+        margin-top: -4%;
+        width: 220px;
+        height: 220px;
+    }
+    .author h2 {
+        font-size: 33px;
+    }
+    .author p {
+        margin-bottom: 12%;
+        font-size: 17px;
+        margin-bottom: 25%;
+    }
 }
