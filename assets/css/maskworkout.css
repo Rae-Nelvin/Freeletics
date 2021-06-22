@@ -16,7 +16,7 @@
     margin-top: 3%;
 }
 
-#mass-p{
+.mass-p{
     font-family: Nunito;
     font-size: 40px;
     color: white;
@@ -67,9 +67,10 @@
         margin-bottom: 7%;
     }
 
-    #mass-p{
-        margin-top: 5%;
+    .mass-p{
+        margin-top: 0;
         font-size: 30px;
+        text-align: justify;
     }
 
     #mass-date{
@@ -90,9 +91,10 @@
         margin-bottom: 7%;
     }
 
-    #mass-p{
+    .mass-p{
         margin-top: 5%;
         font-size: 17px;
+        text-align: justify;
     }
 
     #mass-date{
