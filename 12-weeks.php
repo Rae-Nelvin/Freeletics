@@ -5,7 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -21,15 +22,16 @@
 
 <body>
     <!-- 12 weeks -->
-    <section class="12-weeks">
-        <div class="bg-week">
+    <div class="position-relative overflow-hidden text-center weeks">
+        <!-- <div class="bg-week">
             <img src="../Freeletics/assets/images/12weeks.png" class="img-fluid" alt='image-responsive'>
-        </div>
+        </div> -->
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <h1 class="judul-week">12 WEEKS</h1>
-                    <p class="caption-week">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima id officia
+                    <h1 class="judul-week text-center">12 WEEKS</h1>
+                    <p class="caption-week text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
+                        id officia
                         cum
                         doloremque ad
                         vitae, explicabo harum fugiat nesciunt debitis, eos nulla quas minus iure, ex qui vel
@@ -42,7 +44,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                    <div class="box" id="box-week"></div>
+                    <div class="box-lg" id="box-week"></div>
                 </div>
                 <!-- Swiper -->
                 <div class="d-flex justify-content-start">
@@ -77,7 +79,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- 12 weeks -->
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

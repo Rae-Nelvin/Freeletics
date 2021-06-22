@@ -4,6 +4,7 @@
     background-color: #FDCD22 !important;
     width: 100%;
     height: 700px;
+    position: relative;
 }
 
 .testi h1 {

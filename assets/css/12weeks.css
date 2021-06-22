@@ -1,104 +1,190 @@
-.bg-week img {
+/* .bg-week img {
     width: 100%;
     height: 100%;
     position: relative;
     background-size: cover;
     z-index: 1;
-}
+} */
 
-.bg-week::after {
-    z-index: 1;
-    content: '';
-    display: block;
+.weeks {
+    background-image: url(../images/12weeks.png) !important;
     width: 100%;
-    height: 66.5em;
-    background-image: linear-gradient(to right, rgba(1, 1, 1, 1), rgba(0, 0, 0, 0));
-    position: absolute;
-    margin-top: -70%;
-    bottom: 1;
+    min-height: 120vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
-.judul-week {
-    margin-top: -57% !important;
-    z-index: 1;
-    position: absolute;
-    color: #FDCD22;
-    margin-top: 3%;
-    font-family: Nunito;
-    font-weight: bold;
-}
-
-#swiper-container-week {
-    max-width: 60%;
-    margin-top: -35% !important;
-}
-
-#swiper-slide {
-    max-width: 250px;
-    max-height: 170px;
-}
-
-#swiper-slide img {
+.weeks::after {
+    /* z-index: 1; */
+    content: '';
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-}
-
-#btn-week {
-    color: #FDCD22;
-    margin-top: -20%;
-}
-
-.swiper-pagination {
-    margin-top: -30% !important;
-}
-
-#box-week {
-    align-items: center;
-    content: '';
-    z-index: 1;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
     position: absolute;
-    display: block;
-    opacity: 60%;
-    width: 60%;
-    height: 250px;
-    background-color: #000;
-    margin-top: -33%;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    bottom: 0;
+    /* margin-top: -43%; */
 }
 
-.caption-week {
-    color: #fff;
-    position: absolute;
-    z-index: 1;
-    margin-top: -50%;
-    max-width: 50% !important;
-    text-align: center;
+@media all and (min-width: 768px) {
+    .weeks::after {
+        /* margin-top: -43%; */
+    }
+    .judul-week {
+        margin-top: 2% !important;
+        z-index: 1;
+        position: absolute;
+        color: #FDCD22;
+        font-family: Nunito !important;
+        font-weight: bold;
+    }
+    #swiper-container-week {
+        max-width: 60%;
+        margin-top: 38%;
+    }
+    #swiper-slide {
+        max-width: 250px;
+        max-height: 170px;
+    }
+    #swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+    }
+    #btn-week {
+        color: #FDCD22;
+        /* margin-top: -20%; */
+    }
+    .swiper-pagination {
+        /* margin-top: -30% !important; */
+    }
+    #box-week {
+        margin-top: 30%;
+        align-items: center;
+        content: '';
+        z-index: 1;
+        position: absolute;
+        display: block;
+        opacity: 60%;
+        width: 60%;
+        height: 250px;
+        background-color: #000;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+    .caption-week {
+        color: #fff;
+        margin-top: 10%;
+        position: absolute;
+        z-index: 2;
+        display: block;
+        max-width: 50% !important;
+        text-align: center;
+    }
+    #date-week {
+        margin-top: 56vh;
+        position: absolute;
+        background-color: #FDCD22 !important;
+        text-align: center;
+        border: none !important;
+        z-index: 1;
+        max-width: 20%;
+        border-radius: 20px !important;
+        margin-left: 13%;
+        align-items: flex-start !important;
+        -webkit-border-radius: 20px !important;
+        -moz-border-radius: 20px !important;
+        -ms-border-radius: 20px !important;
+        -o-border-radius: 20px !important;
+    }
 }
 
-#date-week {
-    background-color: #FDCD22 !important;
-    text-align: center;
-    border: none !important;
-    position: absolute;
-    z-index: 1;
-    margin-top: -36%;
-    max-width: 20%;
-    border-radius: 20px !important;
-    margin-left: 14%;
-    align-items: flex-start !important;
-    -webkit-border-radius: 20px !important;
-    -moz-border-radius: 20px !important;
-    -ms-border-radius: 20px !important;
-    -o-border-radius: 20px !important;
+@media all and (max-width: 768px) {
+    #box-week {
+        width: 60vh;
+        display: none;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+    .weeks {
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    .weeks::after {
+        margin-top: -120%;
+        min-height: 800vh;
+        position: absolute;
+    }
+    .judul-week {
+        /* margin-top: -57% !important; */
+        z-index: 1;
+        position: absolute;
+        color: #FDCD22;
+        font-family: Nunito;
+        font-weight: bold;
+    }
+    #swiper-container-week {
+        max-width: 60%;
+        /* margin-top: -35% !important; */
+    }
+    #swiper-slide {
+        max-width: 250px;
+        max-height: 170px;
+    }
+    #swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+    }
+    #btn-week {
+        color: #FDCD22;
+        /* margin-top: -20%; */
+    }
+    .swiper-pagination {
+        /* margin-top: -30% !important; */
+    }
+    .caption-week {
+        color: #fff;
+        /* position: absolute;
+    margin-top: -50%; */
+        z-index: 1;
+        max-width: 50% !important;
+        text-align: center;
+    }
+    #date-week {
+        background-color: #FDCD22 !important;
+        text-align: center;
+        border: none !important;
+        z-index: 1;
+        /* position: absolute;
+    margin-top: -36%; */
+        max-width: 20%;
+        border-radius: 20px !important;
+        margin-left: 14%;
+        align-items: flex-start !important;
+        -webkit-border-radius: 20px !important;
+        -moz-border-radius: 20px !important;
+        -ms-border-radius: 20px !important;
+        -o-border-radius: 20px !important;
+    }
 }
