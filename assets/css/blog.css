@@ -17,17 +17,14 @@
 
 .blog-img img {
     background-size: cover;
+    position: relative;
 }
 
 .blog-img::after {
-    z-index: 1;
-    content: '';
-    display: block;
-    width: 100%;
-    background-color: white !important;
-    /* opacity: 70%; */
-    /* position: absolute; */
-    /* bottom: 0; */
+    content: "";
+    position: absolute;
+    background-color: #000;
+    opacity: 40%;
 }
 
 
