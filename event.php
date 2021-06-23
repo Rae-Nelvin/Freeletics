@@ -31,7 +31,7 @@
                     </h1>
                 </div>
                 <div class="col-lg-3">
-                    <div class="event-img">
+                    <div class="event-img text-center">
                         <img src="../Freeletics/assets/images/event.png" class="img-fluid">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum reiciendis itaque
                             voluptatibus! Qui, sapiente. Fuga voluptatum, ex voluptatem excepturi placeat sit maiores.
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="event-img">
+                    <div class="event-img text-center">
                         <img src="../Freeletics/assets/images/event.png" class="img-fluid">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum reiciendis itaque
                             voluptatibus! Qui, sapiente. Fuga voluptatum, ex voluptatem excepturi placeat sit maiores.
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="event-img">
+                    <div class="event-img text-center">
                         <img src="../Freeletics/assets/images/event.png" class="img-fluid">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum reiciendis itaque
                             voluptatibus! Qui, sapiente. Fuga voluptatum, ex voluptatem excepturi placeat sit maiores.
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="event-img">
+                    <div class="event-img text-center">
                         <img src="../Freeletics/assets/images/event.png" class="img-fluid">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum reiciendis itaque
                             voluptatibus! Qui, sapiente. Fuga voluptatum, ex voluptatem excepturi placeat sit maiores.

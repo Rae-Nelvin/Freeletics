@@ -8,7 +8,7 @@
 .event {
     background-color: #000;
     width: 100%;
-    height: 1031px;
+    min-height: 100vh;
 }
 
 .event-img {
@@ -29,4 +29,10 @@
     -moz-border-radius: 10px !important;
     -ms-border-radius: 10px !important;
     -o-border-radius: 10px !important;
+}
+
+@media all and (max-width: 768px) {
+    .event-img {
+        margin-top: 10%;
+    }
 }

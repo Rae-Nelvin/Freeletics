@@ -29,7 +29,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="blog-img">
+                    <div class="blog-img text-center">
                         <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
                         <div class="d-flex justify-content-end">
                             <a href="">Read more ></a>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="blog-img">
+                    <div class="blog-img text-center">
                         <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
                         <div class="d-flex justify-content-end">
                             <a href="">Read more ></a>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="blog-img">
+                    <div class="blog-img text-center">
                         <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
                         <div class="d-flex justify-content-end">
                             <a href="">Read more ></a>
@@ -61,7 +61,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="blog-img">
+                    <div class="blog-img text-center">
                         <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
                         <div class="d-flex justify-content-end">
                             <a href="">Read more ></a>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="blog-img">
+                    <div class="blog-img text-center">
                         <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
                         <div class="d-flex justify-content-end">
                             <a href="">Read more ></a>
@@ -79,10 +79,10 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="blog-img">
+                    <div class="blog-img text-center">
                         <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
+                        <a href="">Read more ></a>
                         <div class="d-flex justify-content-end">
-                            <a href="">Read more ></a>
                         </div>
                         <img src="../Freeletics/assets/images/blog.png" class="img-fluid">
                     </div>
