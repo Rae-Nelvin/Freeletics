@@ -2,22 +2,22 @@ var swiper = new Swiper(".mySwipper", {
     slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
     breakpoints: {
         400: {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 50,
         },
         768: {
             slidesPerView: 4,
             spaceBetween: 40,
         },
-        1024: {
+        2024: {
             slidesPerView: 5,
             spaceBetween: 50,
         },
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });

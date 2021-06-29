@@ -196,6 +196,10 @@
     <?php include('event.php')?>
     <!-- event -->
 
+    <!-- blog -->
+    <?php include('blog.php')?>
+    <!-- blog -->
+
     <!-- testimonal -->
     <section class="testi">
         <div class="container">
@@ -245,7 +249,7 @@
     <!-- testimonal -->
 
     <!-- sponsor -->
-    <section class="sponsor">
+    <section class="position-relative overflow-hidden text-center sponsor">
         <div class="container">
             <div class="row">
                 <h1>SPONSORSHIP</h1>

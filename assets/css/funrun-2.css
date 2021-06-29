@@ -1,35 +1,29 @@
 .bg-funrun {
-    min-height: 100vh !important;
     width: 100%;
+    min-height: 100vh;
+    max-height: 150vh;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/funrun.png);
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
+.bg-funrun h1 {
+    margin-top: 0%;
+}
+
 #date-funrun {
-    margin-left: 20vh;
+    margin-top: -5;
+    margin-left: 45vh;
+    width: 20%;
     border-radius: 20px;
     background-color: #FDCD22;
     border: none;
+    -webkit-border-radius: ;
+    -moz-border-radius: ;
+    -ms-border-radius: ;
+    -o-border-radius: ;
 }
-
-
-/* .bg-carousel-funrun {
-    background-color: rgba(0, 0, 0, 0.4);
-    background-position: center;
-    position: relative;
-    width: 80%;
-    margin-left: 17vh;
-    margin-top: 2vh;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-} */
 
 #box-fun {
     align-items: center;
@@ -41,7 +35,7 @@
     width: 60%;
     height: 250px;
     background-color: #000;
-    margin-top: 10%;
+    margin-top: 1%;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -50,8 +44,8 @@
 }
 
 #swiper-container-run {
-    max-width: 55%;
-    margin-top: 13%;
+    max-width: 58%;
+    margin-top: 4%;
 }
 
 #swiper-slide-run {
@@ -80,7 +74,7 @@
 } */
 
 #funrun-p {
-    margin-top: 26%;
+    margin-top: 6%;
     padding-left: 30vh;
     padding-right: 30vh;
     font-family: Nunito;
@@ -197,6 +191,6 @@
         margin-top: 13%;
     }
     #btn-read-more {
-        margin-top: -50% !important;
+        margin-top: -30% !important;
     }
 }

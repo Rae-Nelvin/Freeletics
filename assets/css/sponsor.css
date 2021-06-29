@@ -33,13 +33,30 @@
 }
 
 #swiper-slide-sponsor {
-    max-width: 325px;
+    max-width: 100%;
 }
 
 #btn-sponsor {
     color: #FDCD22;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 
 /* slider */
+
+@media all and (max-width: 768px) {
+    #btn-sponsor {
+        color: #FDCD22;
+        margin-top: 7% !important;
+    }
+    /* #swiper-slide-sponsor {
+        max-width: 500px;
+        align-items: center;
+    }
+    #swiper-slide-sponsor img {
+        max-width: 500px;
+    } */
+    #swiper-container-sponsor {
+        max-width: 84%;
+    }
+}

@@ -3,8 +3,10 @@
      <div class="col-md-7 p-lg-4 mx-auto my-5">
          <h1 class="about-h1 display-4 font-weight-normal">FUN RUN</h1>
      </div>
-     <div class="col-xl-3">
+     <div class="d-flex justify-content-start">
          <input type="date" class="form-control" name="birthday" id="date-funrun">
+     </div>
+     <div class="col">
      </div>
      <!-- Swipper  -->
      <div class="d-flex justify-content-center">
