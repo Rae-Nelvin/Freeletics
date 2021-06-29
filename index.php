@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/about.css">
-    <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/maskworkout.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/maskworkout.css"> -->
     <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/testimonal.css">
     <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/sponsor.css">
+    <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/funrun-2.css">
+    <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/mask-2.css">
     <title>Freeletics</title>
 </head>
 
@@ -89,7 +91,7 @@
     <!-- End of About -->
 
     <!-- mask workout -->
-    <section class="mask">
+    <!-- <section class="mask">
         <div class="bg-mask">
             <img src="../Freeletics/assets/images/maskworkout.png" class="img-fluid" alt="img-responsive">
         </div>
@@ -116,30 +118,74 @@
             </div>
         </div>
         <input type="date" class="form-control" name="birthday" id="date-mask">
-        <!-- Swiper -->
-        <div class="swiper-container mySwiper" id="mask">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" id="swiper-mask">
-                    <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid" alt="image-responsive">
-                </div>
-                <div class="swiper-slide" id="swiper-mask">
-                    <img src="../Freeletics/assets/images/author1.jpg" class="img-fluid" alt="image-responsive">
-                </div>
-                <div class="swiper-slide" id="swiper-mask">
-                    <img src="../Freeletics/assets/images/jungkook.jpg" class="img-fluid" alt="image-responsive">
-                </div>
+       
+
+    <div class="swiper-container mySwiper" id="mask">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="swiper-mask">
+                <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid" alt="image-responsive">
             </div>
-            <div class="swiper-button-next" id="btn-mask"></div>
-            <div class="swiper-button-prev" id="btn-mask"></div>
-            <div class="swiper-pagination" id="btn-mask"></div>
+            <div class="swiper-slide" id="swiper-mask">
+                <img src="../Freeletics/assets/images/author1.jpg" class="img-fluid" alt="image-responsive">
+            </div>
+            <div class="swiper-slide" id="swiper-mask">
+                <img src="../Freeletics/assets/images/jungkook.jpg" class="img-fluid" alt="image-responsive">
+            </div>
         </div>
-        <div class="d-flex justify-content-start">
-        </div>
-    </section>
+        <div class="swiper-button-next" id="btn-mask"></div>
+        <div class="swiper-button-prev" id="btn-mask"></div>
+        <div class="swiper-pagination" id="btn-mask"></div>
+    </div>
+    <div class="d-flex justify-content-start">
+    </div>
+    </section> -->
     <!-- mask workout -->
+    <div class="position-relative overflow-hidden p-3 p-md-3 bg-mass">
+        <div class="row align-items-start">
+            <div class="col-12 text-center">
+                <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
+            </div>
+        </div>
+        <div class="row" id="mass-date">
+            <div class="col-4">
+                <input type="date" class="form-control" name="birthday" id="date-mask">
+            </div>
+        </div>
+        <div class="row align-items-start" id="mass-swipper">
+            <div class="col-xl-4" id="img-swipper">
+                <!-- Swiper -->
+                <div class="swiper-container mySwiper" id="mask">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" id="swiper-mask">
+                            <img src="../Freeletics/assets/images/author2.jpg" class="img-fluid" alt="image-responsive">
+                        </div>
+                        <div class="swiper-slide" id="swiper-mask">
+                            <img src="../Freeletics/assets/images/author1.jpg" class="img-fluid" alt="image-responsive">
+                        </div>
+                        <div class="swiper-slide" id="swiper-mask">
+                            <img src="../Freeletics/assets/images/jungkook.jpg" class="img-fluid"
+                                alt="image-responsive">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next" id="btn-mask"></div>
+                    <div class="swiper-button-prev" id="btn-mask"></div>
+                </div>
+                <!-- End of Swiper -->
+            </div>
+            <div class="col-xl-1">
+            </div>
+            <div class="col-xl-6">
+                <p class="lead font-weight-normal text mass-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
+                    magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class="moreText">Lorem ipsum,
+                        dolor sit amet consectetur adipisicing elit.</span>
+                </p><button class="btn btn-outline-warning read-more-btn mass-p">Read More</button>
+            </div>
+        </div>
+    </div>
 
     <!-- fun run -->
-    <?php include('fun-run.php')?>
+    <?php include('funrun-2.php')?>
     <!-- fun run -->
 
     <!-- 12 weeks -->
@@ -248,20 +294,9 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../Freeletics/assets/js/funrun.js"></script>
     <script src="../Freeletics/assets/js/sponsor.js"></script>
+    <script src="../Freeletics/assets/js/mask.js"></script>
 
     <!-- Initialize Swiper -->
-    <script>
-    var swiper = new Swiper(".mySwiper", {
-        effect: "flip",
-        grabCursor: true,
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

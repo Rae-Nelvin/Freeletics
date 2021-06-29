@@ -1,0 +1,202 @@
+.bg-funrun {
+    min-height: 100vh !important;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/funrun.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#date-funrun {
+    margin-left: 20vh;
+    border-radius: 20px;
+    background-color: #FDCD22;
+    border: none;
+}
+
+
+/* .bg-carousel-funrun {
+    background-color: rgba(0, 0, 0, 0.4);
+    background-position: center;
+    position: relative;
+    width: 80%;
+    margin-left: 17vh;
+    margin-top: 2vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+} */
+
+#box-fun {
+    align-items: center;
+    content: '';
+    z-index: 1;
+    position: absolute;
+    display: block;
+    opacity: 40%;
+    width: 60%;
+    height: 250px;
+    background-color: #000;
+    margin-top: 10%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#swiper-container-run {
+    max-width: 55%;
+    margin-top: 13%;
+}
+
+#swiper-slide-run {
+    max-width: 250px;
+    max-height: 170px;
+}
+
+#swiper-slide-run img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+
+/* .btn-funrun {
+    margin-top: 2%;
+    margin-left: 4vh;
+    margin-right: 13vh;
+    color: #FDCD22 !important;
+} */
+
+#funrun-p {
+    margin-top: 26%;
+    padding-left: 30vh;
+    padding-right: 30vh;
+    font-family: Nunito;
+    color: white;
+    margin-bottom: 40%;
+    text-align: justify;
+}
+
+
+/* Tablet Mode */
+
+@media all and (min-width: 768px) and (max-width: 1366px) {
+    #date-funrun {
+        display: none;
+    }
+    .bg-carousel-funrun {
+        background-color: rgba(0, 0, 0, 0.4);
+        background-position: center;
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2vh;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+    }
+    .row-funrun {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .btn-funrun {
+        margin-top: 2%;
+        margin-left: -5%;
+        margin-right: -5%;
+        color: #FDCD22;
+    }
+    #funrun-p {
+        margin-top: 8%;
+        padding-left: 0vh;
+        padding-right: 0vh;
+        font-family: Nunito;
+        font-size: 30px;
+        color: white;
+        margin-bottom: 40%;
+        text-align: justify;
+        margin-left: 4vh;
+        margin-right: 6vh;
+    }
+}
+
+
+/* Phone Mode */
+
+@media all and (max-width: 768px) {
+    #box-fun {
+        display: none;
+    }
+    #date-funrun {
+        display: none;
+    }
+    .bg-carousel-funrun {
+        background-color: rgba(0, 0, 0, 0.4);
+        background-position: center;
+        position: relative;
+        width: 100%;
+        height: 30vh;
+        margin-left: 0;
+        margin-top: 2vh;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+    }
+    .row-funrun {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .btn-funrun {
+        display: none;
+    }
+    #funrun-p {
+        margin-top: 8%;
+        padding-left: 0vh;
+        padding-right: 0vh;
+        font-family: Nunito;
+        font-size: 17px;
+        color: white;
+        margin-bottom: 40%;
+        text-align: justify;
+        margin-left: 4vh;
+        margin-right: 6vh;
+    }
+    .phone-funrun {
+        margin-bottom: 20%;
+    }
+    #swiper-slide-run img {
+        display: block;
+        width: 500px !important;
+        height: 270px !important;
+    }
+    #swiper-slide-run {
+        max-width: 500px;
+        max-height: 270px;
+    }
+    #swiper-container-run {
+        max-width: 80%;
+        margin-top: 13%;
+    }
+    #btn-read-more {
+        margin-top: -50% !important;
+    }
+}

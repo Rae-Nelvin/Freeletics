@@ -52,22 +52,22 @@
                 <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperrr"
                     id="swiper-container-week">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-active" id="swiper-slide">
+                        <div class="swiper-slide swiper-slide-active" id="swiper-slide-week">
                             <img src="../Freeletics/assets/images/week1.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-week">
                             <img src="../Freeletics/assets/images/week2.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-week">
                             <img src="../Freeletics/assets/images/week3.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-week">
                             <img src="../Freeletics/assets/images/week1.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-week">
                             <img src="../Freeletics/assets/images/week2.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-week">
                             <img src="../Freeletics/assets/images/week3.png" class="img-fluid">
                         </div>
                     </div>

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -23,7 +25,6 @@
     <!-- fun run -->
     <section class="run">
         <div class="bg-run">
-            <img src="../Freeletics/assets/images/funrun.png" class="img-fluid" alt='image-responsive'>
         </div>
         <div class="container">
             <div class="row">
@@ -40,28 +41,27 @@
                 </div>
                 <div class="swiper-container mySwiperr" id="swiper-container-run">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-run">
                             <img src="../Freeletics/assets/images/run1.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-run">
                             <img src="../Freeletics/assets/images/run2.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-run">
                             <img src="../Freeletics/assets/images/run3.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-run">
                             <img src="../Freeletics/assets/images/run1.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-run">
                             <img src="../Freeletics/assets/images/run2.png" class="img-fluid">
                         </div>
-                        <div class="swiper-slide" id="swiper-slide">
+                        <div class="swiper-slide" id="swiper-slide-run">
                             <img src="../Freeletics/assets/images/run3.png" class="img-fluid">
                         </div>
                     </div>
-                    <div class="swiper-button-next" id="btn-fun"></div>
-                    <div class="swiper-button-prev" id="btn-fun"></div>
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-button-next" id="btn-fun"></div>
+                    <div class="swiper-button-prev" id="btn-fun"></div> -->
                     <div class="caption-funrun" id="caption-funrun">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima id officia cum
                             doloremque ad
@@ -73,6 +73,8 @@
                             ex dicta quaerat ipsa dolorum a facilis, iusto voluptatibus vero. Incidunt ea fugit
                             mollitia dolore cupiditate sequi maxime?</p>
                     </div>
+                    <div class="swiper-button-next" id="btn-fun"></div>
+                    <div class="swiper-button-prev" id="btn-fun"></div>
                 </div>
             </div>
         </div>
