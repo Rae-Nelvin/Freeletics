@@ -38,7 +38,6 @@
                         <button class="btn btn-outline-warning read-more-btn">Read More</button>
                     </p>
                 </div>
-
                 <div class="d-flex justify-content-center">
                     <div class="box-lg" id="box-week"></div>
                 </div>
