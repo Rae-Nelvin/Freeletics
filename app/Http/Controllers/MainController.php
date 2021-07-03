@@ -45,4 +45,40 @@ class MainController extends Controller
     function dashboard(){
         return view('admin.dashboard');
     }
+
+    function author(){
+        return view('admin.author');
+    }
+
+    function massworkout(){
+        return view('admin.massworkout');
+    }
+
+    function funrun(){
+        return view('admin.funrun');
+    }
+
+    function weeks12(){
+        return view('admin.weeks12');
+    }
+
+    function event(){
+        return view('admin.event');
+    }
+
+    function blog(){
+        return view('admin.blog');
+    }
+
+    function testimonial(){
+        return view('admin.testimonial');
+    }
+
+    function sponsor(){
+        return view('admin.sponsor');
+    }
+
+    function calender(){
+        return view('admin.calender');
+    }
 }
