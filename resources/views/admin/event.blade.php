@@ -25,6 +25,11 @@
   <link rel="stylesheet" href="{{ asset ('plugins/daterangepicker/daterangepicker.css') }}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css') }}">
+  <!-- CSS.gg Icon -->
+  <link href='https://css.gg/pen.css' rel='stylesheet'>
+  <link href='https://css.gg/close-o.css' rel='stylesheet'>
+  <!-- Table CSS -->
+  <link href="{{ asset ('table-css.css') }}" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -200,56 +205,67 @@
               <li class="breadcrumb-item active">Event</li>
             </ol>
           </div><!-- /.col -->
+          <!-- Add New Button -->
+          <div class="col-sm-10">
+          </div>
+          <div class="col-sm-2"><a href="#"><button type="button" class="btn btn-primary addnew-btn">Add New</button></a></div>
+          <!-- End of Button -->
           <!-- Table -->
           <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th style="width: 10px">#</th>
-                      <th>Task</th>
-                      <th>Progress</th>
-                      <th style="width: 40px">Label</th>
+                      <th style="width: 1%">#</th>
+                      <th style="width: 10%">Title</th>
+                      <th style="width: 20%">Sub Title</th>
+                      <th style="width: 30%">Image</th>
+                      <th style="width: 29%">last Update</th>
+                      <th style="width: 10%;">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1.</td>
-                      <td>Update software</td>
+                      <td>Lorem, ipsum.</td>
                       <td>
-                        <div class="progress progress-xs">
-                          <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                        </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae laudantium asperiores et sint aliquid.
                       </td>
-                      <td><span class="badge bg-danger">55%</span></td>
+                      <td><img src="{{ asset('images/12weeks.png')}}" alt="picture-1" style="width: 50%"></td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
+                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
                     </tr>
                     <tr>
                       <td>2.</td>
-                      <td>Clean database</td>
+                      <td>Lorem, ipsum.</td>
                       <td>
-                        <div class="progress progress-xs">
-                          <div class="progress-bar bg-warning" style="width: 70%"></div>
-                        </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, nam illum assumenda natus rem harum.
                       </td>
-                      <td><span class="badge bg-warning">70%</span></td>
+                      <td><img src="{{ asset('images/about.png')}}" alt="picture-2" style="width: 50%"></td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
+                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
                     </tr>
                     <tr>
                       <td>3.</td>
-                      <td>Cron job running</td>
+                      <td>Lorem, ipsum.</td>
                       <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar bg-primary" style="width: 30%"></div>
-                        </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minus beatae molestias expedita? Maxime, culpa.
                       </td>
-                      <td><span class="badge bg-primary">30%</span></td>
+                      <td><img src="{{ asset('images/author1.jpg')}}" alt="picture-3" style="width: 50%"></td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
+                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
                     </tr>
                     <tr>
                       <td>4.</td>
-                      <td>Fix and squish bugs</td>
+                      <td>Lorem, ipsum.</td>
                       <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar bg-success" style="width: 90%"></div>
-                        </div>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta est, voluptatem explicabo temporibus esse modi.
                       </td>
-                      <td><span class="badge bg-success">90%</span></td>
+                      <td><img src="{{ asset('images/author2.jpg')}}" alt="picture-4" style="width: 50%"></td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
+                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
                     </tr>
                   </tbody>
                 </table>
