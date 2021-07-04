@@ -26,8 +26,8 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css') }}">
   <!-- CSS.gg Icon -->
-  <link href='https://css.gg/pen.css' rel='stylesheet'>
-  <link href='https://css.gg/close-o.css' rel='stylesheet'>
+  <link href="{{ asset('btn-css.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Table CSS -->
   <link href="{{ asset ('table-css.css') }}" rel="stylesheet">
 </head>
@@ -47,10 +47,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="{{ route('admin.dashboard') }}"><h2 id="nav-title">FREELETICS SURABAYA</h2></a>
       </li>
     </ul>
 
@@ -68,8 +65,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ route('admin.dashboard') }}" class="brand-link">
-      <img src="{{ asset('images/logo.png') }}" alt="Freeletics Logo" class="brand-image elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Freeletics Surabaya</span>
+      <img src="{{ asset('images/logo.png') }}" alt="Freeletics Logo" class="brand-image elevation-5" style="opacity: .8">
+      <br>
     </a>
 
     <!-- Sidebar -->
@@ -80,7 +77,7 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin 1</a>
+          <a href="#" class="d-block">Leonardo Wijaya</a>
         </div>
       </div>
 
@@ -101,7 +98,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
+          <li class="nav-item">
             <a href="{{ route('admin.dashboard') }}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -110,12 +107,11 @@
             </a>
             </li>
         <li class="nav-header">OBJECTS</li>
-          <li class="nav-item">
+          <li class="nav-item menu-open">
             <a href="{{ route('admin.author') }}" class="nav-link active">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Author
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -164,7 +160,6 @@
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Testimonial
-                <span class="badge badge-info right">2</span>
               </p>
             </a>
           </li>
@@ -209,7 +204,7 @@
           <!-- Add New Button -->
           <div class="col-sm-10">
           </div>
-          <div class="col-sm-2"><a href="#"><button type="button" class="btn btn-primary addnew-btn">Add New</button></a></div>
+          <div class="col-sm-2"><a class="button primary new addnew-btn">Add New</a></div>
           <!-- End of Button -->
           <!-- Table -->
           <table class="table table-bordered">
@@ -219,7 +214,7 @@
                       <th style="width: 10%">Title</th>
                       <th style="width: 20%">Sub Title</th>
                       <th style="width: 30%">Image</th>
-                      <th style="width: 29%">last Update</th>
+                      <th style="width: 29%">Last Update</th>
                       <th style="width: 10%;">Actions</th>
                     </tr>
                   </thead>
@@ -232,8 +227,8 @@
                       </td>
                       <td><img src="{{ asset('images/12weeks.png')}}" alt="picture-1" style="width: 50%"></td>
                       <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
+                      <td><a class="button touch edit" href="#"></a>
+                      <a class="button touch delete" href="#"></a></td>
                     </tr>
                     <tr>
                       <td>2.</td>
@@ -243,8 +238,8 @@
                       </td>
                       <td><img src="{{ asset('images/about.png')}}" alt="picture-2" style="width: 50%"></td>
                       <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
+                      <td><a class="button touch edit" href="#"></a>
+                      <a class="button touch delete" href="#"></a></td>
                     </tr>
                     <tr>
                       <td>3.</td>
@@ -254,8 +249,8 @@
                       </td>
                       <td><img src="{{ asset('images/author1.jpg')}}" alt="picture-3" style="width: 50%"></td>
                       <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
+                      <td><a class="button touch edit" href="#"></a>
+                      <a class="button touch delete" href="#"></a></td>
                     </tr>
                     <tr>
                       <td>4.</td>
@@ -265,8 +260,8 @@
                       </td>
                       <td><img src="{{ asset('images/author2.jpg')}}" alt="picture-4" style="width: 50%"></td>
                       <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
+                      <td><a class="button touch edit" href="#"></a>
+                      <a class="button touch delete" href="#"></a></td>
                     </tr>
                   </tbody>
                 </table>
