@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\PhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,4 +38,6 @@ Route::group(['middleware'=>['AuthCheck']], function(){
     Route::get('/admin/testimonial',[MainController::class, 'testimonial'])->name('admin.testimonial');
     Route::get('/admin/sponsor',[MainController::class, 'sponsor'])->name('admin.sponsor');
     Route::get('/admin/calender',[MainController::class, 'calender'])->name('admin.calender');
+    Route::get('/admin/upload_photos',[PhotoController::class, 'upload_photos'])->name('admin.upload_photos');
+    Route::post('/admin/upload', [PhotoController::class, 'upload'])->name('admin.upload');
 });

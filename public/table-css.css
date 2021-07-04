@@ -17,3 +17,14 @@
     margin-bottom: 1vh;
     text-align: center;
 }
+
+.logout-btn{
+    padding-right: 65px;
+    background: #fdcd22;
+    text-align: center;
+    border: none;
+}
+
+.h1-title {
+    font-weight: bold;
+}

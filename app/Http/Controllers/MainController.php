@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Photos;
+use App\Models\Calender;
 use Illuminate\Support\Facades\Hash;
 
 class MainController extends Controller
@@ -47,7 +49,10 @@ class MainController extends Controller
     }
 
     function author(){
-        return view('admin.author');
+        $user = User::get();
+        $photo = Photos::get();
+        $calender = Photos::get();
+        return view('admin.author', ['user'=>$user,'photo'=>$photo,'calender'=>$calender]);
     }
 
     function massworkout(){
