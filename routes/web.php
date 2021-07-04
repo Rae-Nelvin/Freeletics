@@ -14,8 +14,11 @@ use App\Http\Controllers\MainController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::post('/auth/check',[MainController::class, 'check'])->name('auth.check');

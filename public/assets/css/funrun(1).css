@@ -1,0 +1,109 @@
+.bg-run {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/funrun.png);
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* .bg-run::after {
+    z-index: 1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 66.5em;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background-color: black;
+    opacity: 70%;
+    position: absolute;
+    margin-top: -70%;
+    bottom: 1;
+} */
+
+.judul-funrun {
+    margin-top: -60%;
+    z-index: 1;
+    position: absolute;
+    color: #FDCD22;
+    font-family: Nunito;
+    font-weight: bold;
+}
+
+#swiper-container-run {
+    max-width: 60%;
+    margin-top: -54%;
+}
+
+#swiper-slide-run {
+    max-width: 250px;
+    max-height: 170px;
+}
+
+#swiper-slide-run img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#btn-fun {
+    color: #FDCD22;
+    margin-top: -37%;
+    max-width: 100px;
+}
+
+
+/* .swiper-pagination {
+    margin-top: -30% !important;
+} */
+
+#box-fun {
+    align-items: center;
+    content: '';
+    z-index: 1;
+    position: absolute;
+    display: block;
+    opacity: 40%;
+    width: 60%;
+    height: 250px;
+    background-color: #000;
+    margin-top: -50%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#caption-funrun p {
+    color: #fff;
+    position: absolute;
+    margin-top: -55%;
+    z-index: 1;
+    align-items: center;
+    max-width: 100%;
+}
+
+#date-fun {
+    background-color: #FDCD22 !important;
+    text-align: center;
+    border: none !important;
+    position: absolute;
+    z-index: 1;
+    margin-top: -53%;
+    max-width: 20%;
+    border-radius: 20px !important;
+    margin-left: 14%;
+    align-items: flex-start !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+}

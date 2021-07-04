@@ -17,14 +17,14 @@ class AdminSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name'=> 'Leonardo Wijaya',
-            'email'=> 'leonardo.wijaya003@binus.ac.id',
+            'email'=> 'leonardo.wijaya@binus.ac.id',
             'password' => Hash::make('admin001'),
             'role' => 'Super Admin'
         ]);
 
         DB::table('users')->insert([
             'name'=> 'Wahyu Junior',
-            'email'=> 'wahyu@binus.ac.id',
+            'email'=> 'wahyuhjr@binus.ac.id',
             'password' => Hash::make('admin002'),
             'role' => 'Super Admin'
         ]);
