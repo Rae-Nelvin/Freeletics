@@ -201,40 +201,24 @@
               <br>
             </ol>
           </div><!-- /.col -->
-          <!-- Add New Button -->
-          <div class="col-sm-10">
+          <div class="card-body">
+            <form action="{{ route('admin.upload') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="text" name="title" placeholder="Input Image's Title here"/><br><br>
+                <input type="text" name="subtitle" placeholder="Input Image's Subtitle here"/><br><br>
+                <select name="event" id="event">
+                    <option value="Author">Author</option>
+                    <option value="Massworkout">Mass Workout</option>
+                    <option value="Funrun">Fun Run</option>
+                    <option value="Weeks12">12 Weeks</option>
+                    <option value="Event">Event</option>
+                    <option value="Blog">Blog</option>
+                    <option value="Testimonial">Testimonial</option>
+                </select><br><br>
+                <input type="file" name="file_path"/><br><br>
+                <input type="submit" value="Submit"/>
+            </form>
           </div>
-          <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos') }}">Add New</a></div>
-          <!-- End of Button -->
-          <!-- Table -->
-          <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Title</th>
-                      <th style="width: 20%; text-align: center; font-size: 20px">Sub Title</th>
-                      <th style="width: 30%; text-align: center; font-size: 20px">Image</th>
-                      <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  @foreach ($photo as $photos)
-                    <tr>
-                      <td>{{ $photos['id'] }}</td>
-                      <td>{{ $photos['title'] }}</td>
-                      <td>
-                        {{ $photos['subtitle'] }}
-                      </td>
-                      <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
-                      <td>{{ $photos['updated_at'] }}</td>
-                      <td><a class="button touch edit" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
-                      <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
-                    </tr>
-                  @endforeach
-                  </tbody>
-                </table>
-                <!-- End of Table -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>

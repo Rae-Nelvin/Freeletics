@@ -192,21 +192,16 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title">Author</h1>
+            <h1 class="m-0 h1-title">Edit Photo</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-              <li class="breadcrumb-item active">Author</li>
+              <li class="breadcrumb-item active">Edit Photo</li>
               <br>
             </ol>
           </div><!-- /.col -->
-          <!-- Add New Button -->
-          <div class="col-sm-10">
-          </div>
-          <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos') }}">Add New</a></div>
-          <!-- End of Button -->
-          <!-- Table -->
+          <!-- Image Table -->
           <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -215,7 +210,6 @@
                       <th style="width: 20%; text-align: center; font-size: 20px">Sub Title</th>
                       <th style="width: 30%; text-align: center; font-size: 20px">Image</th>
                       <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -228,13 +222,24 @@
                       </td>
                       <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
                       <td>{{ $photos['updated_at'] }}</td>
-                      <td><a class="button touch edit" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
-                      <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
                     </tr>
                   @endforeach
                   </tbody>
                 </table>
-                <!-- End of Table -->
+          <!-- End of Image Table -->
+          <!-- Form -->
+          <div class="card-body">
+            <form action="{{ route('admin.edit') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="id" value="{{ $photos['id'] }}">
+                <input type="text" name="title" placeholder="Input New Image's Title here"/><br><br>
+                <input type="text" name="subtitle" placeholder="Input New Image's Subtitle here"/><br><br>
+                <input type="hidden" name="event" value="{{ $photos['event'] }}">Event : {{ $photos['event'] }} <br><br>
+                <input type="file" name="file_path"/><br><br>
+                <input type="submit" value="Save"/>
+            </form>
+          </div>
+          <!-- End of Form -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>

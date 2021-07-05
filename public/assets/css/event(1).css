@@ -1,0 +1,39 @@
+.judul-event {
+    color: #FDCD22;
+    font-weight: bold;
+    font-family: Nunito;
+    margin-top: 10% !important;
+}
+
+.event {
+    background-color: #000;
+    width: 100%;
+    min-height: 150vh;
+    margin-bottom: 0%;
+}
+
+.event-img {
+    margin-top: 35%;
+}
+
+.event-img p {
+    text-align: center;
+    color: #FFF;
+    margin-top: 15px;
+}
+
+.btn-warning {
+    font-weight: bold !important;
+    width: 40%;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+}
+
+@media all and (max-width: 768px) {
+    .event-img {
+        margin-top: 10%;
+    }
+}
