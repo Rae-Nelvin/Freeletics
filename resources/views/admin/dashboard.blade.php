@@ -75,7 +75,9 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin 1</a>
+        @foreach ($admin as $admin)
+          <a href="#" class="d-block">{{ $admin->name }}</a>
+          @endforeach
         </div>
       </div>
 

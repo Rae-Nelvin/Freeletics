@@ -16,15 +16,18 @@
     margin-top: 3vh;
     margin-bottom: 1vh;
     text-align: center;
+    background-color: #edc124;
 }
 
 .logout-btn{
     padding-right: 65px;
-    background: #fdcd22;
+    background: #edc124;
     text-align: center;
     border: none;
 }
 
 .h1-title {
     font-weight: bold;
+    color: #edc124;
+    padding-left: 50px;
 }

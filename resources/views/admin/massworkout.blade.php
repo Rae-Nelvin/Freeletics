@@ -26,12 +26,12 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css') }}">
   <!-- CSS.gg Icon -->
-  <link href='https://css.gg/pen.css' rel='stylesheet'>
-  <link href='https://css.gg/close-o.css' rel='stylesheet'>
+  <link href="{{ asset('btn-css.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Table CSS -->
   <link href="{{ asset ('table-css.css') }}" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed dark-mode">
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -40,17 +40,14 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="{{ route('admin.dashboard') }}"><h2 id="nav-title">FREELETICS SURABAYA</h2></a>
       </li>
     </ul>
 
@@ -58,7 +55,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
       <li class="nav-item">
-        <a href="{{ route('auth.logout') }}"><button>Logout
+        <a href="{{ route('auth.logout') }}"><button class="logout-btn button touch">Logout
         </button></a>
       </li>
   </nav>
@@ -68,8 +65,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ route('admin.dashboard') }}" class="brand-link">
-      <img src="{{ asset('images/logo.png') }}" alt="Freeletics Logo" class="brand-image elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Freeletics Surabaya</span>
+      <img src="{{ asset('images/logo.png') }}" alt="Freeletics Logo" class="brand-image elevation-5" style="opacity: .8">
+      <br>
     </a>
 
     <!-- Sidebar -->
@@ -80,7 +77,9 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin 1</a>
+        @foreach ($admin as $admin)
+          <a href="#" class="d-block">{{ $admin->name }}</a>
+          @endforeach
         </div>
       </div>
 
@@ -101,7 +100,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
+          <li class="nav-item">
             <a href="{{ route('admin.dashboard') }}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -110,12 +109,11 @@
             </a>
             </li>
         <li class="nav-header">OBJECTS</li>
-          <li class="nav-item">
+          <li class="nav-item menu-open">
             <a href="{{ route('admin.author') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Author
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -164,7 +162,6 @@
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Testimonial
-                <span class="badge badge-info right">2</span>
               </p>
             </a>
           </li>
@@ -197,76 +194,46 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Mass Workout</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;">Mass Workout</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Mass Workout</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Mass Workout</li>
+              <br>
             </ol>
           </div><!-- /.col -->
           <!-- Add New Button -->
           <div class="col-sm-10">
           </div>
-          <div class="col-sm-2"><a href="#"><button type="button" class="btn btn-primary addnew-btn">Add New</button></a></div>
+          <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos') }}">Add New</a></div>
           <!-- End of Button -->
           <!-- Table -->
           <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th style="width: 1%">#</th>
-                      <th style="width: 10%">Title</th>
-                      <th style="width: 20%">Sub Title</th>
-                      <th style="width: 30%">Image</th>
-                      <th style="width: 29%">last Update</th>
-                      <th style="width: 10%;">Actions</th>
+                      <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Title</th>
+                      <th style="width: 20%; text-align: center; font-size: 20px">Sub Title</th>
+                      <th style="width: 30%; text-align: center; font-size: 20px">Image</th>
+                      <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
+                  @foreach ($photo as $photos)
                     <tr>
-                      <td>1.</td>
-                      <td>Lorem, ipsum.</td>
+                      <td>{{ $photos['id'] }}</td>
+                      <td>{{ $photos['title'] }}</td>
                       <td>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae laudantium asperiores et sint aliquid.
+                        {{ $photos['subtitle'] }}
                       </td>
-                      <td><img src="{{ asset('images/12weeks.png')}}" alt="picture-1" style="width: 50%"></td>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
+                      <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
+                      <td>{{ $photos['updated_at'] }}</td>
+                      <td><a class="button touch edit" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
+                      <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
                     </tr>
-                    <tr>
-                      <td>2.</td>
-                      <td>Lorem, ipsum.</td>
-                      <td>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, nam illum assumenda natus rem harum.
-                      </td>
-                      <td><img src="{{ asset('images/about.png')}}" alt="picture-2" style="width: 50%"></td>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
-                    </tr>
-                    <tr>
-                      <td>3.</td>
-                      <td>Lorem, ipsum.</td>
-                      <td>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minus beatae molestias expedita? Maxime, culpa.
-                      </td>
-                      <td><img src="{{ asset('images/author1.jpg')}}" alt="picture-3" style="width: 50%"></td>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
-                    </tr>
-                    <tr>
-                      <td>4.</td>
-                      <td>Lorem, ipsum.</td>
-                      <td>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta est, voluptatem explicabo temporibus esse modi.
-                      </td>
-                      <td><img src="{{ asset('images/author2.jpg')}}" alt="picture-4" style="width: 50%"></td>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
-                    </tr>
+                  @endforeach
                   </tbody>
                 </table>
                 <!-- End of Table -->

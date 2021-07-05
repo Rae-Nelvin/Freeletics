@@ -31,7 +31,7 @@
   <!-- Table CSS -->
   <link href="{{ asset ('table-css.css') }}" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed dark-mode">
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -40,7 +40,7 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -77,7 +77,9 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Leonardo Wijaya</a>
+        @foreach ($admin as $admin)
+          <a href="#" class="d-block">{{ $admin->name }}</a>
+          @endforeach
         </div>
       </div>
 
@@ -192,15 +194,16 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title">Author</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;">Author</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-              <li class="breadcrumb-item active">Author</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Author</li>
               <br>
             </ol>
           </div><!-- /.col -->
+          
           <!-- Add New Button -->
           <div class="col-sm-10">
           </div>

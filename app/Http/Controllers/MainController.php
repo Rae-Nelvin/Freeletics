@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Photos;
 use App\Models\Calender;
 use Illuminate\Support\Facades\Hash;
+use Session;
+
 
 class MainController extends Controller
 {
@@ -29,6 +31,7 @@ class MainController extends Controller
         else{
             if(Hash::check($request->password, $userInfo->password)){
                 $request->session()->put('LoggedUser', $userInfo->id);
+                
                 return redirect('admin/dashboard/');
             }
             else{
@@ -45,45 +48,88 @@ class MainController extends Controller
     }
 
     function dashboard(){
-        return view('admin.dashboard');
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.dashboard', ['admin' => $admin]);
     }
 
     function author(){
-        $user = User::get();
         $photo = Photos::get();
-        $calender = Photos::get();
-        return view('admin.author', ['user'=>$user,'photo'=>$photo,'calender'=>$calender]);
+        $calender = Calender::get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.author', ['admin'=>$admin,'photo'=>$photo,'calender'=>$calender]);
     }
 
     function massworkout(){
-        return view('admin.massworkout');
+        $user = User::get();
+        $photo = Photos::get();
+        $calender = Calender::get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.massworkout', ['admin'=>$admin,'photo'=>$photo,'calender'=>$calender]);
     }
 
     function funrun(){
-        return view('admin.funrun');
+        $user = User::get();
+        $photo = Photos::get();
+        $calender = Calender::get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.funrun', ['admin'=>$admin,'photo'=>$photo,'calender'=>$calender]);
     }
 
     function weeks12(){
-        return view('admin.weeks12');
+        $user = User::get();
+        $photo = Photos::get();
+        $calender = Calender::get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.weeks12', ['admin'=>$admin,'photo'=>$photo,'calender'=>$calender]);
     }
 
     function event(){
-        return view('admin.event');
+        $user = User::get();
+        $photo = Photos::get();
+        $calender = Calender::get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.event', ['admin'=>$admin,'photo'=>$photo,'calender'=>$calender]);
     }
 
     function blog(){
-        return view('admin.blog');
+        $user = User::get();
+        $photo = Photos::get();
+        $calender = Calender::get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.blog', ['admin'=>$admin,'photo'=>$photo,'calender'=>$calender]);
     }
 
     function testimonial(){
-        return view('admin.testimonial');
+        $user = User::get();
+        $photo = Photos::get();
+        $calender = Calender::get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.testimonial', ['admin'=>$admin,'photo'=>$photo,'calender'=>$calender]);
     }
 
     function sponsor(){
-        return view('admin.sponsor');
+        $user = User::get();
+        $photo = Photos::get();
+        $calender = Calender::get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.sponsor', ['admin'=>$admin,'photo'=>$photo,'calender'=>$calender]);
     }
 
     function calender(){
-        return view('admin.calender');
+        $user = User::get();
+        $photo = Photos::get();
+        $calender = Calender::get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id', $id)->get(['name']);
+        return view('admin.calender', ['admin'=>$admin,'photo'=>$photo,'calender'=>$calender]);
     }
 }
