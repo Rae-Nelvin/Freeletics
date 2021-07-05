@@ -17,15 +17,8 @@
 
 .mass-p {
     font-family: Nunito;
-    font-size: 40px;
     color: white;
-    margin-bottom: 40%;
-}
-
-#mass-date {
-    margin-top: 6%;
-    margin-bottom: 3%;
-    margin-left: 5%;
+    margin-top: 20%;
 }
 
 #mass-swipper {
@@ -33,7 +26,7 @@
 }
 
 #img-swipper {
-    margin-top: 14px;
+    margin-top: 10%;
 }
 
 .img-fluid {
@@ -44,23 +37,33 @@
     -o-border-radius: 5% !important;
 }
 
-.form-control {
-    font-size: 25px;
-    background-color: #FDCD22;
-    text-align: center;
-    border: none;
-    width: 100%;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+.moreText {
+    display: none;
+}
+
+button.read-more-btn {
+    display: none;
+}
+
+.about-p.show-more .moreText {
+    display: inline;
 }
 
 #date-mask {
-    background-color: #FDCD22;
-    border-radius: 20px;
-    border: none;
+    margin-top: 5%;
+    position: absolute;
+    background-color: #FDCD22 !important;
+    text-align: center;
+    border: none !important;
+    z-index: 1;
+    max-width: 25%;
+    border-radius: 20px !important;
+    margin-left: 8%;
+    align-items: flex-start !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
 }
 
 #btn-mask {
@@ -78,7 +81,6 @@
     }
     .mass-p {
         margin-top: 0;
-        font-size: 30px;
         text-align: justify;
     }
     #mass-date {
@@ -102,6 +104,18 @@
         margin-top: 5%;
         font-size: 17px;
         text-align: justify;
+    }
+    .moreText {
+        display: none;
+    }
+    button.read-more-btn {
+        display: inline-block;
+        margin-bottom: 10% !important;
+        /* margin-top: 60px !important; */
+        width: 80%;
+    }
+    .text.show-more .moreText {
+        display: inline;
     }
     #mass-date {
         display: none;

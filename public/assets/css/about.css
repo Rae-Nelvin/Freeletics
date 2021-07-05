@@ -112,7 +112,7 @@ button.read-more-btn {
         display: none;
     }
     button.read-more-btn {
-        margin-top: -60%;
+        margin-top: -50%;
         display: inline;
         margin-bottom: 10%;
     }
@@ -156,9 +156,10 @@ button.read-more-btn {
         display: none;
     }
     button.read-more-btn {
-        margin-top: -60%;
-        display: inline;
-        margin-bottom: 10%;
+        display: inline-block;
+        margin-bottom: 10% !important;
+        /* margin-top: 60px !important; */
+        width: 80%;
     }
     .text.show-more .moreText {
         display: inline;

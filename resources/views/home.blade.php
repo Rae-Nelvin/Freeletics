@@ -19,7 +19,9 @@
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/funrun-2.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/mask-2.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/12weeks.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/style.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/style.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/blog.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/event.css') }}">
     <title>Freeletics</title>
 </head>
 
@@ -126,14 +128,17 @@
                 </div>
                 <!-- End of Swiper -->
             </div>
-            <div class="col-xl-1">
-            </div>
-            <div class="col-xl-6">
+            <div class="col">
                 <p class="lead font-weight-normal text mass-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
-                    magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class="moreText">Lorem ipsum,
-                        dolor sit amet consectetur adipisicing elit.</span>
-                </p><button class="btn btn-outline-warning read-more-btn mass-p">Read More</button>
+                    magnam, itaque eum animi odit sit dolorum illo quam dignissimos! Lorem ipsum dolor sit amet Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit.
+                    inventore atque ea.<span class="moreText">accusamus itaque eum repudiandae distinctio reprehenderit
+                        fuga
+                        ducimus. Beatae accusamus quae veniam perferendis aliquam magni alias illum voluptatem
+                        laudantium!</span>
+                </p><button class="btn btn-outline-warning read-more-btn text-center" id="btn-read-more">Read
+                    More</button>
             </div>
         </div>
     </div>
@@ -437,19 +442,19 @@
                             <img src="{{ asset ('assets/images/s1.png')}}">
                         </div>
                         <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s1.png')}}">
+                            <img src="{{ asset ('assets/images/s2.png')}}">
+                        </div>
+                        <div class="swiper-slide" id="swiper-slide-sponsor">
+                            <img src="{{ asset ('assets/images/s3.png')}}">
                         </div>
                         <div class="swiper-slide" id="swiper-slide-sponsor">
                             <img src="{{ asset ('assets/images/s1.png')}}">
                         </div>
                         <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s1.png')}}">
+                            <img src="{{ asset ('assets/images/s2.png')}}">
                         </div>
                         <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s1.png')}}">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s1.png')}}">
+                            <img src="{{ asset ('assets/images/s3.png')}}">
                         </div>
                     </div>
                     <div class="swiper-button-next" id="btn-sponsor"></div>
@@ -489,7 +494,10 @@
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
     </script>
     <!--
-    -->
+    --
+>
+
 </body>
+
 
 </html
