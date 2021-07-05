@@ -107,8 +107,8 @@
             </a>
             </li>
         <li class="nav-header">OBJECTS</li>
-          <li class="nav-item menu-open">
-            <a href="{{ route('admin.author') }}" class="nav-link active">
+          <li class="nav-item">
+            <a href="{{ route('admin.author') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Author

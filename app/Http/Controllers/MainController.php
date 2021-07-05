@@ -54,7 +54,7 @@ class MainController extends Controller
     }
 
     function author(){
-        $photo = Photos::get();
+        $photo = Photos::where('event','author')->get();
         $calender = Calender::get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -63,7 +63,7 @@ class MainController extends Controller
 
     function massworkout(){
         $user = User::get();
-        $photo = Photos::get();
+        $photo = Photos::where('event','massworkout')->get();
         $calender = Calender::get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -72,7 +72,7 @@ class MainController extends Controller
 
     function funrun(){
         $user = User::get();
-        $photo = Photos::get();
+        $photo = Photos::where('event','funrun')->get();
         $calender = Calender::get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -81,7 +81,7 @@ class MainController extends Controller
 
     function weeks12(){
         $user = User::get();
-        $photo = Photos::get();
+        $photo = Photos::where('event','weeks12')->get();
         $calender = Calender::get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -90,7 +90,7 @@ class MainController extends Controller
 
     function event(){
         $user = User::get();
-        $photo = Photos::get();
+        $photo = Photos::where('event','event')->get();
         $calender = Calender::get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -99,7 +99,7 @@ class MainController extends Controller
 
     function blog(){
         $user = User::get();
-        $photo = Photos::get();
+        $photo = Photos::where('event','blog')->get();
         $calender = Calender::get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -108,7 +108,7 @@ class MainController extends Controller
 
     function testimonial(){
         $user = User::get();
-        $photo = Photos::get();
+        $photo = Photos::where('event','testimonial')->get();
         $calender = Calender::get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -117,7 +117,7 @@ class MainController extends Controller
 
     function sponsor(){
         $user = User::get();
-        $photo = Photos::get();
+        $photo = Photos::where('event','sponsor')->get();
         $calender = Calender::get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -126,7 +126,7 @@ class MainController extends Controller
 
     function calender(){
         $user = User::get();
-        $photo = Photos::get();
+        $photo = Photos::where('event','calender')->get();
         $calender = Calender::get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);

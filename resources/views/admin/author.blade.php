@@ -9,8 +9,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.css') }}">
+  <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/regular.css') }}">
+  <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/fontawesome.css') }}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="{{ asset ('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
   <!-- iCheck -->
@@ -111,7 +116,7 @@
         <li class="nav-header">OBJECTS</li>
           <li class="nav-item menu-open">
             <a href="{{ route('admin.author') }}" class="nav-link active">
-              <i class="nav-icon fas fa-th"></i>
+            <ion-icon name="people-outline" style="font-size: 17px"></ion-icon>
               <p>
                 Author
               </p>
@@ -119,7 +124,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.massworkout') }}" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <ion-icon name="barbell-outline" style="font-size: 17px"></ion-icon>
               <p>
                 Mass Workout
               </p>
@@ -127,7 +132,7 @@
         </li>
           <li class="nav-item">
             <a href="{{ route('admin.funrun') }}" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+            <ion-icon name="walk-outline" style="font-size: 17px"></ion-icon>
               <p>
                 Fun Run
               </p>
@@ -135,7 +140,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.weeks12') }}" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+            <ion-icon name="flag" style="font-size: 17px"></ion-icon>
               <p>
                 12 - Weeks
               </p>
@@ -203,7 +208,7 @@
               <br>
             </ol>
           </div><!-- /.col -->
-          
+
           <!-- Add New Button -->
           <div class="col-sm-10">
           </div>

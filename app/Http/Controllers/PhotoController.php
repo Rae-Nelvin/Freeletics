@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Photos;
 use Illuminate\Database\Eloquent\Collection;
+use Session;
+use App\Models\User;
 
 class PhotoController extends Controller
 {
@@ -28,6 +30,8 @@ class PhotoController extends Controller
             'event' => $request->event,
             'file_path' => $imageName
         ]);
+
+        return redirect('admin/dashboard/')->with('Successful', 'Your Photo has been uploaded successfully!!');
     }
 
     function edit_photos($id){
@@ -51,12 +55,13 @@ class PhotoController extends Controller
                 'file_path' => $imageName
             ]);
         
-        return view('admin.dashboard');
+            return redirect('admin/dashboard/')->with('Successful', 'Your Photo has been updated successfully!!');
     }
 
     function delete($id){
         $delete = Photos::get()->where('id',$id);
         $delete->each->delete();
-        return view('admin.dashboard');
+
+        return redirect('admin/dashboard/')->with('Successful', 'Your Photo has been deleted successfully!!');
     }
 }

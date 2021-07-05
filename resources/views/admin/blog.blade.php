@@ -109,9 +109,9 @@
             </a>
             </li>
         <li class="nav-header">OBJECTS</li>
-          <li class="nav-item menu-open">
+          <li class="nav-item ">
             <a href="{{ route('admin.author') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <ion-icon name="people-outline" style="font-size: 17px"></ion-icon>
               <p>
                 Author
               </p>
@@ -119,7 +119,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.massworkout') }}" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <ion-icon name="barbell-outline" style="font-size: 17px"></ion-icon>
               <p>
                 Mass Workout
               </p>
@@ -127,7 +127,7 @@
         </li>
           <li class="nav-item">
             <a href="{{ route('admin.funrun') }}" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+            <ion-icon name="walk-outline" style="font-size: 17px"></ion-icon>
               <p>
                 Fun Run
               </p>
@@ -135,7 +135,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.weeks12') }}" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+            <ion-icon name="flag" style="font-size: 17px"></ion-icon>
               <p>
                 12 - Weeks
               </p>
@@ -149,7 +149,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item menu-open">
             <a href="{{ route('admin.blog') }}" class="nav-link active">
               <i class="nav-icon fas fa-table"></i>
               <p>
