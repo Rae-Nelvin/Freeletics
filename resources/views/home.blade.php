@@ -17,9 +17,10 @@
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/testimonal.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/sponsor.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/funrun-2.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/mask-2.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/maskworkout.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/12weeks.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/event.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/blog.css') }}">
     <title>Freeletics</title>
 </head>
 
@@ -45,15 +46,13 @@
     <!-- end navbar -->
 
     <!-- about -->
-    <div class="position-relative overflow-hidden text-center bg-about">
+    <div class="position-relative overflow-hidden p-3 p-md-3 text-center bg-about">
         <div class="col-md-7 p-lg-4 mx-auto my-5">
-            <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
-            <p class="lead font-weight-normal about-p text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
-                magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class="moreText">Lorem ipsum,
-                    dolor sit amet consectetur adipisicing elit.</span>
+            <h1 class="about-h1 display-4 font-weight-normal">ABOUT US</h1>
+            <p class="lead font-weight-normal text" id="about-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class ="moreText">Lorem ipsum,
+                dolor sit amet consectetur adipisicing elit.</span>
             </p><button class="btn btn-outline-warning read-more-btn">Read More</button>
-            <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
+            <h1 class="about-h1 display-4 font-weight-normal">MEET THE AUTHOR</h1>       
         </div>
         <div class="container author">
             <!-- Three columns of text below the carousel -->
@@ -61,8 +60,8 @@
                 <div class="col-lg-4">
                     <img class="rounded author" src="{{ asset ('assets/images/author2.jpg')}}"
                         alt="Generic placeholder image" width="250" height="250">
-                    <h2 class="author-h2">Wahyu Hidayat</h2>
-                    <p class="author-p">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id
+                    <h2 class="author">Wahyu Hidayat</h2>
+                    <p class="author">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id
                         dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
                         vestibulum at eros. Praesent commodo cursus magna.</p>
                 </div>
@@ -181,69 +180,50 @@
         <div class="col">
             <p class="lead font-weight-normal text" id="funrun-p">Lorem ipsum dolor sit, amet consectetur adipisicing
                 elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem
-                adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class="moreText">Lorem
-                    ipsum,
-                    dolor sit amet consectetur adipisicing elit.</span>
-            </p><button class="btn btn-outline-warning read-more-btn" id="btn-read-more">Read More</button>
+                adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos!
+            </p>
         </div>
     </div>
+</div>
     <!-- fun run -->
 
     <!-- 12 weeks -->
-    <div class="position-relative overflow-hidden text-center weeks">
-        <div class="container">
-            <div class="row">
-                <div class="d-flex justify-content-center">
-                    <h1 class="judul-week text-center">12 WEEKS</h1>
-                    <p class="caption-week text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Praesentium modi nulla distinctio incidunt! Quae, accusamus dolorem optio laboriosam soluta sit
-                        consequatur nisi! Incidunt pariatur voluptatem veritatis expedita, consectetur corporis commodi.
-                        <span class="moreText">Natus commodi saepe perferendis fuga incidunt delectus soluta, aliquam ex
-                            veniam optio ea consequuntur? Accusamus, veritatis non.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus officia magnam in Lorem
-                            ipsum, dolor sit amet consectetur adipisicing elit.</span>
-                        <button class="btn btn-outline-warning read-more-btn">Read More</button>
-                    </p>
+    <div class="position-relative overflow-hidden p-3 p-md-3 text-center bg-12weeks">
+        <div class="col-md-7 p-lg-4 mx-auto my-5">
+                <h1 class="about-h1 display-4 font-weight-normal">12 WEEKS</h1>
+            </div>
+            <div class="col">
+            <p class="lead font-weight-normal text" id="p-12weeks">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos! Lorem ipsum,
+                dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="col-xl-3">
+                <input type="date" class="form-control" name="birthday" id="date-12weeks">
+        </div>
+        <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperrr"
+            id="swiper-container-week">
+            <div class="swiper-wrapper" id="swiper-wrapper-week">
+                <div class="swiper-slide swiper-slide-active" id="swiper-slide-week">
+                    <img src="{{ asset('assets/images/week1.png') }}" class="img-fluid">
                 </div>
-
-                <div class="d-flex justify-content-center">
-                    <div class="box-lg" id="box-week"></div>
+                <div class="swiper-slide" id="swiper-slide-week">
+                    <img src="{{ asset('assets/images/week2.png') }}" class="img-fluid">
                 </div>
-                <!-- Swiper -->
-                <div class="d-flex justify-content-start">
-                    <input type="date" class="form-control" name="birthday" id="date-week">
+                <div class="swiper-slide" id="swiper-slide-week">
+                    <img src="{{ asset('assets/images/week3.png') }}" class="img-fluid">
                 </div>
-                <div class="d-flex justify-content-center">
-                    <input type="date" class="form-control" name="birthday" id="date-week-mb">
+                <div class="swiper-slide" id="swiper-slide-week">
+                    <img src="{{ asset('assets/images/week1.png') }}" class="img-fluid">
                 </div>
-                <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperrr"
-                    id="swiper-container-week">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week1.png')}}" class=" img-fluid">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week2.png')}}" class=" img-fluid">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week3.png')}}" class=" img-fluid">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week1.png')}}" class=" img-fluid">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week2.png')}}" class=" img-fluid">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week3.png')}}" class=" img-fluid">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week1.png')}}" class=" img-fluid">
-                        </div>
-                    </div>
-                    <div class="swiper-button-next" id="btn-week"></div>
-                    <div class="swiper-button-prev" id="btn-week"></div>
+                <div class="swiper-slide" id="swiper-slide-week">
+                    <img src="{{ asset('assets/images/week2.png') }}" class="img-fluid">
                 </div>
+                <div class="swiper-slide" id="swiper-slide-week">
+                    <img src="{{ asset('assets/images/week3.png') }}" class="img-fluid">
+                </div>
+                </div>
+                <div class="swiper-button-next" id="btn-week"></div>
+                <div class="swiper-button-prev" id="btn-week"></div>
+                <!-- <div class="swiper-pagination"></div> -->
             </div>
         </div>
     </div>
@@ -254,7 +234,7 @@
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <h1 class="judul-event">
+                <h1 class="about-h1" id="about-event">
                         EVENT
                     </h1>
                 </div>
@@ -311,7 +291,7 @@
     <section class="blog">
         <div class="container">
             <div class="d-flex justify-content-center">
-                <h1 class="judul-blog">BLOG</h1>
+            <h1 class="about-h1" id="about-blog">BLOG</h1>
             </div>
             <div class="row">
                 <div class="col-md-4">

@@ -2,7 +2,7 @@
 
 .testi {
     background-color: #FDCD22 !important;
-    min-height: 120vh;
+    min-height: 100vh;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -13,6 +13,7 @@
     margin-top: 5%;
     font-family: Nunito;
     font-weight: bold;
+    font-size: 100px;
 }
 
 .testi-mg {
@@ -39,11 +40,53 @@
 .testi-img h2 {
     text-align: center;
     margin-top: 3%;
+    font-size: 50px;
 }
 
 .testi-img p {
     text-align: center;
-    margin-top: 3%;
+    margin-top: 10%;
+    font-size: 22px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1366px){
+
+    .testi {
+        padding-bottom: 5vh;
+    }
+
+    .testi h1 {
+        margin-top: 5%;
+        font-family: Nunito;
+        font-weight: bold;
+        font-size: 70px;
+    }
+
+    .testi-img p {
+        text-align: center;
+        margin-top: 10%;
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 768px){
+    .testi {
+        padding-bottom: 5vh;
+    }
+
+    .testi h1 {
+        margin-top: 10%;
+        font-family: Nunito;
+        font-weight: bold;
+        font-size: 39px;
+    }
+
+    .testi-img p {
+        text-align: center;
+        margin-top:5%;
+        font-size: 14px;
+    }
+
 }
 
 
