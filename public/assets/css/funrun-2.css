@@ -182,8 +182,8 @@
         height: 270px !important;
     }
     #swiper-slide-run {
-        max-width: 500px;
-        max-height: 270px;
+        max-width: 500px !important;
+        max-height: 270px !important;
     }
     #swiper-container-run {
         max-width: 80%;
