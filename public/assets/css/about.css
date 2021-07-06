@@ -155,10 +155,9 @@ button.read-more-btn {
     .moreText {
         display: none;
     }
-    button.read-more-btn {
+    #btn-read-more {
         display: inline-block;
-        margin-bottom: 10% !important;
-        /* margin-top: 60px !important; */
+        margin-top: -50% !important;
         width: 80%;
     }
     .text.show-more .moreText {
@@ -171,6 +170,10 @@ button.read-more-btn {
     }
     .author h2 {
         font-size: 33px;
+    }
+    .author-h1 {
+        margin-top: -10%;
+        margin-bottom: 10%;
     }
     .author p {
         margin-bottom: 12%;

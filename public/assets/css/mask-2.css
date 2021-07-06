@@ -108,7 +108,7 @@ button.read-more-btn {
     .moreText {
         display: none;
     }
-    button.read-more-btn {
+    #btn-read-more-mass {
         display: inline-block;
         margin-bottom: 10% !important;
         /* margin-top: 60px !important; */

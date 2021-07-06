@@ -54,12 +54,12 @@
                 Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
                 magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class="moreText">Lorem ipsum,
                     dolor sit amet consectetur adipisicing elit.</span>
-            </p><button class="btn btn-outline-warning read-more-btn">Read More</button>
-            <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
+            </p><button class="btn btn-outline-warning read-more-btn" id="btn-read-more">Read More</button>
         </div>
         <div class="container author">
             <!-- Three columns of text below the carousel -->
             <div class="row">
+                <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
                 <div class="col-lg-4">
                     <img class="rounded author" src="{{ asset ('assets/images/author2.jpg')}}"
                         alt="Generic placeholder image" width="250" height="250">
@@ -94,7 +94,7 @@
     </div>
     <!-- End of About -->
     <!-- mask workout -->
-    <div class="position-relative overflow-hidden p-3 p-md-3 bg-mass">
+    <div class="position-relative overflow-hidden text-center p-3 p-md-3 bg-mass">
         <div class="row align-items-start">
             <div class="col-12 text-center">
                 <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
@@ -129,7 +129,8 @@
                 <!-- End of Swiper -->
             </div>
             <div class="col">
-                <p class="lead font-weight-normal text mass-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <p class="lead font-weight-normal text-center mass-p">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit.
                     Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
                     magnam, itaque eum animi odit sit dolorum illo quam dignissimos! Lorem ipsum dolor sit amet Lorem
                     ipsum dolor sit amet consectetur adipisicing elit.
@@ -137,7 +138,7 @@
                         fuga
                         ducimus. Beatae accusamus quae veniam perferendis aliquam magni alias illum voluptatem
                         laudantium!</span>
-                </p><button class="btn btn-outline-warning read-more-btn text-center" id="btn-read-more">Read
+                </p><button class="btn btn-outline-warning read-more-btn text-center" id="btn-read-more-mass">Read
                     More</button>
             </div>
         </div>
@@ -189,7 +190,7 @@
                 adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class="moreText">Lorem
                     ipsum,
                     dolor sit amet consectetur adipisicing elit.</span>
-            </p><button class="btn btn-outline-warning read-more-btn" id="btn-read-more">Read More</button>
+            </p><button class="btn btn-outline-warning read-more-btn" id="btn-read-more-fun">Read More</button>
         </div>
     </div>
     <!-- fun run -->
@@ -207,7 +208,7 @@
                             veniam optio ea consequuntur? Accusamus, veritatis non.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus officia magnam in Lorem
                             ipsum, dolor sit amet consectetur adipisicing elit.</span>
-                        <button class="btn btn-outline-warning read-more-btn">Read More</button>
+                        <button class="btn btn-outline-warning read-more-btn" id="btn-read-more-week">Read More</button>
                     </p>
                 </div>
 
@@ -215,12 +216,9 @@
                     <div class="box-lg" id="box-week"></div>
                 </div>
                 <!-- Swiper -->
-                <div class="d-flex justify-content-start">
+                <!-- <div class="d-flex justify-content-start">
                     <input type="date" class="form-control" name="birthday" id="date-week">
-                </div>
-                <div class="d-flex justify-content-center">
-                    <input type="date" class="form-control" name="birthday" id="date-week-mb">
-                </div>
+                </div> -->
                 <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperrr"
                     id="swiper-container-week">
                     <div class="swiper-wrapper">
