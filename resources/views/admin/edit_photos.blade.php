@@ -194,8 +194,8 @@
                   <thead>
                     <tr>
                       <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Title</th>
-                      <th style="width: 20%; text-align: center; font-size: 20px">Sub Title</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px"><?php echo $title ?></th>
+                      <th style="width: 20%; text-align: center; font-size: 20px"><?php echo $subtitle ?></th>
                       <th style="width: 30%; text-align: center; font-size: 20px">Image</th>
                       <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
                     </tr>
@@ -203,7 +203,7 @@
                   <tbody>
                   @foreach ($photo as $photos)
                     <tr>
-                      <td>{{ $photos['id'] }}</td>
+                      <td>{{ $loop->iteration }}</td>
                       <td>{{ $photos['title'] }}</td>
                       <td>
                         {{ $photos['subtitle'] }}
@@ -220,10 +220,10 @@
             <form action="{{ route('admin.edit') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="id" value="{{ $photos['id'] }}">
-                <input type="text" name="title" placeholder="Input New Image's Title here"/><br><br>
-                <input type="text" name="subtitle" placeholder="Input New Image's Subtitle here"/><br><br>
-                <input type="hidden" name="event" value="{{ $photos['event'] }}">Event : {{ $photos['event'] }} <br><br>
-                <input type="file" name="file_path"/><br><br>
+                <p class="title-edit">Masukkan <?php echo $title ?> Yang Baru :</p><input type="text" name="title"/><br><br>
+                <p class="title-edit">Masukkan <?php echo $subtitle ?> Yang Baru :</p><input type="text" name="subtitle"/><br><br>
+                <input type="hidden" name="event" value="{{ $photos['event'] }}"><p class="title-edit">Event : {{ $photos['event'] }}</p>
+                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="file_path"/><br><br>
                 <input type="submit" value="Save"/>
             </form>
           </div>

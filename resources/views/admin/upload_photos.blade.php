@@ -190,20 +190,14 @@
             </ol>
           </div><!-- /.col -->
           <div class="card-body">
+          <?php 
+          ?>
             <form action="{{ route('admin.upload') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <input type="text" name="title" placeholder="Input Image's Title here"/><br><br>
-                <input type="text" name="subtitle" placeholder="Input Image's Subtitle here"/><br><br>
-                <select name="event" id="event">
-                    <option value="Author">Author</option>
-                    <option value="Massworkout">Mass Workout</option>
-                    <option value="Funrun">Fun Run</option>
-                    <option value="Weeks12">12 Weeks</option>
-                    <option value="Event">Event</option>
-                    <option value="Blog">Blog</option>
-                    <option value="Testimonial">Testimonial</option>
-                </select><br><br>
-                <input type="file" name="file_path"/><br><br>
+                <p class="title-edit"><?php echo $title ?></p><input type="text" name="title" /><br><br>
+                <p class="title-edit"><?php echo $subtitle ?></p><input type="text" name="subtitle" /><br><br>
+                <p class="title-edit"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
+                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="file_path"/><br><br>
                 <input type="submit" value="Submit"/>
             </form>
           </div>

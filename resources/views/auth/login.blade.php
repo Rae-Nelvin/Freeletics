@@ -24,6 +24,7 @@
                     @endif
 
                     @csrf
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo Freeletics" style="margin-bottom: 20px">
                         <h1>Login</h1>
                         <p class="text-muted"> Please enter your email and password!</p>
                         <input type="text" name="email" placeholder="Email">

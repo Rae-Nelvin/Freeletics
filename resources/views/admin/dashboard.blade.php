@@ -180,11 +180,6 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-      @if(Session::get('Successful'))
-                        <div class="alert alert-success">
-                            {{ Session::get('Successful') }}
-                        </div>
-        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 h1-title" style="font-size: 40px;">Dashboard</h1>

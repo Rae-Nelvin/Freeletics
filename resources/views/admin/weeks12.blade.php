@@ -180,6 +180,11 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+      @if(Session::get('Successful'))
+                        <div class="alert alert-success">
+                            {{ Session::get('Successful') }}
+                        </div>
+        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 h1-title" style="font-size: 40px;">12 Weeks</h1>
@@ -192,20 +197,20 @@
             </ol>
           </div><!-- /.col -->
           <!-- Add New Button -->
-          <div class="col-sm-10">
+          <div class="col-sm-9">
           </div>
-          <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos') }}">Add New</a></div>
+          <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',4) }}"style="font-family: inherit; font-weight: bold;">Add New</a></div>
           <!-- End of Button -->
           <!-- Table -->
           <table class="table table-bordered">
                   <thead>
                     <tr>
                       <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Title</th>
-                      <th style="width: 20%; text-align: center; font-size: 20px">Sub Title</th>
-                      <th style="width: 30%; text-align: center; font-size: 20px">Image</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Judul Gambar (Tidak Ditampilkan)</th>
+                      <th style="width: 20%; text-align: center; font-size: 20px">Deskripsi Gambar (Tidak Ditampilkan)</th>
+                      <th style="width: 25%; text-align: center; font-size: 20px">Gambar</th>
                       <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Actions</th>
+                      <th style="width: 15%; text-align: center; font-size: 20px">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -216,7 +221,7 @@
                       <td>
                         {{ $photos['subtitle'] }}
                       </td>
-                      <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
+                      <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 75%"></td>
                       <td>{{ $photos['updated_at'] }}</td>
                       <td><a class="button touch edit" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
                       <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
