@@ -3,9 +3,9 @@ var swiper = new Swiper(".mySwipper", {
     spaceBetween: 30,
     freeMode: true,
     breakpoints: {
-        400: {
+        300: {
             slidesPerView: 1,
-            spaceBetween: 50,
+            spaceBetween: 20,
         },
         768: {
             slidesPerView: 4,

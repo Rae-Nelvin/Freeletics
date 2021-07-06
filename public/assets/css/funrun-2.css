@@ -18,6 +18,10 @@
     border-radius: 20px;
     background-color: #FDCD22;
     border: none;
+    -webkit-border-radius: ;
+    -moz-border-radius: ;
+    -ms-border-radius: ;
+    -o-border-radius: ;
 }
 
 #box-fun {
@@ -74,6 +78,7 @@
     padding-right: 30vh;
     font-family: Nunito;
     color: white;
+    margin-bottom: 40%;
     text-align: justify;
 }
 
@@ -116,6 +121,7 @@
         font-family: Nunito;
         font-size: 30px;
         color: white;
+        margin-bottom: 40%;
         text-align: justify;
         margin-left: 4vh;
         margin-right: 6vh;
@@ -176,14 +182,16 @@
         height: 270px !important;
     }
     #swiper-slide-run {
-        max-width: 500px;
-        max-height: 270px;
+        max-width: 500px !important;
+        max-height: 270px !important;
     }
     #swiper-container-run {
         max-width: 80%;
         margin-top: 13%;
     }
-    #btn-read-more {
-        margin-top: -30% !important;
+    #btn-read-more-fun {
+        margin-top: -60% !important;
+        width: 80%;
+        display: inline-block;
     }
 }

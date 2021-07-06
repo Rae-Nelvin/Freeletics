@@ -1,11 +1,14 @@
-#about-event {
-    margin-top: 5%;
+.judul-event {
+    color: #FDCD22;
+    font-weight: bold;
+    font-family: Nunito;
+    margin-top: 10% !important;
 }
 
 .event {
     background-color: #000;
     width: 100%;
-    min-height: 100vh;
+    min-height: 150vh;
     margin-bottom: 0%;
 }
 
@@ -29,28 +32,8 @@
     -o-border-radius: 10px !important;
 }
 
-@media all and (min-width: 768px) and (max-width: 1366px){
-    
+@media all and (max-width: 768px) {
     .event-img {
         margin-top: 10%;
     }
-}
-
-@media all and (max-width: 768px){
-
-    #about-event {
-        margin-top: 15%;
-    }
-
-    .event-img {
-        margin-top: 10%;
-    }
-    
-    .event {
-        background-color: #000;
-        width: 100%;
-        min-height: 100vh;
-        padding-bottom: 10%;
-    }
-
 }

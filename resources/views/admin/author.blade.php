@@ -9,9 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.min.css') }}">
-  <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.css') }}">
-  <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/regular.css') }}">
-  <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/fontawesome.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -191,8 +189,8 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
-              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Author</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px;font-weight: bold;">Home</a></li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;font-weight: bold;">Author</li>
               <br>
             </ol>
           </div><!-- /.col -->
@@ -200,15 +198,15 @@
           <!-- Add New Button -->
           <div class="col-sm-10">
           </div>
-          <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos') }}">Add New</a></div>
+          <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos') }}" style="font-family: inherit; font-weight: bold;">Add New</a></div>
           <!-- End of Button -->
           <!-- Table -->
           <table class="table table-bordered">
                   <thead>
                     <tr>
                       <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Title</th>
-                      <th style="width: 20%; text-align: center; font-size: 20px">Sub Title</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Author's Name</th>
+                      <th style="width: 20%; text-align: center; font-size: 20px">Description</th>
                       <th style="width: 30%; text-align: center; font-size: 20px">Image</th>
                       <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
                       <th style="width: 10%; text-align: center; font-size: 20px">Actions</th>
@@ -224,7 +222,7 @@
                       </td>
                       <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
                       <td>{{ $photos['updated_at'] }}</td>
-                      <td><a class="button touch edit" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
+                      <td><a class="button touch edit edit-btn" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
                       <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
                     </tr>
                   @endforeach

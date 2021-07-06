@@ -1,108 +1,81 @@
-.bg-mass{
-    min-height: 100vh;
+.bg-mask img {
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/maskworkout.png);
-    background-position: center;
-    background-size: cover;
-    position: relative;
+    height: 100%;
+    margin-top: -2%;
 }
 
-#mass-h1{
-    font-family: Nunito;
+.judul {
     color: #FDCD22;
-    font-size: 100px;
-    font-weight: bold;
-    font-stretch: ultra-expanded;
-    margin-top: 3%;
-}
-
-.mass-p{
+    margin-top: -58%;
     font-family: Nunito;
-    font-size: 40px;
-    color: white;
-    margin-bottom: 40%;
+    font-weight: bold;
 }
 
-#mass-date{
-    margin-top: 6%;
-    margin-bottom: 3%;
-    margin-left: 5%;
+.caption p {
+    margin-top: -45%;
+    color: #fff;
+    max-width: 60%;
+    margin-left: auto;
 }
 
-#mass-swipper{
-    margin-left: 5%;
+
+/* .image-slide img {
+    max-width: 450px;
+    max-height: 500px;
+    margin-top: -38%;
+    position: absolute;
+    z-index: 1;
+    margin-left: 5% !important;
+    object-fit: cover;
+    display: block;
+} */
+
+#swiper-mask img {
+    display: block;
+    width: 100%;
+    align-items: flex-start !important;
 }
 
-#img-swipper{
-    margin-top: 14px;
+#swiper-mask {
+    max-width: 450px;
+    max-height: 500px;
+    align-items: flex-start !important;
 }
 
-.img-fluid{
-    border-radius: 5% !important;
-    -webkit-border-radius: 5% !important;
-    -moz-border-radius: 5% !important;
-    -ms-border-radius: 5% !important;
-    -o-border-radius: 5% !important;
+#mask {
+    max-width: 450px;
+    max-height: 500px;
+    margin-top: -38%;
+    margin-right: 65%;
+    align-items: flex-start !important;
 }
 
-.form-control {
-    font-size: 25px;
+#btn-mask {
+    color: #FDCD22;
+    border-radius: 50px;
+    display: inline-block;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#btn-mask {
+    color: #FDCD22;
+}
+
+#date-mask {
     background-color: #FDCD22;
     text-align: center;
     border: none;
-    width: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-top: -42%;
+    width: 450px;
     border-radius: 20px;
+    margin-left: 5%;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-}
-
-/* Table Mode */
-@media all and (min-width: 768px) and (max-width: 1366px){
-
-    #mass-h1{
-        font-size: 70px;
-        margin-top: 7%;
-        margin-bottom: 7%;
-    }
-
-    .mass-p{
-        margin-top: 0;
-        font-size: 30px;
-        text-align: justify;
-    }
-
-    #mass-date{
-        display: none;
-    }
-
-    #mass-swipper{
-        margin: 0;
-    }
-
-}
-/* Phone Mode */
-@media all and (max-width: 768px){
-
-    #mass-h1{
-        font-size: 45px;
-        margin-top: 7%;
-        margin-bottom: 7%;
-    }
-
-    .mass-p{
-        margin-top: 5%;
-        font-size: 17px;
-        text-align: justify;
-    }
-
-    #mass-date{
-        display: none;
-    }
-
-    #mass-swipper{
-        margin: 0;
-    }
-
 }
