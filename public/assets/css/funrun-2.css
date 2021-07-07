@@ -18,6 +18,10 @@
     border-radius: 20px;
     background-color: #FDCD22;
     border: none;
+    -webkit-border-radius: ;
+    -moz-border-radius: ;
+    -ms-border-radius: ;
+    -o-border-radius: ;
 }
 
 #box-fun {
