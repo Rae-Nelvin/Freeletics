@@ -183,6 +183,11 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+      @if(Session::get('Successful'))
+                        <div class="alert alert-success">
+                            {{ Session::get('Successful') }}
+                        </div>
+        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0">Calender</h1>
@@ -205,9 +210,9 @@
                       <th style="width: 1%">#</th>
                       <th style="width: 10%">Title</th>
                       <th style="width: 20%">Sub Title</th>
-                      <th style="width: 30%">Image</th>
+                      <th style="width: 25%">Image</th>
                       <th style="width: 29%">last Update</th>
-                      <th style="width: 10%;">Actions</th>
+                      <th style="width: 15%;">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
