@@ -30,7 +30,7 @@ a.nav-link {
 .bg-blog {
     background-color: black !important;
     width: 100%;
-    min-height: 100vh;
+    min-height: 130vh;
     /* position: relative;
     background-position: center;
     background-size: cover; */
@@ -38,4 +38,67 @@ a.nav-link {
 
 .title-h1 {
     color: #FDCD22;
+    margin-top: 7%;
+}
+
+.img-fluid {
+    margin-top: 5%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.deskripsi {
+    color: white;
+    max-width: 80%;
+    margin-top: 5%;
+}
+
+.right-side {
+    color: #FDCD22;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    margin-top: -10%;
+}
+
+.line {
+    background-color: white !important;
+    width: 20%;
+    height: 1px;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    margin-left: auto;
+    margin-top: -5%;
+}
+
+.new-blog {
+    margin-top: -2%;
+    /* max-width: 100%; */
+    width: 200px;
+    height: 120px;
+    position: absolute;
+}
+
+.desc-content {
+    color: white;
+    margin-top: 8%;
+    position: absolute;
+    flex: 1;
+}
+
+.right-blog {
+    /* position: relative; */
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-left: auto;
+}
+
+.news {
+    margin-top: -52%;
 }

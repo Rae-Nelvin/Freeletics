@@ -36,11 +36,38 @@
     </nav>
     <!-- end navbar -->
 
-    <div class="position-relative overflow-hidden text-center bg-blog">
-        <div class="col-md-7 p-lg-4 mx-auto my-5">
-            <h1 class="title-h1 display-7 font-weight-normal">BLOG</h1>
+
+    <div class="position-relative overflow-hidden bg-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 p-lg-4 ">
+                    <h1 class="title-h1 display-7 font-weight-normal">Olahraga Di rumah Pada Masa PPKM</h1>
+                    <img src="{{ asset ('assets/images/12weeks.png')}}" class="img-fluid">
+                    <p class="deskripsi">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum numquam reiciendis labore
+                        voluptas
+                        praesentium, repudiandae ea earum eos ipsa optio, nobis rerum placeat vero. Officiis laboriosam
+                        tenetur
+                        ducimus ipsa! Aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, hic? Ad
+                        dolorem magni ullam accusamus expedita deserunt rerum nostrum aut! Harum natus maxime
+                        necessitatibus
+                        pariatur voluptates aperiam voluptatem esse ullam.
+                    </p>
+                </div>
+            </div>
+            <div class="news">
+                <div class="right-blog">
+                    <h3 class="right-side">NEWS UPDATE</h3>
+                    <div class="line"></div>
+                    <img class="new-blog" src="{{ asset ('assets/images/blog.png')}}">
+                    <p class="desc-content">Next event bulan depan juli</p>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
 
 
 
