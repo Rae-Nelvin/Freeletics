@@ -20,14 +20,17 @@ button.read-more-btn {
     font-family: Nunito !important;
     font-weight: bold;
 }
+
 #swiper-container-week {
     max-width: 60%;
     margin-top: 610px;
 }
+
 #swiper-slide-week {
     max-width: 250px;
     max-height: 170px;
 }
+
 #swiper-slide-week img {
     display: block;
     width: 100%;
@@ -39,10 +42,12 @@ button.read-more-btn {
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
 }
+
 #btn-week {
     color: #FDCD22;
     /* margin-top: -20%; */
 }
+
 #box-week {
     margin-top: 30%;
     align-items: center;
@@ -60,6 +65,7 @@ button.read-more-btn {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+
 .caption-week {
     color: #fff;
     margin-top: 10%;
@@ -69,9 +75,11 @@ button.read-more-btn {
     max-width: 50% !important;
     text-align: center;
 }
+
 #date-week-mb {
     display: none;
 }
+
 #date-week {
     margin-top: 56vh;
     position: absolute;
@@ -89,7 +97,7 @@ button.read-more-btn {
     -o-border-radius: 20px !important;
 }
 
-@media all and (min-width: 768px) and (max-width:1366px){
+@media all and (min-width: 768px) and (max-width:1366px) {
     .judul-week {
         margin-top: 2% !important;
         z-index: 1;
@@ -150,22 +158,6 @@ button.read-more-btn {
     #date-week-mb {
         display: none;
     }
-    #date-week {
-        margin-top: 56vh;
-        position: absolute;
-        background-color: #FDCD22 !important;
-        text-align: center;
-        border: none !important;
-        z-index: 1;
-        max-width: 20%;
-        border-radius: 20px !important;
-        margin-left: 13%;
-        align-items: flex-start !important;
-        -webkit-border-radius: 20px !important;
-        -moz-border-radius: 20px !important;
-        -ms-border-radius: 20px !important;
-        -o-border-radius: 20px !important;
-    }
 }
 
 @media all and (max-width: 768px) {
@@ -204,7 +196,7 @@ button.read-more-btn {
         max-height: 270px;
     }
     #swiper-slide img {
-        display: block;
+        display: inline-block;
         max-width: 500px;
         max-height: 270px;
         object-fit: cover;
@@ -213,18 +205,6 @@ button.read-more-btn {
         color: #FDCD22;
         /* margin-top: -20%; */
     }
-    #date-week-mb {
-        display: block;
-        margin-top: 2%;
-        margin-bottom: 5%;
-        background-color: #FDCD22;
-        text-align: center;
-        border: none !important;
-        max-width: 50%;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px !important;
-    }
     #date-week {
         display: none;
     }
@@ -232,15 +212,15 @@ button.read-more-btn {
         margin-top: 25%;
         color: #fff;
         text-align: center;
-        font-size: 23px;
+        font-size: 20px;
     }
     .moreText {
         display: none;
     }
     #btn-read-more-week {
-        margin-top: 10% !important;
+        margin-top: 0% !important;
         display: inline;
-        width: 80%;
+        width: 80% !important;
     }
     .caption-week.show-more .moreText {
         display: inline;

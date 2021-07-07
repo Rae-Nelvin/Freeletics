@@ -149,9 +149,9 @@
         <div class="col-md-7 p-lg-4 mx-auto my-5">
             <h1 class="about-h1 display-4 font-weight-normal">FUN RUN</h1>
         </div>
-        <div class="d-flex justify-content-start">
+        <!-- <div class="d-flex justify-content-start">
             <input type="date" class="form-control" name="birthday" id="date-funrun">
-        </div>
+        </div> -->
         <div class="col">
         </div>
         <!-- Swipper  -->
@@ -211,7 +211,6 @@
                         <button class="btn btn-outline-warning read-more-btn" id="btn-read-more-week">Read More</button>
                     </p>
                 </div>
-
                 <div class="d-flex justify-content-center">
                     <div class="box-lg" id="box-week"></div>
                 </div>

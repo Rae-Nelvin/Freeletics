@@ -1,0 +1,41 @@
+nav {
+    /* background-color: #FDCD22!important; */
+    display: block;
+}
+
+a.nav-link {
+    color: #fff;
+    align-items: center !important;
+    text-align: center !important;
+    flex: center;
+    position: relative;
+    left: 40%;
+    float: none;
+    top: 5%;
+    margin-left: 50px;
+    font-size: 20px;
+    font-family: Nunito;
+    font-weight: bold;
+}
+
+.navbar-nav a {
+    color: #FDCD22 !important;
+    /* color: #fff; */
+    /* margin-left: 50px; */
+}
+
+
+/* backgorund */
+
+.bg-blog {
+    background-color: black !important;
+    width: 100%;
+    min-height: 100vh;
+    /* position: relative;
+    background-position: center;
+    background-size: cover; */
+}
+
+.title-h1 {
+    color: #FDCD22;
+}
