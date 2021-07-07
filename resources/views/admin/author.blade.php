@@ -102,7 +102,7 @@
         <li class="nav-header">OBJECTS</li>
           <li class="nav-item menu-open">
             <a href="{{ route('admin.author') }}" class="nav-link active">
-            <ion-icon name="people-outline" style="font-size: 17px"></ion-icon>
+            <i class="nav-icon fas fa-users"></i>
               <p>
                 Author
               </p>
@@ -110,7 +110,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.massworkout') }}" class="nav-link">
-            <ion-icon name="barbell-outline" style="font-size: 17px"></ion-icon>
+            <i class="nav-icon fas fa-dumbbell"></i>
               <p>
                 Mass Workout
               </p>
@@ -118,7 +118,7 @@
         </li>
           <li class="nav-item">
             <a href="{{ route('admin.funrun') }}" class="nav-link">
-            <ion-icon name="walk-outline" style="font-size: 17px"></ion-icon>
+             <i class="nav-icon fas fa-running"></i>
               <p>
                 Fun Run
               </p>
@@ -126,7 +126,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.weeks12') }}" class="nav-link">
-            <ion-icon name="flag" style="font-size: 17px"></ion-icon>
+            <i class="nav-icon fas fa-flag-checkered"></i>
               <p>
                 12 - Weeks
               </p>
@@ -150,7 +150,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.testimonial') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon fas fa-star-half-alt"></i>
               <p>
                 Testimonial
               </p>
@@ -158,7 +158,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.sponsor') }}" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fas fa-handshake"></i>
               <p>
                 Sponsor
               </p>

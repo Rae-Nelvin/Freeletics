@@ -99,7 +99,7 @@
         <li class="nav-header">OBJECTS</li>
           <li class="nav-item">
             <a href="{{ route('admin.author') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-users"></i>
               <p>
                 Author
               </p>
@@ -107,7 +107,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.massworkout') }}" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <i class="nav-icon fas fa-dumbbell"></i>
               <p>
                 Mass Workout
               </p>
@@ -115,7 +115,7 @@
         </li>
           <li class="nav-item">
             <a href="{{ route('admin.funrun') }}" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+             <i class="nav-icon fas fa-running"></i>
               <p>
                 Fun Run
               </p>
@@ -123,7 +123,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.weeks12') }}" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+            <i class="nav-icon fas fa-flag-checkered"></i>
               <p>
                 12 - Weeks
               </p>
@@ -147,7 +147,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.testimonial') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon fas fa-star-half-alt"></i>
               <p>
                 Testimonial
               </p>
@@ -155,7 +155,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.sponsor') }}" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fas fa-handshake"></i>
               <p>
                 Sponsor
               </p>
@@ -195,6 +195,163 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row" style="margin-bottom: 40px;">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3 style="margin-bottom: 40px">Author</h3>
+              </div>
+              <div class="icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <a href="{{ route('admin.author') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3 style="margin-bottom: 40px">Mass Workout</h3>
+              </div>
+              <div class="icon">
+                <i class="fas fa-dumbbell"></i>
+              </div>
+              <a href="{{ route('admin.massworkout') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3 style="margin-bottom: 40px; color: #FFF">Fun Run</h3>
+              </div>
+              <div class="icon">
+                <i class="fas fa-running"></i>
+              </div>
+              <a href="{{ route('admin.funrun') }}" class="small-box-footer" style="color: #FFF">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3 style="margin-bottom: 40px">12 - Weeks</h3>
+              </div>
+              <div class="icon">
+                <i class="fas fa-flag-checkered"></i>
+              </div>
+              <a href="{{ route('admin.weeks12') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-light">
+              <div class="inner">
+                <h3 style="margin-bottom: 40px">Event</h3>
+              </div>
+              <div class="icon">
+                <i class="fas fa-edit"></i>
+              </div>
+              <a href="{{ route('admin.event') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-dark">
+              <div class="inner">
+                <h3 style="margin-bottom: 40px">Blog</h3>
+              </div>
+              <div class="icon">
+                <i class="fas fa-table"></i>
+              </div>
+              <a href="{{ route('admin.blog') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+              <div class="inner">
+                <h3 style="margin-bottom: 40px; color: #FFFFFF">Testimonial</h3>
+              </div>
+              <div class="icon">
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <a href="{{ route('admin.testimonial') }}" class="small-box-footer" style="color: #FFF">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3 style="margin-bottom: 40px">Sponsor</h3>
+              </div>
+              <div class="icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <a href="{{ route('admin.sponsor') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+      <!-- Calendar -->
+      <div class="card bg-gradient-success">
+              <div class="card-header border-0">
+
+                <h3 class="card-title">
+                  <i class="far fa-calendar-alt"></i>
+                  Calendar
+                </h3>
+                <!-- tools card -->
+                <div class="card-tools">
+                  <!-- button with a dropdown -->
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
+                      <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="dropdown-menu" role="menu">
+                      <a href="#" class="dropdown-item">Add new event</a>
+                      <a href="#" class="dropdown-item">Clear events</a>
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item">View calendar</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <!-- /. tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body pt-0">
+                <!--The calendar -->
+                <div id="calendar" style="width: 100%"></div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+    </section>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

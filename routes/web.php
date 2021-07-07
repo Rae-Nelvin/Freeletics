@@ -21,15 +21,6 @@ use App\Http\Controllers\PhotoController;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/home', function () {
-    return view('home');
-});
-Route::get('/gallery', function () {
-    return view('gallery.gallery');
-});
-Route::get('/blog', function () {
-    return view('blog.blog');
-});
 
 Route::post('/auth/check',[MainController::class, 'check'])->name('auth.check');
 Route::get('/auth/logout',[MainController::class, 'logout'])->name('auth.logout');

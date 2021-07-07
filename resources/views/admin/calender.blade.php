@@ -26,8 +26,8 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css') }}">
   <!-- CSS.gg Icon -->
-  <link href='https://css.gg/pen.css' rel='stylesheet'>
-  <link href='https://css.gg/close-o.css' rel='stylesheet'>
+  <link href="{{ asset('btn-css.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Table CSS -->
   <link href="{{ asset ('table-css.css') }}" rel="stylesheet">
 </head>
@@ -47,10 +47,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="{{ route('admin.dashboard') }}"><h2 id="nav-title">FREELETICS SURABAYA</h2></a>
       </li>
     </ul>
 
@@ -58,7 +55,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
       <li class="nav-item">
-        <a href="{{ route('auth.logout') }}"><button>Logout
+        <a href="{{ route('auth.logout') }}"><button class="logout-btn button touch">Logout
         </button></a>
       </li>
   </nav>
@@ -68,8 +65,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ route('admin.dashboard') }}" class="brand-link">
-      <img src="{{ asset('images/logo.png') }}" alt="Freeletics Logo" class="brand-image elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Freeletics Surabaya</span>
+      <img src="{{ asset('images/logo.png') }}" alt="Freeletics Logo" class="brand-image elevation-5" style="opacity: .8">
+      <br>
     </a>
 
     <!-- Sidebar -->
@@ -80,7 +77,9 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin 1</a>
+        @foreach ($admin as $admin)
+          <a href="#" class="d-block">{{ $admin->name }}</a>
+          @endforeach
         </div>
       </div>
 
@@ -99,17 +98,16 @@
             </li>
         <li class="nav-header">OBJECTS</li>
           <li class="nav-item">
-            <a href="{{ route('admin.author') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ route('admin.author') }}" class="nav-link ">
+            <i class="nav-icon fas fa-users"></i>
               <p>
                 Author
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.massworkout') }}" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <i class="nav-icon fas fa-dumbbell"></i>
               <p>
                 Mass Workout
               </p>
@@ -117,7 +115,7 @@
         </li>
           <li class="nav-item">
             <a href="{{ route('admin.funrun') }}" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+             <i class="nav-icon fas fa-running"></i>
               <p>
                 Fun Run
               </p>
@@ -125,7 +123,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.weeks12') }}" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+            <i class="nav-icon fas fa-flag-checkered"></i>
               <p>
                 12 - Weeks
               </p>
@@ -149,16 +147,15 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.testimonial') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon fas fa-star-half-alt"></i>
               <p>
                 Testimonial
-                <span class="badge badge-info right">2</span>
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.sponsor') }}" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fas fa-handshake"></i>
               <p>
                 Sponsor
               </p>
@@ -179,93 +176,104 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <section class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-      @if(Session::get('Successful'))
-                        <div class="alert alert-success">
-                            {{ Session::get('Successful') }}
-                        </div>
-        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Calender</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;">Calender</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Calender</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Calender</li>
+              <br>
             </ol>
           </div><!-- /.col -->
-          <!-- Add New Button -->
-          <div class="col-sm-10">
-          </div>
-          <div class="col-sm-2"><a href="#"><button type="button" class="btn btn-primary addnew-btn">Add New</button></a></div>
-          <!-- End of Button -->
-          <!-- Table -->
-          <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th style="width: 1%">#</th>
-                      <th style="width: 10%">Title</th>
-                      <th style="width: 20%">Sub Title</th>
-                      <th style="width: 25%">Image</th>
-                      <th style="width: 29%">last Update</th>
-                      <th style="width: 15%;">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1.</td>
-                      <td>Lorem, ipsum.</td>
-                      <td>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae laudantium asperiores et sint aliquid.
-                      </td>
-                      <td><img src="{{ asset('images/12weeks.png')}}" alt="picture-1" style="width: 50%"></td>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
-                    </tr>
-                    <tr>
-                      <td>2.</td>
-                      <td>Lorem, ipsum.</td>
-                      <td>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, nam illum assumenda natus rem harum.
-                      </td>
-                      <td><img src="{{ asset('images/about.png')}}" alt="picture-2" style="width: 50%"></td>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
-                    </tr>
-                    <tr>
-                      <td>3.</td>
-                      <td>Lorem, ipsum.</td>
-                      <td>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minus beatae molestias expedita? Maxime, culpa.
-                      </td>
-                      <td><img src="{{ asset('images/author1.jpg')}}" alt="picture-3" style="width: 50%"></td>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
-                    </tr>
-                    <tr>
-                      <td>4.</td>
-                      <td>Lorem, ipsum.</td>
-                      <td>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta est, voluptatem explicabo temporibus esse modi.
-                      </td>
-                      <td><img src="{{ asset('images/author2.jpg')}}" alt="picture-4" style="width: 50%"></td>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td><a href="#"><button type="button" class="btn btn-icon btn-flat btn-default edit-btn" data-original-title="Edit" ><i class="gg-pen" style="color: green" aria-hidden="true"></i></button></a>
-                      <a href="#"><button type="button" class="btn btn-icon btn-flat btn-default delete-btn" data-original-title="Delete"><i class="gg-close-o" style="color: red" aria-hidden="true"></i></button></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- End of Table -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
+      </div>
+  
+    <!-- /.content-header -->
+
+          <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="sticky-top mb-3">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">Draggable Events</h4>
+                </div>
+                <div class="card-body">
+                  <!-- the events -->
+                  <div id="external-events">
+                    <div class="external-event bg-success">Lunch</div>
+                    <div class="external-event bg-warning">Go home</div>
+                    <div class="external-event bg-info">Do homework</div>
+                    <div class="external-event bg-primary">Work on UI design</div>
+                    <div class="external-event bg-danger">Sleep tight</div>
+                    <div class="checkbox">
+                      <label for="drop-remove">
+                        <input type="checkbox" id="drop-remove">
+                        remove after drop
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Create Event</h3>
+                </div>
+                <div class="card-body">
+                  <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
+                    <ul class="fc-color-picker" id="color-chooser">
+                      <li><a class="text-primary" href="#"><i class="fas fa-square"></i></a></li>
+                      <li><a class="text-warning" href="#"><i class="fas fa-square"></i></a></li>
+                      <li><a class="text-success" href="#"><i class="fas fa-square"></i></a></li>
+                      <li><a class="text-danger" href="#"><i class="fas fa-square"></i></a></li>
+                      <li><a class="text-muted" href="#"><i class="fas fa-square"></i></a></li>
+                    </ul>
+                  </div>
+                  <!-- /btn-group -->
+                  <div class="input-group">
+                    <input id="new-event" type="text" class="form-control" placeholder="Event Title">
+
+                    <div class="input-group-append">
+                      <button id="add-new-event" type="button" class="btn btn-primary">Add</button>
+                    </div>
+                    <!-- /btn-group -->
+                  </div>
+                  <!-- /input-group -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-md-9">
+            <div class="card card-primary">
+              <div class="card-body p-0">
+                <!-- THE CALENDAR -->
+                <div id="calendar"></div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+      </div><!-- /.container-fluid -->
     </div>
+  </section>
     <!-- /.content-header -->
 
   <!-- Control Sidebar -->
