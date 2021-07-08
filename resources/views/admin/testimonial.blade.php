@@ -131,7 +131,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.event') }}" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-table"></i>
               <p>
                 Event
               </p>
@@ -139,7 +139,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.blog') }}" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+            <i class="nav-icon fas fa-edit"></i>
               <p>
                 Blog
               </p>
@@ -158,14 +158,6 @@
               <i class="nav-icon fas fa-handshake"></i>
               <p>
                 Sponsor
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ route('admin.calender') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Calender
               </p>
             </a>
           </li>
@@ -217,7 +209,7 @@
                   @foreach ($photo as $photos)
                     <tr>
                       <td>{{ $loop->iteration }}</td>
-                      <td>{{ $photos['title'] }}</td>
+                      <td>{{ $photos['caption'] }}</td>
                       <td>
                         {{ $photos['subtitle'] }}
                       </td>

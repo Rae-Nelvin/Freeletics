@@ -131,7 +131,7 @@
           </li>
           <li class="nav-item menu-open">
             <a href="{{ route('admin.event') }}" class="nav-link active">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-table"></i>
               <p>
                 Event
               </p>
@@ -139,7 +139,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.blog') }}" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+            <i class="nav-icon fas fa-edit"></i>
               <p>
                 Blog
               </p>
@@ -158,14 +158,6 @@
               <i class="nav-icon fas fa-handshake"></i>
               <p>
                 Sponsor
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ route('admin.calender') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Calender
               </p>
             </a>
           </li>
@@ -207,24 +199,26 @@
                     <tr>
                       <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
                       <th style="width: 10%; text-align: center; font-size: 20px">Judul Event</th>
-                      <th style="width: 20%; text-align: center; font-size: 20px">Deskripsi Event</th>
-                      <th style="width: 25%; text-align: center; font-size: 20px">Gambar</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Deskripsi Event</th>
+                      <th style="width: 15%; text-align: center; font-size: 20px">Content</th>
+                      <th style="width: 20%; text-align: center; font-size: 20px">Gambar</th>
                       <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
                       <th style="width: 15%; text-align: center; font-size: 20px">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                  @foreach ($photo as $photos)
+                  @foreach ($post as $posts)
                     <tr>
                       <td>{{ $loop->iteration }}</td>
-                      <td>{{ $photos['title'] }}</td>
+                      <td>{{ $posts['title'] }}</td>
                       <td>
-                        {{ $photos['subtitle'] }}
+                        {{ $posts['subtitle'] }}
                       </td>
-                      <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 75%"></td>
-                      <td>{{ $photos['updated_at'] }}</td>
-                      <td><a class="button touch edit" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
-                      <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
+                      <td>{{ $posts['content'] }}</td>
+                      <td><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->image_path}}" style="width: 75%"></td>
+                      <td>{{ $posts['updated_at'] }}</td>
+                      <td><a class="button touch edit" href="{{ route('admin.edit_post',$posts->id) }}"></a>
+                      <a class="button touch delete" href="{{ route('admin.delete_photos', $posts->id) }}"></a></td>
                     </tr>
                   @endforeach
                   </tbody>

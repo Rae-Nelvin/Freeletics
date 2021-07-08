@@ -129,7 +129,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.event') }}" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-table"></i>
               <p>
                 Event
               </p>
@@ -137,7 +137,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.blog') }}" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+            <i class="nav-icon fas fa-edit"></i>
               <p>
                 Blog
               </p>
@@ -156,14 +156,6 @@
               <i class="nav-icon fas fa-handshake"></i>
               <p>
                 Sponsor
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ route('admin.calender') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Calender
               </p>
             </a>
           </li>
@@ -194,8 +186,7 @@
                   <thead>
                     <tr>
                       <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px"><?php echo $title ?></th>
-                      <th style="width: 20%; text-align: center; font-size: 20px"><?php echo $subtitle ?></th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Caption</th>
                       <th style="width: 30%; text-align: center; font-size: 20px">Image</th>
                       <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
                     </tr>
@@ -204,10 +195,7 @@
                   @foreach ($photo as $photos)
                     <tr>
                       <td>{{ $loop->iteration }}</td>
-                      <td>{{ $photos['title'] }}</td>
-                      <td>
-                        {{ $photos['subtitle'] }}
-                      </td>
+                      <td>{{ $photos['caption'] }}</td>
                       <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
                       <td>{{ $photos['updated_at'] }}</td>
                     </tr>
@@ -217,12 +205,11 @@
           <!-- End of Image Table -->
           <!-- Form -->
           <div class="card-body">
-            <form action="{{ route('admin.edit') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.editphotos') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="id" value="{{ $photos['id'] }}">
-                <p class="title-edit">Masukkan <?php echo $title ?> Yang Baru :</p><input type="text" name="title"/><br><br>
-                <p class="title-edit">Masukkan <?php echo $subtitle ?> Yang Baru :</p><input type="text" name="subtitle"/><br><br>
                 <input type="hidden" name="event" value="{{ $photos['event'] }}"><p class="title-edit">Event : {{ $photos['event'] }}</p>
+                <input type="hidden" name="id" value="{{ $photos['id'] }}">
+                <p class="title-edit">Masukkan Caption Yang Baru :</p><input type="text" name="title"/><br><br>
                 <p class="title-edit">Masukkan Gambar : </p><input type="file" name="file_path"/><br><br>
                 <input type="submit" value="Save"/>
             </form>

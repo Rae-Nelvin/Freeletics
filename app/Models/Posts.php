@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Photos extends Model
+class Posts extends Model
 {
     use HasFactory;
 
-    protected $table = 'photos';
+    protected $table = 'posts';
     protected $primaryKey = 'id';
     
     /**
@@ -19,10 +19,12 @@ class Photos extends Model
      */
 
     protected $fillable = [
-        'caption',
+        'author_id',
+        'title',
         'subtitle',
         'event',
         'author_id',
-        'file_path'
+        'image_path',
+        'content'
     ];
 }
