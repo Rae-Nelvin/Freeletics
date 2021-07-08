@@ -38,31 +38,61 @@ button.read-more-btn {
     object-fit: cover;
 }
 
+#box-week {
+    align-items: center;
+    content: '';
+    z-index: 1;
+    position: absolute;
+    display: block;
+    opacity: 60%;
+    width: 80%;
+    height: 350px;
+    background-color: #000;
+    margin-top: 23%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
 figure {
     width: 300px !important;
     box-sizing: border-box;
-    height: 280px;
-    background-color: #FDCD22;
     object-fit: cover;
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
+.img-fluid {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.wrapper {
+    /* height: 280px;
+    background-color: #FDCD22;
+    opacity: 50%; */
+}
+
 .tgl {
     font-family: Nunito;
     font-weight: bold;
-    color: black;
+    color: #FDCD22;
     font-size: 13px;
     margin-top: -3% !important;
 }
 
 .fa-calendar-alt {
-    color: black;
+    color: #FDCD22;
 }
 
 .title-img {
-    color: black;
+    color: #FDCD22;
     font-family: Nunito;
     font-weight: bold;
     margin-top: 3%;
@@ -71,7 +101,7 @@ figure {
 
 #btn-week {
     color: #FDCD22;
-    /* margin-top: -20%; */
+    margin-top: -5%;
 }
 
 .caption-week {
@@ -153,7 +183,9 @@ figure {
 @media all and (max-width: 768px) {
     #box-week {
         width: 60vh;
-        display: none;
+        min-height: 100vh;
+        display: block;
+        margin-top: 0%;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         -ms-border-radius: 20px;
@@ -187,22 +219,22 @@ figure {
         margin-top: 0.5%;
     }
     #swiper-container-week {
-        max-width: 70%;
+        max-width: 73%;
         margin-top: 100% !important;
     }
     #swiper-slide-week {
-        max-width: 700px;
+        /* max-width: 300px !important; */
         max-height: 280px;
     }
     #swiper-slide img {
         display: block;
-        max-width: 700px;
+        /* max-width: 300px !important; */
         max-height: 280px;
         object-fit: cover;
     }
     #btn-week {
         color: #FDCD22;
-        /* margin-top: -20%; */
+        margin-top: -15%;
     }
     #date-week {
         display: none;

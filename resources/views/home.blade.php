@@ -154,39 +154,58 @@
         <div class="col-md-7 p-lg-4 mx-auto my-5">
             <h1 class="about-h1 display-4 font-weight-normal">FUN RUN</h1>
         </div>
-        <div class="d-flex justify-content-start">
+        <!-- <div class="d-flex justify-content-start">
             <input type="date" class="form-control" name="birthday" id="date-funrun">
-        </div>
+        </div> -->
         <div class="col">
         </div>
         <!-- Swipper  -->
-        <div class="d-flex justify-content-center">
+        <!-- <div class="d-flex justify-content-center">
             <div class="box" id="box-fun"></div>
-        </div>
+        </div> -->
         <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperr"
             id="swiper-container-run">
             <div class="swiper-wrapper">
-                <div class="swiper-slide " id="swiper-slide-run">
-                    <img src="{{ asset ('assets/images/week1.png')}}" class="img-fluid">
+                <div class="swiper-slide" id="swiper-slide-run">
+                    <figure>
+                        <div class="wrapper">
+                            <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                            <h5 class="title-img">Workout at Home</h5>
+                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                        </div>
+                    </figure>
                 </div>
-                <div class="swiper-slide " id="swiper-slide-run">
-                    <img src="{{ asset ('assets/images/week2.png')}}" class="img-fluid">
+                <div class="swiper-slide" id="swiper-slide-run">
+                    <figure>
+                        <div class="wrapper">
+                            <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                            <h5 class="title-img">Workout at Home</h5>
+                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                        </div>
+                    </figure>
                 </div>
-                <div class="swiper-slide " id="swiper-slide-run">
-                    <img src="{{ asset ('assets/images/week3.png')}}" class="img-fluid">
+                <div class="swiper-slide" id="swiper-slide-run">
+                    <figure>
+                        <div class="wrapper">
+                            <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                            <h5 class="title-img">Workout at Home</h5>
+                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                        </div>
+                    </figure>
                 </div>
-                <div class="swiper-slide " id="swiper-slide-run">
-                    <img src="{{ asset ('assets/images/week1.png')}}" class="img-fluid">
+                <div class="swiper-slide" id="swiper-slide-run">
+                    <figure>
+                        <div class="wrapper">
+                            <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                            <h5 class="title-img">Workout at Home</h5>
+                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                        </div>
+                    </figure>
                 </div>
-                <div class="swiper-slide " id="swiper-slide-run">
-                    <img src="{{ asset ('assets/images/week2.png')}}" class="img-fluid">
-                </div>
-                <div class="swiper-slide " id="swiper-slide-run">
-                    <img src="{{ asset ('assets/images/week3.png')}}" class="img-fluid">
-                </div>
+
             </div>
-            <div class="swiper-button-next" id="btn-week"></div>
-            <div class="swiper-button-prev" id="btn-week"></div>
+            <div class="swiper-button-next" id="btn-funrun"></div>
+            <div class="swiper-button-prev" id="btn-funrun"></div>
         </div>
         <!--  End of Swipper -->
         <div class="col">
@@ -220,6 +239,9 @@
                 <!-- <div class="d-flex justify-content-start">
                     <input type="date" class="form-control" name="birthday" id="date-week">
                 </div> -->
+                <div class="d-flex justify-content-center">
+                    <div class="box" id="box-week"></div>
+                </div>
                 <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperrr"
                     id="swiper-container-week">
                     <div class="swiper-wrapper">
