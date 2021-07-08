@@ -129,7 +129,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.event') }}" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-table"></i>
               <p>
                 Event
               </p>
@@ -137,7 +137,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.blog') }}" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+            <i class="nav-icon fas fa-edit"></i>
               <p>
                 Blog
               </p>
@@ -159,14 +159,6 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{ route('admin.calender') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Calender
-              </p>
-            </a>
-          </li>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -185,22 +177,22 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
-              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Add New</li>
               <br>
             </ol>
           </div><!-- /.col -->
-          <div class="card-body">
-          <?php 
-          ?>
-            <form action="{{ route('admin.upload') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <p class="title-edit"><?php echo $title ?></p><input type="text" name="title" /><br><br>
-                <p class="title-edit"><?php echo $subtitle ?></p><input type="text" name="subtitle" /><br><br>
-                <p class="title-edit"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
-                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="file_path"/><br><br>
-                <input type="submit" value="Submit"/>
-            </form>
+          <table>
+            <tbody>
+              <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data">
+                  @csrf
+                  <tr><td><p class="title-edit"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p></td></tr>
+                  <tr><td><p class="title-edit">Masukkan Caption Gambar : </p><input type="text" name="title" /><br><br></td></tr>
+                  <tr><td><p class="title-edit">Masukkan Gambar : </p><input type="file" name="images[]" multiple="true"/><br><br></td></tr>
+            </tbody>
+          </table>
           </div>
+          <div>
+          <tr><td><input type="submit" value="Submit"/></form>
+          <a href="#" class="btn btn-info addRow" style="margin-top: 20px;">+</a></div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
@@ -248,5 +240,19 @@
 <script src="{{ asset('dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
+<!-- Add More Button -->
+<script type="text/javascript">
+  $('.addRow').on('click', function(){
+    addRow();
+  });
+
+  function addRow(){
+    var tr = '<tr>'+ 
+                  '<td>'+
+                  '<p class="title-edit">Masukkan Gambar : </p><input type="file" name="images[]" multiple="true"/><br><br></td>'+
+              '</tr>';
+              $('tbody').append(tr);
+  };
+</script>
 </body>
 </html>

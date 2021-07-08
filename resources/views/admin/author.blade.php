@@ -134,7 +134,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.event') }}" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-table"></i>
               <p>
                 Event
               </p>
@@ -142,7 +142,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.blog') }}" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+            <i class="nav-icon fas fa-edit"></i>
               <p>
                 Blog
               </p>
@@ -164,14 +164,6 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{ route('admin.calender') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Calender
-              </p>
-            </a>
-          </li>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -184,7 +176,7 @@
     <div class="content-header">
       <div class="container-fluid">
       @if(Session::get('Successful'))
-                        <div class="alert alert-danger">
+                        <div class="alert alert-success">
                             {{ Session::get('Successful') }}
                         </div>
         @endif
@@ -221,7 +213,7 @@
                   @foreach ($photo as $photos)
                     <tr>
                       <td>{{ $loop->iteration }}</td>
-                      <td>{{ $photos['title'] }}</td>
+                      <td>{{ $photos['caption'] }}</td>
                       <td>
                         {{ $photos['subtitle'] }}
                       </td>

@@ -77,9 +77,7 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-        @foreach ($admin as $admin)
-          <a href="#" class="d-block">{{ $admin->name }}</a>
-          @endforeach
+          <a href="#" class="d-block">Leonardo Wijaya</a>
         </div>
       </div>
 
@@ -89,7 +87,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ route('admin.dashboard') }}" class="nav-link">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -98,7 +96,7 @@
             </li>
         <li class="nav-header">OBJECTS</li>
           <li class="nav-item">
-            <a href="{{ route('admin.author') }}" class="nav-link ">
+            <a href="{{ route('admin.author') }}" class="nav-link">
             <i class="nav-icon fas fa-users"></i>
               <p>
                 Author
@@ -131,7 +129,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.event') }}" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-table"></i>
               <p>
                 Event
               </p>
@@ -139,7 +137,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('admin.blog') }}" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+            <i class="nav-icon fas fa-edit"></i>
               <p>
                 Blog
               </p>
@@ -161,14 +159,6 @@
               </p>
             </a>
           </li>
-          <li class="nav-item menu-open">
-            <a href="{{ route('admin.calender') }}" class="nav-link active">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Calender
-              </p>
-            </a>
-          </li>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -176,104 +166,66 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <section class="content-wrapper">
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;">Calender</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;">Edit Photos</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
-              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Calender</li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Edit Photos</li>
               <br>
             </ol>
           </div><!-- /.col -->
+          <!-- Image Table -->
+          <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                    <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Judul Event</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Deskripsi Event</th>
+                      <th style="width: 30%; text-align: center; font-size: 20px">Content</th>
+                      <th style="width: 29%; text-align: center; font-size: 20px">Gambar</th>
+                      <th style="width: 20%; text-align: center; font-size: 20px">Last Update</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  @foreach ($post as $posts)
+                    <tr>
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ $posts['title'] }}</td>
+                      <td>
+                        {{ $posts['subtitle'] }}
+                      </td>
+                      <td>{{ $posts['content'] }}</td>
+                      <td><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->image_path}}" style="width: 50%"></td>
+                      <td>{{ $posts['updated_at'] }}</td>
+                    </tr>
+                  @endforeach
+                  </tbody>
+                </table>
+          <!-- End of Image Table -->
+          <!-- Form -->
+          <div class="card-body">
+            <form action="{{ route('admin.editpost') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="event" value="{{ $posts['event'] }}"><p class="title-edit">Event : {{ $posts['event'] }}</p>
+                <input type="hidden" name="id" value="{{ $posts['id'] }}">
+                <p class="title-edit">Masukkan <?php echo $title ?> Yang Baru :</p><input type="text" name="title"/><br><br>
+                <p class="title-edit">Masukkan <?php echo $subtitle ?> Yang Baru :</p><input type="text" name="subtitle"/><br><br>
+                <p class="title-edit">Masukkan Content Yang Baru :</p><input type="text" name="content"> <br><br>
+                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="image_path"/><br><br>
+                <input type="submit" value="Save"/>
+            </form>
+          </div>
+          <!-- End of Form -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-      </div>
-  
-    <!-- /.content-header -->
-
-          <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="sticky-top mb-3">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">Draggable Events</h4>
-                </div>
-                <div class="card-body">
-                  <!-- the events -->
-                  <div id="external-events">
-                    <div class="external-event bg-success">Lunch</div>
-                    <div class="external-event bg-warning">Go home</div>
-                    <div class="external-event bg-info">Do homework</div>
-                    <div class="external-event bg-primary">Work on UI design</div>
-                    <div class="external-event bg-danger">Sleep tight</div>
-                    <div class="checkbox">
-                      <label for="drop-remove">
-                        <input type="checkbox" id="drop-remove">
-                        remove after drop
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-              </div>
-              <!-- /.card -->
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">Create Event</h3>
-                </div>
-                <div class="card-body">
-                  <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
-                    <ul class="fc-color-picker" id="color-chooser">
-                      <li><a class="text-primary" href="#"><i class="fas fa-square"></i></a></li>
-                      <li><a class="text-warning" href="#"><i class="fas fa-square"></i></a></li>
-                      <li><a class="text-success" href="#"><i class="fas fa-square"></i></a></li>
-                      <li><a class="text-danger" href="#"><i class="fas fa-square"></i></a></li>
-                      <li><a class="text-muted" href="#"><i class="fas fa-square"></i></a></li>
-                    </ul>
-                  </div>
-                  <!-- /btn-group -->
-                  <div class="input-group">
-                    <input id="new-event" type="text" class="form-control" placeholder="Event Title">
-
-                    <div class="input-group-append">
-                      <button id="add-new-event" type="button" class="btn btn-primary">Add</button>
-                    </div>
-                    <!-- /btn-group -->
-                  </div>
-                  <!-- /input-group -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.col -->
-          <div class="col-md-9">
-            <div class="card card-primary">
-              <div class="card-body p-0">
-                <!-- THE CALENDAR -->
-                <div id="calendar"></div>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-      </div><!-- /.container-fluid -->
     </div>
-  </section>
     <!-- /.content-header -->
 
   <!-- Control Sidebar -->

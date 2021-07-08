@@ -15,11 +15,10 @@ class CreatePhotoTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('caption');
             $table->string('subtitle')->nullable();
             $table->string('event');
-            $table->boolean('is_used')->nullable();
-            $table->integer('author_id')->nullable();
+            $table->foreignId('author_id')->references('id')->on('users');
             $table->string('file_path');
             $table->timestamps();
         });

@@ -77,9 +77,7 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-        @foreach ($admin as $admin)
-          <a href="#" class="d-block">{{ $admin->name }}</a>
-          @endforeach
+          <a href="#" class="d-block">Leonardo Wijaya</a>
         </div>
       </div>
 
@@ -89,7 +87,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ route('admin.dashboard') }}" class="nav-link">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -98,7 +96,7 @@
             </li>
         <li class="nav-header">OBJECTS</li>
           <li class="nav-item">
-            <a href="{{ route('admin.author') }}" class="nav-link ">
+            <a href="{{ route('admin.author') }}" class="nav-link">
             <i class="nav-icon fas fa-users"></i>
               <p>
                 Author
@@ -121,8 +119,8 @@
               </p>
             </a>
           </li>
-          <li class="nav-item menu-open">
-            <a href="{{ route('admin.weeks12') }}" class="nav-link active">
+          <li class="nav-item">
+            <a href="{{ route('admin.weeks12') }}" class="nav-link">
             <i class="nav-icon fas fa-flag-checkered"></i>
               <p>
                 12 - Weeks
@@ -172,36 +170,26 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-      @if(Session::get('Successful'))
-                        <div class="alert alert-success">
-                            {{ Session::get('Successful') }}
-                        </div>
-        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;">12 Weeks</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;">Edit Photos</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
-              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">12 Weeks</li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Edit Photos</li>
               <br>
             </ol>
           </div><!-- /.col -->
-          <!-- Add New Button -->
-          <div class="col-sm-9">
-          </div>
-          <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',4) }}"style="font-family: inherit; font-weight: bold;">Add New</a></div>
-          <!-- End of Button -->
-          <!-- Table -->
+          <!-- Image Table -->
           <table class="table table-bordered">
                   <thead>
                     <tr>
                       <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Caption</th>
-                      <th style="width: 25%; text-align: center; font-size: 20px">Gambar</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px"><?php echo $title ?></th>
+                      <th style="width: 20%; text-align: center; font-size: 20px"><?php echo $subtitle ?></th>
+                      <th style="width: 30%; text-align: center; font-size: 20px">Image</th>
                       <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
-                      <th style="width: 15%; text-align: center; font-size: 20px">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -209,15 +197,29 @@
                     <tr>
                       <td>{{ $loop->iteration }}</td>
                       <td>{{ $photos['caption'] }}</td>
-                      <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 75%"></td>
+                      <td>
+                        {{ $photos['subtitle'] }}
+                      </td>
+                      <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
                       <td>{{ $photos['updated_at'] }}</td>
-                      <td><a class="button touch edit" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
-                      <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
                     </tr>
                   @endforeach
                   </tbody>
                 </table>
-                <!-- End of Table -->
+          <!-- End of Image Table -->
+          <!-- Form -->
+          <div class="card-body">
+            <form action="{{ route('admin.editphotos') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="event" value="{{ $photos['event'] }}"><p class="title-edit">Event : {{ $photos['event'] }}</p>
+                <input type="hidden" name="id" value="{{ $photos['id'] }}">
+                <p class="title-edit">Masukkan <?php echo $title ?> Yang Baru :</p><input type="text" name="title"/><br><br>
+                <p class="title-edit">Masukkan <?php echo $subtitle ?> Yang Baru :</p><input type="text" name="subtitle"/><br><br>
+                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="file_path"/><br><br>
+                <input type="submit" value="Save"/>
+            </form>
+          </div>
+          <!-- End of Form -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>

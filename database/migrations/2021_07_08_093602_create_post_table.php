@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCalenderTable extends Migration
+class CreatePostTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateCalenderTable extends Migration
      */
     public function up()
     {
-        Schema::create('calender', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('author_id')->references('id')->on('users');
             $table->string('title');
-            $table->string('description')->nullable;
-            $table->integer('photos_id');
-            $table->integer('author_id');
-            $table->dateTime('event_date');
+            $table->string('subtitle')->nullable();
+            $table->string('event');
+            $table->string('image_path')->nullable();
+            $table->text('content');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateCalenderTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('calender');
+        Schema::dropIfExists('post');
     }
 }

@@ -7,6 +7,7 @@ use App\Models\Photos;
 use Illuminate\Database\Eloquent\Collection;
 use Session;
 use App\Models\User;
+use App\Models\Posts;
 
 class PhotoController extends Controller
 {
@@ -14,76 +15,108 @@ class PhotoController extends Controller
         if($id == 1)
             {
                 $title = "Masukkan Nama Author : ";
-                $subtitle = "Masukkan Deskripsi : ";
+                $subtitle = "Masukkan Deskripsi Author : ";
               $event = 'Author';
+              return view('admin.upload_author',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
             else if($id == 2)
             {
-                $title = "Masukkan Judul Gambar (Tidak ditampilkan) : ";
-                $subtitle = "Masukkan Deskripsi Gambar (Tidak ditampilkan) : ";
               $event = 'Massworkout';
+              return view('admin.upload_photos',['event'=>$event]);
             }
             else if($id == 3)
             {
-                $title = "Masukkan Judul Gambar (Tidak ditampilkan) : ";
-                $subtitle = "Masukkan Deskripsi Gambar (Tidak ditampilkan) : ";
               $event = 'Funrun';
+              return view('admin.upload_photos',['event'=>$event]);
             }
             else if($id == 4)
             {
-                $title = "Masukkan Judul Gambar (Tidak ditampilkan) : ";
-                $subtitle = "Masukkan Deskripsi Gambar (Tidak ditampilkan) : ";
               $event = 'Weeks12';
+              return view('admin.upload_photos',['event'=>$event]);
             }
             else if($id == 5)
             {
                 $title = "Masukkan Judul Event : ";
                 $subtitle = "Masukkan Deskripsi Event";
               $event = 'Event';
+              return view('admin.upload_post',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
             else if($id == 6)
             {
                 $title = "Masukkan Judul Blog : ";
-                $subtitle = "Masukkan Deskripsi Blog (Tidak ditampilkan) : ";
+                $subtitle = "Masukkan Deskripsi Blog : ";
               $event = 'Blog';
+              return view('admin.upload_post',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
             else if($id == 7)
             {
                 $title = "Masukkan Nama Tester : ";
                 $subtitle = "Masukkan Deskripsi Testimonial : ";
                 $event = 'Testimonial';
+                return view('admin.upload_author',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
             else if($id == 8)
             {
                 $title = "Masukkan Nama Sponsor : ";
                 $subtitle = "Masukkan Link Website Sponsor : ";
                 $event = 'Sponsor';
+                return view('admin.upload_author',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
             else if($id == 9)
             {
                 $event = 'Calender';
             }
-        return view('admin.upload_photos',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
+        
     }
 
-    function upload(Request $request){
+    function uploadphotos(Request $request){
         $request->validate([
             'title' => 'required',
             'event' => 'required',
-            'file_path' => 'required|image'
         ]);
 
-        $imageName = $request->event.'/'.$request->file_path->getClientOriginalName();
-        $request->file_path->move(public_path('freeletics_images/'. $request->event), $imageName);
+        $id = Session::get('LoggedUser');
 
-        Photos::create([
+        $files = $request->file('images');
+
+        foreach($files as $file){
+            $imageName = $request->event.'/'.$file->getClientOriginalName();
+            $file->move(public_path('freeletics_images/'. $request->event), $imageName);
+            
+            Photos::create([
+                'author_id' => $id,
+                'caption' => $request->title,
+                'subtitle' => $request->subtitle,
+                'event' => $request->event,
+                'file_path' => $imageName
+            ]);
+        }
+
+        return redirect('admin/'.$request->event)->with('Successful', 'Your Photo has been uploaded successfully!!');
+    }
+
+    function uploadpost(Request $request){
+        $request->validate([
+            'title' => 'required',
+            'event' => 'required',
+            'content' => 'required',
+            'image_path' => 'required|image'
+        ]);
+
+        $imageName = $request->event.'/'.$request->image_path->getClientOriginalName();
+        $request->image_path->move(public_path('freeletics_images/'. $request->event), $imageName);
+        $id = Session::get('LoggedUser');
+
+        Posts::create([
+            'author_id' => $id,
             'title' => $request->title,
             'subtitle' => $request->subtitle,
             'event' => $request->event,
-            'file_path' => $imageName
+            'content' => $request->content,
+            'image_path' => $imageName
         ]);
 
-        return redirect('admin/'.$request->event)->with('Successful', 'Your Photo has been uploaded successfully!!');
+        return redirect('admin/'.$request->event)->with('Successful', 'Your Post has been uploaded successfully!!');
     }
 
     function edit_photos($id){
@@ -93,50 +126,56 @@ class PhotoController extends Controller
             {
                 $title = "Nama Author ";
                 $subtitle = "Deskripsi ";
+                return view('admin.edit_author',['photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
             }
             else if($event == '[{"event":"Massworkout"}]')
             {
-                $title = "Judul Gambar (Tidak ditampilkan) ";
-                $subtitle = "Deskripsi Gambar (Tidak ditampilkan) ";
+                return view('admin.edit_photos',['photo'=>$photos]);
             }
             else if($event == '[{"event":"Funrun"}]')
             {
-                $title = "Judul Gambar (Tidak ditampilkan) ";
-                $subtitle = "Deskripsi Gambar (Tidak ditampilkan) ";
+                return view('admin.edit_photos',['photo'=>$photos]);
             }
             else if($event == '[{"event":"Weeks12"}]')
             {
-                $title = "Judul Gambar (Tidak ditampilkan) ";
-                $subtitle = "Deskripsi Gambar (Tidak ditampilkan) ";
-            }
-            else if($event == '[{"event":"Event"}]')
-            {
-                $title = "Judul Event ";
-                $subtitle = "Deskripsi Event";
-            }
-            else if($event == '[{"event":"Blog"}]')
-            {
-                $title = "Judul Blog ";
-                $subtitle = "Deskripsi Blog (Tidak ditampilkan) ";
+                return view('admin.edit_photos',['photo'=>$photos]);
             }
             else if($event == '[{"event":"Testimonial"}]')
             {
-                $title = "Nama Tester ";
-                $subtitle = "Deskripsi Testimonial ";
+                $title = "Nama Author ";
+                $subtitle = "Deskripsi ";
+                return view('admin.edit_author',['photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
             }
             else if($event == '[{"event":"Sponsor"}]')
             {
-                $title = "Nama Sponsor ";
-                $subtitle = "Link Website Sponsor ";
+                $title = "Nama Author ";
+                $subtitle = "Deskripsi ";
+                return view('admin.edit_author',['photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
             }
-            else if($event == '[{"event":"Calender"}]')
-            {
-            }
+
             
-        return view('admin.edit_photos',['photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
+       
     }
 
-    function edit(Request $request){
+    function edit_post($id)
+    {
+        $post = Posts::get()->where('id',$id);
+        $event2 = Posts::select('event')->where('id',$id)->get();
+        if($event2 == '[{"event":"Event"}]')
+        {
+            $title = "Judul Event ";
+            $subtitle = "Deskripsi Event";
+            return view('admin.edit_post',['post'=>$post,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event2]);
+        }
+        else if($event2 == '[{"event":"Blog"}]')
+        {
+            $title = "Judul Blog ";
+            $subtitle = "Deskripsi Blog ";
+            return view('admin.edit_post',['post'=>$post,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event2]);
+        }   
+    }
+
+    function editphotos(Request $request){
         $request->validate([
             'title' => 'required',
             'file_path' => 'required|image'
@@ -147,9 +186,32 @@ class PhotoController extends Controller
 
         $edit = Photos::where('id',$request->id)
             ->update([
-                'title' => $request->title,
+                'caption' => $request->title,
                 'subtitle' => $request->subtitle,
                 'file_path' => $imageName
+            ]);
+        
+            return redirect('admin/'.$request->event)->with('Successful', 'Your Photo has been updated successfully!!');
+    }
+
+    function editpost(Request $request){
+        $request->validate([
+            'title' => 'required',
+            'event' => 'required',
+            'content' => 'required',
+            'image_path' => 'required|image'
+        ]);
+
+        $imageName = $request->event.'/'.$request->image_path->getClientOriginalName();
+        $request->image_path->move(public_path('freeletics_images/'. $request->event), $imageName);
+
+        $edit = Posts::where('id',$request->id)
+            ->update([
+                'title' => $request->title,
+                'subtitle' => $request->subtitle,
+                'event' => $request->event,
+                'content' => $request->content,
+                'image_path' => $imageName
             ]);
         
             return redirect('admin/'.$request->event)->with('Successful', 'Your Photo has been updated successfully!!');
