@@ -28,17 +28,17 @@ a.nav-link {
 /* backgorund */
 
 .bg-blog {
-    background-color: black !important;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.png);
+    min-height: 150vh;
     width: 100%;
-    min-height: 130vh;
-    /* position: relative;
     background-position: center;
-    background-size: cover; */
+    background-size: cover;
+    position: relative;
 }
 
 .title-h1 {
     color: #FDCD22;
-    margin-top: 7%;
+    margin-top: 17%;
 }
 
 .img-fluid {
@@ -62,43 +62,123 @@ a.nav-link {
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    margin-top: -10%;
+    margin-top: -5%;
 }
 
 .line {
-    background-color: white !important;
+    background-color: #FDCD22 !important;
     width: 20%;
     height: 1px;
     display: flex;
     justify-content: flex-end;
     position: absolute;
     margin-left: auto;
-    margin-top: -5%;
+    margin-top: -1%;
+}
+
+.content {
+    /* height: 280px;
+    background-color: #FDCD22;
+    opacity: 50%; */
+    /* min-height: 100vh; */
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    overflow-x: hidden;
+    margin-top: 0%;
 }
 
 .new-blog {
-    margin-top: -2%;
-    /* max-width: 100%; */
-    width: 200px;
-    height: 120px;
-    position: absolute;
+    margin-top: 5%;
+    width: 220px;
+    height: 140px;
 }
 
 .desc-content {
-    color: white;
-    margin-top: 8%;
-    position: absolute;
+    color: #FDCD22;
+    position: relative;
+    /* margin-top: 6% !important; */
     flex: 1;
+    font-size: 17px;
+    font-family: nunito;
+    font-weight: bold;
 }
 
-.right-blog {
-    /* position: relative; */
+.tgl {
+    /* margin-top: 110px; */
+    position: absolute;
+    color: white;
+    font-size: 13px;
+}
+
+
+/* .new-blog-2 {
+    margin-top: 10%;
+    /* max-width: 100%; */
+
+width: 220px;
+height: 140px;
+position: absolute;
+
+}
+*/ .desc-content-2 {
+    color: #FDCD22;
+    position: absolute;
+    margin-top: 20% !important;
+    flex: 1;
+    font-size: 17px;
+    font-family: nunito;
+    font-weight: bold;
+}
+.tgl-2 {
+    margin-top: 320px;
+    position: absolute;
+    color: white;
+    font-size: 13px;
+}
+
+/* .new-blog-3 {
+    margin-top: 48vh;
+    /* max-width: 100%; */
+width: 220px;
+height: 140px;
+position: absolute;
+
+}
+*/ .desc-content-3 {
+    color: #FDCD22;
+    position: absolute;
+    margin-top: 67vh !important;
+    flex: 1;
+    font-size: 17px;
+    font-family: nunito;
+    font-weight: bold;
+}
+.tgl-3 {
+    margin-top: 70vh;
+    position: absolute;
+    color: white;
+    font-size: 13px;
+}
+
+/* .right-blog {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     position: relative;
     margin-left: auto;
+} */
+.left-bar {
+    vertical-align: top;
+    float: left;
+    max-width: 60%;
 }
-
-.news {
-    margin-top: -52%;
+.sidebar-container {
+    max-width: 20%;
+    float: left;
+    margin-right: 0% !important;
+    vertical-align: top;
+    margin-top: 16%;
+    /* display: flex;
+    justify-content: flex-end; */
 }

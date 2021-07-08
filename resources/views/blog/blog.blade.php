@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -40,7 +42,7 @@
     <div class="position-relative overflow-hidden bg-blog">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 p-lg-4 ">
+                <div class=" left-bar">
                     <h1 class="title-h1 display-7 font-weight-normal">Olahraga Di rumah Pada Masa PPKM</h1>
                     <img src="{{ asset ('assets/images/12weeks.png')}}" class="img-fluid">
                     <p class="deskripsi">
@@ -54,22 +56,47 @@
                         pariatur voluptates aperiam voluptatem esse ullam.
                     </p>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="news">
-        <div class="container">
-            <div class="list-content">
-                <h3 class="right-side">NEWS UPDATE</h3>
-                <div class="line"></div>
-                <div class="col-lg-9">
-                    <img class="new-blog" src="{{ asset ('assets/images/blog.png')}}">
-                    <p class="desc-content">Next event bulan depan juli</p>
+                <div class="sidebar-container">
+                    <div class="list-content">
+                        <h3 class="right-side">NEWS UPDATE</h3>
+                        <div class="line"></div>
+                        <div class="content">
+                            <img class="new-blog" src="{{ asset ('assets/images/blog.png')}}">
+                            <p class="desc-content">Next event bulan depan juli</p>
+                            <span class="tgl">12 july 2021</span>
+                        </div>
+                        <div class="content">
+                            <img class="new-blog" src="{{ asset ('assets/images/blog.png')}}">
+                            <p class="desc-content-2">Next event bulan depan juli</p>
+                            <span class="tgl">12 july 2021</span>
+                        </div>
+                        <div class="content">
+                            <img class="new-blog-3" src="{{ asset ('assets/images/blog.png')}}">
+                            <p class="desc-content">Next event bulan depan juli</p>
+                            <span class="tgl">12 july 2021</span>
+                        </div>
+                        <!-- <div class="content">
+                            <img class="new-blog-2" src="{{ asset ('assets/images/blog.png')}}">
+                            <p class="desc-content-2">Next event bulan depan juli</p>
+                            <span class="tgl-2">12 july 2021</span>
+                        </div>
+                        <div class="content">
+                            <img class="new-blog-3" src="{{ asset ('assets/images/blog.png')}}">
+                            <p class="desc-content-3">Next event bulan depan juli</p>
+                            <span class="tgl-3">12 july 2021</span>
+                        </div> -->
+                    </div>
                 </div>
             </div>
+
         </div>
+
     </div>
+
+
+
+
+
 
 
 

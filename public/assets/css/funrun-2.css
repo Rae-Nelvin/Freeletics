@@ -74,7 +74,7 @@ figure {
     font-weight: bold;
     color: #FDCD22;
     font-size: 13px;
-    margin-top: -3% !important;
+    margin-top: -3%;
 }
 
 .fa-calendar-alt {
@@ -158,6 +158,7 @@ figure {
         width: 100%;
         height: 300px;
         margin-top: 5%;
+        display: none;
     }
     #date-funrun {
         display: none;

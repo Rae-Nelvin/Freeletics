@@ -106,9 +106,9 @@
             </div>
         </div>
         <div class="row" id="mass-date">
-            <div class="col-4">
+            <!-- <div class="col-4">
                 <input type="date" class="form-control" name="birthday" id="date-mask">
-            </div>
+            </div> -->
         </div>
         <div class="row align-items-start" id="mass-swipper">
             <div class="col-xl-4" id="img-swipper">
@@ -160,9 +160,9 @@
         <div class="col">
         </div>
         <!-- Swipper  -->
-        <!-- <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
             <div class="box" id="box-fun"></div>
-        </div> -->
+        </div>
         <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperr"
             id="swiper-container-run">
             <div class="swiper-wrapper">
@@ -180,7 +180,7 @@
                         <div class="wrapper">
                             <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
                             <h5 class="title-img">Workout at Home</h5>
-                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 juli 2021</span>
                         </div>
                     </figure>
                 </div>
