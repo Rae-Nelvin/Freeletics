@@ -6,8 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -211,10 +216,6 @@
                         <button class="btn btn-outline-warning read-more-btn" id="btn-read-more-week">Read More</button>
                     </p>
                 </div>
-
-                <div class="d-flex justify-content-center">
-                    <div class="box-lg" id="box-week"></div>
-                </div>
                 <!-- Swiper -->
                 <!-- <div class="d-flex justify-content-start">
                     <input type="date" class="form-control" name="birthday" id="date-week">
@@ -223,25 +224,58 @@
                     id="swiper-container-week">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week1.png')}}" class=" img-fluid">
+                            <figure>
+                                <div class="wrapper">
+                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                                    <h5 class="title-img">Workout at Home</h5>
+                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                                </div>
+                            </figure>
                         </div>
                         <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week2.png')}}" class=" img-fluid">
+                            <figure>
+                                <div class="wrapper">
+                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                                    <h5 class="title-img">Workout at Home</h5>
+                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                                </div>
+                            </figure>
                         </div>
                         <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week3.png')}}" class=" img-fluid">
+                            <figure>
+                                <div class="wrapper">
+                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                                    <h5 class="title-img">Workout at Home</h5>
+                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                                </div>
+                            </figure>
                         </div>
                         <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week1.png')}}" class=" img-fluid">
+                            <figure>
+                                <div class="wrapper">
+                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                                    <h5 class="title-img">Workout at Home</h5>
+                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                                </div>
+                            </figure>
                         </div>
                         <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week2.png')}}" class=" img-fluid">
+                            <figure>
+                                <div class="wrapper">
+                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                                    <h5 class="title-img">Workout at Home</h5>
+                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                                </div>
+                            </figure>
                         </div>
                         <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week3.png')}}" class=" img-fluid">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <img src="{{ asset ('assets/images/week1.png')}}" class=" img-fluid">
+                            <figure>
+                                <div class="wrapper">
+                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                                    <h5 class="title-img">Workout at Home</h5>
+                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                                </div>
+                            </figure>
                         </div>
                     </div>
                     <div class="swiper-button-next" id="btn-week"></div>

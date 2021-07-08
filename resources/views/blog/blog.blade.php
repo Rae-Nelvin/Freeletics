@@ -55,10 +55,15 @@
                     </p>
                 </div>
             </div>
-            <div class="news">
-                <div class="right-blog">
-                    <h3 class="right-side">NEWS UPDATE</h3>
-                    <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="news">
+        <div class="container">
+            <div class="list-content">
+                <h3 class="right-side">NEWS UPDATE</h3>
+                <div class="line"></div>
+                <div class="col-lg-9">
                     <img class="new-blog" src="{{ asset ('assets/images/blog.png')}}">
                     <p class="desc-content">Next event bulan depan juli</p>
                 </div>

@@ -29,14 +29,6 @@
     margin-top: 10%;
 }
 
-.img-fluid {
-    border-radius: 5% !important;
-    -webkit-border-radius: 5% !important;
-    -moz-border-radius: 5% !important;
-    -ms-border-radius: 5% !important;
-    -o-border-radius: 5% !important;
-}
-
 .moreText {
     display: none;
 }
