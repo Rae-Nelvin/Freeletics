@@ -66,7 +66,7 @@
                             <span class="tgl">12 july 2021</span>
                         </div>
                         <div class="content">
-                            <img class="new-blog" src="{{ asset ('assets/images/blog.png')}}">
+                            <img class="new-blog-2" src="{{ asset ('assets/images/blog.png')}}">
                             <p class="desc-content-2">Next event bulan depan juli</p>
                             <span class="tgl">12 july 2021</span>
                         </div>

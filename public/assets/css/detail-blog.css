@@ -29,7 +29,7 @@ a.nav-link {
 
 .bg-blog {
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.png);
-    min-height: 150vh;
+    min-height: 160vh;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -53,7 +53,7 @@ a.nav-link {
 
 .deskripsi {
     color: white;
-    max-width: 80%;
+    max-width: 100%;
     margin-top: 5%;
 }
 
@@ -95,9 +95,9 @@ a.nav-link {
 }
 
 .desc-content {
+    /* margin-top: 6% !important; */
     color: #FDCD22;
     position: relative;
-    /* margin-top: 6% !important; */
     flex: 1;
     font-size: 17px;
     font-family: nunito;
@@ -105,31 +105,27 @@ a.nav-link {
 }
 
 .tgl {
-    /* margin-top: 110px; */
+    margin-top: -17px;
     position: absolute;
     color: white;
     font-size: 13px;
 }
 
-
-/* .new-blog-2 {
+.new-blog-2 {
     margin-top: 10%;
-    /* max-width: 100%; */
-
-width: 220px;
-height: 140px;
-position: absolute;
-
+    width: 220px;
+    height: 140px;
 }
-*/ .desc-content-2 {
+
+.desc-content-2 {
     color: #FDCD22;
-    position: absolute;
-    margin-top: 20% !important;
+    position: relative;
     flex: 1;
     font-size: 17px;
     font-family: nunito;
     font-weight: bold;
 }
+
 .tgl-2 {
     margin-top: 320px;
     position: absolute;
@@ -137,23 +133,21 @@ position: absolute;
     font-size: 13px;
 }
 
-/* .new-blog-3 {
-    margin-top: 48vh;
-    /* max-width: 100%; */
-width: 220px;
-height: 140px;
-position: absolute;
-
+.new-blog-3 {
+    margin-top: 10%;
+    width: 220px;
+    height: 140px;
 }
-*/ .desc-content-3 {
+
+.desc-content-3 {
     color: #FDCD22;
-    position: absolute;
-    margin-top: 67vh !important;
+    position: relative;
     flex: 1;
     font-size: 17px;
     font-family: nunito;
     font-weight: bold;
 }
+
 .tgl-3 {
     margin-top: 70vh;
     position: absolute;
@@ -161,18 +155,12 @@ position: absolute;
     font-size: 13px;
 }
 
-/* .right-blog {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    margin-left: auto;
-} */
 .left-bar {
     vertical-align: top;
     float: left;
     max-width: 60%;
 }
+
 .sidebar-container {
     max-width: 20%;
     float: left;
@@ -181,4 +169,37 @@ position: absolute;
     margin-top: 16%;
     /* display: flex;
     justify-content: flex-end; */
+}
+
+@media all and (max-width: 768px) {
+    .sidebar-container {
+        position: relative;
+        object-fit: cover;
+        max-width: 100%;
+    }
+    .left-bar {
+        max-width: 100%;
+    }
+    .line {
+        width: 50%;
+        margin-top: 3%;
+    }
+    .new-blog {
+        position: relative;
+        margin-top: 8%;
+        width: 100%;
+        height: 100%;
+    }
+    .new-blog-2 {
+        position: relative;
+        margin-top: 8%;
+        width: 100%;
+        height: 100%;
+    }
+    .new-blog-3 {
+        position: relative;
+        margin-top: 8%;
+        width: 100%;
+        height: 100%;
+    }
 }
