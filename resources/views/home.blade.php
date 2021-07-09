@@ -65,33 +65,14 @@
             <!-- Three columns of text below the carousel -->
             <div class="row">
                 <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
+                @foreach ($author as $author)
                 <div class="col-lg-4">
                     <img class="rounded author" src="{{ asset ('assets/images/author2.jpg')}}"
                         alt="Generic placeholder image" width="250" height="250">
-                    <h2 class="author-h2">Wahyu Hidayat</h2>
-                    <p class="author-p">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id
-                        dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
-                        vestibulum at eros. Praesent commodo cursus magna.</p>
+                    <h2 class="author-h2">{{ $author['caption'] }}</h2>
+                    <p class="author-p">{{ $author['subtitle'] }}</p>
                 </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img class="rounded author" src="{{ asset ('assets/images/author2.jpg')}}"
-                        alt="Generic placeholder image" width="250" height="250">
-                    <h2 class="author">Wahyu Hidayat</h2>
-                    <p class="author">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
-                        sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus
-                        commodo, tortor mauris condimentum nibh.</p>
-                </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img class="rounded author" src="{{ asset ('assets/images/author2.jpg')}}"
-                        alt="Generic placeholder image" width="250" height="250">
-                    <h2 class="author">Wahyu Hidayat</h2>
-                    <p class="author">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                        Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor
-                        mauris condimentum nibh, ut fermentum massa justo sit
-                        amet risus.</p>
-                </div>
+                @endforeach
                 <!-- /.col-lg-4 -->
             </div>
             <!-- /.row -->
@@ -105,28 +86,17 @@
                 <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
             </div>
         </div>
-        <div class="row" id="mass-date">
-            <!-- <div class="col-4">
-                <input type="date" class="form-control" name="birthday" id="date-mask">
-            </div> -->
-        </div>
         <div class="row align-items-start" id="mass-swipper">
             <div class="col-xl-4" id="img-swipper">
                 <!-- Swiper -->
                 <div class="swiper-container mySwiper" id="mask">
                     <div class="swiper-wrapper">
+                        @foreach ($massworkout as $massworkout)
                         <div class="swiper-slide" id="swiper-mask">
-                            <img src="{{ asset ('assets/images/author1.jpg')}}" class="img-fluid"
+                            <img src="/freeletics_images/{{$massworkout->file_path}}" class="img-fluid"
                                 alt="image-responsive">
                         </div>
-                        <div class="swiper-slide" id="swiper-mask">
-                            <img src="{{ asset ('assets/images/author2.jpg')}}" class="img-fluid"
-                                alt="image-responsive">
-                        </div>
-                        <div class="swiper-slide" id="swiper-mask">
-                            <img src="{{ asset ('assets/images/author3.png')}}" class="img-fluid"
-                                alt="image-responsive">
-                        </div>
+                        @endforeach
                     </div>
                     <div class="swiper-button-next" id="btn-mask"></div>
                     <div class="swiper-button-prev" id="btn-mask"></div>
@@ -166,43 +136,17 @@
         <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperr"
             id="swiper-container-run">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" id="swiper-slide-run">
-                    <figure>
+            @foreach ($funrun as $funrun)
+                <div class="swiper-slide" id="swiper-slide-run">    
+                <figure>
                         <div class="wrapper">
-                            <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                            <img src="/freeletics_images/{{$funrun->file_path}}" class=" img-fluid">
                             <h5 class="title-img">Workout at Home</h5>
                             <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
                         </div>
                     </figure>
                 </div>
-                <div class="swiper-slide" id="swiper-slide-run">
-                    <figure>
-                        <div class="wrapper">
-                            <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
-                            <h5 class="title-img">Workout at Home</h5>
-                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 juli 2021</span>
-                        </div>
-                    </figure>
-                </div>
-                <div class="swiper-slide" id="swiper-slide-run">
-                    <figure>
-                        <div class="wrapper">
-                            <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
-                            <h5 class="title-img">Workout at Home</h5>
-                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
-                        </div>
-                    </figure>
-                </div>
-                <div class="swiper-slide" id="swiper-slide-run">
-                    <figure>
-                        <div class="wrapper">
-                            <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
-                            <h5 class="title-img">Workout at Home</h5>
-                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
-                        </div>
-                    </figure>
-                </div>
-
+                @endforeach
             </div>
             <div class="swiper-button-next" id="btn-funrun"></div>
             <div class="swiper-button-prev" id="btn-funrun"></div>
@@ -245,60 +189,17 @@
                 <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperrr"
                     id="swiper-container-week">
                     <div class="swiper-wrapper">
+                        @foreach ($weeks12 as $weeks12)
                         <div class="swiper-slide" id="swiper-slide-week">
                             <figure>
                                 <div class="wrapper">
-                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
+                                    <img src="/freeletics_images/{{$weeks12->file_path}}" class=" img-fluid">
                                     <h5 class="title-img">Workout at Home</h5>
                                     <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
                                 </div>
                             </figure>
                         </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <figure>
-                                <div class="wrapper">
-                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
-                                    <h5 class="title-img">Workout at Home</h5>
-                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <figure>
-                                <div class="wrapper">
-                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
-                                    <h5 class="title-img">Workout at Home</h5>
-                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <figure>
-                                <div class="wrapper">
-                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
-                                    <h5 class="title-img">Workout at Home</h5>
-                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <figure>
-                                <div class="wrapper">
-                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
-                                    <h5 class="title-img">Workout at Home</h5>
-                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <figure>
-                                <div class="wrapper">
-                                    <img src="{{ asset ('assets/images/blog.png')}}" class=" img-fluid">
-                                    <h5 class="title-img">Workout at Home</h5>
-                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
-                                </div>
-                            </figure>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="swiper-button-next" id="btn-week"></div>
                     <div class="swiper-button-prev" id="btn-week"></div>
@@ -317,50 +218,18 @@
                         EVENT
                     </h1>
                 </div>
+                @foreach ($event as $event)
                 <div class="col-lg-3">
                     <div class="event-img text-center">
-                        <img src="{{ asset ('assets/images/event.png')}}" class="img-fluid">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum reiciendis itaque
-                            voluptatibus! Qui, sapiente. Fuga voluptatum, ex voluptatem excepturi placeat sit maiores.
-                            Quod assumenda numquam minima est recusandae eius libero.</p>
+                        <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid">
+                        <h3>{{ $event['title'] }}</h3>
+                        <p>{{ $event['subtitle'] }}</p>
                         <div class="d-flex justify-content-center">
                             <button type="button" class="btn btn-warning">See More</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="event-img text-center">
-                        <img src="{{ asset ('assets/images/event.png')}}" class="img-fluid">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum reiciendis itaque
-                            voluptatibus! Qui, sapiente. Fuga voluptatum, ex voluptatem excepturi placeat sit maiores.
-                            Quod assumenda numquam minima est recusandae eius libero.</p>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-warning">See More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="event-img text-center">
-                        <img src="{{ asset ('assets/images/event.png')}}" class="img-fluid">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum reiciendis itaque
-                            voluptatibus! Qui, sapiente. Fuga voluptatum, ex voluptatem excepturi placeat sit maiores.
-                            Quod assumenda numquam minima est recusandae eius libero.</p>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-warning">See More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="event-img text-center">
-                        <img src="{{ asset ('assets/images/event.png')}}" class="img-fluid">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum reiciendis itaque
-                            voluptatibus! Qui, sapiente. Fuga voluptatum, ex voluptatem excepturi placeat sit maiores.
-                            Quod assumenda numquam minima est recusandae eius libero.</p>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-warning">See More</button>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -373,35 +242,17 @@
                 <h1 class="judul-blog">BLOG</h1>
             </div>
             <div class="row">
+                @foreach ($blog as $blog)
                 <div class="col-md-4">
                     <div class="blog-img text-center">
-                        <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>{{ $blog['title'] }}</p>
                         <div class="d-flex justify-content-end">
-                            <a href="">Read more ></a>
+                            <a href="{{ $blog->subtitle }}">Read more ></a>
                         </div>
                         <img src="{{ asset ('assets/images/blog.png')}}" class="img-fluid">
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="blog-img text-center">
-                        <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="d-flex justify-content-end">
-                            <a href="">Read more ></a>
-                        </div>
-                        <img src="{{ asset ('assets/images/blog.png')}}" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="blog-img text-center">
-                        <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="d-flex justify-content-end">
-                            <a href="">Read more ></a>
-                        </div>
-                        <img src="{{ asset ('assets/images/blog.png')}}" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-
+                @endforeach
         </div>
         <div class="container">
             <div class="row">
@@ -444,42 +295,15 @@
                 <div class="d-flex justify-content-center">
                     <h1>TESTIMONAL</h1>
                 </div>
+                @foreach ($testimonial as $testimonial)
                 <div class="col-lg-3">
                     <div class="testi-img text-center">
-                        <img src="{{ asset ('assets/images/jungkook.jpg')}}">
-                        <h2>Alex Jr</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias earum repellat
-                            cumque ullam, nulla ab magni fuga unde harum inventore iusto deserunt voluptatibus maiores
-                            incidunt distinctio, doloremque delectus sint.</p>
+                        <img src="/freeletics_images/{{$testimonial->file_path}}">
+                        <h2>{{ $testimonial['title'] }}</h2>
+                        <p>{{ $testimonial['subtitle'] }}</p>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="testi-img text-center">
-                        <img src="{{ asset ('assets/images/jungkook.jpg')}}">
-                        <h2>Alex Jr</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias earum repellat
-                            cumque ullam, nulla ab magni fuga unde harum inventore iusto deserunt voluptatibus maiores
-                            incidunt distinctio, doloremque delectus sint.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="testi-img text-center">
-                        <img src="{{ asset ('assets/images/jungkook.jpg')}}">
-                        <h2>Alex Jr</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias earum repellat
-                            cumque ullam, nulla ab magni fuga unde harum inventore iusto deserunt voluptatibus maiores
-                            incidunt distinctio, doloremque delectus sint.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="testi-img text-center">
-                        <img src="{{ asset ('assets/images/jungkook.jpg')}}">
-                        <h2>Alex Jr</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias earum repellat
-                            cumque ullam, nulla ab magni fuga unde harum inventore iusto deserunt voluptatibus maiores
-                            incidunt distinctio, doloremque delectus sint.</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -492,24 +316,11 @@
                 <h1>SPONSORSHIP</h1>
                 <div class="swiper-container mySwipper" id="swiper-container-sponsor">
                     <div class="swiper-wrapper">
+                        @foreach ($sponsor as $sponsor)
                         <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s1.png')}}">
+                            <a href="{{ $sponsor->subtitle }}"><img src="/freeletics_images/{{$sponsor->file_path}}"></a>
                         </div>
-                        <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s2.png')}}">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s3.png')}}">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s1.png')}}">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s2.png')}}">
-                        </div>
-                        <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <img src="{{ asset ('assets/images/s3.png')}}">
-                        </div>
+                        @endforeach
                     </div>
                     <div class="swiper-button-next" id="btn-sponsor"></div>
                     <div class="swiper-button-prev" id="btn-sponsor"></div>

@@ -76,7 +76,6 @@ class MainController extends Controller
     }
 
     function massworkout(){
-        $user = User::get();
         $photo = Photos::where('event','massworkout')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -84,7 +83,6 @@ class MainController extends Controller
     }
 
     function funrun(){
-        $user = User::get();
         $photo = Photos::where('event','funrun')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -92,7 +90,6 @@ class MainController extends Controller
     }
 
     function weeks12(){
-        $user = User::get();
         $photo = Photos::where('event','weeks12')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -100,7 +97,6 @@ class MainController extends Controller
     }
 
     function event(){
-        $user = User::get();
         $post = Posts::where('event','event')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -108,7 +104,6 @@ class MainController extends Controller
     }
 
     function blog(){
-        $user = User::get();
         $post = Posts::where('event','blog')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -116,7 +111,6 @@ class MainController extends Controller
     }
 
     function testimonial(){
-        $user = User::get();
         $photo = Photos::where('event','testimonial')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
@@ -124,7 +118,6 @@ class MainController extends Controller
     }
 
     function sponsor(){
-        $user = User::get();
         $photo = Photos::where('event','sponsor')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);

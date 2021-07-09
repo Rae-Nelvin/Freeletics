@@ -189,7 +189,7 @@
                 <p class="title-edit"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
                 <p class="title-edit"><?php echo $title ?></p><input type="text" name="title" /><br><br>
                 <p class="title-edit"><?php echo $subtitle ?></p><input type="text" name="subtitle" /><br><br>
-                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="file_path"/><br><br>
+                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="images[]"/><br><br>
                 <input type="submit" value="Submit"/>
             </form>
           </div>

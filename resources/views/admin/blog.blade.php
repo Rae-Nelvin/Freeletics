@@ -198,8 +198,8 @@
                   <thead>
                     <tr>
                       <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Judul Event</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Deskripsi Event</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Judul Blog</th>
+                      <th style="width: 10%; text-align: center; font-size: 20px">Deskripsi Blog</th>
                       <th style="width: 15%; text-align: center; font-size: 20px">Content</th>
                       <th style="width: 20%; text-align: center; font-size: 20px">Gambar</th>
                       <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
