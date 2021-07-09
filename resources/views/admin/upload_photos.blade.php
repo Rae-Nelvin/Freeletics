@@ -180,19 +180,19 @@
               <br>
             </ol>
           </div><!-- /.col -->
-          <table>
-            <tbody>
               <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data">
                   @csrf
-                  <tr><td><p class="title-edit"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p></td></tr>
-                  <tr><td><p class="title-edit">Masukkan Caption Gambar : </p><input type="text" name="title" /><br><br></td></tr>
-                  <tr><td><p class="title-edit">Masukkan Gambar : </p><input type="file" name="images[]" multiple="true"/><br><br></td></tr>
-            </tbody>
-          </table>
+                  
+                  <p class="title-edit"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
+                  <p class="title-edit">Masukkan Caption Gambar : </p><input type="text" name="title" /><br><br>
+                  <div class="input-group control-group increment clone" >
+                    <input type="file" name="images[]" class="form-control">
+                  </div>
+                  <div class="input-group-btn"> 
+                      <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+                    </div>
+                  <input type="submit" value="Submit"/></form>
           </div>
-          <div>
-          <tr><td><input type="submit" value="Submit"/></form>
-          <a href="#" class="btn btn-info addRow" style="margin-top: 20px;">+</a></div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
@@ -242,17 +242,12 @@
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
 <!-- Add More Button -->
 <script type="text/javascript">
-  $('.addRow').on('click', function(){
-    addRow();
+   $(document).ready(function() {
+  $(".btn-success").click(function(){ 
+      var html = $(".clone").html();
+      $(".increment").after(html);
   });
-
-  function addRow(){
-    var tr = '<tr>'+ 
-                  '<td>'+
-                  '<p class="title-edit">Masukkan Gambar : </p><input type="file" name="images[]" multiple="true"/><br><br></td>'+
-              '</tr>';
-              $('tbody').append(tr);
-  };
+});
 </script>
 </body>
 </html>
