@@ -20,6 +20,8 @@ use App\Http\Controllers\IndexController;
 //     return view('welcome');
 // });
 Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
+Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery');
 
 Route::post('/auth/check',[MainController::class, 'check'])->name('auth.check');
 Route::get('/auth/logout',[MainController::class, 'logout'])->name('auth.logout');

@@ -67,7 +67,7 @@
                 <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
                 @foreach ($author as $author)
                 <div class="col-lg-4">
-                    <img class="rounded author" src="{{ asset ('assets/images/author2.jpg')}}"
+                    <img class="rounded author" src="/freeletics_images/{{$author->file_path}}"
                         alt="Generic placeholder image" width="250" height="250">
                     <h2 class="author-h2">{{ $author['caption'] }}</h2>
                     <p class="author-p">{{ $author['subtitle'] }}</p>
