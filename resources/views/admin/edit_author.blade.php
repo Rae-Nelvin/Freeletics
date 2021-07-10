@@ -208,10 +208,10 @@
                 </table>
           <!-- End of Image Table -->
           <!-- Form -->
-          <div class="card-body">
+          <div class="card-body div-form">
             <form action="{{ route('admin.editphotos') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="event" value="{{ $photos['event'] }}"><p class="title-edit">Event : {{ $photos['event'] }}</p>
+                <input type="hidden" name="event" value="{{ $photos['event'] }}"><p class="title-edit event-form">Event : {{ $photos['event'] }}</p>
                 <input type="hidden" name="id" value="{{ $photos['id'] }}">
                 <p class="title-edit">Masukkan <?php echo $title ?> Yang Baru :</p><input type="text" name="title"/><br><br>
                 <p class="title-edit">Masukkan <?php echo $subtitle ?> Yang Baru :</p><input type="text" name="subtitle"/><br><br>

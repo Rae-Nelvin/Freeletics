@@ -184,14 +184,16 @@
           <div class="card-body">
           <?php 
           ?>
+          <div class="div-form">
             <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <p class="title-edit"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
-                <p class="title-edit"><?php echo $title ?></p><input type="text" name="title" /><br><br>
-                <p class="title-edit"><?php echo $subtitle ?></p><input type="text" name="subtitle" /><br><br>
-                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="images[]"/><br><br>
+                <p class="title-edit event-form"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
+                <p class="title-edit"><?php echo $title ?></p><input type="text" name="title" style="width:20%;"/><br><br>
+                <p class="title-edit"><?php echo $subtitle ?></p><input type="text" name="subtitle" style="width:40%;"/><br><br>
+                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="images[] image-form"/><br><br>
                 <input type="submit" value="Submit"/>
             </form>
+          </div>
           </div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->

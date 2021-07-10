@@ -181,18 +181,20 @@
               <br>
             </ol>
           </div><!-- /.col -->
+            <div class="div-form">
               <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data">
                   @csrf
-                  
-                  <p class="title-edit"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
-                  <p class="title-edit">Masukkan Caption Gambar : </p><input type="text" name="title" /><br><br>
-                  <div class="input-group control-group increment clone" >
-                    <input type="file" name="images[]" class="form-control">
+                  <p class="title-edit event-form"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
+                  <p class="title-edit">Masukkan Caption Gambar : </p><input type="text" name="title" style="width: 100%;"/><br><br>
+                  <div class="input-group control-group increment clone">
+                    <input type="file" name="images[]" class="form-control image-form">
                   </div>
-                  <div class="input-group-btn"> 
-                      <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
-                    </div>
-                  <input type="submit" value="Submit"/></form>
+                  <div class="input-group-btn div-button"> 
+                      <button class="btn btn-success button-class" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+                      <input type="submit" value="Submit"/>
+              </form>
+                  </div>
+              </div>
           </div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
