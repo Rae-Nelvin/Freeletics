@@ -57,9 +57,8 @@
             <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
             <p class="lead font-weight-normal about-p text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
-                magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class="moreText">Lorem ipsum,
-                    dolor sit amet consectetur adipisicing elit.</span>
-            </p><button class="btn btn-outline-warning read-more-btn" id="btn-read-more">Read More</button>
+                magnam, itaque eum animi odit sit dolorum illo quam dignissimos!
+            </p>
         </div>
         <div class="container author">
             <!-- Three columns of text below the carousel -->
@@ -109,12 +108,8 @@
                     Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
                     magnam, itaque eum animi odit sit dolorum illo quam dignissimos! Lorem ipsum dolor sit amet Lorem
                     ipsum dolor sit amet consectetur adipisicing elit.
-                    inventore atque ea.<span class="moreText">accusamus itaque eum repudiandae distinctio reprehenderit
-                        fuga
-                        ducimus. Beatae accusamus quae veniam perferendis aliquam magni alias illum voluptatem
-                        laudantium!</span>
-                </p><button class="btn btn-outline-warning read-more-btn text-center" id="btn-read-more-mass">Read
-                    More</button>
+                    inventore atque ea.
+                </p>
             </div>
         </div>
     </div>

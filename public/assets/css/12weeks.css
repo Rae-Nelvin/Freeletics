@@ -258,7 +258,7 @@ figure {
     }
     #btn-read-more-week {
         margin-top: 10% !important;
-        display: inline;
+        display: none;
         width: 80%;
     }
     .caption-week.show-more .moreText {

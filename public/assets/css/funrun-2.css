@@ -228,6 +228,6 @@ figure {
     #btn-read-more-fun {
         margin-top: -60% !important;
         width: 80%;
-        display: inline-block;
+        display: none;
     }
 }
