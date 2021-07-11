@@ -17,8 +17,9 @@
 }
 
 #swiper-slide-run {
-    max-width: 100%;
+    max-width: 25%;
     max-height: 100%;
+    margin-left: 5%;
 }
 
 #swiper-slide-run img {
@@ -127,13 +128,13 @@ figure {
         -o-border-radius: 30px;
     }
     .row-funrun {
-        margin-left: 4%;
+        margin-left: 0%;
         margin-right: 4%;
     }
     #btn-funrun {
-        margin-top: 2%;
-        margin-left: -5%;
-        margin-right: -5%;
+        margin-top: -4%;
+        margin-left: -1%;
+        margin-right: 0;
         color: #FDCD22 !important;
     }
     #funrun-p {
@@ -148,6 +149,13 @@ figure {
         margin-left: 4vh;
         margin-right: 6vh;
     }
+
+    #swiper-slide-run {
+        margin-left: 2%;
+        margin-top: 3%;
+        max-width: 30%;
+    }
+
 }
 
 
@@ -209,8 +217,9 @@ figure {
         box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
     }
     #swiper-slide-run {
-        max-width: 500px !important;
-        max-height: 270px !important;
+        margin-left: 1%;
+        max-width: 100% !important;
+        max-height: 100% !important;
     }
     #swiper-container-run {
         max-width: 73%;

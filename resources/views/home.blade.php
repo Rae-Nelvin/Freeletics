@@ -146,7 +146,7 @@
                         </div>
                     </figure>
                 </div>
-                @endforeach
+             @endforeach 
             </div>
             <div class="swiper-button-next" id="btn-funrun"></div>
             <div class="swiper-button-prev" id="btn-funrun"></div>

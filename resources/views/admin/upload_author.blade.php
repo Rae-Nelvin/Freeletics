@@ -190,7 +190,7 @@
                 <p class="title-edit event-form"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
                 <p class="title-edit"><?php echo $title ?></p><input type="text" name="title" style="width:20%;"/><br><br>
                 <p class="title-edit"><?php echo $subtitle ?></p><input type="text" name="subtitle" style="width:40%;"/><br><br>
-                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="images[] image-form"/><br><br>
+                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="images[]"/><br><br>
                 <input type="submit" value="Submit"/>
             </form>
           </div>

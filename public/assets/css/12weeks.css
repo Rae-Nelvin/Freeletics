@@ -22,12 +22,13 @@ button.read-more-btn {
 }
 
 #swiper-container-week {
-    max-width: 80%;
-    margin-top: 30%;
+    max-width: 90%;
+    margin-top: 35%;
 }
 
 #swiper-slide-week {
-    max-width: 100%;
+    max-width: 20%;
+    margin-left: 8%;
     max-height: 100%;
 }
 
@@ -128,12 +129,13 @@ figure {
         font-weight: bold;
     }
     #swiper-container-week {
-        max-width: 60%;
-        margin-top: 38%;
+        max-width: 90%;
+        margin-top: 35%;
     }
     #swiper-slide-week {
-        max-width: 250px;
-        max-height: 170px;
+        max-width: 30%;
+        margin-left: 2%;
+        max-height: 100%;
     }
     #swiper-slide-week img {
         display: block;
@@ -219,22 +221,28 @@ figure {
         margin-top: 0.5%;
     }
     #swiper-container-week {
-        max-width: 73%;
+        max-width: 60%;
+        max-height: 100%;
         margin-top: 100% !important;
     }
     #swiper-slide-week {
-        /* max-width: 300px !important; */
-        max-height: 280px;
+        max-width: 100% !important; 
+        max-height: 100%;
+        margin-left: 2%;
+        margin-right: 0;
     }
     #swiper-slide img {
         display: block;
         /* max-width: 300px !important; */
-        max-height: 280px;
+        max-height: 100%;
+        max-width: 100%;
         object-fit: cover;
+        margin-right: 0;
+        margin-left: 42px;
     }
     #btn-week {
         color: #FDCD22;
-        margin-top: -15%;
+        margin-top: -20%;
     }
     #date-week {
         display: none;

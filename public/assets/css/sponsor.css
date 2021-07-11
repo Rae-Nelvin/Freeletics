@@ -41,6 +41,12 @@
     margin-top: 1%;
 }
 
+@media all and (min-width: 768px) and (max-width: 1366px){
+
+    #swiper-slide-sponsor {
+        margin-left: 5%;
+    }
+}
 
 /* slider */
 
@@ -58,5 +64,10 @@
     } */
     #swiper-container-sponsor {
         max-width: 84%;
+    }
+
+    #swiper-slide-sponsor img{
+        margin-left: 5%;
+        max-width: 350px;
     }
 }
