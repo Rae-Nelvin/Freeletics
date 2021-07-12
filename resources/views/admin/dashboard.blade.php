@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.min.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
@@ -174,12 +175,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;">Dashboard</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;font-weight: bold;">Dashboard</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
-              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Dashboard</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px;font-family: Nunito;font-weight: bold;">Home</a></li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;font-family: Nunito;font-weight: bold">Dashboard</li>
               <br>
             </ol>
           </div><!-- /.col -->
@@ -197,7 +198,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3 style="margin-bottom: 40px">Author <br>
+                <h3 style="margin-bottom: 40px;font-family:Nunito;">Author <br>
                 <?php echo $count_Author ?></h3>
               </div>
               <div class="icon">
@@ -211,7 +212,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3 style="margin-bottom: 40px">Mass Workout <br>
+                <h3 style="margin-bottom: 40px;font-family:Nunito;">Mass Workout <br>
                 <?php echo $count_Massworkout ?></h3>
               </div>
               <div class="icon">
@@ -225,7 +226,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3 style="margin-bottom: 40px; color: #FFF">Fun Run <br>
+                <h3 style="margin-bottom: 40px; color: #FFF;font-family:Nunito;">Fun Run <br>
                 <?php echo $count_Funrun ?></h3>
               </div>
               <div class="icon">
@@ -239,7 +240,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3 style="margin-bottom: 40px">12 - Weeks <br>
+                <h3 style="margin-bottom: 40px;font-family:Nunito;">12 - Weeks <br>
                 <?php echo $count_Weeks12 ?></h3>
               </div>
               <div class="icon">
@@ -257,7 +258,7 @@
             <!-- small box -->
             <div class="small-box bg-light">
               <div class="inner">
-                <h3 style="margin-bottom: 40px">Event <br>
+                <h3 style="margin-bottom: 40px;font-family:Nunito;">Event <br>
                 <?php echo $count_Event ?></h3>
               </div>
               <div class="icon">
@@ -271,7 +272,7 @@
             <!-- small box -->
             <div class="small-box bg-dark">
               <div class="inner">
-                <h3 style="margin-bottom: 40px">Blog <br>
+                <h3 style="margin-bottom: 40px;font-family:Nunito;">Blog <br>
                 <?php echo $count_Blog ?></h3>
               </div>
               <div class="icon">
@@ -285,7 +286,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3 style="margin-bottom: 40px; color: #FFFFFF">Testimonial <br>
+                <h3 style="margin-bottom: 40px; color: #FFFFFF;font-family:Nunito;">Testimonial <br>
                 <?php echo $count_Testimonial ?></h3>
               </div>
               <div class="icon">
@@ -299,7 +300,7 @@
             <!-- small box -->
             <div class="small-box bg-secondary">
               <div class="inner">
-                <h3 style="margin-bottom: 40px">Sponsor <br>
+                <h3 style="margin-bottom: 40px;font-family:Nunito;">Sponsor <br>
                 <?php echo $count_Sponsor ?></h3>
               </div>
               <div class="icon">

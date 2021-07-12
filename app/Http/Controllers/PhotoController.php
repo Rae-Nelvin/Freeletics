@@ -148,8 +148,8 @@ class PhotoController extends Controller
             }
             else if($event == '[{"event":"Sponsor"}]')
             {
-                $title = "Nama Author ";
-                $subtitle = "Deskripsi ";
+                $title = "Nama Sponsor ";
+                $subtitle = "Link Sponsor ";
                 return view('admin.edit_author',['photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
             }
 

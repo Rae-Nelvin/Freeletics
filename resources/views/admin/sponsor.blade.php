@@ -9,8 +9,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.min.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="{{ asset ('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
   <!-- iCheck -->
@@ -153,7 +156,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item menu-open">
+          <li class="nav-item">
             <a href="{{ route('admin.sponsor') }}" class="nav-link active">
               <i class="nav-icon fas fa-handshake"></i>
               <p>
@@ -179,43 +182,44 @@
         @endif
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;">Sponsor</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Sponsor</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
-              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Sponsor</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px;font-weight: bold;font-family: Nunito;">Home</a></li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;font-weight: bold;font-family: Nunito;">Sponsor</li>
               <br>
             </ol>
           </div><!-- /.col -->
+
           <!-- Add New Button -->
           <div class="col-sm-9">
           </div>
-          <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',8) }}"style="font-family: inherit; font-weight: bold;">Add New</a></div>
+          <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',1) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
           <!-- End of Button -->
           <!-- Table -->
-          <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Nama Sponsor</th>
-                      <th style="width: 20%; text-align: center; font-size: 20px">Link Sponsor</th>
-                      <th style="width: 25%; text-align: center; font-size: 20px">Gambar</th>
-                      <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
-                      <th style="width: 15%; text-align: center; font-size: 20px">Actions</th>
-                    </tr>
-                  </thead>
+          <table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">#</th>
+								<th class="column2">Nama Sponsor</th>
+								<th class="column3">Link Sponsor</th>
+								<th class="column4">Gambar</th>
+								<th class="column5">Last Update</th>
+								<th class="column6">Actions</th>
+							</tr>
+						</thead>
                   <tbody>
                   @foreach ($photo as $photos)
-                    <tr>
-                      <td>{{ $loop->iteration }}</td>
-                      <td>{{ $photos['caption'] }}</td>
-                      <td>
+                    <tr class="table100-body">
+                      <td class="column1">{{ $loop->iteration }}</td>
+                      <td class="column2">{{ $photos['caption'] }}</td>
+                      <td class="column3-1">
                         {{ $photos['subtitle'] }}
                       </td>
-                      <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 75%"></td>
-                      <td>{{ $photos['updated_at'] }}</td>
-                      <td><a class="button touch edit" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
+                      <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width:75%"></td>
+                      <td class="column5">{{ $photos['updated_at'] }}</td>
+                      <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
                       <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
                     </tr>
                   @endforeach

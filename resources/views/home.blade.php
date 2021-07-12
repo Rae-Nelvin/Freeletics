@@ -249,35 +249,6 @@
                 </div>
                 @endforeach
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="blog-img text-center">
-                        <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="d-flex justify-content-end">
-                            <a href="">Read more ></a>
-                        </div>
-                        <img src="{{ asset ('assets/images/blog.png')}}" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="blog-img text-center">
-                        <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="d-flex justify-content-end">
-                            <a href="">Read more ></a>
-                        </div>
-                        <img src="{{ asset ('assets/images/blog.png')}}" class="img-fluid" id="blog-img">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="blog-img text-center">
-                        <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
-                        <a href="">Read more ></a>
-                        <div class="d-flex justify-content-end">
-                        </div>
-                        <img src="{{ asset ('assets/images/blog.png')}}" class="img-fluid">
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -294,7 +265,7 @@
                 <div class="col-lg-3">
                     <div class="testi-img text-center">
                         <img src="/freeletics_images/{{$testimonial->file_path}}">
-                        <h2>{{ $testimonial['title'] }}</h2>
+                        <h2>{{ $testimonial['caption'] }}</h2>
                         <p>{{ $testimonial['subtitle'] }}</p>
                     </div>
                 </div>
