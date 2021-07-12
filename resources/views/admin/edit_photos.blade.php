@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.min.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
@@ -171,33 +172,33 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;">Edit Photos</h1>
+          <div class="col-sm-6 p-6">
+            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Edit Photos</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
-              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;">Edit Photos</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px;font-family:Nunito;">Home</a></li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;font-family: Nunito;">Edit Photos</li>
               <br>
             </ol>
           </div><!-- /.col -->
           <!-- Image Table -->
-          <table class="table table-bordered">
+          <table>
                   <thead>
-                    <tr>
-                      <th style="width: 1%; text-align: center; font-size: 20px;">#</th>
-                      <th style="width: 10%; text-align: center; font-size: 20px">Caption</th>
-                      <th style="width: 30%; text-align: center; font-size: 20px">Image</th>
-                      <th style="width: 29%; text-align: center; font-size: 20px">Last Update</th>
+                    <tr class="table100-head">
+                      <th class="column1">#</th>
+                      <th class="column2">Caption</th>
+                      <th class="column4">Image</th>
+                      <th class="column5">Last Update</th>
                     </tr>
                   </thead>
                   <tbody>
                   @foreach ($photo as $photos)
-                    <tr>
-                      <td>{{ $loop->iteration }}</td>
-                      <td>{{ $photos['caption'] }}</td>
-                      <td><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
-                      <td>{{ $photos['updated_at'] }}</td>
+                    <tr class="table100-body">
+                      <td class="column1">{{ $loop->iteration }}</td>
+                      <td class="column2">{{ $photos['caption'] }}</td>
+                      <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
+                      <td class="column5">{{ $photos['updated_at'] }}</td>
                     </tr>
                   @endforeach
                   </tbody>

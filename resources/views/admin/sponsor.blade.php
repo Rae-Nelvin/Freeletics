@@ -195,7 +195,7 @@
           <!-- Add New Button -->
           <div class="col-sm-9">
           </div>
-          <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',1) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
+          <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',8) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
           <!-- End of Button -->
           <!-- Table -->
           <table>
