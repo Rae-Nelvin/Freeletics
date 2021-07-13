@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.min.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
@@ -181,17 +182,30 @@
               <br>
             </ol>
           </div><!-- /.col -->
-          <div class="card-body">
-          <?php 
-          ?>
-            <form action="{{ route('admin.uploadpost') }}" method="POST" enctype="multipart/form-data">
+          <div style="margin-top: 40px;">
+            <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <p class="title-edit"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
-                <p class="title-edit"><?php echo $title ?></p><input type="text" name="title" /><br><br>
-                <p class="title-edit"><?php echo $subtitle ?></p><input type="text" name="subtitle" /><br><br>
-                <p class="title-edit">Masukkan Content : </p><input type="text" name="content"><br><br>
-                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="image_path"/><br><br>
-                <input type="submit" value="Submit"/>
+                <div class="form-group">
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;font-size: 30px;"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></label>
+                </div>
+                <div class="form-group">
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $title ?></label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $subtitle ?></label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile" name="image_path">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                    </div>
+                  </div>
+                <button class="btn btn-success"><input type="submit" class="button btn-success" style="font-family: Nunito;font-weight: bold;"/></button>
             </form>
           </div>
         </div><!-- /.row -->

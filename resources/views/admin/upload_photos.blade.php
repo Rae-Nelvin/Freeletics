@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.min.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
@@ -173,27 +174,45 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;">Add New</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Add New</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;font-family: Nunito;">Add New</li>
               <br>
             </ol>
           </div><!-- /.col -->
-            <div class="div-form">
-              <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data">
-                  @csrf
-                  <p class="title-edit event-form"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></p>
-                  <p class="title-edit">Masukkan Caption Gambar : </p><input type="text" name="title" style="width: 100%;"/><br><br>
-                  <div class="input-group control-group increment clone">
-                    <input type="file" name="images[]" class="form-control image-form">
-                  </div>
-                  <div class="input-group-btn div-button"> 
-                      <button class="btn btn-success button-class" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
-                      <input type="submit" value="Submit"/>
-              </form>
-                  </div>
+            <div style="margin-top: 40px;">
+            <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;font-size: 30px;"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></label>
+                </div>
+                <div class="form-group">
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan Caption Gambar :</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+                </div>
+                <div class="form-group">
+                  <table>
+                    <thead>
+                    <tr class="table100-head">
+                      <th class="column3">Upload Image</th>
+                      <th class="column4-2">Image Preview</th>
+                      <th class="column6"><button class="btn btn-success addRow">+ Add Photo</button></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table100-body">
+                      <td class="column3"><input type="file" name="images[]" onchange="loadFile(e)"></td>
+                      <td class="column4-2"><img id="output" /></td>
+                      <td class="column6"><button class="btn btn-danger remove">- Remove</button></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn btn-success"><input type="submit" class="button btn-success" style="font-family: Nunito;font-weight: bold;"/></button>
+            </form>
               </div>
           </div>
         </div><!-- /.row -->
@@ -245,12 +264,23 @@
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
 <!-- Add More Button -->
 <script type="text/javascript">
-   $(document).ready(function() {
-  $(".btn-success").click(function(){ 
-      var html = $(".clone").html();
-      $(".increment").after(html);
+  $('.addRow').on('click', function(){
+    event.preventDefault();
+    addRow();
   });
-});
+
+  function addRow(){
+    var tr = '<tr class="table100-body">' +
+                      '<td class="column3"><input type="file" name="images[]"></td>' +
+                      '<td class="column4-2"></td>' +
+                      '<td class="column6"><button class="btn btn-danger remove">- Remove</button></td>' +
+                    '</tr>';
+      $('tbody').append(tr);
+  };
+
+  $('tbody').on('click', '.remove', function(){
+    $(this).parent().parent().remove();
+  });
 </script>
 </body>
 </html>

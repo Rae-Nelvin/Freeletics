@@ -277,6 +277,11 @@
     text-align: center;
     padding: 10px;
   }
+
+  .column4-2 {
+    width: 400px;
+    text-align: center;
+  }
   
   .column5 {
     width: 140px;
