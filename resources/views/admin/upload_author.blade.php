@@ -190,20 +190,21 @@
                 </div>
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $title ?></label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="60">
                 </div>
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $subtitle ?></label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle" size="60">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
+                    <label for="exampleInputFile" style="font-family: Nunito;" class="title-edit">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" name="iamges[]">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="inputGroupFile02" name="images[]" onchange="loadFile(event)" size="60">
+                        <label class="custom-file-label" for="inputGroupFile02">Choose Image</label>
                       </div>
                     </div>
+                    <img id="output" style="padding:10px; max-width: 25%;"/>
                   </div>
                 <button class="btn btn-success"><input type="submit" class="button btn-success" style="font-family: Nunito;font-weight: bold;"/></button>
             </form>
@@ -256,6 +257,17 @@
 <script src="{{ asset('dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
-
+<script>
+  var loadFile =  function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+<script>
+  $('#inputGroupFile02').on('change',function(){
+   var fileName = $(this).val();
+  $(this).next('.custom-file-label').html(fileName);
+})
+</script>
 </body>
 </html>
