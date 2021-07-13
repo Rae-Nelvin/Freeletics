@@ -12,8 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="{{ asset ('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
   <!-- iCheck -->
@@ -80,9 +78,7 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-        @foreach ($admin as $admin)
-          <a href="#" class="d-block">{{ $admin->name }}</a>
-          @endforeach
+          <a href="#" class="d-block">Leonardo Wijaya</a>
         </div>
       </div>
 
@@ -92,7 +88,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ route('admin.dashboard') }}" class="nav-link">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -109,7 +105,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('admin.massworkout') }}" class="nav-link active">
+            <a href="{{ route('admin.massworkout') }}" class="nav-link">
             <i class="nav-icon fas fa-dumbbell"></i>
               <p>
                 Mass Workout
@@ -175,87 +171,31 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-      @if(Session::get('Successful'))
-                        <div class="alert alert-success">
-                            {{ Session::get('Successful') }}
-                        </div>
-        @endif
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Mass Workout</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Add New</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px;font-weight: bold;font-family: Nunito;">Home</a></li>
-              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;font-weight: bold;font-family: Nunito;">Mass Workout</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px">Home</a></li>
+              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;font-family: Nunito;">Add New</li>
               <br>
             </ol>
           </div><!-- /.col -->
-        </div>
-          <!-- Caption Table -->
-          <!-- Add New Button -->
-          <div class="row" style="margin-top: 40px;margin-left: 10px;margin-right: 10px;"></div>
-          <!-- Add New Button -->
-          <div class="row" style="margin-left: 10px;margin-right: 10px;">
-              <div class="col-sm-9">
-              <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Caption Table</h1>
-              </div>
-              <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_caption',2) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
-              <!-- End of Button -->
-              <!-- Table -->
-              <table>
-                <thead>
-                  <tr class="table100-head">
-                    <th class="column1">#</th>
-                    <th class="column4-3">Caption</th>
-                    <th class="column5">Last Update</th>
-                  </tr>
-                </thead>
-                      <tbody>
-                      @foreach ($caption as $captions)
-                        <tr class="table100-body">
-                          <td class="column1">{{ $loop->iteration }}</td>
-                          <td class="column4-3-1">{{ $captions['captions'] }}</td>
-                          <td class="column5">{{ $captions['updated_at'] }}</td>
-                        </tr>
-                      @endforeach
-                      </tbody>
-                    </table>
-                    <!-- End of Table -->
-            </div><!-- /.row -->
-            <!-- Photo Table -->
-            <div class="row" style="margin-top: 80px;margin-left: 10px;margin-right: 10px;">
-          <!-- Add New Button -->
-          <div class="col-sm-9">
-          <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Photo Table</h1>
+          <div style="margin-top: 40px;">
+            <form action="{{ route('admin.uploadcaption') }}" method="POST">
+                @csrf
+                <div class="form-group">
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;font-size: 30px;"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></label>
+                </div>
+                <div class="form-group">
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan Caption : </label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="caption" size="60">
+                </div>
+               <input type="submit" class="button btn-success" style="font-family: Nunito;font-weight: bold;"/></button>
+            </form>
           </div>
-          <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',2) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
-          <!-- End of Button -->
-          <!-- Table -->
-          <table>
-						<thead>
-							<tr class="table100-head">
-								<th class="column1">#</th>
-								<th class="column2">Caption</th>
-								<th class="column4">Gambar</th>
-								<th class="column5">Last Update</th>
-								<th class="column6">Actions</th>
-							</tr>
-						</thead>
-                  <tbody>
-                  @foreach ($photo as $photos)
-                    <tr class="table100-body">
-                      <td class="column1">{{ $loop->iteration }}</td>
-                      <td class="column2">{{ $photos['caption'] }}</td>
-                      <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width:185px;height:200px;"></td>
-                      <td class="column5">{{ $photos['updated_at'] }}</td>
-                      <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
-                      <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
-                    </tr>
-                  @endforeach
-                  </tbody>
-                </table>
-                <!-- End of Table -->
+          </div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>

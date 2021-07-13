@@ -216,6 +216,7 @@
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;font-size: 30px;">Event : {{ $photos['event'] }}</label>
                 </div>
                 <input type="hidden" name="id" value="{{ $photos['id'] }}">
+                <input type="hidden" name="event" value="{{ $photos['event'] }}">
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan <?php echo $title ?> :</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="60">

@@ -282,6 +282,16 @@
     width: 400px;
     text-align: center;
   }
+
+  .column4-3 {
+    width: 300px;
+    text-align: center;
+  }
+
+  .column4-3-1 {
+    width: 300px;
+    text-align: left;
+  }
   
   .column5 {
     width: 140px;

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Photos;
 use App\Models\Posts;
+use App\Models\Captions;
 use Illuminate\Support\Facades\Hash;
 use Session;
 
@@ -72,28 +73,32 @@ class MainController extends Controller
         $photo = Photos::where('event','author')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
-        return view('admin.author', ['admin'=>$admin,'photo'=>$photo]);
+        $caption = Captions::where('event','author')->get();
+        return view('admin.author', ['admin'=>$admin,'photo'=>$photo,'caption'=>$caption]);
     }
 
     function massworkout(){
         $photo = Photos::where('event','massworkout')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
-        return view('admin.massworkout', ['admin'=>$admin,'photo'=>$photo]);
+        $caption = Captions::where('event','massworkout')->get();
+        return view('admin.massworkout', ['admin'=>$admin,'photo'=>$photo,'caption'=>$caption]);
     }
 
     function funrun(){
         $photo = Photos::where('event','funrun')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
-        return view('admin.funrun', ['admin'=>$admin,'photo'=>$photo]);
+        $caption = Captions::where('event','funrun')->get();
+        return view('admin.funrun', ['admin'=>$admin,'photo'=>$photo,'caption'=>$caption]);
     }
 
     function weeks12(){
         $photo = Photos::where('event','weeks12')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
-        return view('admin.weeks12', ['admin'=>$admin,'photo'=>$photo]);
+        $caption = Captions::where('event','weeks12')->get();
+        return view('admin.weeks12', ['admin'=>$admin,'photo'=>$photo,'caption'=>$caption]);
     }
 
     function event(){
