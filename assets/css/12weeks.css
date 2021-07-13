@@ -1,0 +1,143 @@
+.bg-12weeks {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/12weeks.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#p-12weeks {
+    font-family: Nunito;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10vh;
+    margin-left: 30vh;
+}
+
+#date-12weeks {
+    margin-left: 35vh;
+}
+
+#swiper-container-week {
+    background-color: rgba(0, 0, 0, 0.4);
+    background-position: center;
+    position: relative;
+    width: 60%;
+    margin-left: 35vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#swiper-wrapper-week {
+    margin-left: 5vh;
+}
+
+#swiper-slide-week {
+    max-width: 260px;
+    max-height: 170px;
+    padding-right: 3vh;
+}
+
+#swiper-slide-week img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+/* Tablet Mode */
+
+@media all and (min-width: 768px) and (max-width: 1366px) {
+
+    #p-12weeks {
+        font-family: Nunito;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        margin-left: 4vh;
+        margin-right: 6vh;
+    }
+
+    #swiper-container-week {
+        max-width: 60%;
+        margin-bottom: 10vh;
+    }
+
+    #swiper-slide-week {
+        max-width: 250px;
+        max-height: 170px;
+    }
+
+    #swiper-slide-week img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+    }
+
+    #date-12weeks {
+        display: none;
+    }
+
+}
+
+/* Phone Mode */
+
+@media all and (max-width: 768px) {
+
+    #p-12weeks {
+        font-family: Nunito;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        margin-left: 4vh;
+        margin-right: 6vh;
+    }
+
+    #date-12weeks {
+        display: none;
+    }
+
+    #swiper-container-week {
+        max-width: 60%;
+        margin-left: 8vh;
+        /* margin-top: -35% !important; */
+    }
+    #swiper-slide-week {
+        max-width: 250px;
+        max-height: 170px;
+    }
+    #swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #btn-week {
+        color: #FDCD22;
+        /* margin-top: -20%; */
+    }
+    .swiper-pagination {
+        /* margin-top: -30% !important; */
+    }
+
+    .caption-week.show-more .moreText {
+        display: inline;
+    }
+}
