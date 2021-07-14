@@ -1,25 +1,26 @@
 .bg-funrun {
     width: 100%;
-    min-height: 100vh;
+    min-height: 150vh;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/funrun.png);
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
-.bg-funrun h1 {
-    margin-top: 0%;
+@media all and (min-width:1000px) {
+    .bg-funrun {
+        min-height: 200vh;
+    }
 }
 
 #swiper-container-run {
-    max-width: 70%;
-    margin-top: 9%;
+    max-width: 80%;
+    margin-top: 3%;
 }
 
 #swiper-slide-run {
-    max-width: 25%;
+    max-width: 100%;
     max-height: 100%;
-    margin-left: 5%;
 }
 
 #swiper-slide-run img {
@@ -39,7 +40,7 @@
     width: 80%;
     height: 350px;
     background-color: #000;
-    margin-top: 5%;
+    margin-top: -1%;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -62,12 +63,6 @@ figure {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-}
-
-.wrapper {
-    /* height: 280px;
-    background-color: #FDCD22;
-    opacity: 50%; */
 }
 
 .tgl {
@@ -101,32 +96,19 @@ figure {
     padding-right: 30vh;
     font-family: Nunito;
     color: white;
-    margin-bottom: 40%;
+    /* margin-bottom: 40%; */
     text-align: justify;
+}
+
+#see-more-funrun {
+    margin-top: 10%;
+    width: 20%;
 }
 
 
 /* Tablet Mode */
 
 @media all and (min-width: 768px) and (max-width: 1366px) {
-    #date-funrun {
-        display: none;
-    }
-    .bg-carousel-funrun {
-        background-color: rgba(0, 0, 0, 0.4);
-        background-position: center;
-        position: relative;
-        width: 100%;
-        margin-left: 0;
-        margin-top: 2vh;
-        padding-top: 3vh;
-        padding-bottom: 3vh;
-        border-radius: 30px;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        -ms-border-radius: 30px;
-        -o-border-radius: 30px;
-    }
     .row-funrun {
         margin-left: 0%;
         margin-right: 4%;
@@ -142,20 +124,28 @@ figure {
         padding-left: 0vh;
         padding-right: 0vh;
         font-family: Nunito;
-        font-size: 30px;
         color: white;
         margin-bottom: 40%;
         text-align: justify;
         margin-left: 4vh;
         margin-right: 6vh;
     }
-
-    #swiper-slide-run {
-        margin-left: 2%;
-        margin-top: 3%;
-        max-width: 30%;
+    #swiper-container-run {
+        max-width: 80%;
     }
-
+    #swiper-slide-run {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #swiper-slide-run img {
+        display: block;
+        max-width: 300px !important;
+        max-height: 200px;
+        object-fit: cover;
+    }
+    #box-fun {
+        width: 85%;
+    }
 }
 
 
@@ -168,25 +158,6 @@ figure {
         margin-top: 5%;
         display: none;
     }
-    #date-funrun {
-        display: none;
-    }
-    .bg-carousel-funrun {
-        background-color: rgba(0, 0, 0, 0.4);
-        background-position: center;
-        position: relative;
-        width: 100%;
-        height: 30vh;
-        margin-left: 0;
-        margin-top: 2vh;
-        padding-top: 3vh;
-        padding-bottom: 3vh;
-        border-radius: 30px;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        -ms-border-radius: 30px;
-        -o-border-radius: 30px;
-    }
     .row-funrun {
         margin-left: 4%;
         margin-right: 4%;
@@ -197,8 +168,6 @@ figure {
     }
     #funrun-p {
         margin-top: 8%;
-        padding-left: 0vh;
-        padding-right: 0vh;
         font-family: Nunito;
         font-size: 17px;
         color: white;
@@ -206,6 +175,8 @@ figure {
         text-align: justify;
         margin-left: 4vh;
         margin-right: 6vh;
+        padding-left: 0vh;
+        padding-right: 0vh;
     }
     .phone-funrun {
         margin-bottom: 20%;
@@ -213,21 +184,58 @@ figure {
     #swiper-slide-run img {
         display: block;
         width: 500px !important;
-        height: 270px !important;
+        height: 280px !important;
         box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
     }
     #swiper-slide-run {
-        margin-left: 1%;
+        /* margin-left: 1%; */
         max-width: 100% !important;
         max-height: 100% !important;
     }
     #swiper-container-run {
-        max-width: 73%;
+        max-width: 75%;
         margin-top: 13%;
     }
-    #btn-read-more-fun {
-        margin-top: -60% !important;
+    #see-more-funrun {
+        margin-top: 10%;
         width: 80%;
-        display: none;
+    }
+    /* .bg-funrun {
+        min-height: 150vh !important;
+    } */
+}
+
+@media all and (min-width: 768px) and (max-width:800px) {
+    #swiper-container-run {
+        max-width: 85%;
+        margin-top: 10% !important;
+    }
+    #swiper-slide-run {
+        max-width: 300px !important;
+        max-height: 280px;
+    }
+    #swiper-slide img {
+        display: block;
+        width: 300px !important;
+        height: 280px;
+        object-fit: cover;
+    }
+    #btn-funrun {
+        color: #FDCD22;
+        margin-top: -7%;
+    }
+}
+
+@media all and (min-width: 300px) and (max-width:400px) {
+    #swiper-container-run {
+        max-width: 85%;
+        margin-top: 10% !important;
+    }
+}
+
+@media all and (min-width: 300px) and (max-width:420px) {
+    #see-more-funrun {
+        width: 80%;
+        margin-top: -20% !important;
     }
 }

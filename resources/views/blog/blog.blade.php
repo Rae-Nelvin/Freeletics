@@ -42,6 +42,9 @@
     <div class="position-relative overflow-hidden bg-blog">
         <div class="container">
             <div class="row">
+                <div class="d-flex justify-content-center">
+                    <h1 class="title">BLOG</h1>
+                </div>
                 <div class=" left-bar">
                     <h1 class="title-h1 display-7 font-weight-normal">Olahraga Di rumah Pada Masa PPKM</h1>
                     <img src="{{ asset ('assets/images/12weeks.png')}}" class="img-fluid">
@@ -61,19 +64,31 @@
                         <h3 class="right-side">NEWS UPDATE</h3>
                         <div class="line"></div>
                         <div class="content">
-                            <img class="new-blog" src="{{ asset ('assets/images/blog.png')}}">
-                            <p class="desc-content">Next event bulan depan juli</p>
-                            <span class="tgl">12 july 2021</span>
+                            <a href="{{url('/gallery')}}"> <img class="new-blog"
+                                    src="{{ asset ('assets/images/blog.png')}}">
+                            </a>
+                            <a href="">
+                                <p class="desc-content">Next event bulan depan juli</p>
+                                <span class="tgl">12 july 2021</span>
+                            </a>
                         </div>
                         <div class="content">
-                            <img class="new-blog-2" src="{{ asset ('assets/images/blog.png')}}">
-                            <p class="desc-content-2">Next event bulan depan juli</p>
-                            <span class="tgl">12 july 2021</span>
+                            <a href="{{url('/home')}}"> <img class="new-blog-2"
+                                    src="{{ asset ('assets/images/blog.png')}}">
+                            </a>
+                            <a href="">
+                                <p class="desc-content-2">Next event bulan depan juli</p>
+                                <span class="tgl">12 july 2021</span>
+                            </a>
                         </div>
                         <div class="content">
-                            <img class="new-blog-3" src="{{ asset ('assets/images/blog.png')}}">
-                            <p class="desc-content">Next event bulan depan juli</p>
-                            <span class="tgl">12 july 2021</span>
+                            <a href="{{url('/home')}}"> <img class="new-blog-3"
+                                    src="{{ asset ('assets/images/blog.png')}}">
+                            </a>
+                            <a href="">
+                                <p class="desc-content">Next event bulan depan juli</p>
+                                <span class="tgl">12 july 2021</span>
+                            </a>
                         </div>
                         <!-- <div class="content">
                             <img class="new-blog-2" src="{{ asset ('assets/images/blog.png')}}">

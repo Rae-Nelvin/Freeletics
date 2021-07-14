@@ -25,10 +25,27 @@ a.nav-link {
 }
 
 .page-section {
-    background-color: black;
+    width: 100%;
+    min-height: 130vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
 .section-subheading {
     color: #FDCD22;
     font-family: Nunito !important;
+}
+
+#see-more {
+    width: 20%;
+    margin-top: 7%;
+    position: relative;
+}
+
+@media all and (max-width: 768px) {
+    #see-more {
+        width: 90%;
+    }
 }
