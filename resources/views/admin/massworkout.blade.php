@@ -182,7 +182,7 @@
         @endif
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Mass Workout</h1>
+            <h1 class="m-0 h1-title" style="font-size: 60px;font-family: Nunito;">Mass Workout</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -196,66 +196,73 @@
           <!-- Add New Button -->
           <div class="row" style="margin-top: 40px;margin-left: 10px;margin-right: 10px;"></div>
           <!-- Add New Button -->
+          <div class="card-body bg-custom-1 rounded">
           <div class="row" style="margin-left: 10px;margin-right: 10px;">
-              <div class="col-sm-9">
-              <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Caption Table</h1>
+              <div class="col-sm-12">
+              <h1 class="m-0 h1-title" style="font-size: 30px;font-family: Nunito;color: white">Caption Table</h1>
+              <!-- End of Button -->
+              <!-- Description Table -->
+              <table style="margin-top: 10px">
+                        <thead>
+                        <tr class="table100-head">
+                            <th class="column1">#</th>
+                            <th class="column4-3">Description</th>
+                            <th class="column5">Last Update</th>
+                            <th class="column6">Actions</th>
+                        </tr>
+                        </thead>
+                            <tbody>
+                            @foreach ($caption as $captions)
+                                <tr class="table100-body">
+                                <td class="column1">{{ $loop->iteration }}</td>
+                                <td class="column4-3-1">{{ $captions['captions'] }}</td>
+                                <td class="column5">{{ $captions['updated_at'] }}</td>
+                                <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.upload_caption',2) }}"></a>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                            </table>
+                    <!-- End of Table -->
+                  </div>
+                </div>  
+            </div><!-- /.row -->
+            <!-- Photo Table -->
+            <div class="row" style="margin-top: 80px;margin-left: 10px;margin-right: 10px;">
+          <!-- Add New Button -->
+          <div class="card-body bg-custom-1 rounded">
+            <div class="row">
+              <div class="col-sm-10">
+              <h1 class="m-0 h1-title" style="font-size: 30px;font-family: Nunito;color: white;">Photo Table</h1>
               </div>
-              <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_caption',2) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
+              <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',2) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
               <!-- End of Button -->
               <!-- Table -->
               <table>
                 <thead>
                   <tr class="table100-head">
                     <th class="column1">#</th>
-                    <th class="column4-3">Caption</th>
+                    <th class="column2">Caption</th>
+                    <th class="column4">Gambar</th>
                     <th class="column5">Last Update</th>
+                    <th class="column6">Actions</th>
                   </tr>
                 </thead>
                       <tbody>
-                      @foreach ($caption as $captions)
+                      @foreach ($photo as $photos)
                         <tr class="table100-body">
                           <td class="column1">{{ $loop->iteration }}</td>
-                          <td class="column4-3-1">{{ $captions['captions'] }}</td>
-                          <td class="column5">{{ $captions['updated_at'] }}</td>
+                          <td class="column2">{{ $photos['caption'] }}</td>
+                          <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width:185px;height:200px;"></td>
+                          <td class="column5">{{ $photos['updated_at'] }}</td>
+                          <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
+                          <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
                         </tr>
                       @endforeach
                       </tbody>
                     </table>
                     <!-- End of Table -->
-            </div><!-- /.row -->
-            <!-- Photo Table -->
-            <div class="row" style="margin-top: 80px;margin-left: 10px;margin-right: 10px;">
-          <!-- Add New Button -->
-          <div class="col-sm-9">
-          <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Photo Table</h1>
+            </div>
           </div>
-          <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',2) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
-          <!-- End of Button -->
-          <!-- Table -->
-          <table>
-						<thead>
-							<tr class="table100-head">
-								<th class="column1">#</th>
-								<th class="column2">Caption</th>
-								<th class="column4">Gambar</th>
-								<th class="column5">Last Update</th>
-								<th class="column6">Actions</th>
-							</tr>
-						</thead>
-                  <tbody>
-                  @foreach ($photo as $photos)
-                    <tr class="table100-body">
-                      <td class="column1">{{ $loop->iteration }}</td>
-                      <td class="column2">{{ $photos['caption'] }}</td>
-                      <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width:185px;height:200px;"></td>
-                      <td class="column5">{{ $photos['updated_at'] }}</td>
-                      <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
-                      <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
-                    </tr>
-                  @endforeach
-                  </tbody>
-                </table>
-                <!-- End of Table -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>

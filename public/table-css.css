@@ -5,28 +5,6 @@
     font-weight: bold;
 }
 
-.edit-btn {
-    margin-right: 10px;
-    margin-left: 20px;
-}
-
-.addnew-btn {
-    width: 250px;
-    margin-top: 3vh;
-    margin-bottom: 1vh;
-    text-align: center;
-    background-color: #edc124;
-}
-
-.logout-btn{
-    padding-right: 65px;
-    background: #edc124;
-    text-align: center;
-    border: none;
-    font-family: Nunito;
-    font-weight: bold;
-}
-
 .h1-title {
     font-weight: bold;
     color: #edc124;
@@ -37,8 +15,12 @@
     font-size: 20px;
 }
 
-.editor{
-	color: #FFF !important;
+.card{
+	background-color: #343a40 !important;
+}
+
+.bg-custom-1 {
+    background-color: #343a40 ;
 }
 
 @media all and (min-width: 768px) and (max-width: 1366px)
@@ -222,7 +204,7 @@
     line-height: 1.2;
     font-weight: unset;
     font-weight: bold;
-    background-color: #343a40;
+    background-color: #454d55;
   }
 
   .table100-body td{

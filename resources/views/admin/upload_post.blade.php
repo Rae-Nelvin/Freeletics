@@ -175,7 +175,7 @@
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Add New</h1>
+            <h1 class="m-0 h1-title" style="font-size: 60px;font-family: Nunito;">Add New</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -184,7 +184,7 @@
               <br>
             </ol>
           </div><!-- /.col -->
-          <div style="margin-top: 40px;">
+          <div class="card-body bg-custom-1 rounded mt-5">
             <form action="{{ route('admin.uploadpost') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -192,7 +192,7 @@
                 </div>
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $title ?></label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="100%">
+                    <input type="text" class="form-control bg-white" id="exampleInputEmail1" name="title" size="100%">
                 </div>
                 <div class="form-group">
                 <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $subtitle ?></label>
@@ -209,7 +209,7 @@
                     <div class="input-group">
                       <div class="custom-file" style="max-width: 40%;">
                         <input type="file" class="custom-file-input" id="inputGroupFile02" name="image_path" onchange="loadFile(event)" size="60">
-                        <label class="custom-file-label" for="inputGroupFile02">Choose Image</label>
+                        <label class="custom-file-label bg-white" for="inputGroupFile02">Choose Image</label>
                       </div>
                     </div>
                     <img id="output" style="padding:10px; max-width: 25%;"/>

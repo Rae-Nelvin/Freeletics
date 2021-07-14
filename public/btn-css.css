@@ -152,3 +152,24 @@ $gw-red-dark: rgb(123, 36, 28); /*#7b241c */
 .inlineIcon.delete:before {
   color: #c0392b;
 }
+
+.edit-btn {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.addnew-btn {
+  width: 150px;
+  margin-bottom: 1vh;
+  text-align: center;
+  background-color: #edc124;
+}
+
+.logout-btn{
+  padding-right: 65px;
+  background: #edc124;
+  text-align: center;
+  border: none;
+  font-family: Nunito;
+  font-weight: bold;
+}

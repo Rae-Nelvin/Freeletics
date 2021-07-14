@@ -182,7 +182,7 @@
         @endif
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Blog</h1>
+            <h1 class="m-0 h1-title" style="font-size: 60px;font-family: Nunito;">Blog</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -193,39 +193,44 @@
           </div><!-- /.col -->
 
           <!-- Add New Button -->
-          <div class="col-sm-9">
-          </div>
-          <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',6) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
-          <!-- End of Button -->
-          <!-- Table -->
-          <table>
-						<thead>
-							<tr class="table100-head">
-								<th class="column1">#</th>
-								<th class="column2">Judul Blog</th>
-								<th class="column3">Deskripsi Blog</th>
-								<th class="column4">Gambar</th>
-								<th class="column5">Last Update</th>
-								<th class="column6">Actions</th>
-							</tr>
-						</thead>
-                  <tbody>
-                  @foreach ($post as $posts)
-                    <tr class="table100-body">
-                      <td class="column1">{{ $loop->iteration }}</td>
-                      <td class="column2">{{ $posts['title'] }}</td>
-                      <td class="column3-1">
-                        {{ $posts['subtitle'] }}
-                      </td>
-                      <td class="column4-1"><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->file_path}}" style="width:185px;height:200px;"></td>
-                      <td class="column5">{{ $posts['updated_at'] }}</td>
-                      <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.edit_post',$posts->id) }}"></a>
-                      <a class="button touch delete" href="{{ route('admin.delete_photos', $posts->id) }}"></a></td>
+          <div class="card-body bg-custom-1 rounded mt-5">
+            <div class="row">
+              <div class="col-sm-10">
+                <h1 class="m-0 h1-title" style="font-size: 30px;font-family: Nunito;color:white;">Photo Table</h1>
+              </div>
+              <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',6) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
+                <!-- End of Button -->
+                <!-- Table -->
+                <table>
+                  <thead>
+                    <tr class="table100-head">
+                      <th class="column1">#</th>
+                      <th class="column2">Judul Event</th>
+                      <th class="column3">Deskripsi Event</th>
+                      <th class="column4">Gambar</th>
+                      <th class="column5">Last Update</th>
+                      <th class="column6">Actions</th>
                     </tr>
-                  @endforeach
-                  </tbody>
-                </table>
-                <!-- End of Table -->
+                  </thead>
+                        <tbody>
+                        @foreach ($post as $posts)
+                          <tr class="table100-body">
+                            <td class="column1">{{ $loop->iteration }}</td>
+                            <td class="column2">{{ $posts['title'] }}</td>
+                            <td class="column3-1">
+                              {{ $posts['subtitle'] }}
+                            </td>
+                            <td class="column4-1"><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->file_path}}" style="width:185px;height:200px;"></td>
+                            <td class="column5">{{ $posts['updated_at'] }}</td>
+                            <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.edit_post',$posts->id) }}"></a>
+                            <a class="button touch delete" href="{{ route('admin.delete_photos', $posts->id) }}"></a></td>
+                          </tr>
+                        @endforeach
+                        </tbody>
+                      </table>
+                      <!-- End of Table -->
+              </div>
+          </div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>

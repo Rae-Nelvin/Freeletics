@@ -174,7 +174,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Add New</h1>
+            <h1 class="m-0 h1-title" style="font-size: 60px;font-family: Nunito;">Add New</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -183,7 +183,7 @@
               <br>
             </ol>
           </div><!-- /.col -->
-            <div style="margin-top: 40px;">
+            <div class="card-body bg-custom-1 rounded mt-5">
             <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -191,7 +191,7 @@
                 </div>
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan Caption Gambar :</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+                    <input type="text" class="form-control bg-white" id="exampleInputEmail1" name="title">
                 </div>
                 <div class="form-group">
                   <table>

@@ -183,29 +183,31 @@
             </ol>
           </div><!-- /.col -->
           <!-- Image Table -->
-          <table>
-                  <thead>
-                    <tr class="table100-head">
-                      <th class="column1">#</th>
-                      <th class="column2">Caption</th>
-                      <th class="column4">Image</th>
-                      <th class="column5">Last Update</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  @foreach ($photo as $photos)
-                    <tr class="table100-body">
-                      <td class="column1">{{ $loop->iteration }}</td>
-                      <td class="column2">{{ $photos['caption'] }}</td>
-                      <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
-                      <td class="column5">{{ $photos['updated_at'] }}</td>
-                    </tr>
-                  @endforeach
-                  </tbody>
-                </table>
+          <div class="card-body bg-custom-1 rounded mt-5">
+            <table>
+                    <thead>
+                      <tr class="table100-head">
+                        <th class="column1">#</th>
+                        <th class="column2">Caption</th>
+                        <th class="column4">Image</th>
+                        <th class="column5">Last Update</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($photo as $photos)
+                      <tr class="table100-body">
+                        <td class="column1">{{ $loop->iteration }}</td>
+                        <td class="column2">{{ $photos['caption'] }}</td>
+                        <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
+                        <td class="column5">{{ $photos['updated_at'] }}</td>
+                      </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
           <!-- End of Image Table -->
           <!-- Form -->
-          <div style="margin-top: 40px;">
+          <div class="card-body bg-custom-1 rounded mt-5">
             <form action="{{ route('admin.editphotos') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -215,14 +217,14 @@
                 <input type="hidden" name="event" value="{{ $photos['event'] }}">
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan Caption :</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="60">
+                    <input type="text" class="form-control bg-white" id="exampleInputEmail1" name="title" size="60">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile" style="font-family: Nunito;" class="title-edit">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
                         <input type="file" class="custom-file-input" id="inputGroupFile02" name="file_path" onchange="loadFile(event)" size="60">
-                        <label class="custom-file-label" for="inputGroupFile02">Choose Image</label>
+                        <label class="custom-file-label bg-white" for="inputGroupFile02" style="max-width: 40%;">Choose Image</label>
                       </div>
                     </div>
                     <img id="output" style="padding:10px; max-width: 25%;"/>

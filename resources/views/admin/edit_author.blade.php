@@ -31,6 +31,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Table CSS -->
   <link href="{{ asset ('table-css.css') }}" rel="stylesheet">
+ <!-- Quill Rich Text Editor -->
+ <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed dark-mode">
 <div class="wrapper">
@@ -173,7 +175,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Edit Photos</h1>
+            <h1 class="m-0 h1-title" style="font-size: 60px;font-family: Nunito;">Edit Photos</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -183,33 +185,35 @@
             </ol>
           </div><!-- /.col -->
           <!-- Image Table -->
-          <table>
-                  <thead>
-                      <tr class="table100-head">
-                        <th class="column1">#</th>
-                        <th class="column2"><?php echo $title ?></th>
-                        <th class="column3"><?php echo $subtitle ?></th>
-                        <th class="column4">Image</th>
-                        <th class="column5">Last Update</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  @foreach ($photo as $photos)
-                    <tr class="table100-body">
-                      <td class="column1">{{ $loop->iteration }}</td>
-                      <td class="column2">{{ $photos['caption'] }}</td>
-                      <td class="column3-1">
-                        {{ $photos['subtitle'] }}
-                      </td>
-                      <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
-                      <td class="column5">{{ $photos['updated_at'] }}</td>
-                    </tr>
-                  @endforeach
-                  </tbody>
-                </table>
-          <!-- End of Image Table -->
+          <div class="card-body bg-custom-1 rounded mt-5">
+            <table>
+                    <thead>
+                        <tr class="table100-head">
+                          <th class="column1">#</th>
+                          <th class="column2"><?php echo $title ?></th>
+                          <th class="column3"><?php echo $subtitle ?></th>
+                          <th class="column4">Image</th>
+                          <th class="column5">Last Update</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($photo as $photos)
+                      <tr class="table100-body">
+                        <td class="column1">{{ $loop->iteration }}</td>
+                        <td class="column2">{{ $photos['caption'] }}</td>
+                        <td class="column3-1">
+                          {{ $photos['subtitle'] }}
+                        </td>
+                        <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
+                        <td class="column5">{{ $photos['updated_at'] }}</td>
+                      </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+          <!-- End of Image Table --> 
           <!-- Form -->
-          <div style="margin-top: 40px;">
+          <div class="card-body bg-custom-1 rounded mt-5">
             <form action="{{ route('admin.editphotos') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -219,18 +223,24 @@
                 <input type="hidden" name="event" value="{{ $photos['event'] }}">
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan <?php echo $title ?> :</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="60">
+                    <input type="text" class="form-control bg-white" id="exampleInputEmail1" name="title" size="60">
                 </div>
                 <div class="form-group">
-                    <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan <?php echo $subtitle ?> :</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle" size="60">
+                <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan <?php echo $subtitle ?> :</label>
+                  <div class="card">
+                    <div class="card-body bg-white p-0 m-0">
+                        <div id="editor" style="width: 100%;">
+                          <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle">
+                        </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile" style="font-family: Nunito;" class="title-edit">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile02" name="file_path" onchange="loadFile(event)" size="60">
-                        <label class="custom-file-label" for="inputGroupFile02">Choose Image</label>
+                        <input type="file" class="custom-file-input" id="inputGroupFile02" name="file_path" onchange="loadFile(event)">
+                        <label class="custom-file-label bg-white" for="inputGroupFile02" style="max-width: 40%;">Choose Image</label>
                       </div>
                     </div>
                     <img id="output" style="padding:10px; max-width: 25%;"/>
@@ -297,6 +307,33 @@
    var fileName = $(this).val();
   $(this).next('.custom-file-label').html(fileName);
 })
+</script>
+<!-- Quill Rich Text Editor js -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>
+  var toolbarOptions = [
+  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+  ['blockquote', 'code-block'],
+  [ 'image' ],
+
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+  [{ 'direction': 'rtl' }],                         // text direction
+  
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],        // custom dropdown
+
+  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+  [{ 'align': [] }],
+
+  ['clean']                                         // remove formatting button
+];
+var quill = new Quill('#editor', {
+  modules: {
+    toolbar: toolbarOptions
+  },
+  theme: 'snow'
+});
 </script>
 </body>
 </html>
