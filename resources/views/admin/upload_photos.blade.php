@@ -211,7 +211,7 @@
                     </tbody>
                   </table>
                 </div>
-                <button class="btn btn-success"><input type="submit" class="button btn-success" style="font-family: Nunito;font-weight: bold;"/></button>
+                <button class="btn btn-success" style="font-family: Nunito;font-weight: bold;">Submit<input type="submit" class="button btn-success d-none" /></button>
             </form>
               </div>
           </div>

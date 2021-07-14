@@ -194,9 +194,7 @@
                 <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan Caption :</label>
                   <div class="card">
                     <div class="card-body bg-white p-0 m-0">
-                        <div id="editor" style="width: 100%;">
-                          <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle">
-                        </div>
+                          <textarea name="caption" id="editor" style="width: 100%;"></textarea>
                     </div>
                   </div>
                 </div>
@@ -277,6 +275,13 @@ var quill = new Quill('#editor', {
   },
   theme: 'snow'
 });
+var form = document.getElementById("FormId"); // get form by ID
+
+form.onsubmit = function() { // onsubmit do this first
+                             var name = document.querySelector('input[name=textarea]'); // set name input var
+                             name.value = JSON.stringify(quill.getContents()); // populate name input with quill data
+                             return true; // submit form
+                           }
 </script>
 </body>
 </html>

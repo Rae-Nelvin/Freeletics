@@ -198,9 +198,7 @@
                 <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $subtitle ?></label>
                   <div class="card">
                     <div class="card-body bg-white p-0 m-0">
-                        <div id="editor" style="width: 100%;">
-                          <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle">
-                        </div>
+                    <textarea name="subtitle" id="editor" style="width: 100%;"></textarea>
                     </div>
                   </div>
                 </div>

@@ -184,7 +184,7 @@
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <div class="content-header">
-                <div class="container">
+                <div class="container-fluid">
                     @if(Session::get('Successful'))
                     <div class="alert alert-success">
                         {{ Session::get('Successful') }}
