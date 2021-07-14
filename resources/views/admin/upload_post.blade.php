@@ -190,7 +190,7 @@
                 </div>
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $title ?></label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="60">
                 </div>
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $subtitle ?></label>

@@ -61,7 +61,7 @@ class CaptionController extends Controller
 
         $id = Session::get('LoggedUser');
 
-        $count = Captions::get()->count();
+        $count = Captions::get()->where('event',$request->event)->count();
         if($count < 1){
         Captions::create([
             'author_id' => $id,

@@ -20,7 +20,7 @@ class CreatePostTable extends Migration
             $table->string('subtitle')->nullable();
             $table->string('event');
             $table->string('image_path')->nullable();
-            $table->text('content');
+            $table->text('content')->nullable();
             $table->timestamps();
         });
     }

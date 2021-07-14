@@ -94,7 +94,6 @@ class PhotoController extends Controller
         $request->validate([
             'title' => 'required',
             'event' => 'required',
-            'content' => 'required',
             'image_path' => 'required|image'
         ]);
 
