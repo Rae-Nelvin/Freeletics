@@ -31,6 +31,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Table CSS -->
   <link href="{{ asset ('table-css.css') }}" rel="stylesheet">
+    <!-- Quill Rich Text Editor -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed dark-mode">
 <div class="wrapper">
@@ -201,7 +203,7 @@
                       <td class="column3-1">
                         {{ $posts['subtitle'] }}
                       </td>
-                      <td class="column5"><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->image_path}}" style="width: 50%"></td>
+                      <td class="column4-1"><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->image_path}}" style="width: 50%"></td>
                       <td class="column6-1">{{ $posts['updated_at'] }}</td>
                     </tr>
                   @endforeach
@@ -222,14 +224,20 @@
                     <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="60">
                 </div>
                 <div class="form-group">
-                    <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan <?php echo $subtitle ?> :</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle" size="60">
+                <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $subtitle ?></label>
+                  <div class="card">
+                    <div class="card-body bg-white p-0 m-0">
+                        <div id="editor" style="width: 100%;">
+                          <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle">
+                        </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile" style="font-family: Nunito;" class="title-edit">File input</label>
                     <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile02" name="image_path" onchange="loadFile(event)" size="60">
+                      <div class="custom-file" style="max-width: 40%;">
+                        <input type="file" class="custom-file-input" id="inputGroupFile02" name="image_path" onchange="loadFile(event)" >
                         <label class="custom-file-label" for="inputGroupFile02">Choose Image</label>
                       </div>
                     </div>
@@ -297,6 +305,33 @@
    var fileName = $(this).val();
   $(this).next('.custom-file-label').html(fileName);
 })
+</script>
+<!-- Quill Rich Text Editor js -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>
+  var toolbarOptions = [
+  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+  ['blockquote', 'code-block'],
+  [ 'image' ],
+
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+  [{ 'direction': 'rtl' }],                         // text direction
+  
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],        // custom dropdown
+
+  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+  [{ 'align': [] }],
+
+  ['clean']                                         // remove formatting button
+];
+var quill = new Quill('#editor', {
+  modules: {
+    toolbar: toolbarOptions
+  },
+  theme: 'snow'
+});
 </script>
 </body>
 </html>

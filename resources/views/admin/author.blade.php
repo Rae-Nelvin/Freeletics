@@ -207,28 +207,6 @@
                         </div><!-- /.col -->
                     </div>
                     <!-- Caption Table -->
-                    <!-- Add New Button -->
-                    <div class="row" style="margin-top: 40px;margin-left: 10px;margin-right: 10px;"></div>
-                    <!-- Add New Button -->
-                    <div class="row" style="margin-left: 10px;margin-right: 10px;">
-                        <div class="col-sm-9">
-                            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Caption Table</h1>
-                        </div>
-<<<<<<< HEAD
-        @endif
-        <div class="row">
-          <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Author</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="color: white; font-size: 20px;font-weight: bold;font-family: Nunito;">Home</a></li>
-              <li class="breadcrumb-item active" style="font-size: 20px;color: #edc124;font-weight: bold;font-family: Nunito;">Author</li>
-              <br>
-            </ol>
-          </div><!-- /.col -->
-        </div>
-          <!-- Caption Table -->
           <!-- Add New Button -->
           <div class="row" style="margin-top: 40px;margin-left: 10px;margin-right: 10px;"></div>
           <!-- Add New Button -->
@@ -302,83 +280,6 @@
         </div>
     </div>
     <!-- /.content-header -->
-=======
-                        <div class="col-sm-3"><a class="button primary new addnew-btn"
-                                href="{{ route('admin.upload_caption',1) }}"
-                                style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
-                        <!-- End of Button -->
-                        <!-- Table -->
-                        <table>
-                            <thead>
-                                <tr class="table100-head">
-                                    <th class="column1">#</th>
-                                    <th class="column4-3">Caption</th>
-                                    <th class="column5">Last Update</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($caption as $captions)
-                                <tr class="table100-body">
-                                    <td class="column1">{{ $loop->iteration }}</td>
-                                    <td class="column4-3-1">{{ $captions['captions'] }}</td>
-                                    <td class="column5">{{ $captions['updated_at'] }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <!-- End of Table -->
-                    </div><!-- /.row -->
-                    <!-- Photo Table -->
-                    <div class="row" style="margin-top: 80px;margin-left: 10px;margin-right: 10px;">
-                        <!-- Add New Button -->
-                        <div class="row">
-                            <div class="col-sm-9">
-                                <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Photo Table</h1>
-                            </div>
-                            <div class="col-sm-3"><a class="button primary new addnew-btn"
-                                    href="{{ route('admin.upload_photos',1) }}"
-                                    style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a>
-                            </div>
-                            <!-- End of Button -->
-                            <!-- Table -->
-                            <table>
-                                <thead>
-                                    <tr class="table100-head">
-                                        <th class="column1">#</th>
-                                        <th class="column2">Nama Author</th>
-                                        <th class="column3">Deskripsi</th>
-                                        <th class="column4">Gambar</th>
-                                        <th class="column5">Last Update</th>
-                                        <th class="column6">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($photo as $photos)
-                                    <tr class="table100-body">
-                                        <td class="column1">{{ $loop->iteration }}</td>
-                                        <td class="column2">{{ $photos['caption'] }}</td>
-                                        <td class="column3-1">
-                                            {{ $photos['subtitle'] }}
-                                        </td>
-                                        <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}"
-                                                alt="{{$photos->file_path}}" style="width:185px;height:200px;"></td>
-                                        <td class="column5">{{ $photos['updated_at'] }}</td>
-                                        <td class="column6-1"><a class="button touch edit edit-btn"
-                                                href="{{ route('admin.edit_photos',$photos->id) }}"></a>
-                                            <a class="button touch delete"
-                                                href="{{ route('admin.delete_photos', $photos->id) }}"></a>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                            <!-- End of Table -->
-                        </div><!-- /.row -->
-                    </div><!-- /.container-fluid -->
-                </div>
-            </div>
-            <!-- /.content-header -->
->>>>>>> main
 
             <!-- Control Sidebar -->
             <aside class="control-sidebar control-sidebar-dark">

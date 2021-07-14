@@ -31,6 +31,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Table CSS -->
   <link href="{{ asset ('table-css.css') }}" rel="stylesheet">
+  <!-- Quill Rich Text Editor -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed dark-mode">
 <div class="wrapper">
@@ -170,10 +172,10 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 h1-title" style="font-size: 40px;">Add New</h1>
+            <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Add New</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -190,23 +192,29 @@
                 </div>
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $title ?></label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="60">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="100%">
                 </div>
                 <div class="form-group">
-                    <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $subtitle ?></label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle">
+                <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $subtitle ?></label>
+                  <div class="card">
+                    <div class="card-body bg-white p-0 m-0">
+                        <div id="editor" style="width: 100%;">
+                          <input type="text" class="form-control" id="exampleInputEmail1" name="subtitle">
+                        </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;">File input</label>
                     <div class="input-group">
-                      <div class="custom-file">
+                      <div class="custom-file" style="max-width: 40%;">
                         <input type="file" class="custom-file-input" id="inputGroupFile02" name="image_path" onchange="loadFile(event)" size="60">
                         <label class="custom-file-label" for="inputGroupFile02">Choose Image</label>
                       </div>
                     </div>
                     <img id="output" style="padding:10px; max-width: 25%;"/>
                   </div>
-                <button class="btn btn-success"><input type="submit" class="button btn-success" style="font-family: Nunito;font-weight: bold;"/></button>
+                <button class="btn btn-success" style="font-family: Nunito;font-weight: bold;">Submit<input type="submit" class="button btn-success d-none" /></button>
             </form>
           </div>
         </div><!-- /.row -->
@@ -267,6 +275,33 @@
    var fileName = $(this).val();
   $(this).next('.custom-file-label').html(fileName);
 })
+</script>
+<!-- Quill Rich Text Editor js -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>
+  var toolbarOptions = [
+  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+  ['blockquote', 'code-block'],
+  [ 'image' ],
+
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+  [{ 'direction': 'rtl' }],                         // text direction
+  
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],        // custom dropdown
+
+  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+  [{ 'align': [] }],
+
+  ['clean']                                         // remove formatting button
+];
+var quill = new Quill('#editor', {
+  modules: {
+    toolbar: toolbarOptions
+  },
+  theme: 'snow'
+});
 </script>
 </body>
 </html>

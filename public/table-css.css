@@ -37,6 +37,10 @@
     font-size: 20px;
 }
 
+.editor{
+	color: #FFF !important;
+}
+
 @media all and (min-width: 768px) and (max-width: 1366px)
 {
 
