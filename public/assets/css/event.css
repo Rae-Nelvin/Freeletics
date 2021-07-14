@@ -13,12 +13,17 @@
 }
 
 .event-img {
-    margin-top: 35%;
+    margin-top: 45% !important;
 }
 
-.event-img p {
+.event-img img {
+    width: 300px;
+    height: 300px;
+}
+
+.event-img {
     text-align: center;
-    color: #FFF;
+    color: #FFF !important;
     margin-top: 15px;
 }
 
@@ -34,6 +39,6 @@
 
 @media all and (max-width: 768px) {
     .event-img {
-        margin-top: 10%;
+        margin-top: 10% !important;
     }
 }

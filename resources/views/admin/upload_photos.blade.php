@@ -204,8 +204,8 @@
                     </thead>
                     <tbody>
                     <tr class="table100-body">
-                      <td class="column3"><input type="file" name="images[]" onchange="loadFile(e)"></td>
-                      <td class="column4-2"><img id="output" /></td>
+                      <td class="column3"><input type="file" name="images[]" onchange="loadFile(event)"></td>
+                      <td class="column4-2"><img id="output" style="padding: 10px;width: 50%;"/></td>
                       <td class="column6"><button class="btn btn-danger remove">- Remove</button></td>
                     </tr>
                     </tbody>
@@ -272,7 +272,7 @@
   function addRow(){
     var tr = '<tr class="table100-body">' +
                       '<td class="column3"><input type="file" name="images[]"></td>' +
-                      '<td class="column4-2"></td>' +
+                      '<td class="column4-2"><img id="output"></td>' +
                       '<td class="column6"><button class="btn btn-danger remove">- Remove</button></td>' +
                     '</tr>';
       $('tbody').append(tr);
@@ -281,6 +281,12 @@
   $('tbody').on('click', '.remove', function(){
     $(this).parent().parent().remove();
   });
+</script>
+<script>
+  var loadFile =  function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
 </script>
 </body>
 </html>

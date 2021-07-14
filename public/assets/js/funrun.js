@@ -8,11 +8,23 @@ var swiper = new Swiper(".mySwiperr", {
     breakpoints: {
         300: {
             slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        400: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+        },
+        1200: {
+            slidesPerView: 3,
             spaceBetween: 20,
         },
         1500: {
             slidesPerView: 3,
-            spaceBetween: 60,
+            spaceBetween: 40,
         },
     },
 });

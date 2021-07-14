@@ -1,21 +1,28 @@
-nav {
-    /* background-color: #FDCD22!important; */
-    display: block;
+nav {}
+
+.navbar {
+    overflow: hidden;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 3;
 }
 
-a.nav-link {
-    color: #fff;
-    align-items: center !important;
-    text-align: center !important;
-    flex: center;
-    position: relative;
-    left: 40%;
-    float: none;
-    top: 5%;
-    margin-left: 50px;
-    font-size: 20px;
-    font-family: Nunito;
-    font-weight: bold;
+@media all and (min-width:1000px) {
+    a.nav-link {
+        color: #fff;
+        align-items: center !important;
+        text-align: center !important;
+        flex: center;
+        position: relative;
+        left: 40%;
+        float: none;
+        top: 5%;
+        margin-left: 50px;
+        font-size: 20px;
+        font-family: Nunito;
+        font-weight: bold;
+    }
 }
 
 .navbar-nav a {
@@ -37,6 +44,7 @@ a.nav-link {
     font-family: Nunito;
     color: #FDCD22;
     font-weight: bold;
+    margin-top: 10%;
 }
 
 .author-h1 {
@@ -82,31 +90,28 @@ button.read-more-btn {
 
 .author img {
     margin-top: -5%;
-    border-radius: 30% !important;
-    -webkit-border-radius: 30% !important;
-    -moz-border-radius: 30% !important;
-    -ms-border-radius: 30% !important;
-    -o-border-radius: 30% !important;
+    border-radius: 20% !important;
+    -webkit-border-radius: 20% !important;
+    -moz-border-radius: 20% !important;
+    -ms-border-radius: 20% !important;
+    -o-border-radius: 20% !important;
+    width: 230px;
+    height: 250px;
 }
 
 
 /* Tabled Mode */
 
 @media all and (min-width: 768px) and (max-width: 1366px) {
-    a.navbar-brand img {
+    /* a.navbar-brand img {
         max-width: 13vh;
-    }
-    a.nav-link {
-        font-size: 20px;
-        font-family: Nunito;
-        font-weight: bold;
-    }
+    } */
     .about-h1 {
-        font-size: 50px;
+        /* font-size: 50px; */
     }
     .about-p {
         margin-top: 5%;
-        font-size: 30px;
+        /* font-size: 30px; */
     }
     .moreText {
         display: none;
@@ -127,6 +132,9 @@ button.read-more-btn {
     .author h2 {
         font-size: 38px;
     }
+    .author h1 {
+        margin-top: -15%;
+    }
     .author p {
         font-size: 20px;
         margin-bottom: 25%;
@@ -138,12 +146,11 @@ button.read-more-btn {
 
 @media all and (max-width: 768px) {
     a.navbar-brand img {
-        max-width: 12vh;
+        /* max-width: 12vh; */
     }
     a.nav-link {
-        font-size: 20px;
-        font-family: Nunito;
-        font-weight: bold;
+        font-size: 15px;
+        /* font-weight: bold; */
     }
     .about-h1 {
         font-size: 39px;

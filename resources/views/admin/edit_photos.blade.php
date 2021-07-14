@@ -205,14 +205,29 @@
                 </table>
           <!-- End of Image Table -->
           <!-- Form -->
-          <div class="card-body">
+          <div style="margin-top: 40px;">
             <form action="{{ route('admin.editphotos') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="event" value="{{ $photos['event'] }}"><p class="title-edit">Event : {{ $photos['event'] }}</p>
+                <div class="form-group">
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;font-size: 30px;">Event : {{ $photos['event'] }}</label>
+                </div>
                 <input type="hidden" name="id" value="{{ $photos['id'] }}">
-                <p class="title-edit">Masukkan Caption Yang Baru :</p><input type="text" name="title"/><br><br>
-                <p class="title-edit">Masukkan Gambar : </p><input type="file" name="file_path"/><br><br>
-                <input type="submit" value="Save"/>
+                <input type="hidden" name="event" value="{{ $photos['event'] }}">
+                <div class="form-group">
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan Caption :</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="title" size="60">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile" style="font-family: Nunito;" class="title-edit">File input</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile02" name="file_path" onchange="loadFile(event)" size="60">
+                        <label class="custom-file-label" for="inputGroupFile02">Choose Image</label>
+                      </div>
+                    </div>
+                    <img id="output" style="padding:10px; max-width: 25%;"/>
+                  </div>
+                <button class="btn btn-success"><input type="submit" class="button btn-success" style="font-family: Nunito;font-weight: bold;"/></button>
             </form>
           </div>
           <!-- End of Form -->
@@ -263,5 +278,17 @@
 <script src="{{ asset('dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
+<script>
+  var loadFile =  function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+<script>
+  $('#inputGroupFile02').on('change',function(){
+   var fileName = $(this).val();
+  $(this).next('.custom-file-label').html(fileName);
+})
+</script>
 </body>
 </html>

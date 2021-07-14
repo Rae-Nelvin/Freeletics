@@ -1,0 +1,103 @@
+nav {
+    /* background-color: #FDCD22!important; */
+    display: block;
+}
+
+a.nav-link {
+    color: #fff;
+    align-items: center !important;
+    text-align: center !important;
+    flex: center;
+    position: relative;
+    left: 40%;
+    float: none;
+    top: 5%;
+    margin-left: 50px;
+    font-size: 20px;
+    font-family: Nunito;
+    font-weight: bold;
+}
+
+.navbar-nav a {
+    color: #FDCD22 !important;
+    /* color: #fff; */
+    /* margin-left: 50px; */
+}
+
+.page-section {
+    width: 100%;
+    min-height: 150vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.section-subheading {
+    color: #FDCD22;
+    font-family: Nunito !important;
+}
+
+#see-more {
+    width: 20%;
+    margin-top: 7%;
+    position: relative;
+}
+
+.search {
+    margin-top: 5%;
+    margin-left: auto;
+    width: 25%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: flex-end !important;
+    position: relative;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#search {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#btn-search {
+    width: 20%;
+}
+
+#datepicker {
+    margin-top: 4%;
+    position: absolute;
+    background-color: #FDCD22 !important;
+    text-align: center;
+    border: none !important;
+    max-width: 20%;
+    border-radius: 20px !important;
+    align-items: flex-start !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+}
+
+@media all and (max-width: 768px) {
+    #datepicker {
+        width: 100%;
+        max-width: 90%;
+    }
+    .search {
+        width: 100%;
+        position: absolute;
+        margin-top: 17%;
+        margin-bottom: 20%;
+    }
+    .port {
+        margin-top: 50% !important;
+        position: relative;
+    }
+}

@@ -71,8 +71,8 @@
                     <h2 class="author-h2">{{ $author['caption'] }}</h2>
                     <p class="author-p">{{ $author['subtitle'] }}</p>
                 </div>
-                @endforeach
                 <!-- /.col-lg-4 -->
+                @endforeach
             </div>
             <!-- /.row -->
         </div>
@@ -112,48 +112,54 @@
                 </p>
             </div>
         </div>
+        <div class="see-more text-center">
+            <button type="button" class="btn btn-outline-warning" id="see-more">SEE MORE</button>
+        </div>
     </div>
 
     <!-- fun run -->
     <div class="position-relative overflow-hidden text-center bg-funrun">
-        <div class="col-md-7 p-lg-4 mx-auto my-5">
-            <h1 class="about-h1 display-4 font-weight-normal">FUN RUN</h1>
-        </div>
-        <!-- <div class="d-flex justify-content-start">
-            <input type="date" class="form-control" name="birthday" id="date-funrun">
-        </div> -->
-        <div class="col">
-        </div>
-        <!-- Swipper  -->
-        <div class="d-flex justify-content-center">
-            <div class="box" id="box-fun"></div>
-        </div>
-        <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperr"
-            id="swiper-container-run">
-            <div class="swiper-wrapper">
-            @foreach ($funrun as $funrun)
-                <div class="swiper-slide" id="swiper-slide-run">    
-                <figure>
-                        <div class="wrapper">
-                            <img src="/freeletics_images/{{$funrun->file_path}}" class=" img-fluid">
-                            <h5 class="title-img">Workout at Home</h5>
-                            <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
-                        </div>
-                    </figure>
-                </div>
-             @endforeach 
+        <div class="container">
+            <div class="col-md-7 p-lg-4 mx-auto my-5">
+                <h1 class="about-h1 display-4 font-weight-normal">FUN RUN</h1>
             </div>
-            <div class="swiper-button-next" id="btn-funrun"></div>
-            <div class="swiper-button-prev" id="btn-funrun"></div>
-        </div>
-        <!--  End of Swipper -->
-        <div class="col">
-            <p class="lead font-weight-normal text" id="funrun-p">Lorem ipsum dolor sit, amet consectetur adipisicing
-                elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem
-                adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span class="moreText">Lorem
-                    ipsum,
-                    dolor sit amet consectetur adipisicing elit.</span>
-            </p><button class="btn btn-outline-warning read-more-btn" id="btn-read-more-fun">Read More</button>
+            <div class="col">
+            </div>
+            <!-- Swipper  -->
+            <div class="d-flex justify-content-center">
+                <div class="box" id="box-fun"></div>
+            </div>
+            <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperr"
+                id="swiper-container-run">
+                <div class="swiper-wrapper">
+                    @foreach ($funrun as $funrun)
+                    <div class="swiper-slide" id="swiper-slide-run">
+                        <figure>
+                            <div class="wrapper">
+                                <img src="/freeletics_images/{{$funrun->file_path}}" class=" img-fluid">
+                                <h5 class="title-img">Workout at Home</h5>
+                                <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                            </div>
+                        </figure>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="swiper-button-next" id="btn-funrun"></div>
+                <div class="swiper-button-prev" id="btn-funrun"></div>
+            </div>
+            <!--  End of Swipper -->
+            <div class="col">
+                <p class="lead font-weight-normal text" id="funrun-p">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing
+                    elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem
+                    adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span
+                        class="moreText">Lorem
+                        ipsum,
+                        dolor sit amet consectetur adipisicing elit.</span>
+            </div>
+            <div class="see-more text-center">
+                <button type="button" class="btn btn-outline-warning" id="see-more-funrun">SEE MORE</button>
+            </div>
         </div>
     </div>
     <!-- fun run -->
@@ -164,7 +170,8 @@
             <div class="row">
                 <div class="d-flex justify-content-center">
                     <h1 class="judul-week text-center">12 WEEKS</h1>
-                    <p class="caption-week text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <p class="lead font-weight-normal caption-week">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
                         Praesentium modi nulla distinctio incidunt! Quae, accusamus dolorem optio laboriosam soluta sit
                         consequatur nisi! Incidunt pariatur voluptatem veritatis expedita, consectetur corporis commodi.
                         <span class="moreText">Natus commodi saepe perferendis fuga incidunt delectus soluta, aliquam ex
@@ -199,6 +206,9 @@
                     <div class="swiper-button-next" id="btn-week"></div>
                     <div class="swiper-button-prev" id="btn-week"></div>
                 </div>
+            </div>
+            <div class="see-more text-center">
+                <button type="button" class="btn btn-outline-warning" id="see-more-week">SEE MORE</button>
             </div>
         </div>
     </div>
@@ -248,8 +258,9 @@
                     </div>
                 </div>
                 @endforeach
-        </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
     <!-- blog -->
@@ -284,7 +295,8 @@
                     <div class="swiper-wrapper">
                         @foreach ($sponsor as $sponsor)
                         <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <a href="{{ $sponsor->subtitle }}"><img src="/freeletics_images/{{$sponsor->file_path}}"></a>
+                            <a href="{{ $sponsor->subtitle }}"><img
+                                    src="/freeletics_images/{{$sponsor->file_path}}"></a>
                         </div>
                         @endforeach
                     </div>
@@ -331,4 +343,6 @@
 </body>
 
 
-</html
+
+
+</htmlml

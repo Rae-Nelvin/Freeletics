@@ -191,10 +191,45 @@
               <br>
             </ol>
           </div><!-- /.col -->
-
-          <!-- Add New Button -->
-          <div class="col-sm-9">
           </div>
+          <!-- Caption Table -->
+          <!-- Add New Button -->
+          <div class="row" style="margin-top: 40px;margin-left: 10px;margin-right: 10px;"></div>
+          <!-- Add New Button -->
+          <div class="row" style="margin-left: 10px;margin-right: 10px;">
+              <div class="col-sm-9">
+              <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Caption Table</h1>
+              </div>
+              <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_caption',4) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
+              <!-- End of Button -->
+              <!-- Table -->
+              <table>
+                <thead>
+                  <tr class="table100-head">
+                    <th class="column1">#</th>
+                    <th class="column4-3">Caption</th>
+                    <th class="column5">Last Update</th>
+                  </tr>
+                </thead>
+                      <tbody>
+                      @foreach ($caption as $captions)
+                        <tr class="table100-body">
+                          <td class="column1">{{ $loop->iteration }}</td>
+                          <td class="column4-3-1">{{ $captions['captions'] }}</td>
+                          <td class="column5">{{ $captions['updated_at'] }}</td>
+                        </tr>
+                      @endforeach
+                      </tbody>
+                    </table>
+                    <!-- End of Table -->
+            </div><!-- /.row -->
+        <!-- Photo Table -->
+        <div class="row" style="margin-top: 80px;margin-left: 10px;margin-right: 10px;">
+          <!-- Add New Button -->
+          <div class="row">
+              <div class="col-sm-9">
+              <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Photo Table</h1>
+              </div>
           <div class="col-sm-3"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',4) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
           <!-- End of Button -->
           <!-- Table -->

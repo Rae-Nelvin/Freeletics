@@ -62,11 +62,6 @@ class PhotoController extends Controller
                 $event = 'Sponsor';
                 return view('admin.upload_author',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
-            else if($id == 9)
-            {
-                $event = 'Calender';
-            }
-        
     }
 
     function uploadphotos(Request $request){
@@ -99,7 +94,6 @@ class PhotoController extends Controller
         $request->validate([
             'title' => 'required',
             'event' => 'required',
-            'content' => 'required',
             'image_path' => 'required|image'
         ]);
 
@@ -142,8 +136,8 @@ class PhotoController extends Controller
             }
             else if($event == '[{"event":"Testimonial"}]')
             {
-                $title = "Nama Author ";
-                $subtitle = "Deskripsi ";
+                $title = "Nama Tester ";
+                $subtitle = "Testimonial ";
                 return view('admin.edit_author',['photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
             }
             else if($event == '[{"event":"Sponsor"}]')
@@ -198,7 +192,6 @@ class PhotoController extends Controller
         $request->validate([
             'title' => 'required',
             'event' => 'required',
-            'content' => 'required',
             'image_path' => 'required|image'
         ]);
 
@@ -250,10 +243,6 @@ class PhotoController extends Controller
             else if($event == '[{"event":"Sponsor"}]')
             {
                 $event1 = 'Sponsor';
-            }
-            else if($event == '[{"event":"Calender"}]')
-            {
-                $event1 = 'Calender';
             }
         $delete = Photos::get()->where('id',$id);
         $delete->each->delete();

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\CaptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ use App\Http\Controllers\IndexController;
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
 Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery');
+Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery-more');
 
 Route::post('/auth/check',[MainController::class, 'check'])->name('auth.check');
 Route::get('/auth/logout',[MainController::class, 'logout'])->name('auth.logout');
@@ -49,4 +51,6 @@ Route::group(['middleware'=>['AuthCheck']], function(){
     Route::get('/admin/edit_post/{id}', [PhotoController::class, 'edit_post'])->name('admin.edit_post');
     Route::post('admin/editpost', [PhotoController::class, 'editpost'])->name('admin.editpost');
     Route::get('/admin/delete/{id}', [PhotoController::class, 'delete'])->name('admin.delete_photos');
+    Route::get('/admin/upload_caption/{id}', [CaptionController::class, 'upload_caption'])->name('admin.upload_caption');
+    Route::post('/admin/uploadcaption',[CaptionController::class, 'uploadcaption'])->name('admin.uploadcaption');
 });
