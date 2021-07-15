@@ -191,7 +191,7 @@
             </ol>
           </div><!-- /.col -->
             <div class="card-body bg-custom-1 rounded mt-5">
-            <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.uploadphotos') }}" method="POST" enctype="multipart/form-data" id="form">
                 @csrf
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;font-size: 30px;"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></label>
@@ -206,15 +206,10 @@
                     <tr class="table100-head">
                       <th class="column3">Upload Image</th>
                       <th class="column4-2">Image Preview</th>
-                      <th class="column6"><button class="btn btn-success addRow">+ Add Photo</button></th>
+                      <th class="column6"><button class="btn btn-success" id="add-member-fields">+ Add Photo</button></th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr class="table100-body">
-                      <td class="column3"><input type="file" name="images[]" onchange="loadFile(event)"></td>
-                      <td class="column4-2"><img id="output" style="padding: 10px;width: 50%;"/></td>
-                      <td class="column6"><button class="btn btn-danger remove">- Remove</button></td>
-                    </tr>
+                    <tbody id="team-member-fields">
                     </tbody>
                   </table>
                 </div>
@@ -269,31 +264,55 @@
 <script src="{{ asset('dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
-<!-- Add More Button -->
+<!-- Image Preview & Add More Button -->
 <script type="text/javascript">
-  $('.addRow').on('click', function(){
-    event.preventDefault();
-    addRow();
-  });
 
-  function addRow(){
-    var tr = '<tr class="table100-body">' +
-                      '<td class="column3"><input type="file" name="images[]"></td>' +
-                      '<td class="column4-2"><img id="output"></td>' +
-                      '<td class="column6"><button class="btn btn-danger remove">- Remove</button></td>' +
-                    '</tr>';
-      $('tbody').append(tr);
+var i = 0;
+
+function preview_member(event, inp) {
+  var reader = new FileReader();
+  console.log(inp);
+  reader.onload = function() {
+    var output = document.getElementById("output_member" + inp);
+    output.src = reader.result;
   };
+
+  reader.readAsDataURL(event.target.files[0]);
+}
+
+jQuery(document).ready(function($) {
+  //fadeout selected item and remove
+  $(document).on("click", "#remove-member-fields", function(event) {
+    event.preventDefault();
+    $(this)
+      .parent()
+      .fadeOut(300, function() {
+        $(this).empty();
+        return false;
+      });
+  });
 
   $('tbody').on('click', '.remove', function(){
     $(this).parent().parent().remove();
   });
-</script>
-<script>
-  var loadFile =  function(event) {
-    var output = document.getElementById('output');
-    output.src = URL.createObjectURL(event.target.files[0]);
-  };
+
+  //add input
+  $("#add-member-fields").click(function() {
+    i++;
+
+    var rows = '<tr class="table100-body">' +
+                      '<td class="column3"><input type="file" name="images[]" id="image" onchange="preview_member(event, '+ i + ')"></td>' +
+                      '<td class="column4-2"><img id="output_member'+ i + '" style="max-width:40%;margin: 10px"></td>' +
+                      '<td class="column6"><button class="btn btn-danger remove" id="remove-member-fields">- Remove</button></td>' +
+                    '</tr>';
+
+    $(rows)
+      .fadeIn("slow")
+      .appendTo("#team-member-fields");
+    return false;
+  });
+});
+
 </script>
 </body>
 </html>
