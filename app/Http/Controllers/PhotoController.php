@@ -218,40 +218,55 @@ class PhotoController extends Controller
 
     function delete($id){
         $event = Photos::select('event')->where('id',$id)->get();
+        $event2 = Posts::select('event')->where('id',$id)->get();
         if($event == '[{"event":"Author"}]')
             {
                 $event1 = 'Author';
+                $delete = Photos::get()->where('id',$id);
+                $delete->each->delete();
             }
             else if($event == '[{"event":"Massworkout"}]')
             {
                 $event1 = 'Massworkout';
+                $delete = Photos::get()->where('id',$id);
+                $delete->each->delete();
             }
             else if($event == '[{"event":"Funrun"}]')
             {
                 $event1 = 'Funrun';
+                $delete = Photos::get()->where('id',$id);
+                $delete->each->delete();
             }
             else if($event == '[{"event":"Weeks12"}]')
             {
                 $event1 = 'Weeks12';
+                $delete = Photos::get()->where('id',$id);
+                $delete->each->delete();
             }
-            else if($event == '[{"event":"Event"}]')
+            else if($event2 == '[{"event":"Event"}]')
             {
                 $event1 = 'Event';
+                $delete = Posts::get()->where('id',$id);
+                $delete->each->delete();
             }
-            else if($event == '[{"event":"Blog"}]')
+            else if($event2 == '[{"event":"Blog"}]')
             {
                 $event1 = 'Blog';
+                $delete = Posts::get()->where('id',$id);
+                $delete->each->delete();
             }
             else if($event == '[{"event":"Testimonial"}]')
             {
                 $event1 = 'Testimonial';
+                $delete = Photos::get()->where('id',$id);
+                $delete->each->delete();
             }
             else if($event == '[{"event":"Sponsor"}]')
             {
                 $event1 = 'Sponsor';
+                $delete = Photos::get()->where('id',$id);
+                $delete->each->delete();
             }
-        $delete = Photos::get()->where('id',$id);
-        $delete->each->delete();
 
         return redirect('admin/'.$event1)->with('Fail', 'Your Photo has been deleted successfully!!');
     }

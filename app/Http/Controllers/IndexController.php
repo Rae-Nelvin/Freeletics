@@ -10,8 +10,8 @@ use App\Models\Captions;
 class IndexController extends Controller
 {
     function index(){
-        $author1 = Photos::get()->where('event','Author')->where('id',1);
-        $author2 = Photos::get()->where('event','Author')->where('id','>',1);
+        $author1 = Photos::get()->where('event','Author')->where('id',25);
+        $author2 = Photos::get()->where('event','Author')->where('id','>',25);
         $massworkout = Photos::orderBy('id', 'DESC')->where('event','Massworkout')->take(6)->get();
         $funrun = Photos::orderBy('id','DESC')->where('event','Funrun')->take(6)->get();
         $weeks12 = Photos::orderBy('id','DESC')->where('event','Weeks12')->take(6)->get();

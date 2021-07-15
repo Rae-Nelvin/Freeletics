@@ -288,7 +288,8 @@
         height: 200,
         plugins: 'lists',
         toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
-        lists_indent_on_tab: false
+        lists_indent_on_tab: false,
+        forced_root_block : ''
       });
 </script>
 </body>

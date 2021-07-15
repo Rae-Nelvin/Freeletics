@@ -197,9 +197,9 @@
 
           <!-- Add New Button -->
           <div class="card-body bg-custom-1 rounded mt-5">
-            <div class="row">
+            <div class="row" style="margin-left: 10px;margin-right: 10px;">
               <div class="col-sm-10">
-                <h1 class="m-0 h1-title" style="font-size: 30px;font-family: Nunito;color:white;">Photo Table</h1>
+                <h1 class="m-0 h1-title" style="font-size: 30px;font-family: Nunito;color:white;">Content</h1>
               </div>
               <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',6) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
                 <!-- End of Button -->
@@ -223,7 +223,7 @@
                             <td class="column3-1">
                               {!! $posts['subtitle'] !!}
                             </td>
-                            <td class="column4-1"><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->file_path}}" style="width:185px;height:200px;"></td>
+                            <td class="column4-1"><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->file_path}}" style="max-width:60%"></td>
                             <td class="column5">{{ \Carbon\Carbon::parse($posts['updated_at'])->format('j F, Y') }}</td>
                             <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.edit_post',$posts->id) }}"></a>
                             <a class="button touch delete" href="{{ route('admin.delete_photos', $posts->id) }}"></a></td>

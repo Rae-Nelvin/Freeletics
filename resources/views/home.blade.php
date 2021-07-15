@@ -119,7 +119,7 @@
             </div>
             <div class="col">
                 <p class="lead font-weight-normal text-center mass-p">
-                    @foreach ($caption_funrun as $caption)
+                    @foreach ($caption_massworkout as $caption)
                         {!! $caption['captions'] !!}
                     @endforeach
                 </p>

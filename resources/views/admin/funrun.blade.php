@@ -202,14 +202,14 @@
           <div class="card-body bg-custom-1 rounded">
           <div class="row" style="margin-left: 10px;margin-right: 10px;">
               <div class="col-sm-12">
-              <h1 class="m-0 h1-title" style="font-size: 30px;font-family: Nunito;color: white">Caption Table</h1>
+              <h1 class="m-0 h1-title" style="font-size: 30px;font-family: Nunito;color: white">Deskripsi</h1>
               <!-- End of Button -->
               <!-- Description Table -->
               <table style="margin-top: 10px">
                         <thead>
                         <tr class="table100-head">
                             <th class="column1">#</th>
-                            <th class="column4-3">Description</th>
+                            <th class="column4-3">Deskripsi</th>
                             <th class="column5">Last Update</th>
                             <th class="column6">Actions</th>
                         </tr>
@@ -230,12 +230,11 @@
                 </div>  
             </div><!-- /.row -->
         <!-- Photo Table -->
-        <div class="row" style="margin-top: 80px;margin-left: 10px;margin-right: 10px;">
           <!-- Add New Button -->
-          <div class="card-body bg-custom-1 rounded">
-            <div class="row">
+          <div class="card-body bg-custom-1 rounded mt-5" >
+            <div class="row" style="margin-left: 10px;margin-right: 10px;">
               <div class="col-sm-10">
-              <h1 class="m-0 h1-title" style="font-size: 30px;font-family: Nunito;color: white;">Photo Table</h1>
+              <h1 class="m-0 h1-title" style="font-size: 30px;font-family: Nunito;color: white;">Photo</h1>
               </div>
               <div class="col-sm-2"><a class="button primary new addnew-btn" href="{{ route('admin.upload_photos',3) }}" style="font-family: inherit; font-weight: bold;font-family: Nunito;">Add New</a></div>
               <!-- End of Button -->
@@ -255,7 +254,7 @@
                         <tr class="table100-body">
                           <td class="column1">{{ $loop->iteration }}</td>
                           <td class="column2">{!! $photos['caption'] !!}</td>
-                          <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width:185px;height:200px;"></td>
+                          <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="max-width:60%"></td>
                           <td class="column5">{{ \Carbon\Carbon::parse($photos['updated_at'])->format('j F, Y') }}</td>
                           <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.edit_photos',$photos->id) }}"></a>
                           <a class="button touch delete" href="{{ route('admin.delete_photos', $photos->id) }}"></a></td>
@@ -268,7 +267,6 @@
           </div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-    </div>
     <!-- /.content-header -->
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
