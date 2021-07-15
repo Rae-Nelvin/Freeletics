@@ -5,50 +5,33 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Captions;
 use Session;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
 
 class CaptionController extends Controller
 {
-    function upload_caption($id){
-        if($id == 1)
+    function upload_caption($idt){
+      $id = Session::get('LoggedUser');
+      $admin = User::where('id',$id)->get(['name']);
+        if($idt == 1)
         {
           $event = 'Author';
-          return view('admin.upload_caption',['event'=>$event]);
+          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event]);
         }
-        else if($id == 2)
+        else if($idt == 2)
         {
           $event = 'Massworkout';
-          return view('admin.upload_caption',['event'=>$event]);
+          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event]);
         }
-        else if($id == 3)
+        else if($idt == 3)
         {
           $event = 'Funrun';
-          return view('admin.upload_caption',['event'=>$event]);
+          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event]);
         }
-        else if($id == 4)
+        else if($idt == 4)
         {
           $event = 'Weeks12';
-          return view('admin.upload_caption',['event'=>$event]);
-        }
-        else if($id == 5)
-        {
-          $event = 'Event';
-          return view('admin.upload_caption',['event'=>$event]);
-        }
-        else if($id == 6)
-        {
-          $event = 'Blog';
-          return view('admin.upload_caption',['event'=>$event]);
-        }
-        else if($id == 7)
-        {
-            $event = 'Testimonial';
-            return view('admin.upload_caption',['event'=>$event]);
-        }
-        else if($id == 8)
-        {
-            $event = 'Sponsor';
-            return view('admin.upload_caption',['event'=>$event]);
+          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event]);
         }
     }
 

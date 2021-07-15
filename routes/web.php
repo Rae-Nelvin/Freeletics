@@ -23,7 +23,7 @@ use App\Http\Controllers\CaptionController;
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
 Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery');
-Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery-more');
+Route::get('/gallerymore', [IndexController::class, 'gallerymore'])->name('gallerymore');
 
 Route::prefix('auth')->group(function(){
     Route::post('/check',[MainController::class, 'check'])->name('auth.check');

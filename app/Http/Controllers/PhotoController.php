@@ -12,56 +12,60 @@ use App\Models\Posts;
 
 class PhotoController extends Controller
 {
-    function upload_photos($id){
-        if($id == 1)
+    function upload_photos($idt){
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id',$id)->get(['name']);
+        if($idt == 1)
             {
                 $title = "Masukkan Nama Author : ";
                 $subtitle = "Masukkan Deskripsi Author : ";
               $event = 'Author';
-              return view('admin.upload_author',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
+              
+              return view('admin.upload_author',['admin'=>$admin,'event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
-            else if($id == 2)
+            else if($idt == 2)
             {
               $event = 'Massworkout';
-              return view('admin.upload_photos',['event'=>$event]);
+              
+              return view('admin.upload_photos',['admin'=>$admin,'event'=>$event]);
             }
-            else if($id == 3)
+            else if($idt == 3)
             {
               $event = 'Funrun';
-              return view('admin.upload_photos',['event'=>$event]);
+              return view('admin.upload_photos',['admin'=>$admin,'event'=>$event]);
             }
-            else if($id == 4)
+            else if($idt == 4)
             {
               $event = 'Weeks12';
-              return view('admin.upload_photos',['event'=>$event]);
+              return view('admin.upload_photos',['admin'=>$admin,'event'=>$event]);
             }
-            else if($id == 5)
+            else if($idt == 5)
             {
                 $title = "Masukkan Judul Event : ";
                 $subtitle = "Masukkan Deskripsi Event";
               $event = 'Event';
-              return view('admin.upload_post',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
+              return view('admin.upload_post',['admin'=>$admin,'event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
-            else if($id == 6)
+            else if($idt == 6)
             {
                 $title = "Masukkan Judul Blog : ";
                 $subtitle = "Masukkan Deskripsi Blog : ";
               $event = 'Blog';
-              return view('admin.upload_post',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
+              return view('admin.upload_post',['admin'=>$admin,'event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
-            else if($id == 7)
+            else if($idt == 7)
             {
                 $title = "Masukkan Nama Tester : ";
                 $subtitle = "Masukkan Deskripsi Testimonial : ";
                 $event = 'Testimonial';
-                return view('admin.upload_author',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
+                return view('admin.upload_author',['admin'=>$admin,'event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
-            else if($id == 8)
+            else if($idt == 8)
             {
                 $title = "Masukkan Nama Sponsor : ";
                 $subtitle = "Masukkan Link Website Sponsor : ";
                 $event = 'Sponsor';
-                return view('admin.upload_author',['event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
+                return view('admin.upload_author',['admin'=>$admin,'event'=>$event,'title'=>$title,'subtitle'=>$subtitle]);
             }
     }
 
@@ -117,56 +121,57 @@ class PhotoController extends Controller
     function edit_photos($id){
         $photos = Photos::get()->where('id',$id);
         $event = Photos::select('event')->where('id',$id)->get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id',$id)->get(['name']);
         if($event == '[{"event":"Author"}]')
             {
                 $title = "Nama Author ";
                 $subtitle = "Deskripsi ";
-                return view('admin.edit_author',['photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
+                return view('admin.edit_author',['admin'=>$admin,'photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
             }
             else if($event == '[{"event":"Massworkout"}]')
             {
-                return view('admin.edit_photos',['photo'=>$photos]);
+                return view('admin.edit_photos',['admin'=>$admin,'photo'=>$photos]);
             }
             else if($event == '[{"event":"Funrun"}]')
             {
-                return view('admin.edit_photos',['photo'=>$photos]);
+                return view('admin.edit_photos',['admin'=>$admin,'photo'=>$photos]);
             }
             else if($event == '[{"event":"Weeks12"}]')
             {
-                return view('admin.edit_photos',['photo'=>$photos]);
+                return view('admin.edit_photos',['admin'=>$admin,'photo'=>$photos]);
             }
             else if($event == '[{"event":"Testimonial"}]')
             {
                 $title = "Nama Tester ";
                 $subtitle = "Testimonial ";
-                return view('admin.edit_author',['photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
+                return view('admin.edit_author',['admin'=>$admin,'photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
             }
             else if($event == '[{"event":"Sponsor"}]')
             {
                 $title = "Nama Sponsor ";
                 $subtitle = "Link Sponsor ";
-                return view('admin.edit_author',['photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
-            }
-
-            
-       
+                return view('admin.edit_author',['admin'=>$admin,'photo'=>$photos,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event]);
+            }       
     }
 
     function edit_post($id)
     {
         $post = Posts::get()->where('id',$id);
         $event2 = Posts::select('event')->where('id',$id)->get();
+        $id = Session::get('LoggedUser');
+        $admin = User::where('id',$id)->get(['name']);
         if($event2 == '[{"event":"Event"}]')
         {
             $title = "Judul Event ";
             $subtitle = "Deskripsi Event";
-            return view('admin.edit_post',['post'=>$post,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event2]);
+            return view('admin.edit_post',['admin'=>$admin,'post'=>$post,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event2]);
         }
         else if($event2 == '[{"event":"Blog"}]')
         {
             $title = "Judul Blog ";
             $subtitle = "Deskripsi Blog ";
-            return view('admin.edit_post',['post'=>$post,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event2]);
+            return view('admin.edit_post',['admin'=>$admin,'post'=>$post,'title'=>$title,'subtitle'=>$subtitle,'event'=>$event2]);
         }   
     }
 

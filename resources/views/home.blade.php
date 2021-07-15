@@ -43,7 +43,7 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home </a>
                     <a class="nav-link" href="#">About Us</a>
-                    <a class="nav-link" href="#">MaskWorkout</a>
+                    <a class="nav-link" href="#">Mass Workout</a>
                     <a class="nav-link" href="#">Funrun</a>
                     <a class="nav-link" href="#">12 Week</a>
                     <a class="nav-link" href="#">Event</a>
@@ -58,21 +58,33 @@
     <div class="position-relative overflow-hidden text-center bg-about">
         <div class="col-md-7 p-lg-4 mx-auto my-5">
             <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
-            <p class="lead font-weight-normal about-p text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
-                magnam, itaque eum animi odit sit dolorum illo quam dignissimos!
+            <p class="lead font-weight-normal about-p text">
+                @foreach($caption_author as $caption)
+                    {!! $caption['captions'] !!}
+                @endforeach
             </p>
         </div>
         <div class="container author">
             <!-- Three columns of text below the carousel -->
             <div class="row">
                 <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
-                @foreach ($author as $author)
+                @foreach ($author1 as $author1)
+                <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                    <img class="rounded author" src="/freeletics_images/{{$author->file_path}}"
+                    <img class="rounded author" src="/freeletics_images/{{$author1->file_path}}"
                         alt="Generic placeholder image" width="250" height="250">
-                    <h2 class="author-h2">{{ $author['caption'] }}</h2>
-                    <p class="author-p">{{ $author['subtitle'] }}</p>
+                    <h2 class="author-h2">{{ $author1['caption'] }}</h2>
+                    <p class="author-p">{!! $author1['subtitle'] !!}</p>
+                </div>
+                @endforeach
+            </div>
+            <div class="row">
+                @foreach ($author2 as $author2)
+                <div class="col-lg-4">
+                    <img class="rounded author" src="/freeletics_images/{{$author2->file_path}}"
+                        alt="Generic placeholder image" width="250" height="250">
+                    <h2 class="author-h2">{{ $author2['caption'] }}</h2>
+                    <p class="author-p">{!! $author2['subtitle'] !!}</p>
                 </div>
                 <!-- /.col-lg-4 -->
                 @endforeach
@@ -81,7 +93,7 @@
         </div>
     </div>
     <!-- End of About -->
-    <!-- mask workout -->
+    <!-- Mass workout -->
     <div class="position-relative overflow-hidden text-center p-3 p-md-3 bg-mass">
         <div class="row align-items-start">
             <div class="col-12 text-center">
@@ -106,17 +118,15 @@
                 <!-- End of Swiper -->
             </div>
             <div class="col">
-                <p class="lead font-weight-normal text-center mass-p">Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit.
-                    Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci
-                    magnam, itaque eum animi odit sit dolorum illo quam dignissimos! Lorem ipsum dolor sit amet Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit.
-                    inventore atque ea.
+                <p class="lead font-weight-normal text-center mass-p">
+                    @foreach ($caption_funrun as $caption)
+                        {!! $caption['captions'] !!}
+                    @endforeach
                 </p>
             </div>
         </div>
         <div class="see-more text-center">
-            <button type="button" class="btn btn-outline-warning" id="see-more">SEE MORE</button>
+            <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning" id="see-more">SEE MORE</button></a>
         </div>
     </div>
 
@@ -152,16 +162,14 @@
             </div>
             <!--  End of Swipper -->
             <div class="col">
-                <p class="lead font-weight-normal text" id="funrun-p">Lorem ipsum dolor sit, amet consectetur
-                    adipisicing
-                    elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem
-                    adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos! <span
-                        class="moreText">Lorem
-                        ipsum,
-                        dolor sit amet consectetur adipisicing elit.</span>
+                <p class="lead font-weight-normal text" id="funrun-p">
+                    @foreach($caption_funrun as $caption)
+                        {!! $caption['captions'] !!}
+                    @endforeach
+                </p>
             </div>
             <div class="see-more text-center">
-                <button type="button" class="btn btn-outline-warning" id="see-more-funrun">SEE MORE</button>
+                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning" id="see-more-funrun">SEE MORE</button></a>
             </div>
         </div>
     </div>
@@ -173,15 +181,10 @@
             <div class="row">
                 <div class="d-flex justify-content-center">
                     <h1 class="judul-week text-center">12 WEEKS</h1>
-                    <p class="lead font-weight-normal caption-week">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        Praesentium modi nulla distinctio incidunt! Quae, accusamus dolorem optio laboriosam soluta sit
-                        consequatur nisi! Incidunt pariatur voluptatem veritatis expedita, consectetur corporis commodi.
-                        <span class="moreText">Natus commodi saepe perferendis fuga incidunt delectus soluta, aliquam ex
-                            veniam optio ea consequuntur? Accusamus, veritatis non.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus officia magnam in Lorem
-                            ipsum, dolor sit amet consectetur adipisicing elit.</span>
-                        <button class="btn btn-outline-warning read-more-btn" id="btn-read-more-week">Read More</button>
+                    <p class="lead font-weight-normal caption-week">
+                    @foreach ($caption_weeks12 as $caption)    
+                        {!! $caption['captions'] !!}
+                    @endforeach
                     </p>
                 </div>
                 <!-- Swiper -->
@@ -211,7 +214,7 @@
                 </div>
             </div>
             <div class="see-more text-center">
-                <button type="button" class="btn btn-outline-warning" id="see-more-week">SEE MORE</button>
+                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning" id="see-more-week">SEE MORE</button></a>
             </div>
         </div>
     </div>
@@ -231,7 +234,7 @@
                     <div class="event-img text-center">
                         <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid">
                         <h3>{{ $event['title'] }}</h3>
-                        <p>{{ $event['subtitle'] }}</p>
+                        <p>{!! $event['subtitle'] !!}</p>
                         <div class="d-flex justify-content-center">
                             <button type="button" class="btn btn-warning">See More</button>
                         </div>
@@ -253,7 +256,7 @@
                 @foreach ($blog as $blog)
                 <div class="col-md-4">
                     <div class="blog-img text-center">
-                        <p>{{ $blog['title'] }}</p>
+                        <p>{!! $blog['title'] !!}</p>
                         <div class="d-flex justify-content-end">
                             <a href="{{ $blog->subtitle }}">Read more ></a>
                         </div>
@@ -280,7 +283,7 @@
                     <div class="testi-img text-center">
                         <img src="/freeletics_images/{{$testimonial->file_path}}">
                         <h2>{{ $testimonial['caption'] }}</h2>
-                        <p>{{ $testimonial['subtitle'] }}</p>
+                        <p>{!! $testimonial['subtitle'] !!}</p>
                     </div>
                 </div>
                 @endforeach
@@ -298,7 +301,7 @@
                     <div class="swiper-wrapper">
                         @foreach ($sponsor as $sponsor)
                         <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <a href="{{ $sponsor->subtitle }}"><img
+                            <a href="{!! $sponsor->subtitle !!}"><img
                                     src="/freeletics_images/{{$sponsor->file_path}}"></a>
                         </div>
                         @endforeach
@@ -340,12 +343,6 @@
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
     </script>
     <!--
-    --
->
-
+-->
 </body>
-
-
-
-
-</htmlml
+</html>

@@ -221,7 +221,7 @@
                             <td class="column1">{{ $loop->iteration }}</td>
                             <td class="column2">{{ $posts['title'] }}</td>
                             <td class="column3-1">
-                              {{ $posts['subtitle'] }}
+                              {!! $posts['subtitle'] !!}
                             </td>
                             <td class="column4-1"><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->file_path}}" style="width:185px;height:200px;"></td>
                             <td class="column5">{{ \Carbon\Carbon::parse($posts['updated_at'])->format('j F, Y') }}</td>

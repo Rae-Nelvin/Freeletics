@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="see-more text-center">
-                <button type="button" class="btn btn-outline-warning" id="see-more">SEE MORE</button>
+                <a href="{{ route('gallerymore') }}"><button type="button" class="btn btn-outline-warning" id="see-more">SEE MORE</button></a>
             </div>
         </div>
     </section>
