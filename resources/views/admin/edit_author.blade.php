@@ -31,8 +31,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Table CSS -->
   <link href="{{ asset ('table-css.css') }}" rel="stylesheet">
- <!-- Quill Rich Text Editor -->
- <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <!-- TinyMCE CSS -->
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed dark-mode">
 <div class="wrapper">
@@ -91,7 +91,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{ route('admin.dashboard') }}" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
               </p>
@@ -173,6 +173,13 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+      @if($errors->any())
+        @foreach ($errors->all() as $errors)
+        <div class="alert alert-danger">
+        {{ $errors }}
+        </div>
+        @endforeach
+      @endif
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 h1-title" style="font-size: 60px;font-family: Nunito;">Edit Photos</h1>
@@ -205,7 +212,7 @@
                           {{ $photos['subtitle'] }}
                         </td>
                         <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
-                        <td class="column5">{{ $photos['updated_at'] }}</td>
+                        <td class="column5">{{ \Carbon\Carbon::parse($photos['updated_at'])->format('j F, Y') }}</td>
                       </tr>
                     @endforeach
                     </tbody>
@@ -229,7 +236,7 @@
                 <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan <?php echo $subtitle ?> :</label>
                   <div class="card">
                     <div class="card-body bg-white p-0 m-0">
-                      <textarea name="subtitle" id="editor" style="width: 100%;"></textarea>
+                    <textarea name="subtitle" class="konten" style="width: 100%;"></textarea>
                     </div>
                   </div>
                 </div>
@@ -306,32 +313,15 @@
   $(this).next('.custom-file-label').html(fileName);
 })
 </script>
-<!-- Quill Rich Text Editor js -->
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<!-- TinyMCE js -->
 <script>
-  var toolbarOptions = [
-  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-  ['blockquote', 'code-block'],
-  [ 'image' ],
-
-  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-  [{ 'direction': 'rtl' }],                         // text direction
-  
-  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],        // custom dropdown
-
-  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-  [{ 'align': [] }],
-
-  ['clean']                                         // remove formatting button
-];
-var quill = new Quill('#editor', {
-  modules: {
-    toolbar: toolbarOptions
-  },
-  theme: 'snow'
-});
+      tinymce.init({
+        selector: 'textarea.konten',
+        height: 200,
+        plugins: 'lists',
+        toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+        lists_indent_on_tab: false
+      });
 </script>
 </body>
 </html>

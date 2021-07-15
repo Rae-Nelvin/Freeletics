@@ -89,7 +89,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{ route('admin.dashboard') }}" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
               </p>
@@ -171,6 +171,13 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+      @if($errors->any())
+        @foreach ($errors->all() as $errors)
+        <div class="alert alert-danger">
+        {{ $errors }}
+        </div>
+        @endforeach
+      @endif
         <div class="row mb-2">
           <div class="col-sm-6 p-6">
             <h1 class="m-0 h1-title" style="font-size: 40px;font-family: Nunito;">Edit Photos</h1>
@@ -199,7 +206,7 @@
                         <td class="column1">{{ $loop->iteration }}</td>
                         <td class="column2">{{ $photos['caption'] }}</td>
                         <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="width: 50%"></td>
-                        <td class="column5">{{ $photos['updated_at'] }}</td>
+                        <td class="column5">{{ \Carbon\Carbon::parse($photos['updated_at'])->format('j F, Y') }}</td>
                       </tr>
                     @endforeach
                     </tbody>

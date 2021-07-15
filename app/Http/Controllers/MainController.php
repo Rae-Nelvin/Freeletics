@@ -74,7 +74,8 @@ class MainController extends Controller
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
         $caption = Captions::where('event','author')->get();
-        return view('admin.author', ['admin'=>$admin,'photo'=>$photo,'caption'=>$caption]);
+        $date = Captions::select('updated_at')->where('id',$id)->get();
+        return view('admin.author', ['admin'=>$admin,'photo'=>$photo,'caption'=>$caption,'date'=>$date]);
     }
 
     function massworkout(){

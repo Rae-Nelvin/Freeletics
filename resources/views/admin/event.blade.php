@@ -93,7 +93,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{ route('admin.dashboard') }}" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
               </p>
@@ -176,10 +176,15 @@
     <div class="content-header">
       <div class="container-fluid">
       @if(Session::get('Successful'))
-                        <div class="alert alert-success">
-                            {{ Session::get('Successful') }}
-                        </div>
-        @endif
+        <div class="alert alert-success">
+          {{ Session::get('Successful') }}
+        </div>
+      @endif
+      @if(Session::get('Fail'))
+        <div class="alert alert-danger">
+          {{ Session::get('Fail') }}
+        </div>
+      @endif
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 h1-title" style="font-size: 60px;font-family: Nunito;">Event</h1>
@@ -221,7 +226,7 @@
                               {{ $posts['subtitle'] }}
                             </td>
                             <td class="column4-1"><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->file_path}}" style="width:185px;height:200px;"></td>
-                            <td class="column5">{{ $posts['updated_at'] }}</td>
+                            <td class="column5">{{ \Carbon\Carbon::parse($posts['updated_at'])->format('j F, Y') }}</td>
                             <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.edit_post',$posts->id) }}"></a>
                             <a class="button touch delete" href="{{ route('admin.delete_photos', $posts->id) }}"></a></td>
                           </tr>

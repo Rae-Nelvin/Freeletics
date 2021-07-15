@@ -91,7 +91,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             <a href="{{ route('admin.dashboard') }}" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
               </p>

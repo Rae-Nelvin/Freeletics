@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Photos;
 use Illuminate\Database\Eloquent\Collection;
 use Session;
+use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 use App\Models\Posts;
 
@@ -67,7 +68,7 @@ class PhotoController extends Controller
     function uploadphotos(Request $request){
         $request->validate([
             'title' => 'required',
-            'event' => 'required',
+            'images' => 'required'
         ]);
 
         $id = Session::get('LoggedUser');
@@ -109,7 +110,7 @@ class PhotoController extends Controller
             'content' => $request->content,
             'image_path' => $imageName
         ]);
-
+        
         return redirect('admin/'.$request->event)->with('Successful', 'Your Post has been uploaded successfully!!');
     }
 
@@ -247,6 +248,6 @@ class PhotoController extends Controller
         $delete = Photos::get()->where('id',$id);
         $delete->each->delete();
 
-        return redirect('admin/'.$event1)->with('Successful', 'Your Photo has been deleted successfully!!');
+        return redirect('admin/'.$event1)->with('Fail', 'Your Photo has been deleted successfully!!');
     }
 }

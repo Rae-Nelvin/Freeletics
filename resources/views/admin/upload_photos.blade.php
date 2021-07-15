@@ -90,7 +90,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{ route('admin.dashboard') }}" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
               </p>
@@ -172,6 +172,13 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+      @if($errors->any())
+        @foreach ($errors->all() as $errors)
+        <div class="alert alert-danger">
+        {{ $errors }}
+        </div>
+        @endforeach
+      @endif
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 h1-title" style="font-size: 60px;font-family: Nunito;">Add New</h1>
