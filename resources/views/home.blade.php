@@ -42,9 +42,12 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home </a>
-                    <a class="nav-link" href="#">Features </a>
-                    <a class="nav-link" href="#">Pricing </a>
-                    <a class="nav-link" href="#">Pricing </a>
+                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#">MaskWorkout</a>
+                    <a class="nav-link" href="#">Funrun</a>
+                    <a class="nav-link" href="#">12 Week</a>
+                    <a class="nav-link" href="#">Event</a>
+                    <a class="nav-link" href="#">Blog</a>
                 </div>
             </div>
         </div>

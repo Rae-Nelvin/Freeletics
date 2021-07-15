@@ -9,11 +9,11 @@ a.nav-link {
     text-align: center !important;
     flex: center;
     position: relative;
-    left: 40%;
+    left: 10%;
     float: none;
     top: 5%;
-    margin-left: 50px;
-    font-size: 20px;
+    margin-left: 40px;
+    font-size: 17px;
     font-family: Nunito;
     font-weight: bold;
 }
@@ -36,9 +36,14 @@ a.nav-link {
     position: relative;
 }
 
+.title {
+    color: #FDCD22;
+    margin-top: 5%;
+}
+
 .title-h1 {
     color: #FDCD22;
-    margin-top: 17%;
+    margin-top: 20%;
 }
 
 .img-fluid {
@@ -86,6 +91,10 @@ a.nav-link {
     left: 0;
     overflow-x: hidden;
     margin-top: 0%;
+}
+
+.content a {
+    text-decoration: none;
 }
 
 .new-blog {
@@ -155,10 +164,22 @@ a.nav-link {
     font-size: 13px;
 }
 
-.left-bar {
+
+/* .left-bar {
     vertical-align: top;
     float: left;
     max-width: 60%;
+} */
+
+#left-bar {
+    margin-top: -5%;
+}
+
+#left-bar img {
+    position: relative;
+    object-fit: cover;
+    background-position: center;
+    width: 100%;
 }
 
 .sidebar-container {

@@ -28,10 +28,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="#">Home </a>
-                    <a class="nav-link" href="#">Features </a>
-                    <a class="nav-link" href="#">Pricing </a>
-                    <a class="nav-link" href="#">Pricing </a>
+                    <a class="nav-link active" aria-current="page" href="#">Home </a>
+                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#">MaskWorkout</a>
+                    <a class="nav-link" href="#">Funrun</a>
+                    <a class="nav-link" href="#">12 Week</a>
+                    <a class="nav-link" href="#">Event</a>
+                    <a class="nav-link" href="#">Blog</a>
                 </div>
             </div>
         </div>
@@ -45,7 +48,7 @@
                 <div class="d-flex justify-content-center">
                     <h1 class="title">BLOG</h1>
                 </div>
-                <div class=" left-bar">
+                <div class=" col-9" id="left-bar">
                     <h1 class="title-h1 display-7 font-weight-normal">Olahraga Di rumah Pada Masa PPKM</h1>
                     <img src="{{ asset ('assets/images/12weeks.png')}}" class="img-fluid">
                     <p class="deskripsi">

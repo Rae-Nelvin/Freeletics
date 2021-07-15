@@ -24,12 +24,14 @@
 }
 
 .testi-img img {
-    display: inline;
+    /* display: inline; */
     background-size: cover;
-    align-items: center;
     max-width: 250px;
     margin-top: 15%;
     border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    background-position: center;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;

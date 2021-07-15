@@ -19,6 +19,9 @@
 .event-img img {
     width: 300px;
     height: 300px;
+    object-fit: cover;
+    position: relative;
+    background-position: center;
 }
 
 .event-img {
@@ -27,14 +30,20 @@
     margin-top: 15px;
 }
 
+.event-img h3 {
+    margin-top: 15px;
+    font-family: Nunito;
+}
+
 .btn-warning {
+    font-family: Nunito;
     font-weight: bold !important;
     width: 40%;
-    border-radius: 10px !important;
-    -webkit-border-radius: 10px !important;
-    -moz-border-radius: 10px !important;
-    -ms-border-radius: 10px !important;
-    -o-border-radius: 10px !important;
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
 }
 
 @media all and (max-width: 768px) {

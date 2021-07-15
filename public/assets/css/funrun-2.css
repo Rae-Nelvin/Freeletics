@@ -103,6 +103,11 @@ figure {
 #see-more-funrun {
     margin-top: 10%;
     width: 20%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 
@@ -199,6 +204,11 @@ figure {
     #see-more-funrun {
         margin-top: 10%;
         width: 80%;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
     }
     /* .bg-funrun {
         min-height: 150vh !important;

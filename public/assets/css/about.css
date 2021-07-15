@@ -15,11 +15,11 @@ nav {}
         text-align: center !important;
         flex: center;
         position: relative;
-        left: 40%;
+        left: 10%;
         float: none;
         top: 5%;
-        margin-left: 50px;
-        font-size: 20px;
+        margin-left: 40px;
+        font-size: 17px;
         font-family: Nunito;
         font-weight: bold;
     }
@@ -97,6 +97,9 @@ button.read-more-btn {
     -o-border-radius: 20% !important;
     width: 230px;
     height: 250px;
+    object-fit: cover;
+    position: relative;
+    background-position: center;
 }
 
 
