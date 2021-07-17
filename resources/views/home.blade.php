@@ -60,7 +60,7 @@
             <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
             <p class="lead font-weight-normal about-p text">
                 @foreach($caption_author as $caption)
-                    {!! $caption['captions'] !!}
+                {!! $caption['captions'] !!}
                 @endforeach
             </p>
         </div>
@@ -95,38 +95,51 @@
     <!-- End of About -->
     <!-- Mass workout -->
     <div class="position-relative overflow-hidden text-center p-3 p-md-3 bg-mass">
-        <div class="row align-items-start">
-            <div class="col-12 text-center">
-                <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
-            </div>
-        </div>
-        <div class="row align-items-start" id="mass-swipper">
-            <div class="col-xl-4" id="img-swipper">
-                <!-- Swiper -->
-                <div class="swiper-container mySwiper" id="mask">
-                    <div class="swiper-wrapper">
-                        @foreach ($massworkout as $massworkout)
-                        <div class="swiper-slide" id="swiper-mask">
-                            <img src="/freeletics_images/{{$massworkout->file_path}}" class="img-fluid"
-                                alt="image-responsive">
-                        </div>
-                        @endforeach
-                    </div>
-                    <div class="swiper-button-next" id="btn-mask"></div>
-                    <div class="swiper-button-prev" id="btn-mask"></div>
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-12 text-center">
+                    <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
                 </div>
-                <!-- End of Swiper -->
             </div>
-            <div class="col">
-                <p class="lead font-weight-normal text-center mass-p">
-                    @foreach ($caption_massworkout as $caption)
-                        {!! $caption['captions'] !!}
-                    @endforeach
-                </p>
+
+            <div class="row align-items-start" id="mass-swipper">
+                <div class="col-xl" id="img-swipper">
+                    <!-- Swiper -->
+                    <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiper"
+                        id="swiper-container-mask">
+                        <div class="col-12 text-center">
+                            <p class="lead font-weight-normal text-center mass-p">
+                                @foreach ($caption_massworkout as $caption)
+                                {!! $caption['captions'] !!}
+                                @endforeach
+                            </p>
+                        </div>
+                        <div class="swiper-wrapper">
+                            @foreach ($massworkout as $massworkout)
+                            <div class="swiper-slide" id="swiper-slide-mask">
+                                <figure>
+                                    <div class="wrapper">
+                                        <img src="/freeletics_images/{{$massworkout->file_path}}" class="img-fluid"
+                                            alt="image-responsive">
+                                        <h5 class="title-img">Workout at Home</h5>
+                                        <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+                                    </div>
+                                </figure>
+                            </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-button-next" id="btn-mask"></div>
+                        <div class="swiper-button-prev" id="btn-mask"></div>
+                    </div>
+
+                    <!-- End of Swiper -->
+                </div>
+
             </div>
-        </div>
-        <div class="see-more text-center">
-            <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning" id="see-more">SEE MORE</button></a>
+            <div class="see-more text-center">
+                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning" id="see-more">SEE
+                        MORE</button></a>
+            </div>
         </div>
     </div>
 
@@ -137,6 +150,11 @@
                 <h1 class="about-h1 display-4 font-weight-normal">FUN RUN</h1>
             </div>
             <div class="col">
+                <p class="lead font-weight-normal text" id="funrun-p">
+                    @foreach($caption_funrun as $caption)
+                    {!! $caption['captions'] !!}
+                    @endforeach
+                </p>
             </div>
             <!-- Swipper  -->
             <div class="d-flex justify-content-center">
@@ -161,15 +179,9 @@
                 <div class="swiper-button-prev" id="btn-funrun"></div>
             </div>
             <!--  End of Swipper -->
-            <div class="col">
-                <p class="lead font-weight-normal text" id="funrun-p">
-                    @foreach($caption_funrun as $caption)
-                        {!! $caption['captions'] !!}
-                    @endforeach
-                </p>
-            </div>
             <div class="see-more text-center">
-                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning" id="see-more-funrun">SEE MORE</button></a>
+                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning"
+                        id="see-more-funrun">SEE MORE</button></a>
             </div>
         </div>
     </div>
@@ -182,9 +194,9 @@
                 <div class="d-flex justify-content-center">
                     <h1 class="judul-week text-center">12 WEEKS</h1>
                     <p class="lead font-weight-normal caption-week">
-                    @foreach ($caption_weeks12 as $caption)    
+                        @foreach ($caption_weeks12 as $caption)
                         {!! $caption['captions'] !!}
-                    @endforeach
+                        @endforeach
                     </p>
                 </div>
                 <!-- Swiper -->
@@ -214,7 +226,8 @@
                 </div>
             </div>
             <div class="see-more text-center">
-                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning" id="see-more-week">SEE MORE</button></a>
+                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning"
+                        id="see-more-week">SEE MORE</button></a>
             </div>
         </div>
     </div>
@@ -254,16 +267,20 @@
             </div>
             <div class="row">
                 @foreach ($blog as $blog)
-                <div class="col-md-4">
-                    <div class="blog-img text-center">
-                        <p>{!! $blog['title'] !!}</p>
-                        <div class="d-flex justify-content-end">
-                            <a href="{{ $blog->subtitle }}">Read more ></a>
+                <div class="col">
+                    <div class="blog-img text-center" id="blog-img">
+                        <div class="card-body text-center bg-transparent">
+                            <p>{!! $blog['title'] !!}</p>
+                            <div class="col-12">
+                                <a href="{{ $blog->subtitle }}">Read more</a>
+                            </div>
+                            <img src="{{ asset ('assets/images/blog.png')}}" id="img-blog">
                         </div>
-                        <img src="{{ asset ('assets/images/blog.png')}}" class="img-fluid">
+
                     </div>
                 </div>
                 @endforeach
+
             </div>
         </div>
         </div>
@@ -342,7 +359,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
     </script>
-    <!--
--->
+    <!- - -->
 </body>
+
+
 </html>
