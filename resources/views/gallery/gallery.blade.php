@@ -45,42 +45,27 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">GALLERY</h2>
-                <h3 class="section-subheading ">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Sed minima, quidem qui quae officiis ipsam non quaerat et quasi
-                    adipisci ipsum corporis repellat dolorem consequuntur rerum excepturi doloremque dolorum? Tenetur.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore aut, error rem illo quod quam
-                    enim eaque quidem nulla architecto culpa saepe at quibusdam, quas ducimus perspiciatis iure?
-                    Nesciunt, qui.
+                <h3 class="section-subheading ">@foreach ($caption as $captions)
+                                {!! $captions['captions'] !!}
+                                @endforeach
                 </h3>
             </div>
             <div class="row">
+            @foreach ($photo as $photos)
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <!-- Portfolio item 1-->
+                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
+                            <img class="img-fluid" src="/freeletics_images/{{$photos->file_path}}" alt="..." />
                         </a>
                     </div>
+                    
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
-                        </a>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="see-more text-center">
-                <a href="{{ route('gallerymore') }}"><button type="button" class="btn btn-outline-warning" id="see-more"
+                <a href="{{ route('gallerymore',$id) }}"><button type="button" class="btn btn-outline-warning" id="see-more"
                         style="border-radius: 20px;">SEE MORE</button></a>
             </div>
         </div>

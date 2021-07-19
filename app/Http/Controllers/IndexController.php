@@ -35,11 +35,51 @@ class IndexController extends Controller
         return view('blog.blog');
     }
 
-    function gallery(){
-        return view('gallery.gallery');
+    function gallery($id){
+        if($id == 1)
+        {
+            $caption = Captions::where('event','Massworkout')->get();
+            $photo = Photos::orderBy('id', 'DESC')->where('event','Massworkout')->take(3)->get();
+            return view('gallery.gallery',['caption'=>$caption,'photo'=>$photo,'id'=>$id]);
+        }
+
+        else if($id == 2)
+        {
+            $caption = Captions::where('event','Funrun')->get();
+            $photo = Photos::orderBy('id', 'DESC')->where('event','Funrun')->take(3)->get();
+            return view('gallery.gallery',['caption'=>$caption,'photo'=>$photo,'id'=>$id]);
+        }
+
+        else if($id == 3)
+        {
+            $caption = Captions::where('event','Weeks12')->get();
+            $photo = Photos::orderBy('id', 'DESC')->where('event','Weeks12')->take(3)->get();
+            return view('gallery.gallery',['caption'=>$caption,'photo'=>$photo,'id'=>$id]);
+        }
+        
     }
 
-    function gallerymore(){
-        return view('gallery.gallery-more');
+    function gallerymore($id){
+        if($id == 1)
+        {
+            $caption = Captions::where('event','Massworkout')->get();
+            $photo = Photos::orderBy('id', 'DESC')->where('event','Massworkout')->get();
+            return view('gallery.gallery-more',['caption'=>$caption,'photo'=>$photo,'id'=>$id]);
+        }
+
+        else if($id == 2)
+        {
+            $caption = Captions::where('event','Funrun')->get();
+            $photo = Photos::orderBy('id', 'DESC')->where('event','Funrun')->get();
+            return view('gallery.gallery-more',['caption'=>$caption,'photo'=>$photo,'id'=>$id]);
+        }
+
+        else if($id == 3)
+        {
+            $caption = Captions::where('event','Weeks12')->get();
+            $photo = Photos::orderBy('id', 'DESC')->where('event','Weeks12')->get();
+            return view('gallery.gallery-more',['caption'=>$caption,'photo'=>$photo,'id'=>$id]);
+        }
+
     }
 }

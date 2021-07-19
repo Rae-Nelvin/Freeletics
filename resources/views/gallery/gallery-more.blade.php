@@ -76,55 +76,16 @@
                 </div>
             </div>
             <div class="row">
+            @foreach ($photo as $photos)
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <!-- Portfolio item 1-->
                     <div class="portfolio-item port" id="port">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
+                            <img class="img-fluid" src="/freeletics_images/{{$photos->file_path}}" alt="..." />
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
-                        </a>
-                    </div>
-                </div>
-            </div>
+                @endforeach
             <!-- <div class="see-more text-center">
                 <button type="button" class="btn btn-outline-warning" id="see-more">SEE MORE</button>
             </div> -->

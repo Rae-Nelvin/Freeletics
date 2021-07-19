@@ -118,8 +118,8 @@
                                     <div class="wrapper">
                                         <img src="/freeletics_images/{{$massworkout->file_path}}" class="img-fluid"
                                             alt="image-responsive">
-                                        <h5 class="title-img">Workout at Home</h5>
-                                        <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
+
+
                                     </div>
                                 </figure>
                             </div>
@@ -134,7 +134,7 @@
 
             </div>
             <div class="see-more text-center">
-                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning"
+                <a href="{{ route('gallery',1) }}"><button type="button" class="btn btn-outline-warning"
                         id="see-more-mask">SEE
                         MORE</button></a>
             </div>
@@ -166,8 +166,6 @@
                         <figure>
                             <div class="wrapper">
                                 <img src="/freeletics_images/{{$funrun->file_path}}" class=" img-fluid">
-                                <h5 class="title-img">Workout at Home</h5>
-                                <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
                             </div>
                         </figure>
                     </div>
@@ -178,7 +176,7 @@
             </div>
             <!--  End of Swipper -->
             <div class="see-more text-center">
-                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning"
+                <a href="{{ route('gallery',2) }}"><button type="button" class="btn btn-outline-warning"
                         id="see-more-funrun">SEE MORE</button></a>
             </div>
         </div>
@@ -212,8 +210,6 @@
                             <figure>
                                 <div class="wrapper">
                                     <img src="/freeletics_images/{{$weeks12->file_path}}" class=" img-fluid">
-                                    <h5 class="title-img">Workout at Home</h5>
-                                    <span class="tgl"><i class="fa fa-calendar-o"></i> 12 july 2021</span>
                                 </div>
                             </figure>
                         </div>
@@ -224,7 +220,7 @@
                 </div>
             </div>
             <div class="see-more text-center">
-                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning"
+                <a href="{{ route('gallery',3) }}"><button type="button" class="btn btn-outline-warning"
                         id="see-more-week">SEE MORE</button></a>
             </div>
         </div>
