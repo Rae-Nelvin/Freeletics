@@ -1,27 +1,14 @@
-nav {
-    /* background-color: #FDCD22!important; */
-    display: block;
-}
-
 a.nav-link {
-    color: #fff;
     align-items: center !important;
     text-align: center !important;
     flex: center;
     position: relative;
-    left: 10%;
     float: none;
     top: 5%;
     margin-left: 40px;
     font-size: 17px;
     font-family: Nunito;
     font-weight: bold;
-}
-
-.navbar-nav a {
-    color: #FDCD22 !important;
-    /* color: #fff; */
-    /* margin-left: 50px; */
 }
 
 

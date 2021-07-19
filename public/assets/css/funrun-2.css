@@ -15,7 +15,7 @@
 
 #swiper-container-run {
     max-width: 80%;
-    margin-top: 12%;
+    margin-top: 10%;
 }
 
 #swiper-slide-run {
@@ -25,8 +25,8 @@
 
 #swiper-slide-run img {
     display: block;
-    max-width: 300px !important;
-    max-height: 200px;
+    width: 300px !important;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -117,6 +117,18 @@ figure {
 @media all and (min-width: 1920px) {
     #box-fun {
         width: 60%;
+    }
+}
+
+@media all and (min-width: 1200px) and (max-width:1250px) {
+    #box-fun {
+        margin-top: -25%;
+    }
+    #swiper-container-run {
+        margin-top: -23%;
+    }
+    #btn-funrun {
+        margin-top: -6% !important;
     }
 }
 
@@ -234,28 +246,37 @@ figure {
         max-width: 300px !important;
         max-height: 280px;
     }
-    #swiper-slide img {
+    #swiper-slide-run img {
         display: block;
         width: 300px !important;
-        height: 280px;
+        height: 200px;
         object-fit: cover;
     }
     #btn-funrun {
         color: #FDCD22;
         margin-top: -7%;
     }
+    #see-more-funrun {
+        width: 40%;
+    }
 }
 
 @media all and (min-width: 300px) and (max-width:400px) {
     #swiper-container-run {
         max-width: 85%;
-        margin-top: 10% !important;
+        margin-top: -10% !important;
+    }
+    #swiper-slide-run img {
+        display: block;
+        max-width: 300px !important;
+        max-height: 200px;
+        object-fit: cover;
     }
 }
 
 @media all and (min-width: 300px) and (max-width:420px) {
     #see-more-funrun {
         width: 80%;
-        margin-top: -20% !important;
+        margin-top: 10% !important;
     }
 }

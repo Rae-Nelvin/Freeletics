@@ -17,16 +17,15 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../Freeletics/assets/css/maskworkout.css"> -->
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/about.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/testimonal.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/sponsor.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/funrun-2.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/mask-2.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/12weeks.css') }}">
-    <!-- <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/style.css') }}"> -->
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/blog.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/event.css') }}">
+
     <title>Freeletics</title>
 </head>
 
@@ -41,13 +40,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home </a>
-                    <a class="nav-link" href="#">About Us</a>
-                    <a class="nav-link" href="#">Mass Workout</a>
-                    <a class="nav-link" href="#">Funrun</a>
-                    <a class="nav-link" href="#">12 Week</a>
-                    <a class="nav-link" href="#">Event</a>
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" aria-current="page" href="#">Home </a>
+                    <a class="nav-link" href="#">ABOUT US</a>
+                    <a class="nav-link" href="#">MASK WORKOUT</a>
+                    <a class="nav-link" href="#">FUNRUN</a>
+                    <a class="nav-link" href="#">12 WEEK </a>
+                    <a class="nav-link" href="#">BLOG </a>
                 </div>
             </div>
         </div>
@@ -64,12 +62,11 @@
                 @endforeach
             </p>
         </div>
-        <div class="container author">
+        <div div class="container author">
             <!-- Three columns of text below the carousel -->
             <div class="row">
                 <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
                 @foreach ($author1 as $author1)
-                <div class="col-lg-4"></div>
                 <div class="col-lg-4">
                     <img class="rounded author" src="/freeletics_images/{{$author1->file_path}}"
                         alt="Generic placeholder image" width="250" height="250">
@@ -137,7 +134,8 @@
 
             </div>
             <div class="see-more text-center">
-                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning" id="see-more">SEE
+                <a href="{{ route('gallery') }}"><button type="button" class="btn btn-outline-warning"
+                        id="see-more-mask">SEE
                         MORE</button></a>
             </div>
         </div>
@@ -348,6 +346,7 @@
     <script src="{{ asset('assets/js/12weeks.js')}}"></script>
     <script src="{{ asset('assets/js/sponsor.js')}}"></script>
     <script src="{{ asset('assets/js/mask.js')}}"></script>
+    <script src="{{ asset('assets/js/12weeks.js')}}"></script>
 
     <!-- Initialize Swiper -->
     </script>
