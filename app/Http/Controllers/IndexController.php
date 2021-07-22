@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Photos;
 use App\Models\Posts;
 use App\Models\Captions;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -31,8 +32,16 @@ class IndexController extends Controller
                             'caption_funrun'=>$caption_funrun,'caption_weeks12'=>$caption_weeks12]);
     }
 
-    function blog(){
-        return view('blog.blog');
+    function blog($id){
+        $blog = Posts::where('id','=',$id)->get();
+        $other = Posts::where('id','!=',$id)->take(3)->get();
+        return view('blog.blog',['blog'=>$blog,'other'=>$other]);
+    }
+
+    function event($id){
+        $event = Posts::where('id','=',$id)->get();
+        $other = Posts::where('id','!=',$id)->take(3)->get();
+        return view('event.event',['event'=>$event,'other'=>$other]);
     }
 
     function gallery($id){
@@ -80,10 +89,29 @@ class IndexController extends Controller
             $photo = Photos::orderBy('id', 'DESC')->where('event','Weeks12')->get();
             return view('gallery.gallery-more',['caption'=>$caption,'photo'=>$photo,'id'=>$id]);
         }
-
     }
-    function event(){
-        return view('event.event');
+
+    function datepicker(Request $request)
+    {
+
+        $month = $request->datepicker;
+        $id = $request->id;
+        if($id == 1)
+        {
+            $event = 'Massworkout';
+        }
+        else if($id == 2)
+        {
+            $event = 'Funrun';
+        }
+        else if($id == 3)
+        {
+            $event = 'Weeks12';
+        }
+        $result = Photos::where('event',$event)->whereMonth('created_at', '=', $month)->get();
+
+
+        return view('gallery.gallery-more', ['photo'=>$result,'id'=>$id]);
     }
 
 }

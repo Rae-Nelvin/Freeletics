@@ -48,10 +48,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="#">Home </a>
-                    <a class="nav-link" href="#">Features </a>
-                    <a class="nav-link" href="#">Pricing </a>
-                    <a class="nav-link" href="#">Pricing </a>
+                    <a class="nav-link" aria-current="page" href="{{ route('index') }}">Home </a>
+                    <a class="nav-link" href="{{ route('index') }}">About Us</a>
+                    <a class="nav-link" href="{{ route('index') }}">Mass Workout</a>
+                    <a class="nav-link" href="{{ route('index') }}">Fun Run</a>
+                    <a class="nav-link" href="{{ route('index') }}">12 Week</a>
+                    <a class="nav-link" href="{{ route('index') }}">Event</a>
+                    <a class="nav-link active" href="{{ route('index') }}">Blog</a>
                 </div>
             </div>
         </div>
@@ -64,33 +67,28 @@
                 <h2 class="section-heading text-uppercase">GALLERY</h2>
                 <div class="row">
                     <!-- <ul id="pagination-demo" class="pagination-lg pull-right"></ul> -->
-                    <div class="d-flex justify-content-start">
-                        <div class="btn-group" id="datepicker">
-                            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false">Bulan
-                            </button>
-                            <ul class="dropdown-menu" id="datepicker">
-                                <li><a class="dropdown-item" href="#">Januari</a></li>
-                                <li><a class="dropdown-item" href="#">Februari</a></li>
-                                <li><a class="dropdown-item" href="#">Maret</a></li>
-                                <li><a class="dropdown-item" href="#">April</a></li>
-                                <li><a class="dropdown-item" href="#">Mei</a></li>
-                                <li><a class="dropdown-item" href="#">Juni</a></li>
-                                <li><a class="dropdown-item" href="#">Juli</a></li>
-                                <li><a class="dropdown-item" href="#">Agustus</a></li>
-                                <li><a class="dropdown-item" href="#">September</a></li>
-                                <li><a class="dropdown-item" href="#">Oktober</a></li>
-                                <li><a class="dropdown-item" href="#">Nopember</a></li>
-                                <li><a class="dropdown-item" href="#">Desember</a></li>
-                            </ul>
-                        </div>
+                    <div class="col-4">
+                        <form action="{{ route('datepicker') }}" method="GET"> 
+                        <input type="hidden" name="id" value=<?php echo $id ?>>
+                        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+                        <select class="form-control" name="datepicker" id="datepicker" onchange="this.form.submit();">
+                            <option value="0" selected="selected">&#xf078 Pilih Bulan </option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">Desember</option>
+                        </select>
+                        </form>
                     </div>
-                    <form class="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                            id="search">
-                        <button class="btn btn-outline-warning" type="submit" id="btn-search"><i
-                                class='fas fa-search'></i></button>
-                    </form>
+                    <form class="search"></form>
                 </div>
             </div>
             <div class="row">

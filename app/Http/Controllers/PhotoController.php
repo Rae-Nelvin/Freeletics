@@ -270,4 +270,5 @@ class PhotoController extends Controller
 
         return redirect('admin/'.$event1)->with('Fail', 'Your Photo has been deleted successfully!!');
     }
+
 }

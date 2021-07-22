@@ -209,7 +209,7 @@
                         <td class="column1">{{ $loop->iteration }}</td>
                         <td class="column2">{{ $posts['title'] }}</td>
                         <td class="column3-1">
-                          {!! $posts['subtitle'] !!}
+                          {!! $posts['content'] !!}
                         </td>
                         <td class="column4-1"><img src="/freeletics_images/{{$posts->image_path}}" alt="{{$posts->image_path}}" style="max-width:60%"></td>
                         <td class="column6-1">{{ \Carbon\Carbon::parse($posts['updated_at'])->format('j F, Y') }}</td>
@@ -218,8 +218,10 @@
                     </tbody>
                   </table>
                 </div>
+              </div>
           <!-- End of Image Table -->
           <!-- Form -->
+          <div class="row mb-2">
           <div class="card-body bg-custom-1 rounded mt-5">
             <form action="{{ route('admin.editpost') }}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -236,7 +238,7 @@
                 <label for="EventForm" class="title-edit" style="font-family: Nunito;"><?php echo $subtitle ?></label>
                   <div class="card">
                     <div class="card-body bg-white p-0 m-0">
-                    <textarea name="subtitle" class="konten" style="width: 100%;"></textarea>
+                    <textarea name="content" class="konten" style="width: 100%;"></textarea>
                     </div>
                   </div>
                 </div>

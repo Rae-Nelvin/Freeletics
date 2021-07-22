@@ -31,12 +31,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="#">Home </a>
-                    <a class="nav-link" href="#">Features </a>
-                    <a class="nav-link" href="#">Pricing </a>
-                    <a class="nav-link" href="#">Pricing </a>
+                    <a class="nav-link" aria-current="page" href="{{ route('index') }}">Home </a>
+                    <a class="nav-link" href="{{ route('index') }}">About Us</a>
+                    <a class="nav-link" href="{{ route('index') }}">Mass Workout</a>
+                    <a class="nav-link" href="{{ route('index') }}">Fun Run</a>
+                    <a class="nav-link" href="{{ route('index') }}">12 Week</a>
+                    <a class="nav-link" href="{{ route('index') }}">Event</a>
+                    <a class="nav-link active" href="{{ route('index') }}">Blog</a>
                 </div>
-            </div>
         </div>
     </nav>
     <!-- end navbar -->
@@ -54,34 +56,9 @@
             @foreach ($photo as $photos)
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <!-- Portfolio item 1-->
-<<<<<<< Updated upstream
-                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                             <img class="img-fluid" src="/freeletics_images/{{$photos->file_path}}" alt="..." />
-=======
-                    <div class="card">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <img class="img-fluid" src="{{asset('assets/images/funrun.png')}}" alt="..." />
->>>>>>> Stashed changes
                         </a>
                     </div>
                     

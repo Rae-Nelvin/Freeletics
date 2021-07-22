@@ -40,12 +40,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="#">Home </a>
-                    <a class="nav-link" href="#">ABOUT US</a>
-                    <a class="nav-link" href="#">MASK WORKOUT</a>
-                    <a class="nav-link" href="#">FUNRUN</a>
-                    <a class="nav-link" href="#">12 WEEK </a>
-                    <a class="nav-link" href="#">BLOG </a>
+                    <a class="nav-link" aria-current="page" href="{{ route('index') }}">HOME</a>
+                    <a class="nav-link" href="#about-us-section">ABOUT US</a>
+                    <a class="nav-link" href="#mass-workout-section">MASS WORKOUT</a>
+                    <a class="nav-link" href="#fun-run-section">FUN RUN</a>
+                    <a class="nav-link" href="#12-week-section">12 WEEK</a>
+                    <a class="nav-link" href="#event-section">EVENT</a>
+                    <a class="nav-link" href="#blog-section">BLOG</a>
                 </div>
             </div>
         </div>
@@ -53,7 +54,7 @@
     <!-- end navbar -->
 
     <!-- about -->
-    <div class="position-relative overflow-hidden text-center bg-about">
+    <div class="position-relative overflow-hidden text-center bg-about" id="about-us-section">
         <div class="col-md-7 p-lg-4 mx-auto my-5">
             <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
             <p class="lead font-weight-normal about-p text">
@@ -91,11 +92,11 @@
     </div>
     <!-- End of About -->
     <!-- Mass workout -->
-    <div class="position-relative overflow-hidden text-center p-3 p-md-3 bg-mass">
+    <div class="position-relative overflow-hidden text-center p-3 p-md-3 bg-mass" id="mass-workout-section">
         <div class="container">
             <div class="row align-items-start">
                 <div class="col-12 text-center">
-                    <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
+                <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
                 </div>
             </div>
 
@@ -140,19 +141,20 @@
             </div>
         </div>
     </div>
-
+    
+    <!-- End of Mass Workout -->
     <!-- fun run -->
-    <div class="position-relative overflow-hidden text-center bg-funrun" id="bg-funrun">
+    <div class="position-relative overflow-hidden text-center bg-funrun" id="fun-run-section">
         <div class="container">
-            <div class="row">
-                <h1 class="judul-funrun display-4 font-weight-normal">FUN RUN</h1>
-                <div class="d-flex">
-                    <p class="lead font-weight-normal text" id="funrun-p">
-                        @foreach($caption_funrun as $caption)
-                        {!! $caption['captions'] !!}
-                        @endforeach
-                    </p>
-                </div>
+            <div class="col-md-7 p-lg-4 mx-auto my-5">
+                <h1 class="about-h1 display-4 font-weight-normal">FUN RUN</h1>
+            </div>
+            <div class="col">
+                <p class="lead font-weight-normal text" id="funrun-p">
+                    @foreach($caption_funrun as $caption)
+                    {!! $caption['captions'] !!}
+                    @endforeach
+                </p>
             </div>
             <!-- Swipper  -->
             <div class="d-flex justify-content-center">
@@ -184,7 +186,7 @@
     <!-- fun run -->
 
     <!-- 12 weeks -->
-    <div class="position-relative overflow-hidden text-center weeks">
+    <div class="position-relative overflow-hidden text-center weeks" id="12-week-section">
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
@@ -196,6 +198,9 @@
                     </p>
                 </div>
                 <!-- Swiper -->
+                <!-- <div class="d-flex justify-content-start">
+                    <input type="date" class="form-control" name="birthday" id="date-week">
+                </div> -->
                 <div class="d-flex justify-content-center">
                     <div class="box" id="box-week"></div>
                 </div>
@@ -225,7 +230,7 @@
     <!-- 12 weeks -->
 
     <!-- event -->
-    <section class="event">
+    <section class="event" id="event-section">
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
@@ -238,9 +243,8 @@
                     <div class="event-img text-center">
                         <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid">
                         <h3>{{ $event['title'] }}</h3>
-                        <p>{!! $event['subtitle'] !!}</p>
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-warning">See More</button>
+                        <a href="{{ route('event',$event->id) }}" class="btn btn-warning">See More</a>
                         </div>
                     </div>
                 </div>
@@ -251,29 +255,28 @@
     <!-- event -->
 
     <!-- blog -->
-    <div class="blog ">
-        <div class="container ">
-            <div class="d-flex justify-content-center">
-                <h1 class="judul-blog">BLOG</h1>
-            </div>
+    <section class="event" id="blog-section">
+        <div class="container">
             <div class="row">
+                <div class="d-flex justify-content-center">
+                    <h1 class="judul-event">
+                        BLOG
+                    </h1>
+                </div>
                 @foreach ($blog as $blog)
-                <div class="col">
-                    <div class="card " id="card">
-                        <img src="/freeletics_images/{{$blog->image_path}}" class="">
-                        <div class="card-body">
-                            <h5 class="card-title">{!! $blog['title'] !!}</h5>
-                            <p href="" class="deskripsi">{{ $blog->subtitle }}</p>
-                            <a href="" class="btn btn-primary" id="btn-blog">Read more</a>
+                <div class="col-lg-3">
+                    <div class="event-img text-center">
+                        <img src="/freeletics_images/{{$blog->image_path}}" class="img-fluid">
+                        <h3>{{ $blog['title'] }}</h3>
+                        <div class="d-flex justify-content-center">
+                        <a href="{{ route('blog',$blog->id) }}" class="btn btn-warning">See More</a>
                         </div>
                     </div>
                 </div>
                 @endforeach
             </div>
         </div>
-    </div>
-    </div>
-    </div>
+    </section>
     <!-- blog -->
 
     <!-- testimonal -->

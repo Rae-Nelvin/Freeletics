@@ -218,8 +218,10 @@
                     </tbody>
                   </table>
                 </div>
+              </div>
           <!-- End of Image Table --> 
           <!-- Form -->
+          <div class="row mb-2">
           <div class="card-body bg-custom-1 rounded mt-5">
             <form action="{{ route('admin.editphotos') }}" method="POST" enctype="multipart/form-data">
                 @csrf

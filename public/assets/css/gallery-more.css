@@ -70,20 +70,23 @@ a.nav-link {
     width: 20%;
 }
 
-.btn-group a {
-    color: black !important;
-}
-
-.btn-warning {
-    color: black;
-}
-
 #datepicker {
     margin-top: 4%;
     position: absolute;
+    background-color: #FDCD22 !important;
+    text-align: center;
     border: none !important;
-    width: 15%;
+    max-width: 20%;
+    border-radius: 20px !important;
     align-items: flex-start !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+}
+
+select {
+    font-family: 'FontAwesome', 'Nunito'
 }
 
 @media all and (max-width: 768px) {

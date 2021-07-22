@@ -8,12 +8,12 @@
 .event {
     background-color: #000;
     width: 100%;
-    min-height: 100vh;
+    min-height: 150vh;
     margin-bottom: 0%;
 }
 
 .event-img {
-    margin-top: 20% !important;
+    margin-top: 45% !important;
 }
 
 .event-img img {

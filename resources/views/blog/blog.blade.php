@@ -28,13 +28,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home </a>
-                    <a class="nav-link" href="#">About Us</a>
-                    <a class="nav-link" href="#">MaskWorkout</a>
-                    <a class="nav-link" href="#">Funrun</a>
-                    <a class="nav-link" href="#">12 Week</a>
-                    <a class="nav-link" href="#">Event</a>
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('index') }}">Home </a>
+                    <a class="nav-link" href="{{ route('index') }}">About Us</a>
+                    <a class="nav-link" href="{{ route('index') }}">Mass Workout</a>
+                    <a class="nav-link" href="{{ route('index') }}">Fun Run</a>
+                    <a class="nav-link" href="{{ route('index') }}">12 Week</a>
+                    <a class="nav-link" href="{{ route('index') }}">Event</a>
+                    <a class="nav-link active" href="{{ route('index') }}">Blog</a>
                 </div>
             </div>
         </div>
@@ -42,44 +42,34 @@
     <!-- end navbar -->
 
 
-    <div class="position-relative overflow-hidden blog">
+    <div class="position-relative overflow-hidden bg-blog blog">
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
                     <h1 class="title">BLOG</h1>
                 </div>
-                @foreach ($blog as $blog)
                 <div class=" col-9" id="left-bar">
-                    <h1 class="title-h1 display-7 font-weight-normal">{!! $blog['title'] !!}</h1>
+                    @foreach ($blog as $blog)
+                    <h1 class="title-h1 display-7 font-weight-normal">{{ $blog->title }}</h1>
                     <img src="/freeletics_images/{{$blog->image_path}}" class="img-fluid">
-                    <p class="deskripsi"> {{ $blog->subtitle }}</p>
+                    <p class="deskripsi">
+                        {{ $blog->content }}
+                    </p>
+                    @endforeach
                 </div>
-                @endforeach
                 <div class="sidebar-container">
                     <div class="list-content">
                         <h3 class="right-side">NEWS UPDATE</h3>
                         <div class="line"></div>
+                        @foreach ($other as $other)
                         <div class="card bg-transparent">
-                            <a href="{{url('/gallery')}}"> <img class="new-blog"
-                                    src="/freeletics_images/{{$blog->image_path}}">
-                                <p class="desc-content">Next event bulan depan juli</p>
-                                <span class="tgl">12 july 2021</span>
+                            <a href="{{ route('blog',$other->id) }}"> <img class="new-blog"
+                                    src="/freeletics_images/{{$other->image_path}}">
+                                <p class="desc-content">{{ $other->title }}</p>
+                                <span class="tgl">{{ \Carbon\Carbon::parse($other['updated_at'])->format('j F, Y') }}</span>
                             </a>
                         </div>
-                        <div class="card bg-transparent">
-                            <a href="{{url('/home')}}"> <img class="new-blog-2"
-                                    src="/freeletics_images/{{$blog->image_path}}">
-                                <p class="desc-content">Next event bulan depan juli</p>
-                                <span class="tgl">12 july 2021</span>
-                            </a>
-                        </div>
-                        <div class="card bg-transparent">
-                            <a href="{{url('/home')}}"> <img class="new-blog-3"
-                                    src="/freeletics_images/{{$blog->image_path}}">
-                                <p class="desc-content">Next event bulan depan juli</p>
-                                <span class="tgl">12 july 2021</span>
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
