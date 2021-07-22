@@ -22,14 +22,11 @@ use App\Http\Controllers\CaptionController;
 // });
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
-<<<<<<< Updated upstream
 Route::get('/gallery/{id}', [IndexController::class, 'gallery'])->name('gallery');
 Route::get('/gallerymore/{id}', [IndexController::class, 'gallerymore'])->name('gallerymore');
-=======
 Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery');
 Route::get('/gallerymore', [IndexController::class, 'gallerymore'])->name('gallerymore');
 Route::get('/event', [IndexController::class, 'event'])->name('event');
->>>>>>> Stashed changes
 
 Route::prefix('auth')->group(function(){
     Route::post('/check',[MainController::class, 'check'])->name('auth.check');
