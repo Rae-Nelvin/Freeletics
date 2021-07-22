@@ -82,4 +82,8 @@ class IndexController extends Controller
         }
 
     }
+    function event(){
+        return view('event.event');
+    }
+
 }

@@ -3,6 +3,10 @@ nav {
     display: block;
 }
 
+.bg-event {
+    font-family: Nunito;
+}
+
 a.nav-link {
     color: #fff;
     align-items: center !important;
@@ -27,7 +31,7 @@ a.nav-link {
 
 /* backgorund */
 
-.bg-blog {
+.bg-event {
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.png);
     min-height: 160vh;
     width: 100%;
@@ -97,7 +101,7 @@ a.nav-link {
     text-decoration: none;
 }
 
-.new-blog {
+.new-event {
     margin-top: 5%;
     width: 220px;
     height: 140px;
@@ -120,13 +124,22 @@ a.nav-link {
     font-size: 13px;
 }
 
-.new-blog-2 {
+.new-event-2 {
     margin-top: 10%;
     width: 220px;
     height: 140px;
 }
 
-.desc-content-2 {
+.card {
+    border: none;
+    width: 100%;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.desc-content {
     color: #FDCD22;
     position: relative;
     flex: 1;
@@ -142,13 +155,13 @@ a.nav-link {
     font-size: 13px;
 }
 
-.new-blog-3 {
+.new-event-3 {
     margin-top: 10%;
     width: 220px;
     height: 140px;
 }
 
-.desc-content-3 {
+.desc-content {
     color: #FDCD22;
     position: relative;
     flex: 1;
@@ -205,22 +218,26 @@ a.nav-link {
         width: 50%;
         margin-top: 3%;
     }
-    .new-blog {
+    .new-event {
         position: relative;
         margin-top: 8%;
         width: 100%;
         height: 100%;
     }
-    .new-blog-2 {
+    .new-event-2 {
         position: relative;
         margin-top: 8%;
         width: 100%;
         height: 100%;
     }
-    .new-blog-3 {
+    .new-event-3 {
         position: relative;
         margin-top: 8%;
         width: 100%;
         height: 100%;
     }
+    #img-detail-event {
+        min-width: 10px !important;
+    }
+    .deskripsi {}
 }

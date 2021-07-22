@@ -11,10 +11,14 @@ a.nav-link {
     font-weight: bold;
 }
 
+.blog {
+    font-family: Nunito;
+}
+
 
 /* backgorund */
 
-.bg-blog {
+.blog {
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.png);
     min-height: 160vh;
     width: 100%;
@@ -81,6 +85,15 @@ a.nav-link {
 }
 
 .content a {
+    text-decoration: none;
+}
+
+.card {
+    border: none;
+    width: 100%;
+}
+
+.card a {
     text-decoration: none;
 }
 

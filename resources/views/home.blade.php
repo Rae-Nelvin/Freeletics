@@ -142,17 +142,17 @@
     </div>
 
     <!-- fun run -->
-    <div class="position-relative overflow-hidden text-center bg-funrun">
+    <div class="position-relative overflow-hidden text-center bg-funrun" id="bg-funrun">
         <div class="container">
-            <div class="col-md-7 p-lg-4 mx-auto my-5">
-                <h1 class="about-h1 display-4 font-weight-normal">FUN RUN</h1>
-            </div>
-            <div class="col">
-                <p class="lead font-weight-normal text" id="funrun-p">
-                    @foreach($caption_funrun as $caption)
-                    {!! $caption['captions'] !!}
-                    @endforeach
-                </p>
+            <div class="row">
+                <h1 class="judul-funrun display-4 font-weight-normal">FUN RUN</h1>
+                <div class="d-flex">
+                    <p class="lead font-weight-normal text" id="funrun-p">
+                        @foreach($caption_funrun as $caption)
+                        {!! $caption['captions'] !!}
+                        @endforeach
+                    </p>
+                </div>
             </div>
             <!-- Swipper  -->
             <div class="d-flex justify-content-center">
@@ -196,9 +196,6 @@
                     </p>
                 </div>
                 <!-- Swiper -->
-                <!-- <div class="d-flex justify-content-start">
-                    <input type="date" class="form-control" name="birthday" id="date-week">
-                </div> -->
                 <div class="d-flex justify-content-center">
                     <div class="box" id="box-week"></div>
                 </div>
@@ -254,32 +251,29 @@
     <!-- event -->
 
     <!-- blog -->
-    <section class="blog">
-        <div class="container">
+    <div class="blog ">
+        <div class="container ">
             <div class="d-flex justify-content-center">
                 <h1 class="judul-blog">BLOG</h1>
             </div>
             <div class="row">
                 @foreach ($blog as $blog)
                 <div class="col">
-                    <div class="blog-img text-center" id="blog-img">
-                        <div class="card-body text-center bg-transparent">
-                            <p>{!! $blog['title'] !!}</p>
-                            <div class="col-12">
-                                <a href="{{ $blog->subtitle }}">Read more</a>
-                            </div>
-                            <img src="{{ asset ('assets/images/blog.png')}}" id="img-blog">
+                    <div class="card " id="card">
+                        <img src="/freeletics_images/{{$blog->image_path}}" class="">
+                        <div class="card-body">
+                            <h5 class="card-title">{!! $blog['title'] !!}</h5>
+                            <p href="" class="deskripsi">{{ $blog->subtitle }}</p>
+                            <a href="" class="btn btn-primary" id="btn-blog">Read more</a>
                         </div>
-
                     </div>
                 </div>
                 @endforeach
-
             </div>
         </div>
-        </div>
-        </div>
-    </section>
+    </div>
+    </div>
+    </div>
     <!-- blog -->
 
     <!-- testimonal -->

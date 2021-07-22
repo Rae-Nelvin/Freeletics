@@ -1,16 +1,22 @@
-.bg-funrun {
+#bg-funrun {
     width: 100%;
-    min-height: 150vh;
+    min-height: 200vh;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/funrun.png);
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
-@media all and (min-width:1000px) {
-    .bg-funrun {
-        min-height: 200vh;
-    }
+@media all and (max-width:1300px) {
+    /* .bg-funrun {
+        height: 140vh !important;
+    } */
+}
+
+.judul-funrun {
+    color: #FDCD22;
+    font-family: Nunito;
+    margin-top: 15%;
 }
 
 #swiper-container-run {
@@ -91,7 +97,7 @@ figure {
 }
 
 #funrun-p {
-    margin-top: 6%;
+    margin-top: 10%;
     padding-left: 30vh;
     padding-right: 30vh;
     font-family: Nunito;
@@ -118,18 +124,28 @@ figure {
     #box-fun {
         width: 60%;
     }
+    /* .bg-funrun {
+        min-height: 80vh !important;
+    } */
 }
 
-@media all and (min-width: 1200px) and (max-width:1250px) {
+@media all and (min-width: 1200px) and (max-width:1280px) {
     #box-fun {
         margin-top: -25%;
     }
     #swiper-container-run {
         margin-top: -23%;
+        width: 100%;
     }
     #btn-funrun {
         margin-top: -6% !important;
     }
+}
+
+@media all and (min-width: 1300px) and (max-width:1367px) {
+    /* .bg-funrun {
+        height: 200vh !important;
+    } */
 }
 
 
@@ -179,6 +195,9 @@ figure {
 /* Phone Mode */
 
 @media all and (max-width: 768px) {
+    #bg-funrun {
+        min-height: 120vh;
+    }
     #box-fun {
         width: 100%;
         height: 300px;
@@ -210,9 +229,9 @@ figure {
     }
     #swiper-slide-run img {
         display: block;
-        width: 500px !important;
-        height: 280px !important;
-        box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
+        max-width: 300px !important;
+        height: 200px !important;
+        box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.2);
     }
     #swiper-slide-run {
         /* margin-left: 1%; */
@@ -220,11 +239,11 @@ figure {
         max-height: 100% !important;
     }
     #swiper-container-run {
-        max-width: 75%;
-        margin-top: 13%;
+        max-width: 85%;
+        margin-top: -30%;
     }
     #see-more-funrun {
-        margin-top: 10%;
+        margin-top: -5% !important;
         width: 80%;
         border-radius: 20px;
         -webkit-border-radius: 20px;
@@ -261,22 +280,15 @@ figure {
     }
 }
 
-@media all and (min-width: 300px) and (max-width:400px) {
-    #swiper-container-run {
-        max-width: 85%;
-        margin-top: -10% !important;
-    }
-    #swiper-slide-run img {
-        display: block;
-        max-width: 300px !important;
-        max-height: 200px;
-        object-fit: cover;
-    }
-}
-
 @media all and (min-width: 300px) and (max-width:420px) {
     #see-more-funrun {
         width: 80%;
         margin-top: 10% !important;
+    }
+}
+
+@media all and (min-width: 414px) and (max-width:420px) {
+    #swiper-container-run {
+        max-width: 75%;
     }
 }

@@ -23,7 +23,7 @@ button.read-more-btn {
 
 #swiper-container-week {
     max-width: 80%;
-    margin-top: 32%;
+    margin-top: 10%;
 }
 
 #swiper-slide-week {
@@ -48,7 +48,7 @@ button.read-more-btn {
     width: 80%;
     height: 350px;
     background-color: #000;
-    margin-top: 23%;
+    margin-top: 5%;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -100,12 +100,10 @@ figure {
 
 .caption-week {
     color: #fff;
-    margin-top: 10%;
-    position: absolute;
-    z-index: 2;
-    display: block;
-    max-width: 50% !important;
-    text-align: center;
+    margin-top: 15%;
+    padding-left: 30vh;
+    padding-right: 30vh;
+    text-align: justify;
 }
 
 #date-week-mb {
@@ -125,7 +123,7 @@ figure {
 @media all and (min-width: 1920px) {
     #swiper-container-week {
         max-width: 80%;
-        margin-top: 38%;
+        margin-top: 11%;
     }
     #swiper-slide-week {
         max-width: 100%;
@@ -133,6 +131,12 @@ figure {
     }
     #box-week {
         width: 60%;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    #btn-week {
+        margin-top: -50% !important;
     }
 }
 
@@ -147,7 +151,7 @@ figure {
     }
     #swiper-container-week {
         max-width: 80%;
-        margin-top: 30%;
+        margin-top: 10%;
     }
     #swiper-slide-week {
         max-width: 100%;
@@ -165,12 +169,10 @@ figure {
     }
     .caption-week {
         color: #fff;
-        margin-top: 10%;
-        position: absolute;
-        z-index: 2;
-        display: block;
-        max-width: 50% !important;
-        text-align: center;
+        margin-top: 15%;
+        padding-left: 30vh;
+        padding-right: 30vh;
+        text-align: justify;
     }
     #date-week-mb {
         display: none;
@@ -178,6 +180,9 @@ figure {
 }
 
 @media all and (max-width: 768px) {
+    .weeks {
+        min-height: 120vh;
+    }
     #box-week {
         width: 60vh;
         min-height: 100vh;
@@ -217,7 +222,7 @@ figure {
     }
     #swiper-container-week {
         max-width: 83%;
-        margin-top: 120% !important;
+        margin-top: 20% !important;
     }
     #swiper-slide-week {
         max-width: 300px !important;
@@ -231,7 +236,7 @@ figure {
     }
     #btn-week {
         color: #FDCD22;
-        margin-top: -15%;
+        margin-top: -5%;
     }
     #date-week {
         display: none;
@@ -249,7 +254,7 @@ figure {
     }
     #see-more-week {
         width: 80%;
-        margin-top: 5% !important;
+        margin-top: 10% !important;
     }
     .weeks {
         min-height: 130vh;
@@ -268,7 +273,7 @@ figure {
         max-width: 300px !important;
         max-height: 200px;
     }
-    #swiper-slide img {
+    #swiper-slide-mask img {
         display: block;
         width: 300px !important;
         height: 200px;
@@ -276,7 +281,7 @@ figure {
     }
     #btn-week {
         color: #FDCD22;
-        margin-top: -7%;
+        margin-top: -7% !important;
     }
     #see-more-week {
         width: 40%;
@@ -289,5 +294,19 @@ figure {
 @media all and (min-width: 414px) and (max-width:420px) {
     #swiper-container-week {
         max-width: 75%;
+    }
+    #btn-week {
+        color: #FDCD22;
+        margin-top: -5%;
+    }
+}
+
+
+/* ipad button */
+
+@media all and (min-width: 768px) {
+    #btn-week {
+        color: #FDCD22;
+        margin-top: -3% !important;
     }
 }

@@ -9,12 +9,13 @@
     <!-- Bootstrap CSS -->
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/detail-event.css') }}">
-    <title>Blog</title>
+    <title>Event</title>
 </head>
 
 <body>
@@ -42,67 +43,44 @@
     <!-- end navbar -->
 
 
-    <div class="position-relative overflow-hidden bg-blog">
+    <div class="position-relative overflow-hidden bg-event">
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <h1 class="title">BLOG</h1>
+                    <h1 class="title">EVENT</h1>
                 </div>
+                @foreach ($blog as $blog)
                 <div class=" col-9" id="left-bar">
-                    <h1 class="title-h1 display-7 font-weight-normal">Olahraga Di rumah Pada Masa PPKM</h1>
-                    <img src="{{ asset ('assets/images/12weeks.png')}}" class="img-fluid">
-                    <p class="deskripsi">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum numquam reiciendis labore
-                        voluptas
-                        praesentium, repudiandae ea earum eos ipsa optio, nobis rerum placeat vero. Officiis laboriosam
-                        tenetur
-                        ducimus ipsa! Aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, hic? Ad
-                        dolorem magni ullam accusamus expedita deserunt rerum nostrum aut! Harum natus maxime
-                        necessitatibus
-                        pariatur voluptates aperiam voluptatem esse ullam.
-                    </p>
+                    <h1 class="title-h1 display-7 font-weight-normal">{!! $blog['title'] !!}</h1>
+                    <img src="/freeletics_images/{{$blog->image_path}}" class="img-fluid">
+                    <p class="deskripsi"> {{ $blog->subtitle }}</p>
                 </div>
+                @endforeach
                 <div class="sidebar-container">
                     <div class="list-content">
                         <h3 class="right-side">NEWS UPDATE</h3>
                         <div class="line"></div>
-                        <div class="content">
-                            <a href="{{url('/gallery')}}"> <img class="new-blog"
+                        <div class="card bg-transparent">
+                            <a href="{{url('/gallery')}}"> <img class="new-event"
                                     src="{{ asset ('assets/images/blog.png')}}">
-                            </a>
-                            <a href="">
                                 <p class="desc-content">Next event bulan depan juli</p>
                                 <span class="tgl">12 july 2021</span>
                             </a>
                         </div>
-                        <div class="content">
-                            <a href="{{url('/home')}}"> <img class="new-blog-2"
+                        <div class="card bg-transparent">
+                            <a href="{{url('/home')}}"> <img class="new-event-2"
                                     src="{{ asset ('assets/images/blog.png')}}">
-                            </a>
-                            <a href="">
-                                <p class="desc-content-2">Next event bulan depan juli</p>
-                                <span class="tgl">12 july 2021</span>
-                            </a>
-                        </div>
-                        <div class="content">
-                            <a href="{{url('/home')}}"> <img class="new-blog-3"
-                                    src="{{ asset ('assets/images/blog.png')}}">
-                            </a>
-                            <a href="">
                                 <p class="desc-content">Next event bulan depan juli</p>
                                 <span class="tgl">12 july 2021</span>
                             </a>
                         </div>
-                        <!-- <div class="content">
-                            <img class="new-blog-2" src="{{ asset ('assets/images/blog.png')}}">
-                            <p class="desc-content-2">Next event bulan depan juli</p>
-                            <span class="tgl-2">12 july 2021</span>
+                        <div class="card bg-transparent">
+                            <a href="{{url('/home')}}"> <img class="new-event-3"
+                                    src="{{ asset ('assets/images/blog.png')}}">
+                                <p class="desc-content">Next event bulan depan juli</p>
+                                <span class="tgl">12 july 2021</span>
+                            </a>
                         </div>
-                        <div class="content">
-                            <img class="new-blog-3" src="{{ asset ('assets/images/blog.png')}}">
-                            <p class="desc-content-3">Next event bulan depan juli</p>
-                            <span class="tgl-3">12 july 2021</span>
-                        </div> -->
                     </div>
                 </div>
             </div>

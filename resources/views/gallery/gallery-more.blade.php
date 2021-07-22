@@ -64,8 +64,26 @@
                 <h2 class="section-heading text-uppercase">GALLERY</h2>
                 <div class="row">
                     <!-- <ul id="pagination-demo" class="pagination-lg pull-right"></ul> -->
-                    <div class="col-4">
-                        <input type="text" placeholder="MM-YYYY" class="form-control" name="datepicker" id="datepicker">
+                    <div class="d-flex justify-content-start">
+                        <div class="btn-group" id="datepicker">
+                            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">Bulan
+                            </button>
+                            <ul class="dropdown-menu" id="datepicker">
+                                <li><a class="dropdown-item" href="#">Januari</a></li>
+                                <li><a class="dropdown-item" href="#">Februari</a></li>
+                                <li><a class="dropdown-item" href="#">Maret</a></li>
+                                <li><a class="dropdown-item" href="#">April</a></li>
+                                <li><a class="dropdown-item" href="#">Mei</a></li>
+                                <li><a class="dropdown-item" href="#">Juni</a></li>
+                                <li><a class="dropdown-item" href="#">Juli</a></li>
+                                <li><a class="dropdown-item" href="#">Agustus</a></li>
+                                <li><a class="dropdown-item" href="#">September</a></li>
+                                <li><a class="dropdown-item" href="#">Oktober</a></li>
+                                <li><a class="dropdown-item" href="#">Nopember</a></li>
+                                <li><a class="dropdown-item" href="#">Desember</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <form class="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
