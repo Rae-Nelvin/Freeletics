@@ -3,19 +3,29 @@ nav {
     display: block;
 }
 
-a.nav-link {
-    color: #fff;
-    align-items: center !important;
-    text-align: center !important;
-    flex: center;
-    position: relative;
-    left: 10%;
-    float: none;
-    top: 5%;
-    margin-left: 40px;
-    font-size: 17px;
-    font-family: Nunito;
-    font-weight: bold;
+.navbar {
+    overflow: hidden;
+    overflow-x: hidden;
+    position: fixed !important;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+@media all and (min-width:1000px) {
+    a.nav-link {
+        align-items: center !important;
+        text-align: center !important;
+        flex: center;
+        position: relative;
+        left: 10%;
+        float: none;
+        top: 5%;
+        margin-left: 40px;
+        font-size: 17px;
+        font-family: Nunito;
+        font-weight: bold;
+    }
 }
 
 .navbar-nav a {
@@ -27,13 +37,14 @@ a.nav-link {
 
 /* backgorund */
 
-.bg-blog {
+.bg-event {
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.png);
     min-height: 160vh;
     width: 100%;
     background-position: center;
     background-size: cover;
     position: relative;
+    font-family: Nunito;
 }
 
 .title {

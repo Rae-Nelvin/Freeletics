@@ -66,16 +66,15 @@
                             <a href="{{ route('blog',$other->id) }}"> <img class="new-blog"
                                     src="/freeletics_images/{{$other->image_path}}">
                                 <p class="desc-content">{{ $other->title }}</p>
-                                <span class="tgl">{{ \Carbon\Carbon::parse($other['updated_at'])->format('j F, Y') }}</span>
+                                <span
+                                    class="tgl">{{ \Carbon\Carbon::parse($other['updated_at'])->format('j F, Y') }}</span>
                             </a>
                         </div>
                         @endforeach
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
 
 
@@ -105,5 +104,6 @@
     </script>
 
 </body>
+
 
 </html>

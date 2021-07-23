@@ -37,23 +37,23 @@
                     <a class="nav-link" href="{{ route('index') }}">Fun Run</a>
                     <a class="nav-link" href="{{ route('index') }}">12 Week</a>
                     <a class="nav-link" href="{{ route('index') }}">Event</a>
-                    <a class="nav-link active" href="{{ route('index') }}">Blog</a>
+                    <a class="nav-link" href="{{ route('index') }}">Blog</a>
                 </div>
-        </div>
+            </div>
     </nav>
     <!-- end navbar -->
     <!-- Portfolio Grid-->
     <section class="page-section " id="portfolio">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">GALLERY</h2>
+                <h2 class="section-heading text-uppercase" id="title">GALLERY</h2>
                 <h3 class="section-subheading ">@foreach ($caption as $captions)
-                                {!! $captions['captions'] !!}
-                                @endforeach
+                    {!! $captions['captions'] !!}
+                    @endforeach
                 </h3>
             </div>
             <div class="row">
-            @foreach ($photo as $photos)
+                @foreach ($photo as $photos)
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <!-- Portfolio item 1-->
                     <div class="portfolio-item">
@@ -61,13 +61,13 @@
                             <img class="img-fluid" src="/freeletics_images/{{$photos->file_path}}" alt="..." />
                         </a>
                     </div>
-                    
+
                 </div>
                 @endforeach
             </div>
             <div class="see-more text-center">
-                <a href="{{ route('gallerymore',$id) }}"><button type="button" class="btn btn-outline-warning" id="see-more"
-                        style="border-radius: 20px;">SEE MORE</button></a>
+                <a href="{{ route('gallerymore',$id) }}"><button type="button" class="btn btn-outline-warning"
+                        id="see-more" style="border-radius: 20px;">SEE MORE</button></a>
             </div>
         </div>
     </section>

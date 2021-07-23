@@ -34,7 +34,7 @@
                     <a class="nav-link" href="{{ route('index') }}">Fun Run</a>
                     <a class="nav-link" href="{{ route('index') }}">12 Week</a>
                     <a class="nav-link" href="{{ route('index') }}">Event</a>
-                    <a class="nav-link active" href="{{ route('index') }}">Blog</a>
+                    <a class="nav-link" href="{{ route('index') }}">Blog</a>
                 </div>
             </div>
         </div>
@@ -66,7 +66,8 @@
                             <a href="{{ route('blog',$other->id) }}"> <img class="new-blog"
                                     src="/freeletics_images/{{$other->image_path}}">
                                 <p class="desc-content">{{ $other->title }}</p>
-                                <span class="tgl">{{ \Carbon\Carbon::parse($other['updated_at'])->format('j F, Y') }}</span>
+                                <span
+                                    class="tgl">{{ \Carbon\Carbon::parse($other['updated_at'])->format('j F, Y') }}</span>
                             </a>
                         </div>
                         @endforeach
@@ -105,5 +106,6 @@
     </script>
 
 </body>
+
 
 </html>
