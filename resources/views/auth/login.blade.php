@@ -31,7 +31,7 @@
                         <span class="text-danger">@error('email'){{ $message}} @enderror</span>
                         <input type="password" name="password" placeholder="Password">
                         <span class="text-danger">@error('password'){{ $message}} @enderror</span>
-                        <br><a class="forgot text-muted" href="#">Get Back</a>
+                        <br><a class="forgot text-muted" href="{{ route('index') }}">Get Back</a>
                         <input type="submit" value="Submit">
                         <div class="col-md-12">
                             <ul class="social-network social-circle">

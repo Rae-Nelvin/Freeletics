@@ -21,11 +21,14 @@ use App\Http\Controllers\CaptionController;
 //     return view('welcome');
 // });
 Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('/blog/{id}', [IndexController::class, 'blog'])->name('blog');
-Route::get('/gallery/{id}', [IndexController::class, 'gallery'])->name('gallery');
-Route::get('/gallerymore/{id}', [IndexController::class, 'gallerymore'])->name('gallerymore');
-Route::get('/datepicker', [IndexController::class, 'datepicker'])->name('datepicker');
-Route::get('/event/{id}', [IndexController::class, 'event'])->name('event');
+Route::get('/home', [IndexController::class, 'home'])->name('home');
+Route::prefix('home')->group(function(){
+    Route::get('/blog/{id}', [IndexController::class, 'blog'])->name('blog');
+    Route::get('/gallery/{id}', [IndexController::class, 'gallery'])->name('gallery');
+    Route::get('/gallerymore/{id}', [IndexController::class, 'gallerymore'])->name('gallerymore');
+    Route::get('/datepicker', [IndexController::class, 'datepicker'])->name('datepicker');
+    Route::get('/event/{id}', [IndexController::class, 'event'])->name('event');
+});
 
 Route::prefix('auth')->group(function(){
     Route::post('/check',[MainController::class, 'check'])->name('auth.check');

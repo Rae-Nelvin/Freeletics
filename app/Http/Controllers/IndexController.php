@@ -10,7 +10,12 @@ use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
+
     function index(){
+        return view('welcome');
+    }
+
+    function home(){
         $author1 = Photos::get()->where('event','Author')->where('id',1);
         $author2 = Photos::get()->where('event','Author')->where('id','>',1);
         $massworkout = Photos::orderBy('id', 'DESC')->where('event','Massworkout')->take(6)->get();

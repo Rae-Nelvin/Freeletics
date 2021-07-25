@@ -28,13 +28,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="{{ route('index') }}">Home </a>
-                    <a class="nav-link" href="{{ route('index') }}">About Us</a>
-                    <a class="nav-link" href="{{ route('index') }}">Mass Workout</a>
-                    <a class="nav-link" href="{{ route('index') }}">Fun Run</a>
-                    <a class="nav-link" href="{{ route('index') }}">12 Week</a>
-                    <a class="nav-link" href="{{ route('index') }}">Event</a>
-                    <a class="nav-link active" href="{{ route('index') }}">Blog</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home </a>
+                    <a class="nav-link" href="{{ route('home') }}">About Us</a>
+                    <a class="nav-link" href="{{ route('home') }}">Mass Workout</a>
+                    <a class="nav-link" href="{{ route('home') }}">Fun Run</a>
+                    <a class="nav-link" href="{{ route('home') }}">12 Week</a>
+                    <a class="nav-link" href="{{ route('home') }}">Event</a>
+                    <a class="nav-link active" href="{{ route('home') }}">Blog</a>
                 </div>
             </div>
         </div>
@@ -51,8 +51,8 @@
                 <div class=" col-9" id="left-bar">
                     @foreach ($event as $event)
                     <h1 class="title-h1 display-7 font-weight-normal">{{ $event->title }}</h1>
-                    <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid">
-                    <p class="deskripsi">
+                    <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid" style="max-width: 100%;max-height: 100%;min-height: 480px;">
+                    <p class="deskripsi" style="font-size: 23px;">
                         {{ $event->content }}
                     </p>
                     @endforeach

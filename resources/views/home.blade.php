@@ -313,11 +313,11 @@
             <div class="row">
                 <h1>SPONSORSHIP</h1>
                 <div class="swiper-container mySwipper" id="swiper-container-sponsor">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" >
                         @foreach ($sponsor as $sponsor)
                         <div class="swiper-slide" id="swiper-slide-sponsor">
                             <a href="{!! $sponsor->subtitle !!}"><img
-                                    src="/freeletics_images/{{$sponsor->file_path}}"></a>
+                                    src="/freeletics_images/{{$sponsor->file_path}}" style="width: 100%;max-width: 100%"></a>
                         </div>
                         @endforeach
                     </div>
