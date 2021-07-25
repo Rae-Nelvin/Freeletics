@@ -61,11 +61,11 @@ body {
     margin-top: -10%;
 }
 
-.about-p {
+#about-p {
     margin-top: 12%;
     font-family: Nunito;
     font-size: 20px;
-    color: white;
+    color: white !important;
     margin-bottom: 40%;
 }
 
@@ -111,7 +111,7 @@ body {
     .about-h1 {
         /* font-size: 50px; */
     }
-    .about-p {
+    #about-p {
         margin-top: 5%;
         /* font-size: 30px; */
     }
@@ -157,9 +157,11 @@ body {
         font-size: 39px;
         margin-top: 30%;
     }
-    .about-p {
+    #about-p {
         margin-top: 15%;
-        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: left;
     }
     .author h2 {
         font-size: 33px;

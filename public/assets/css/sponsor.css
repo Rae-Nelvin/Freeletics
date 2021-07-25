@@ -22,7 +22,8 @@
 #swiper-slide-sponsor img {
     margin-top: 25%;
     display: block;
-    max-width: 325px;
+    min-width: 325px;
+    min-height: 125px;
     max-height: 120px;
     object-fit: cover;
     border-radius: 10px !important;
@@ -67,6 +68,6 @@
     }
     #swiper-slide-sponsor img {
         /* margin-left: 5%; */
-        max-width: 350px;
+        min-width: 350px;
     }
 }

@@ -55,39 +55,43 @@
 
     <!-- about -->
     <div class="position-relative overflow-hidden text-center bg-about" id="about-us-section">
-        <div class="col-md-7 p-lg-4 mx-auto my-5">
-            <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
-            <p class="lead font-weight-normal about-p text">
-                @foreach($caption_author as $caption)
-                {!! $caption['captions'] !!}
-                @endforeach
-            </p>
-        </div>
-        <div div class="container author">
-            <!-- Three columns of text below the carousel -->
+        <div class="container">
             <div class="row">
-                <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
-                @foreach ($author1 as $author1)
-                <div class="col-lg-4">
-                    <img class="rounded author" src="/freeletics_images/{{$author1->file_path}}"
-                        alt="Generic placeholder image" width="250" height="250">
-                    <h2 class="author-h2">{{ $author1['caption'] }}</h2>
-                    <p class="author-p">{!! $author1['subtitle'] !!}</p>
+                <div class="col-md-12 text-center">
+                    <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
+                    <p class="lead font-weight-normal text" id="about-p">
+                        @foreach($caption_author as $caption)
+                        {!! $caption['captions'] !!}
+                        @endforeach
+                    </p>
                 </div>
-                @endforeach
-            </div>
-            <div class="row">
-                @foreach ($author2 as $author2)
-                <div class="col-lg-4">
-                    <img class="rounded author" src="/freeletics_images/{{$author2->file_path}}"
-                        alt="Generic placeholder image" width="250" height="250">
-                    <h2 class="author-h2">{{ $author2['caption'] }}</h2>
-                    <p class="author-p">{!! $author2['subtitle'] !!}</p>
+                <div div class="container author">
+                    <!-- Three columns of text below the carousel -->
+                    <div class="row">
+                        <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
+                        @foreach ($author1 as $author1)
+                        <div class="col-lg-4">
+                            <img class="rounded author" src="/freeletics_images/{{$author1->file_path}}"
+                                alt="Generic placeholder image" width="250" height="250">
+                            <h2 class="author-h2">{{ $author1['caption'] }}</h2>
+                            <p class="author-p">{!! $author1['subtitle'] !!}</p>
+                        </div>
+                        @endforeach
+                    </div>
+                    <div class="row">
+                        @foreach ($author2 as $author2)
+                        <div class="col-lg-4">
+                            <img class="rounded author" src="/freeletics_images/{{$author2->file_path}}"
+                                alt="Generic placeholder image" width="250" height="250">
+                            <h2 class="author-h2">{{ $author2['caption'] }}</h2>
+                            <p class="author-p">{!! $author2['subtitle'] !!}</p>
+                        </div>
+                        <!-- /.col-lg-4 -->
+                        @endforeach
+                    </div>
+                    <!-- /.row -->
                 </div>
-                <!-- /.col-lg-4 -->
-                @endforeach
             </div>
-            <!-- /.row -->
         </div>
     </div>
     <!-- End of About -->
@@ -96,7 +100,7 @@
         <div class="container">
             <div class="row align-items-start">
                 <div class="col-12 text-center">
-                <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
+                    <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
                 </div>
             </div>
 
@@ -141,7 +145,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- End of Mass Workout -->
     <!-- fun run -->
     <div class="position-relative overflow-hidden text-center bg-funrun" id="fun-run-section">
@@ -190,7 +194,9 @@
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <h1 class="judul-week text-center">12 WEEKS</h1>
+                    <div class="col-md-7">
+                        <h1 class="about-h1 display-4 font-weight-normal">12 WEEKS</h1>
+                    </div>
                     <p class="lead font-weight-normal caption-week">
                         @foreach ($caption_weeks12 as $caption)
                         {!! $caption['captions'] !!}
@@ -244,7 +250,7 @@
                         <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid">
                         <h3>{{ $event['title'] }}</h3>
                         <div class="d-flex justify-content-center">
-                        <a href="{{ route('event',$event->id) }}" class="btn btn-warning">See More</a>
+                            <a href="{{ route('event',$event->id) }}" class="btn btn-warning">See More</a>
                         </div>
                     </div>
                 </div>
@@ -269,7 +275,7 @@
                         <img src="/freeletics_images/{{$blog->image_path}}" class="img-fluid">
                         <h3>{{ $blog['title'] }}</h3>
                         <div class="d-flex justify-content-center">
-                        <a href="{{ route('blog',$blog->id) }}" class="btn btn-warning">See More</a>
+                            <a href="{{ route('blog',$blog->id) }}" class="btn btn-warning">See More</a>
                         </div>
                     </div>
                 </div>
