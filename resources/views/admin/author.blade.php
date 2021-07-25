@@ -234,7 +234,7 @@
                                 <td class="column1">{{ $loop->iteration }}</td>
                                 <td class="column4-3-1">{!! $captions['captions'] !!}</td>
                                 <td class="column5">{{ \Carbon\Carbon::parse($captions['updated_at'])->format('j F, Y') }}</td>
-                                <td class="column6-1"><a class="button touch edit edit-btn" href="{{ route('admin.upload_caption',1) }}"></a>
+                                <td class="column6-1"><a class="button touch edit edit-btn mb-2" href="{{ route('admin.upload_caption',1) }}"></a>
                                 </tr>
                             @endforeach
                             </tbody>
