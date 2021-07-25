@@ -25,10 +25,10 @@
                 <div class="caption-2">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quo doloremque sit, labore voluptas temporibus nemo, odio nihil eligendi corporis autem earum suscipit quam? Quos minima tempora amet. Adipisci, numquam.</p>
                 </div>
-                <button type="button" class="btn btn-warning" id="btn">Get Started</button>
+                <a href="{{ route('home')}}"><button type="button" class="btn btn-warning" id="btn">Get Started</button></a>
             </div>
             <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-warning" id="btn-mb">Get Started</button>
+                <a href="{{ route('home') }}"><button type="button" class="btn btn-warning" id="btn-mb">Get Started</button></a>
             </div>
         </div>
         <div class="bg">

@@ -1,7 +1,7 @@
     .bg-mass {
         min-height: 130vh;
         width: 100%;
-        background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/maskworkout.png);
+        background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/maskworkout.jpg);
         background-position: center;
         background-size: cover;
         position: relative;

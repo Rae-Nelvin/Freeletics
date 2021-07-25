@@ -39,7 +39,7 @@ body {
 }
 
 .bg-about {
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.png);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.jpg);
     min-height: 100vh;
     width: 100%;
     background-position: center;
