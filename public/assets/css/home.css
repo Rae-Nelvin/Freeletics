@@ -1,7 +1,8 @@
 html,
 body {
     width: auto!important;
-    overflow-x: hidden!important
+    overflow-x: hidden!important;
+    font-family: Nunito;
 }
 
 .bg {
@@ -29,20 +30,21 @@ body {
     color: #fff;
     margin-top: 10%;
     max-width: 40%;
+    color: #FDCD22;
 }
 
 .caption-2 p {
     position: absolute;
     z-index: 1;
     color: #fff;
-    margin-top: 18%;
+    margin-top: 21%;
     max-width: 40%;
 }
 
 #btn {
     position: absolute;
     z-index: 1;
-    margin-top: 25%;
+    margin-top: 30%;
     border-radius: 10px;
     display: block;
     font-weight: bold;
