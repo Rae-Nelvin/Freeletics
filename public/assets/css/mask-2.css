@@ -20,6 +20,7 @@
         color: white;
         margin-top: 5%;
         max-width: 100%;
+        text-align: left;
     }
     
     .about-p.show-more .moreText {
