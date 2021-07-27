@@ -21,6 +21,8 @@
                 <div class="logo">
                     <img src="{{url('/assets/images/logo.png')}}" alt="logo">
                 </div>
+            </div>
+            <div class="col-4">
                 <div class="caption">
                     <h1>TRAIN WHEREVER,WHENEVER, WITH THE BEST DIGITAL COACH</h1>
                 </div>
@@ -29,10 +31,10 @@
                         voluptas temporibus nemo, odio nihil eligendi corporis autem earum suscipit quam? Quos minima
                         tempora amet. Adipisci, numquam.</p>
                 </div>
-                <a href="{{ route('home')}}"><button type="button" class="btn btn-warning " id="btn">Get
-                        Started</button></a>
+                <a href="{{ route('home')}}"><button type="button" class="btn btn-warning " id="btn">GET
+                        STARTED</button>
+                </a>
             </div>
-
         </div>
         <div class="bg" id="bg-2">
             <!-- <img src="{{url('/assets/images/intro.jpg')}}" alt="intro-background" id="bg">

@@ -1,10 +1,10 @@
 .weeks {
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/12weeks.jpg) !important;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/12weeks.jpg);
     width: 100%;
     background-position: center;
     background-size: cover;
     position: relative;
-    margin-top: -20%;
+    min-height: 150vh;
 }
 
 button.read-more-btn {
@@ -208,29 +208,20 @@ figure {
         font-family: Nunito;
         font-weight: bold;
     }
-    .tgl {
-        /* text-align: center; */
-        display: flex;
-        justify-content: center;
-    }
-    .fa-calendar-o {
-        margin-right: 3%;
-        margin-top: 0.5%;
-    }
     #swiper-container-week {
-        max-width: 83%;
+        max-width: 80%;
         margin-top: 80% !important;
     }
     #swiper-slide-week {
-        max-width: 300px !important;
-        max-height: 200px;
+        max-width: 100% !important;
+        max-height: 100% !important;
     }
-    #swiper-slide-mask img {
+    #swiper-slide-week img {
         display: block;
         /* max-width: 300px !important; */
         max-height: 280px;
         object-fit: cover;
-        box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2) !important;
     }
     #btn-week {
         color: #fff;
@@ -290,7 +281,20 @@ figure {
 }
 
 @media all and (min-width: 414px) and (max-width:420px) {
-    #swiper-container-week {
+    /* #swiper-container-week {
         max-width: 75%;
+    } */
+}
+
+@media all and (min-width: 300px) and (max-width:400px) {
+    #swiper-container-week {
+        max-width: 85%;
+        margin-top: 80% !important;
+    }
+    #swiper-slide-week img {
+        display: block;
+        max-width: 300px !important;
+        max-height: 200px;
+        object-fit: cover;
     }
 }

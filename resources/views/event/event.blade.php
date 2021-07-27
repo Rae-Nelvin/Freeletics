@@ -51,8 +51,9 @@
                 <div class=" col-9" id="left-bar">
                     @foreach ($event as $event)
                     <h1 class="title-h1 display-7 font-weight-normal">{{ $event->title }}</h1>
-                    <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid" style="max-width: 100%;max-height: 100%;min-height: 480px;">
-                    <p class="deskripsi" style="font-size: 23px;">
+                    <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid"
+                        style="max-width: 100%;max-height: 100%;min-height: 480px;">
+                    <p class="deskripsi" style="font-size: 20px;">
                         {{ $event->content }}
                     </p>
                     @endforeach

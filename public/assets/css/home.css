@@ -31,40 +31,54 @@ body {
     margin-top: 10%;
     max-width: 40%;
     color: #FDCD22;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px #000000;
 }
 
 .caption-2 p {
     position: absolute;
     z-index: 1;
     color: #fff;
-    margin-top: 21%;
-    max-width: 40%;
+    margin-top: 17%;
+    max-width: 45%;
+    font-size: 23px;
 }
 
 #btn {
+    height: 40px;
     position: absolute;
     z-index: 1;
     margin-top: 30%;
-    border-radius: 10px;
+    border-radius: 30px;
     display: block;
+    width: 10%;
     font-weight: bold;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    box-shadow: 4px 4px 4px #000000;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
 #btn-mb {
     display: none;
 }
 
-@media (min-width: 1280px) and (max-width:1300px) {
+@media (min-width: 1024px) and (max-width:1300px) {
     .caption-2 p {
         margin-top: 30% !important;
     }
     #btn {
-        margin-top: 40%;
+        margin-top: 50%;
+        width: 15%;
     }
+}
+
+@media (min-width: 1920px) {
+    .caption-2 p {
+        width: 35%;
+    }
+    #btn {}
 }
 
 @media (max-width: 767px) {
@@ -91,7 +105,8 @@ body {
     .caption-2 p {
         text-align: left;
         margin-top: 90%;
-        max-width: 90%;
+        max-width: 100%;
+        font-size: 18px;
     }
     #btn-mb {
         position: relative;
@@ -110,11 +125,21 @@ body {
         justify-content: center;
         width: 90%;
         position: absolute;
-        margin-top: 75vh;
+        margin-top: 80vh;
     }
 }
 
-@media (min-width: 768px) and (max-width:769px) {
+@media (max-width: 375px) and (max-width:380px) {
+    #btn {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        position: absolute;
+        margin-top: 105vh;
+    }
+}
+
+@media (min-width: 500px) and (max-width:769px) {
     #mobile {
         width: 100%;
         height: 52em;
@@ -140,14 +165,6 @@ body {
         margin-top: 70%;
         max-width: 90%;
     }
-    /* #btn-mb {
-        display: block !important;
-        width: 50%;
-        position: absolute;
-        margin-top: 90%;
-        z-index: 1;
-        align-items: center;
-    } */
     #btn {
         display: flex;
         justify-content: center;

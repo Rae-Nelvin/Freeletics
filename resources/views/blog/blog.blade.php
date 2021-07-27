@@ -48,29 +48,31 @@
                 <div class="d-flex justify-content-center">
                     <h1 class="title">BLOG</h1>
                 </div>
-                <div class=" col-9" id="left-bar">
+                <div class="col" id="left-bar">
                     @foreach ($blog as $blog)
                     <h1 class="title-h1 display-7 font-weight-normal">{{ $blog->title }}</h1>
-                    <img src="/freeletics_images/{{$blog->image_path}}" class="img-fluid"  style="max-width: 100%;max-height: 100%;min-height: 480px;">
-                    <p class="deskripsi" style="font-size: 23px;">
+                    <img src="/freeletics_images/{{$blog->image_path}}" class="img-fluid">
+                    <p class="deskripsi" style="font-size: 20px;">
                         {{ $blog->content }}
                     </p>
                     @endforeach
                 </div>
                 <div class="sidebar-container">
-                    <div class="list-content">
-                        <h3 class="right-side">NEWS UPDATE</h3>
-                        <div class="line"></div>
-                        @foreach ($other as $other)
-                        <div class="card bg-transparent">
-                            <a href="{{ route('blog',$other->id) }}"> <img class="new-blog"
-                                    src="/freeletics_images/{{$other->image_path}}">
-                                <p class="desc-content">{{ $other->title }}</p>
-                                <span
-                                    class="tgl">{{ \Carbon\Carbon::parse($other['updated_at'])->format('j F, Y') }}</span>
-                            </a>
+                    <div class="col">
+                        <div class="list-content">
+                            <h3 class="right-side">NEWS UPDATE</h3>
+                            <div class="line"></div>
+                            @foreach ($other as $other)
+                            <div class="card bg-transparent">
+                                <a href="{{ route('blog',$other->id) }}"> <img class="new-blog"
+                                        src="/freeletics_images/{{$other->image_path}}">
+                                    <p class="desc-content">{{ $other->title }}</p>
+                                    <span
+                                        class="tgl">{{ \Carbon\Carbon::parse($other['updated_at'])->format('j F, Y') }}</span>
+                                </a>
+                            </div>
+                            @endforeach
                         </div>
-                        @endforeach
                     </div>
                 </div>
             </div>

@@ -70,7 +70,6 @@
                     <div class="row">
                         <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
                         @foreach ($author1 as $author1)
-                        <div class="col-4"></div>
                         <div class="col-lg-4">
                             <img class="rounded author" src="/freeletics_images/{{$author1->file_path}}"
                                 alt="Generic placeholder image" width="250" height="250">
@@ -205,34 +204,32 @@
                     </p>
                 </div>
                 <!-- Swiper -->
-                <!-- <div class="d-flex justify-content-start">
-                    <input type="date" class="form-control" name="birthday" id="date-week">
-                </div> -->
-                <div class="d-flex justify-content-center">
-                    <div class="box" id="box-week"></div>
-                </div>
-                <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperrr"
-                    id="swiper-container-week">
-                    <div class="swiper-wrapper">
-                        @foreach ($weeks12 as $weeks12)
-                        <div class="swiper-slide" id="swiper-slide-week">
-                            <figure>
-                                <div class="wrapper">
-                                    <img src="/freeletics_images/{{$weeks12->file_path}}" class=" img-fluid">
-                                </div>
-                            </figure>
-                        </div>
-                        @endforeach
-                    </div>
-                    <div class="swiper-button-next" id="btn-week"></div>
-                    <div class="swiper-button-prev" id="btn-week"></div>
-                </div>
+            </div> -->
+            <div class="d-flex justify-content-center">
+                <div class="box" id="box-week"></div>
             </div>
-            <div class="see-more text-center">
-                <a href="{{ route('gallery',3) }}"><button type="button" class="btn btn-outline-warning"
-                        id="see-more-week">SEE MORE</button></a>
+            <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperrr"
+                id="swiper-container-week">
+                <div class="swiper-wrapper">
+                    @foreach ($weeks12 as $weeks12)
+                    <div class="swiper-slide" id="swiper-slide-week">
+                        <figure>
+                            <div class="wrapper">
+                                <img src="/freeletics_images/{{$weeks12->file_path}}" class=" img-fluid">
+                            </div>
+                        </figure>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="swiper-button-next" id="btn-week"></div>
+                <div class="swiper-button-prev" id="btn-week"></div>
             </div>
         </div>
+        <div class="see-more text-center">
+            <a href="{{ route('gallery',3) }}"><button type="button" class="btn btn-outline-warning"
+                    id="see-more-week">SEE MORE</button></a>
+        </div>
+    </div>
     </div>
     <!-- 12 weeks -->
 
@@ -313,11 +310,11 @@
             <div class="row">
                 <h1>SPONSORSHIP</h1>
                 <div class="swiper-container mySwipper" id="swiper-container-sponsor">
-                    <div class="swiper-wrapper" >
+                    <div class="swiper-wrapper">
                         @foreach ($sponsor as $sponsor)
                         <div class="swiper-slide" id="swiper-slide-sponsor">
-                            <a href="{!! $sponsor->subtitle !!}"><img
-                                    src="/freeletics_images/{{$sponsor->file_path}}" style="width: 100%;max-width: 100%"></a>
+                            <a href="{!! $sponsor->subtitle !!}"><img src="/freeletics_images/{{$sponsor->file_path}}"
+                                    style="width: 100%;max-width: 100%"></a>
                         </div>
                         @endforeach
                     </div>
