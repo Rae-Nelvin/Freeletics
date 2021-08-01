@@ -31,13 +31,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home </a>
-                    <a class="nav-link" href="{{ route('home') }}">About Us</a>
-                    <a class="nav-link" href="{{ route('home') }}">Mass Workout</a>
-                    <a class="nav-link" href="{{ route('home') }}">Fun Run</a>
-                    <a class="nav-link" href="{{ route('home') }}">12 Week</a>
-                    <a class="nav-link" href="{{ route('home') }}">Event</a>
-                    <a class="nav-link" href="{{ route('home') }}">Blog</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('index') }}">HOME</a>
+                    <a class="nav-link" href="#about-us-section">ABOUT US</a>
+                    <a class="nav-link" href="#event-section">EVENT</a>
+                    <a class="nav-link" href="#blog-section">BLOG</a>
+                    <a class="nav-link" href="{{ route('gallery',1) }}">GALLERY</a>
                 </div>
             </div>
     </nav>
@@ -46,7 +44,7 @@
     <section class="page-section " id="portfolio">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase" id="title">GALLERY</h2>
+                <h2 class="judul text-uppercase">GALLERY</h2>
                 <h3 class="section-subheading ">@foreach ($caption as $captions)
                     {!! $captions['captions'] !!}
                     @endforeach

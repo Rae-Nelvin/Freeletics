@@ -18,11 +18,11 @@ nav {
         text-align: center !important;
         flex: center;
         position: relative;
-        left: 10%;
+        left: 30%;
         float: none;
         top: 5%;
         margin-left: 40px;
-        font-size: 17px;
+        font-size: 14px;
         font-family: Nunito;
         font-weight: bold;
     }
