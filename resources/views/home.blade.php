@@ -69,7 +69,6 @@
                     <!-- Three columns of text below the carousel -->
                     <div class="row">
                         <h1 class="author-h1 display-7 font-weight-normal">MEET THE AUTHOR</h1>
-                        <div class="col-4"></div>
                         @foreach ($author1 as $author1)
                         <div class="col-lg-4">
                             <img class="rounded author" src="/freeletics_images/{{$author1->file_path}}"

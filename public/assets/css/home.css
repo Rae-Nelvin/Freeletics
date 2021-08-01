@@ -32,7 +32,7 @@ body {
     max-width: 40%;
     color: #FDCD22;
     font-weight: bold;
-    text-shadow: 5px 5px 5px #000000;
+    text-shadow: 4px 4px 4px #000000;
 }
 
 .caption-2 p {
@@ -51,21 +51,20 @@ body {
     margin-top: 30%;
     border-radius: 30px;
     display: block;
-    width: 40%;
+    width: 10%;
     font-weight: bold;
     box-shadow: 4px 4px 4px #000000;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
-    font-size: 21px;
 }
 
 #btn-mb {
     display: none;
 }
 
-@media (min-width: 1024px) and (max-width:1366px) {
+@media (min-width: 1024px) and (max-width:1300px) {
     .caption-2 p {
         margin-top: 30% !important;
     }
