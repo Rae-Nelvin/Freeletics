@@ -51,9 +51,7 @@
                     <h1 class="title-h1 display-7 font-weight-normal">{{ $blog->title }}</h1>
                     <img src="/freeletics_images/{{$blog->image_path}}" class="img-fluid">
                     <p class="deskripsi" style="font-size: 20px;">
-                        @foreach ($caption_author as $caption )
-                        {!! $caption['captions'] !!}
-                        @endforeach
+                        {!! $blog['content'] !!}
                     </p>
                     @endforeach
                 </div>

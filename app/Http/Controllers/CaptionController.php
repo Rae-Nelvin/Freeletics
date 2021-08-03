@@ -44,21 +44,27 @@ class CaptionController extends Controller
 
         $id = Session::get('LoggedUser');
 
-        $count = Captions::get()->where('event',$request->event)->count();
+        if($request->event == "Massworkout"){
+          $event = "Massworkout";
+        }else{
+          $event = "Author";
+        }
+
+        $count = Captions::get()->where('event',$event)->count();
         if($count < 1){
         Captions::create([
             'author_id' => $id,
             'captions' => $request->caption,
-            'event' => $request->event
+            'event' => $event
         ]);
         }
         else{
-            Captions::where('event',$request->event)
+            Captions::where('event',$event)
             ->update([
                 'captions' => $request->caption
             ]);
         }
         
-        return redirect('admin/'.$request->event)->with('Successful', 'Your Caption has been uploaded successfully!!');
+        return redirect('admin/'.$event)->with('Successful', 'Your Caption has been uploaded successfully!!');
     }
 }

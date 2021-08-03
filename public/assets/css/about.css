@@ -9,6 +9,10 @@ body {
     overflow-x: hidden!important
 }
 
+#about-us-section strong{
+    font-weight: 900 !important;
+}
+
 .navbar {
     overflow: hidden;
     overflow-x: hidden;

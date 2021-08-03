@@ -5,6 +5,11 @@
     font-weight: bold;
 }
 
+strong{
+	font-family: sans-serif;
+	font-weight: 900 !important;
+}
+
 .h1-title {
     font-weight: bold;
     color: #edc124;

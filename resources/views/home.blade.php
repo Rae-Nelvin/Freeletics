@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
-                    <p class="lead font-weight-normal text-center" id="about-p">
+                    <p class="lead font-weight-normal text" id="about-p">
                         @foreach($caption_author as $caption)
                         {!! $caption['captions'] !!}
                         @endforeach
@@ -152,7 +152,7 @@
             </div>
             <div class="col">
                 <p class="lead font-weight-normal text" id="funrun-p">
-                    @foreach($caption_funrun as $caption)
+                    @foreach($caption_massworkout as $caption)
                     {!! $caption['captions'] !!}
                     @endforeach
                 </p>
@@ -187,7 +187,7 @@
     <!-- fun run -->
 
     <!-- 12 weeks -->
-    <div class="position-relative overflow-hidden text-center weeks" id="12-week-section">
+    <div class="position-relative overflow-hidden text-center weeks" id="weeks12-section">
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
@@ -195,7 +195,7 @@
                         <h1 class="about-h1 display-4 font-weight-normal">12 WEEKS</h1>
                     </div>
                     <p class="lead font-weight-normal caption-week">
-                        @foreach ($caption_weeks12 as $caption)
+                        @foreach ($caption_massworkout as $caption)
                         {!! $caption['captions'] !!}
                         @endforeach
                     </p>

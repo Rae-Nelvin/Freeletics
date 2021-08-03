@@ -1,5 +1,10 @@
 /* about */
 
+strong{
+    font-weight: 900 !important;
+}
+
+
 nav {
     /* background-color: #FDCD22!important; */
     display: block;

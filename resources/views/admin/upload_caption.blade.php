@@ -195,7 +195,8 @@
             <form action="{{ route('admin.uploadcaption') }}" method="POST">
                 @csrf
                 <div class="form-group">
-                    <label for="EventForm" class="title-edit" style="font-family: Nunito;font-size: 30px;"><?php echo"<input type='hidden' name='event' value=$event>Event :  ";  echo $event ?></label>
+                <?php echo"<input type='hidden' name='event' value=$event>" ?>
+                    <label for="EventForm" class="title-edit" style="font-family: Nunito;font-size: 30px;">Edit Description</label>
                 </div>
                 <div class="form-group">
                 <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan Caption :</label>
