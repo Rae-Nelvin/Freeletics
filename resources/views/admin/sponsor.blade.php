@@ -209,7 +209,7 @@
                         <tr class="table100-head">
                             <th class="column1">#</th>
                             <th class="column2">Nama Author</th>
-                            <th class="column3">Deskripsi</th>
+                            <th class="column3">Link</th>
                             <th class="column4">Gambar</th>
                             <th class="column5">Last Update</th>
                             <th class="column6">Actions</th>

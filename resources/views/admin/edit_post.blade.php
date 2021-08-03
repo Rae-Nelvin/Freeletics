@@ -320,11 +320,13 @@
       tinymce.init({
         selector: 'textarea.konten',
         height: 200,
-        plugins: 'lists',
+        plugins: 'lists paste',
         toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
         lists_indent_on_tab: false,
-        forced_root_block : ''
+        forced_root_block : '',
+        paste_as_text: true
       });
+      
 </script>
 </body>
 </html>

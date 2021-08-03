@@ -50,9 +50,7 @@
                     <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid"
                         style="max-width: 100%;max-height: 100%;min-height: 480px;">
                     <p class="deskripsi" style="font-size: 20px;">
-                        @foreach ($caption_author as $caption )
-                        {{!! $caption['captions'] !!}}
-                        @endforeach
+                        {!! $event['content'] !!}
                     </p>
                     @endforeach
                 </div>

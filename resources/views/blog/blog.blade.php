@@ -52,7 +52,7 @@
                     <img src="/freeletics_images/{{$blog->image_path}}" class="img-fluid">
                     <p class="deskripsi" style="font-size: 20px;">
                         @foreach ($caption_author as $caption )
-                        {{!! $caption['captions'] !!}}
+                        {!! $caption['captions'] !!}
                         @endforeach
                     </p>
                     @endforeach
