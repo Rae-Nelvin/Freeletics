@@ -146,7 +146,7 @@
         }
         #btn-mask {
             color: #fff;
-            margin-top: 25%;
+            margin-top: 34% !important;
             position: absolute;
         }
         #swiper-container-mask {
