@@ -6,11 +6,7 @@
                                 position: relative;
                                 min-height: 150vh;
                             }
-
-                            button.read-more-btn {
-                                display: none;
-                            }
-
+                            
                             .judul-week {
                                 margin-top: 10% !important;
                                 z-index: 1;
@@ -19,24 +15,24 @@
                                 font-family: Nunito !important;
                                 font-weight: bold;
                             }
-
+                            
                             #swiper-container-week {
                                 max-width: 77%;
                                 margin-top: 27%;
                             }
-
+                            
                             #swiper-slide-week {
                                 max-width: 100%;
                                 max-height: 100%;
                             }
-
+                            
                             #swiper-slide-week img {
                                 display: block;
                                 width: 300px !important;
                                 height: 200px;
                                 object-fit: cover;
                             }
-
+                            
                             #box-week {
                                 align-items: center;
                                 content: '';
@@ -54,7 +50,7 @@
                                 -ms-border-radius: 20px;
                                 -o-border-radius: 20px;
                             }
-
+                            
                             figure {
                                 width: 300px !important;
                                 box-sizing: border-box;
@@ -63,7 +59,7 @@
                                 background-position: center;
                                 position: relative;
                             }
-
+                            
                             .img-fluid {
                                 border-radius: 20px;
                                 -webkit-border-radius: 20px;
@@ -71,7 +67,7 @@
                                 -ms-border-radius: 20px;
                                 -o-border-radius: 20px;
                             }
-
+                            
                             .tgl {
                                 font-family: Nunito;
                                 font-weight: bold;
@@ -79,11 +75,11 @@
                                 font-size: 13px;
                                 margin-top: -3% !important;
                             }
-
+                            
                             .fa-calendar-alt {
                                 color: #FDCD22;
                             }
-
+                            
                             .title-img {
                                 color: #FDCD22;
                                 font-family: Nunito;
@@ -91,30 +87,28 @@
                                 margin-top: 3%;
                                 font-size: 19px;
                             }
-
+                            
                             #btn-week {
                                 color: #FDCD22;
                                 margin-top: -2%;
                             }
-
+                            
                             .caption-week {
                                 color: #fff;
                                 margin-top: 15%;
                                 position: absolute;
                                 z-index: 2;
                                 display: block;
-                                max-width: 40% !important;
-                                text-align: justify;
+                                max-width: 50% !important;
                                 max-width: 60% !important;
-                                text-align: left;
+                                text-align: center;
                                 max-width: 40% !important;
-                                text-align: justify;
                             }
-
+                            
                             #date-week-mb {
                                 display: none;
                             }
-
+                            
                             #see-more-week {
                                 width: 20%;
                                 margin-top: 10% !important;
@@ -124,7 +118,7 @@
                                 -ms-border-radius: 20px;
                                 -o-border-radius: 20px;
                             }
-
+                            
                             @media all and (min-width: 1920px) {
                                 #swiper-container-week {
                                     max-width: 80%;
@@ -138,7 +132,7 @@
                                     width: 60%;
                                 }
                             }
-
+                            
                             @media all and (min-width: 768px) and (max-width:1366px) {
                                 .judul-week {
                                     margin-top: 2% !important;
@@ -182,7 +176,7 @@
                                     width: 85%;
                                 }
                             }
-
+                            
                             @media all and (max-width: 768px) {
                                 #box-week {
                                     width: 60vh;
@@ -240,8 +234,8 @@
                                 .caption-week {
                                     margin-top: 45%;
                                     color: #fff;
-                                    text-align: left;
-                                    max-width: 80% !important;
+                                    text-align: center;
+                                    max-width: 90% !important;
                                     margin-left: 0vh;
                                     margin-right: 0vh;
                                     padding-left: 0vh;
@@ -259,7 +253,7 @@
                                     margin-top: -30%;
                                 }
                             }
-
+                            
                             @media all and (min-width: 768px) and (max-width:800px) {
                                 #swiper-container-week {
                                     max-width: 90%;
@@ -286,13 +280,13 @@
                                     min-height: 100vh;
                                 }
                             }
-
+                            
                             @media all and (min-width: 414px) and (max-width:420px) {
                                 /* #swiper-container-week {
         max-width: 75%;
     } */
                             }
-
+                            
                             @media all and (min-width: 300px) and (max-width:400px) {
                                 #swiper-container-week {
                                     max-width: 85%;

@@ -6,7 +6,7 @@
         background-size: cover;
         position: relative;
     }
-
+    
     #mass-h1 {
         font-family: Nunito;
         color: #FDCD22;
@@ -14,7 +14,7 @@
         font-stretch: ultra-expanded;
         margin-top: 3%;
     }
-
+    
     .mass-p {
         font-family: Nunito;
         color: white;
@@ -22,22 +22,22 @@
         max-width: 100%;
         text-align: left;
     }
-
+    
     .about-p.show-more .moreText {
         display: inline;
     }
-
+    
     #swiper-container-mask {
         max-width: 82%;
         margin-top: 0%;
     }
-
+    
     #swiper-slide-mask {
         max-width: 100%;
         max-height: 100%;
         margin-top: 5%;
     }
-
+    
     #swiper-slide-mask img {
         display: block;
         width: 300px !important;
@@ -45,7 +45,7 @@
         object-fit: cover;
         position: relative;
     }
-
+    
     figure {
         width: 300px !important;
         box-sizing: border-box;
@@ -54,7 +54,7 @@
         background-position: center;
         position: relative;
     }
-
+    
     .img-fluid {
         border-radius: 20px;
         -webkit-border-radius: 20px;
@@ -62,7 +62,7 @@
         -ms-border-radius: 20px;
         -o-border-radius: 20px;
     }
-
+    
     .tgl {
         font-family: Nunito;
         font-weight: bold;
@@ -70,11 +70,11 @@
         font-size: 13px;
         margin-top: -3%;
     }
-
+    
     .fa-calendar-alt {
         color: #FDCD22;
     }
-
+    
     #see-more-mask {
         width: 20%;
         margin-top: 10%;
@@ -85,13 +85,13 @@
         -ms-border-radius: 20px;
         -o-border-radius: 20px;
     }
-
+    
     #btn-mask {
         color: #FDCD22;
         margin-top: 7%;
     }
     /* Table Mode */
-
+    
     @media all and (min-width: 768px) and (max-width: 1366px) {
         #mass-h1 {
             /* font-size: 70px; */
@@ -115,7 +115,7 @@
         }
         #btn-mask {
             color: #FDCD22;
-            /* margin-top: -10% !important; */
+            margin-top: 10% !important;
         }
         #see-more-mask {
             width: 20%;
@@ -124,7 +124,7 @@
         }
     }
     /* Phone Mode */
-
+    
     @media all and (max-width: 767px) {
         #see-more {
             width: 90%;
@@ -165,7 +165,7 @@
             -o-border-radius: 40px;
         }
     }
-
+    
     @media all and (max-width: 400px) {
         #swiper-container-mask {
             max-width: 100% !important;
@@ -174,7 +174,7 @@
             max-width: 100% !important;
         } */
     }
-
+    
     @media all and (min-width: 768px) and (max-width:1366px) {
         /* #swiper-container-mask {
             max-width: 100% !important;

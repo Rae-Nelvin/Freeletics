@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
-                    <p class="lead font-weight-normal text" id="about-p">
+                    <p class="lead font-weight-normal text-center" id="about-p">
                         @foreach($caption_author as $caption)
                         {!! $caption['captions'] !!}
                         @endforeach
