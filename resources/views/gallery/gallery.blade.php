@@ -33,9 +33,11 @@
                 <div class="navbar-nav">
                     <a class="nav-link" aria-current="page" href="{{ route('index') }}">HOME</a>
                     <a class="nav-link" href="#about-us-section">ABOUT US</a>
-                    <a class="nav-link" href="#event-section">EVENT</a>
-                    <a class="nav-link" href="#blog-section">BLOG</a>
-                    <a class="nav-link" href="{{ route('gallery',1) }}">GALLERY</a>
+                    <a class="nav-link" href="{{route ('massworkout')}}">MASSWORKOUT</a>
+                    <a class="nav-link" href="{{route ('funrun')}}">FUNRUN</a>
+                    <a class="nav-link" href="{{route ('12weeks')}}">12 WEEKS</a>
+                    <a class="nav-link" href="{{route ('event')}}">EVENT</a>
+                    <a class="nav-link" href="{{route ('blog')}}">BLOG</a>
                 </div>
             </div>
     </nav>

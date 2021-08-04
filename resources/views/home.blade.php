@@ -42,9 +42,11 @@
                 <div class="navbar-nav">
                     <a class="nav-link" aria-current="page" href="{{ route('index') }}">HOME</a>
                     <a class="nav-link" href="#about-us-section">ABOUT US</a>
+                    <a class="nav-link" href="#mass-workout-section">MASSWORKOUT</a>
+                    <a class="nav-link" href="#fun-run-section">FUNRUN</a>
+                    <a class="nav-link" href="#12-week-section">12 WEEKS</a>
                     <a class="nav-link" href="#event-section">EVENT</a>
                     <a class="nav-link" href="#blog-section">BLOG</a>
-                    <a class="nav-link" href="{{ route('gallery',1) }}">GALLERY</a>
                 </div>
             </div>
         </div>
@@ -56,8 +58,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
+<<<<<<< Updated upstream
                     <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
                     <p class="lead font-weight-normal text" id="about-p">
+=======
+                    <h1 class="about-h1 display-7 font-weight-normal" id="about">ABOUT US</h1>
+                    <p class="lead font-weight-normal text-center" id="about-p">
+>>>>>>> Stashed changes
                         @foreach($caption_author as $caption)
                         {!! $caption['captions'] !!}
                         @endforeach
@@ -102,7 +109,6 @@
                     <h1 class="display-7 font-weight-normal" id="mass-h1">MASS WORKOUT</h1>
                 </div>
             </div>
-
             <div class="row align-items-start" id="mass-swipper">
                 <div class="col-xl" id="img-swipper">
                     <!-- Swiper -->
@@ -130,15 +136,13 @@
                         <div class="swiper-button-next" id="btn-mask"></div>
                         <div class="swiper-button-prev" id="btn-mask"></div>
                     </div>
-
                     <!-- End of Swiper -->
                 </div>
-
             </div>
             <div class="see-more text-center">
                 <a href="{{ route('gallery',1) }}"><button type="button" class="btn btn-outline-warning"
-                        id="see-more-mask">SEE
-                        MORE</button></a>
+                        id="see-more-mask">SEE MORE</button>
+                </a>
             </div>
         </div>
     </div>
@@ -148,7 +152,7 @@
     <div class="position-relative overflow-hidden text-center bg-funrun" id="fun-run-section">
         <div class="container">
             <div class="col-md-7 p-lg-4 mx-auto my-5">
-                <h1 class="about-h1 display-4 font-weight-normal">FUN RUN</h1>
+                <h1 class="about-h1 display-7 font-weight-normal" id="judul-funrun">FUN RUN</h1>
             </div>
             <div class="col">
                 <p class="lead font-weight-normal text" id="funrun-p">
@@ -192,7 +196,7 @@
             <div class="row">
                 <div class="d-flex justify-content-center">
                     <div class="col-md-7">
-                        <h1 class="about-h1 display-4 font-weight-normal">12 WEEKS</h1>
+                        <h1 class="about-h1 display-7 font-weight-normal" id="judul-week">12 WEEKS</h1>
                     </div>
                     <p class="lead font-weight-normal caption-week">
                         @foreach ($caption_massworkout as $caption)
@@ -201,7 +205,7 @@
                     </p>
                 </div>
                 <!-- Swiper -->
-            </div> -->
+            </div>
             <div class="d-flex justify-content-center">
                 <div class="box" id="box-week"></div>
             </div>

@@ -64,7 +64,7 @@ body {
     display: none;
 }
 
-@media (min-width: 1024px) and (max-width:1300px) {
+@media (min-width: 769px) and (max-width:1336px) {
     .caption-2 p {
         margin-top: 30% !important;
     }
@@ -103,7 +103,7 @@ body {
         margin-top: 50%;
     }
     .caption-2 p {
-        text-align: left;
+        text-align: center;
         margin-top: 90%;
         max-width: 100%;
         font-size: 18px;
@@ -161,7 +161,7 @@ body {
         margin-top: 50%;
     }
     .caption-2 p {
-        text-align: left;
+        text-align: center;
         margin-top: 70%;
         max-width: 90%;
     }
