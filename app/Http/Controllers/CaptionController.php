@@ -16,22 +16,26 @@ class CaptionController extends Controller
         if($idt == 1)
         {
           $event = 'Author';
-          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event]);
+          $caption = Captions::where("event","Author")->get();
+          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event,'caption'=>$caption]);
         }
         else if($idt == 2)
         {
           $event = 'Massworkout';
-          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event]);
+          $caption = Captions::where("event","Author")->get();
+          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event,'caption'=>$caption]);
         }
         else if($idt == 3)
         {
           $event = 'Funrun';
-          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event]);
+          $caption = Captions::where("event","Author")->get();
+          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event,'caption'=>$caption]);
         }
         else if($idt == 4)
         {
           $event = 'Weeks12';
-          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event]);
+          $caption = Captions::where("event","Author")->get();
+          return view('admin.upload_caption',['admin'=>$admin,'event'=>$event,'caption'=>$caption]);
         }
     }
 

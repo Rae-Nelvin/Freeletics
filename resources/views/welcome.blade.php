@@ -1,3 +1,7 @@
+<!-- Made By : -->
+<!-- Rhemzy Putra / 2440109375 (UI Designer) -->
+<!-- Wahyu Junior / 2440117154 (Front End Developer) -->
+<!-- Leonardo Wijaya / 2440068902 (Back End Developer) -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,11 +29,6 @@
             <div class="col-4">
                 <div class="caption">
                     <h1>TRAIN WHEREVER,WHENEVER, WITH THE BEST DIGITAL COACH</h1>
-                </div>
-                <div class="caption-2">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quo doloremque sit, labore
-                        voluptas temporibus nemo, odio nihil eligendi corporis autem earum suscipit quam? Quos minima
-                        tempora amet. Adipisci, numquam.</p>
                 </div>
                 <a href="{{ route('home')}}"><button type="button" class="btn btn-warning " id="btn">GET
                         STARTED</button>

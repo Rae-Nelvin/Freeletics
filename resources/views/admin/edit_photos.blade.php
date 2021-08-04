@@ -204,7 +204,7 @@
                     @foreach ($photo as $photos)
                       <tr class="table100-body">
                         <td class="column1">{{ $loop->iteration }}</td>
-                        <td class="column2">{{ $photos['caption'] }}</td>
+                        <td class="column2"><p class="title">{{ $photos['caption'] }}</p></td>
                         <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="max-width:60%"</td>
                         <td class="column5">{{ \Carbon\Carbon::parse($photos['updated_at'])->format('j F, Y') }}</td>
                       </tr>
@@ -226,7 +226,7 @@
                 <input type="hidden" name="event" value="{{ $photos['event'] }}">
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan Caption :</label>
-                    <input type="text" class="form-control bg-white" id="exampleInputEmail1" name="title" size="60">
+                    <input type="text" class="form-control bg-white" id="title" name="title" size="60">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile" style="font-family: Nunito;" class="title-edit">File input</label>
@@ -299,6 +299,8 @@
   $('#inputGroupFile02').on('change',function(){
    var fileName = $(this).val();
   $(this).next('.custom-file-label').html(fileName);
+  var title = $('.title').text();
+  document.getElementById("title").value = title;
 })
 </script>
 </body>

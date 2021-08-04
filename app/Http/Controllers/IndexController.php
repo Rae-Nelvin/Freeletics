@@ -116,4 +116,17 @@ class IndexController extends Controller
         return view('gallery.gallery-more', ['photo'=>$result,'id'=>$id]);
     }
 
+    function getevent($id){
+        
+        if($id == 1){
+            $event = "event";
+        }else if($id == 2){
+            $event = "blog";
+        }
+        $post = Posts::where("event",$event)->orderBy("id","DESC")->take(1)->get();      
+        $other = Posts::take(3)->get();
+        
+        return view($event.".".$event,[$event => $post,'other' => $other]);
+
+    }
 }

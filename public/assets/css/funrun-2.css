@@ -1,6 +1,6 @@
 .bg-funrun {
     width: 100%;
-    min-height: 170vh;
+    min-height: 100vh;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/funrun.jpg);
     background-position: center;
     background-size: cover;
@@ -9,7 +9,7 @@
 
 @media all and (min-width:1920px) {
     .bg-funrun {
-        min-height: 110vh !important;
+        min-height: 100vh !important;
     }
     #box-fun {
         width: 95% !important;
@@ -135,7 +135,7 @@ figure {
 
 @media all and (min-width: 1200px) and (max-width: 1300px) {
     .bg-funrun {
-        min-height: 150vh !important;
+        min-height: 110vh !important;
     }
     .row-funrun {
         margin-left: 0%;
@@ -148,12 +148,12 @@ figure {
         color: #FDCD22 !important;
     }
     #funrun-p {
-        margin-top: 8%;
+        margin-top: 3%;
         padding-left: 0vh;
         padding-right: 0vh;
         font-family: Nunito;
         color: white;
-        margin-bottom: 40%;
+        margin-bottom: 34%;
         text-align: center;
         margin-left: 4vh;
         margin-right: 6vh;

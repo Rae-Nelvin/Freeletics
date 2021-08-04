@@ -54,11 +54,11 @@ a.nav-link {
 }
 
 .about-p {
-    margin-top: 12%;
+    margin-top: 5%;
     font-family: Nunito;
     font-size: 20px;
-    color: white;
-    margin-bottom: 40%;
+    color: white !important;
+    margin-bottom: 20%;
 }
 
 button.read-more-btn {

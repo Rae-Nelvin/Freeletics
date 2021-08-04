@@ -207,9 +207,9 @@
                     @foreach ($photo as $photos)
                       <tr class="table100-body">
                         <td class="column1">{{ $loop->iteration }}</td>
-                        <td class="column2">{{ $photos['caption'] }}</td>
+                        <td class="column2"><p class="title">{{ $photos['caption'] }}</p></td>
                         <td class="column3-1">
-                          {!! $photos['subtitle'] !!}
+                          <p class="content">{!! $photos['subtitle'] !!}</p>
                         </td>
                         <td class="column4-1"><img src="/freeletics_images/{{$photos->file_path}}" alt="{{$photos->file_path}}" style="max-width:60%"></td>
                         <td class="column5">{{ \Carbon\Carbon::parse($photos['updated_at'])->format('j F, Y') }}</td>
@@ -232,7 +232,7 @@
                 <input type="hidden" name="event" value="{{ $photos['event'] }}">
                 <div class="form-group">
                     <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan <?php echo $title ?> :</label>
-                    <input type="text" class="form-control bg-white" id="exampleInputEmail1" name="title" size="60">
+                    <input type="text" class="form-control bg-white" id="title" name="title" size="60">
                 </div>
                 <div class="form-group">
                 <label for="EventForm" class="title-edit" style="font-family: Nunito;">Masukkan <?php echo $subtitle ?> :</label>
@@ -317,6 +317,8 @@
 </script>
 <!-- TinyMCE js -->
 <script>
+  var content = $('.content').text();
+  var title = $('.title').text();
       tinymce.init({
         selector: 'textarea.konten',
         height: 200,
@@ -324,8 +326,15 @@
         toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
         lists_indent_on_tab: false,
         forced_root_block : '',
-        paste_as_text: true
+        paste_as_text: true,
+        setup: function (editor) {
+        editor.on('init', function (e) {
+          editor.setContent(content);
+          });
+        }
       });
+    
+  document.getElementById("title").value = title;
 </script>
 </body>
 </html>

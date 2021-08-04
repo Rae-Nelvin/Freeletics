@@ -28,6 +28,7 @@ Route::prefix('home')->group(function(){
     Route::get('/gallerymore/{id}', [IndexController::class, 'gallerymore'])->name('gallerymore');
     Route::get('/datepicker', [IndexController::class, 'datepicker'])->name('datepicker');
     Route::get('/event/{id}', [IndexController::class, 'event'])->name('event');
+    Route::get('/getevent/{id}', [IndexController::class, 'getevent'])->name('getevent');
 });
 
 Route::prefix('auth')->group(function(){

@@ -28,13 +28,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="{{ route('index') }}">HOME</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('home') }}">HOME</a>
                     <a class="nav-link" href="{{ route('home') }}">ABOUT US</a>
                     <a class="nav-link" href="{{ route('home') }}">MASSWORKOUT</a>
                     <a class="nav-link" href="{{ route('home') }}">FUNRUN</a>
                     <a class="nav-link" href="{{ route('home') }}">12 WEEKS</a>
-                    <a class="nav-link" href="{{ route('home') }}">EVENT</a>
-                    <a class="nav-link" href="{{ route('home') }}">BLOG</a>
+                    <a class="nav-link" href="{{ route('getevent',1) }}">EVENT</a>
+                    <a class="nav-link" href="{{ route('getevent',2) }}">BLOG</a>
                 </div>
             </div>
         </div>

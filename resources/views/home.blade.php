@@ -1,3 +1,8 @@
+<!-- Made By : -->
+<!-- Rhemzy Putra / 2440109375 (UI Designer) -->
+<!-- Wahyu Junior / 2440117154 (Front End Developer) -->
+<!-- Leonardo Wijaya / 2440068902 (Back End Developer) -->
+
 <!doctype html>
 <html lang="en">
 
@@ -350,8 +355,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
     </script>
-    <!- - -->
 </body>
-
-
 </html>

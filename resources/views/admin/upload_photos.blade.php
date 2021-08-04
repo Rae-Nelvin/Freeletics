@@ -266,9 +266,7 @@
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
 <!-- Image Preview & Add More Button -->
 <script type="text/javascript">
-
 var i = 0;
-
 function preview_member(event, inp) {
   var reader = new FileReader();
   console.log(inp);
@@ -276,10 +274,8 @@ function preview_member(event, inp) {
     var output = document.getElementById("output_member" + inp);
     output.src = reader.result;
   };
-
   reader.readAsDataURL(event.target.files[0]);
 }
-
 jQuery(document).ready(function($) {
   //fadeout selected item and remove
   $(document).on("click", "#remove-member-fields", function(event) {
@@ -291,28 +287,23 @@ jQuery(document).ready(function($) {
         return false;
       });
   });
-
   $('tbody').on('click', '.remove', function(){
     $(this).parent().parent().remove();
   });
-
   //add input
   $("#add-member-fields").click(function() {
     i++;
-
     var rows = '<tr class="table100-body">' +
                       '<td class="column3"><input type="file" name="images[]" id="image" onchange="preview_member(event, '+ i + ')"></td>' +
                       '<td class="column4-2"><img id="output_member'+ i + '" style="max-width:40%;margin: 10px"></td>' +
                       '<td class="column6"><button class="btn btn-danger remove" id="remove-member-fields">- Remove</button></td>' +
                     '</tr>';
-
     $(rows)
       .fadeIn("slow")
       .appendTo("#team-member-fields");
     return false;
   });
 });
-
 </script>
 </body>
 </html>

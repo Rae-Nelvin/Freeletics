@@ -4,12 +4,12 @@
                                 background-position: center;
                                 background-size: cover;
                                 position: relative;
-                                min-height: 150vh;
+                                min-height: 100vh;
                             }
 
                             @media all and (min-width: 1920px) {
                                 .weeks {
-                                    min-height: 120vh;
+                                    min-height: 100vh;
                                 }
                                 #box-week {
                                     width: 95% !important;

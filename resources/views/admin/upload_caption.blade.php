@@ -214,7 +214,9 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
+  @foreach ($caption as $caption)
+  <p class="content" style="display: none;">{{ $caption['captions'] }}</p>
+  @endforeach
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -259,6 +261,7 @@
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
 <!-- TinyMCE js -->
 <script>
+  var content = $('.content').text();
       tinymce.init({
         selector: 'textarea.konten',
         height: 200,
@@ -266,7 +269,12 @@
         toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
         lists_indent_on_tab: false,
         forced_root_block : '',
-        paste_as_text: true
+        paste_as_text: true,
+        setup: function (editor) {
+        editor.on('init', function (e) {
+          editor.setContent(content);
+          });
+        }
       });
 </script>
 </body>
