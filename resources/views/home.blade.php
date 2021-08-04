@@ -58,13 +58,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-<<<<<<< Updated upstream
                     <h1 class="about-h1 display-7 font-weight-normal">ABOUT US</h1>
                     <p class="lead font-weight-normal text" id="about-p">
-=======
                     <h1 class="about-h1 display-7 font-weight-normal" id="about">ABOUT US</h1>
                     <p class="lead font-weight-normal text-center" id="about-p">
->>>>>>> Stashed changes
                         @foreach($caption_author as $caption)
                         {!! $caption['captions'] !!}
                         @endforeach
