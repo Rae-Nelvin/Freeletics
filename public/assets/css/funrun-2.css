@@ -133,7 +133,7 @@ figure {
 
 /* Tablet Mode */
 
-@media all and (min-width: 768px) and (max-width: 1366px) {
+@media all and (min-width: 1200px) and (max-width: 1300px) {
     .bg-funrun {
         min-height: 150vh !important;
     }
@@ -251,8 +251,8 @@ figure {
 
 @media all and (min-width: 768px) and (max-width:800px) {
     #swiper-container-run {
-        max-width: 85%;
-        margin-top: 10% !important;
+        max-width: 90%;
+        margin-top: -25% !important;
     }
     #swiper-slide-run {
         max-width: 300px !important;
@@ -265,8 +265,8 @@ figure {
         object-fit: cover;
     }
     #btn-funrun {
-        color: #fff;
-        margin-top: -7%;
+        color: #FDCD22;
+        margin-top: -5%;
     }
     #see-more-funrun {
         width: 40%;

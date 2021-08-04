@@ -24,7 +24,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="{{ asset ('assets/images/logo.png')}}"></a>
+            <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset ('assets/images/logo.png')}}"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,12 +32,12 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" aria-current="page" href="{{ route('index') }}">HOME</a>
-                    <a class="nav-link" href="#about-us-section">ABOUT US</a>
-                    <a class="nav-link" href="{{route ('massworkout')}}">MASSWORKOUT</a>
-                    <a class="nav-link" href="{{route ('funrun')}}">FUNRUN</a>
-                    <a class="nav-link" href="{{route ('12weeks')}}">12 WEEKS</a>
-                    <a class="nav-link" href="{{route ('event')}}">EVENT</a>
-                    <a class="nav-link" href="{{route ('blog')}}">BLOG</a>
+                    <a class="nav-link" href="{{ route('home') }}">ABOUT US</a>
+                    <a class="nav-link" href="{{ route('home') }}">MASSWORKOUT</a>
+                    <a class="nav-link" href="{{ route('home') }}">FUNRUN</a>
+                    <a class="nav-link" href="{{ route('home') }}">12 WEEKS</a>
+                    <a class="nav-link" href="{{ route('home') }}">EVENT</a>
+                    <a class="nav-link" href="{{ route('home') }}">BLOG</a>
                 </div>
             </div>
     </nav>
