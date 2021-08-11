@@ -7,7 +7,7 @@ body {
 
 .bg {
     width: 100%;
-    min-height: 100vh;
+    min-height: 150vh;
     background-image: url(../images/intro.jpg);
     background-position: center;
     background-size: cover;
@@ -48,7 +48,7 @@ body {
     height: 40px;
     position: absolute;
     z-index: 1;
-    margin-top: 18%;
+    margin-top: 27%;
     border-radius: 30px;
     display: block;
     width: 20%;
@@ -69,7 +69,7 @@ body {
         margin-top: 30% !important;
     }
     #btn {
-        margin-top: 30%;
+        margin-top: 50%;
         width: 15%;
     }
 }
@@ -125,7 +125,7 @@ body {
         justify-content: center;
         width: 90%;
         position: absolute;
-        margin-top: 40vh;
+        margin-top: 80vh;
     }
 }
 
@@ -135,7 +135,7 @@ body {
         justify-content: center;
         width: 90%;
         position: absolute;
-        margin-top: 80vh;
+        margin-top: 105vh;
     }
 }
 
@@ -169,6 +169,6 @@ body {
         display: flex;
         justify-content: center;
         width: 90%;
-        margin-top: 80vh;
+        margin-top: 68vh;
     }
 }

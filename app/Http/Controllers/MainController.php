@@ -90,7 +90,7 @@ class MainController extends Controller
         $photo = Photos::where('event','funrun')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
-        $caption = Captions::where('event','massworkout')->get();
+        $caption = Captions::where('event','Funrun')->get();
         return view('admin.funrun', ['admin'=>$admin,'photo'=>$photo,'caption'=>$caption]);
     }
 
@@ -98,7 +98,7 @@ class MainController extends Controller
         $photo = Photos::where('event','weeks12')->get();
         $id = Session::get('LoggedUser');
         $admin = User::where('id', $id)->get(['name']);
-        $caption = Captions::where('event','massworkout')->get();
+        $caption = Captions::where('event','Weeks12')->get();
         return view('admin.weeks12', ['admin'=>$admin,'photo'=>$photo,'caption'=>$caption]);
     }
 

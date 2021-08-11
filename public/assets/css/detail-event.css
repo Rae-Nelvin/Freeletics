@@ -50,9 +50,11 @@ nav {
 .title {
     color: #FDCD22;
     margin-top: 5%;
+    font-weight: bold;
 }
 
 .title-h1 {
+    font-weight: bold;
     color: #FDCD22;
     margin-top: 20%;
 }

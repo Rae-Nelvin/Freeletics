@@ -96,13 +96,13 @@ nav {
 }
 
 select {
-    font-family: 'FontAwesome', 'Nunito'
+    font-family: 'FontAwesome', 'Nunito';
 }
 
 @media all and (max-width: 768px) {
     #datepicker {
         width: 100%;
-        max-width: 90%;
+        max-width: 95%;
     }
     .search {
         width: 100%;
@@ -111,7 +111,7 @@ select {
         margin-bottom: 20%;
     }
     .port {
-        margin-top: 50% !important;
+        margin-top: 20% !important;
         position: relative;
     }
 }

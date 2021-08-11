@@ -156,7 +156,7 @@
             </div>
             <div class="col">
                 <p class="lead font-weight-normal text" id="funrun-p">
-                    @foreach($caption_massworkout as $caption)
+                    @foreach($caption_funrun as $caption)
                     {!! $caption['captions'] !!}
                     @endforeach
                 </p>
@@ -199,7 +199,7 @@
                         <h1 class="about-h1 display-7 font-weight-normal" id="judul-week">12 WEEKS</h1>
                     </div>
                     <p class="lead font-weight-normal caption-week">
-                        @foreach ($caption_massworkout as $caption)
+                        @foreach ($caption_weeks12 as $caption)
                         {!! $caption['captions'] !!}
                         @endforeach
                     </p>

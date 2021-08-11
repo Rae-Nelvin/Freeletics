@@ -27,11 +27,14 @@ class IndexController extends Controller
         $sponsor = Photos::get()->where('event','Sponsor');
         $caption_author = Captions::where('event','Author')->get();
         $caption_massworkout = Captions::where('event','Massworkout')->get();
+        $caption_funrun = Captions::where('event','Funrun')->get();
+        $caption_weeks12 = Captions::where('event','Weeks12')->get();
         return view('home',['author1'=>$author1,'author2'=>$author2,'massworkout'=>$massworkout,
                             'funrun'=>$funrun,'weeks12'=>$weeks12,
                             'event'=>$event,'blog'=>$blog,
                             'testimonial'=>$testimonial,'sponsor'=>$sponsor,
-                            'caption_author'=>$caption_author,'caption_massworkout'=>$caption_massworkout]);
+                            'caption_author'=>$caption_author,'caption_massworkout'=>$caption_massworkout,
+                            'caption_funrun'=>$caption_funrun,'caption_weeks12'=>$caption_weeks12]);
     }
 
     function blog($id){

@@ -17,12 +17,12 @@ class CaptionSeeder extends Seeder
         DB::table('captions')->insert([
            'author_id' => 1,
            'captions' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos!',
-           'event' => 'Author'
+           'event' => 'Funrun'
         ]);
         DB::table('captions')->insert([
             'author_id' => 1,
             'captions' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos!',
-            'event' => 'Massworkout'
+            'event' => 'Weeks12'
          ]);
     }
 }

@@ -53,9 +53,16 @@ nav {
     margin-top: 5% !important;
 }
 
-.portfolio-item {
+.portfolio-item img {
     box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
 }
+
+
+/* #image-gallery {
+    object-fit: cover;
+    min-width: 400px !important;
+    min-height: 100% !important;
+} */
 
 #see-more {
     width: 20%;
@@ -67,4 +74,7 @@ nav {
     #see-more {
         width: 90%;
     }
+    /* #image-gallery {
+        max-width: 100px !important;
+    } */
 }

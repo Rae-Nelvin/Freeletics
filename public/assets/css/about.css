@@ -9,6 +9,9 @@ body {
     overflow-x: hidden!important
 }
 
+strong {
+    font-weight: bold !important;
+}
 
 /*
 nav {
@@ -68,11 +71,11 @@ nav {
 }
 
 #about-p {
-    margin-top: 5%;
+    margin-top: 12%;
     font-family: Nunito;
     font-size: 20px;
     color: white !important;
-    margin-bottom: 20%;
+    margin-bottom: 40%;
 }
 
 .author h2 {
@@ -132,7 +135,7 @@ nav {
     }
     .author-h1 {
         margin-top: -10%;
-        margin-bottom: 10% !important;
+        margin-bottom: 20% !important;
     }
     .author {
         width: 100%;

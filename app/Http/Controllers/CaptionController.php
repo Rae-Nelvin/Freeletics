@@ -22,19 +22,19 @@ class CaptionController extends Controller
         else if($idt == 2)
         {
           $event = 'Massworkout';
-          $caption = Captions::where("event","Author")->get();
+          $caption = Captions::where("event","Massworkout")->get();
           return view('admin.upload_caption',['admin'=>$admin,'event'=>$event,'caption'=>$caption]);
         }
         else if($idt == 3)
         {
           $event = 'Funrun';
-          $caption = Captions::where("event","Author")->get();
+          $caption = Captions::where("event","Funrun")->get();
           return view('admin.upload_caption',['admin'=>$admin,'event'=>$event,'caption'=>$caption]);
         }
         else if($idt == 4)
         {
           $event = 'Weeks12';
-          $caption = Captions::where("event","Author")->get();
+          $caption = Captions::where("event","Weeks12")->get();
           return view('admin.upload_caption',['admin'=>$admin,'event'=>$event,'caption'=>$caption]);
         }
     }
@@ -48,27 +48,21 @@ class CaptionController extends Controller
 
         $id = Session::get('LoggedUser');
 
-        if($request->event == "Massworkout"){
-          $event = "Massworkout";
-        }else{
-          $event = "Author";
-        }
-
-        $count = Captions::get()->where('event',$event)->count();
+        $count = Captions::get()->where('event',$request->event)->count();
         if($count < 1){
         Captions::create([
             'author_id' => $id,
             'captions' => $request->caption,
-            'event' => $event
+            'event' => $request->event
         ]);
         }
         else{
-            Captions::where('event',$event)
+            Captions::where('event',$request->event)
             ->update([
                 'captions' => $request->caption
             ]);
         }
         
-        return redirect('admin/'.$event)->with('Successful', 'Your Caption has been uploaded successfully!!');
+        return redirect('admin/'.$request->event)->with('Successful', 'Your Caption has been uploaded successfully!!');
     }
 }
