@@ -15,6 +15,16 @@ class CaptionSeeder extends Seeder
     public function run()
     {
         DB::table('captions')->insert([
+            'author_id' => 1,
+            'captions' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos!',
+            'event' => 'Author'
+         ]);
+         DB::table('captions')->insert([
+             'author_id' => 1,
+             'captions' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos!',
+             'event' => 'Massworkout'
+          ]);
+        DB::table('captions')->insert([
            'author_id' => 1,
            'captions' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cumque suscipit dolorem reprehenderit dolore expedita ullam sint hic exercitationem adipisci magnam, itaque eum animi odit sit dolorum illo quam dignissimos!',
            'event' => 'Funrun'
