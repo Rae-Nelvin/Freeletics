@@ -13,7 +13,7 @@
 }
 
 .event-img {
-    margin-top: 45% !important;
+    margin-top: 20% !important;
 }
 
 .event-img img {
@@ -46,8 +46,18 @@
     -o-border-radius: 20px !important;
 }
 
+.more-events{
+    margin-top: 3%;
+    margin-left: 40%;
+}
+
 @media all and (max-width: 768px) {
     .event-img {
         margin-top: 10% !important;
+    }
+
+    .more-events{
+        margin-top: 3%;
+        margin-left: 42%;
     }
 }

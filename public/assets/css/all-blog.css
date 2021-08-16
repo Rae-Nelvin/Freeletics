@@ -1,0 +1,142 @@
+.navbar {
+    overflow: hidden;
+    overflow-x: hidden;
+    position: fixed !important;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+@media all and (min-width:1000px) {
+    a.nav-link {
+        align-items: center !important;
+        text-align: center !important;
+        flex: center;
+        position: relative;
+        left: 5%;
+        float: none;
+        top: 5%;
+        margin-left: 40px;
+        font-size: 14px;
+        font-family: Nunito;
+        font-weight: bold;
+    }
+}
+
+.navbar-nav a {
+    color: #FDCD22 !important;
+}
+
+.all-event {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/about.jpg);
+    min-height: 170vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.allevent-h1 {
+    color: #FDCD22;
+    font-family: Nunito;
+    margin-top: 10%;
+    font-weight: bold;
+}
+
+.all-event-img img {
+    max-width: 100%;
+    object-fit: cover;
+    position: relative;
+    background-position: center;
+}
+
+#allevent-img {
+    margin-top: 10vh;
+    width: 300px !important;
+    height: 300px !important;
+    object-fit: cover;
+    position: relative;
+    background-position: center;
+    max-width: 100%;
+}
+
+.desc {
+    color: #FDCD22;
+    font-family: Nunito;
+}
+
+#btn-see-more {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.judul-event {
+    color: #FDCD22;
+    font-weight: bold;
+    font-family: Nunito;
+    margin-top: 10% !important;
+}
+
+.event {
+    background-color: #000;
+    width: 100%;
+    min-height: 150vh;
+    margin-bottom: 0%;
+}
+
+.event-img {
+    margin-top: 20% !important;
+}
+
+.event-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+    background-position: center;
+}
+
+.event-img {
+    text-align: center;
+    color: #FFF !important;
+    margin-top: 15px;
+}
+
+.event-img h3 {
+    margin-top: 15px;
+    font-family: Nunito;
+}
+
+.btn-warning {
+    font-family: Nunito;
+    font-weight: bold !important;
+    width: 40%;
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+}
+
+.more-events{
+    margin-top: 3%;
+    margin-left: 40%;
+}
+
+.img-fluid {
+    -webkit-border-radius: 20px;
+}
+
+@media all and (max-width: 768px) {
+    .event-img {
+        margin-top: 10% !important;
+    }
+
+    .more-events{
+        margin-top: 3%;
+        margin-left: 42%;
+    }
+}

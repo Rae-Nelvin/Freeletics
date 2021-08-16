@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/detail-blog.css') }}">
-    <title>Event</title>
+    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/all-event.css') }}">
+    <title>All Event</title>
 </head>
 
 <body>
@@ -28,65 +28,39 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="{{ route('home') }}">HOME</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('index') }}">HOME</a>
                     <a class="nav-link" href="{{ route('home') }}">ABOUT US</a>
                     <a class="nav-link" href="{{ route('home') }}">MASSWORKOUT</a>
                     <a class="nav-link" href="{{ route('home') }}">FUNRUN</a>
                     <a class="nav-link" href="{{ route('home') }}">12 WEEKS</a>
-                    <a class="nav-link" href="{{ route('getevent',1) }}">EVENT</a>
-                    <a class="nav-link" href="{{ route('getevent',2) }}">BLOG</a>
+                    <a class="nav-link" href="{{ route('home') }}">EVENT</a>
+                    <a class="nav-link" href="{{ route('home') }}">BLOG</a>
                 </div>
             </div>
         </div>
     </nav>
     <!-- end navbar -->
-    <div class="position-relative overflow-hidden bg-blog blog">
+
+    <section class="position-relative overflow-hidden all-event">
         <div class="container">
             <div class="row">
-                <div class="d-flex justify-content-center">
-                    <h1 class="title">EVENT</h1>
-                </div>
-                <div class=" col" id="left-bar">
-                    @foreach ($event as $event)
-                    <h1 class="title-h1 display-7 font-weight-normal">{{ $event->title }}</h1>
-                    <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid"
-                        style="max-width: 100%;max-height: 100%;min-height: 480px;">
-                    <p class="deskripsi" style="font-size: 20px;">
-                        {!! $event['content'] !!}
-                    </p>
-                    @endforeach
-                </div>
-                <div class="sidebar-container">
-                    <div class="list-content">
-                        <h3 class="right-side">NEWS UPDATE</h3>
-                        <div class="line"></div>
-                        @foreach ($other as $other)
-                        <div class="card bg-transparent">
-                            <a href="{{ route('event',$other->id) }}"> 
-                                <img class="new-blog"
-                                    src="/freeletics_images/{{$other->image_path}}">
-                                <p class="desc-content">{{ $other->title }}</p>
-                                <span
-                                    class="tgl">{{ \Carbon\Carbon::parse($other['updated_at'])->format('j F, Y') }}</span>
-                            </a>
+                <h1 class="allevent-h1 text-center">
+                    ALL EVENT
+                </h1>
+                @foreach ($event as $event)
+                <div class="col-lg-3">
+                    <div class="event-img text-center">
+                        <img src="/freeletics_images/{{$event->image_path}}" class="img-fluid">
+                        <h3>{{ $event['title'] }}</h3>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ route('event',$event->id) }}" class="btn btn-warning">See More</a>
                         </div>
-                        @endforeach
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
+    </section>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

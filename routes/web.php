@@ -23,12 +23,14 @@ use App\Http\Controllers\CaptionController;
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/home', [IndexController::class, 'home'])->name('home');
 Route::prefix('home')->group(function(){
-    Route::get('/blog/{id}', [IndexController::class, 'blog'])->name('blog');
     Route::get('/gallery/{id}', [IndexController::class, 'gallery'])->name('gallery');
     Route::get('/gallerymore/{id}', [IndexController::class, 'gallerymore'])->name('gallerymore');
     Route::get('/datepicker', [IndexController::class, 'datepicker'])->name('datepicker');
     Route::get('/event/{id}', [IndexController::class, 'event'])->name('event');
+    Route::get('/blog/{id}', [IndexController::class, 'blog'])->name('blog');
     Route::get('/getevent/{id}', [IndexController::class, 'getevent'])->name('getevent');
+    Route::get('/eventmore', [IndexController::class, 'eventmore'])->name('eventmore');
+    Route::get('/blogmore', [IndexController::class, 'blogmore'])->name('blogmore');
 });
 
 Route::prefix('auth')->group(function(){

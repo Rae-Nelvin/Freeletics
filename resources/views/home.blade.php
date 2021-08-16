@@ -255,6 +255,9 @@
                 </div>
                 @endforeach
             </div>
+            <div class="more-events">
+                <a href="{{ route('eventmore') }}" class="btn btn-warning">See More Events</a>
+            </div>
         </div>
     </section>
     <!-- event -->
@@ -279,6 +282,9 @@
                     </div>
                 </div>
                 @endforeach
+            </div>
+            <div class="more-events">
+                <a href="{{ route('blogmore') }}" class="btn btn-warning">See More Blogs</a>
             </div>
         </div>
     </section>
