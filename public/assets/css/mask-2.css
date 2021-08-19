@@ -92,7 +92,7 @@
     }
     /* Table Mode */
 
-    @media all and (min-width: 768px) and (max-width: 1366px) {
+    @media all and (min-width: 768px) and (max-width: 1280px) {
         #mass-h1 {
             /* font-size: 70px; */
             margin-top: 7%;
@@ -115,7 +115,6 @@
         }
         #btn-mask {
             color: #FDCD22;
-            margin-top: 10% !important;
         }
         #see-more-mask {
             width: 20%;
