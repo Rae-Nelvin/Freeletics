@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/12weeks.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/blog.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/event.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/event.css') }}">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -255,8 +256,8 @@
                 </div>
                 @endforeach
             </div>
-            <div class="more-events">
-                <a href="{{ route('eventmore') }}" class="btn btn-warning">See More Events</a>
+            <div class="more-events text-center">
+                <a href="{{ route('eventmore') }}" class="btn btn-outline-warning" id="more-btn">See More Events</a>
             </div>
         </div>
     </section>
@@ -283,8 +284,8 @@
                 </div>
                 @endforeach
             </div>
-            <div class="more-events">
-                <a href="{{ route('blogmore') }}" class="btn btn-warning">See More Blogs</a>
+            <div class="more-events text-center">
+                <a href="{{ route('blogmore') }}" class="btn btn-outline-warning" id="more-btn">See More Blogs</a>
             </div>
         </div>
     </section>

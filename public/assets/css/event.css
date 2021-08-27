@@ -46,9 +46,14 @@
     -o-border-radius: 20px !important;
 }
 
+.btn-outline-warning {
+    width: 20%;
+    border-radius: 20px !important;
+}
+
 .more-events {
     margin-top: 6%;
-    margin-left: 40%;
+    /* margin-left: 40%; */
 }
 
 @media all and (max-width: 768px) {
@@ -56,7 +61,12 @@
         margin-top: 10% !important;
     }
     .more-events {
-        margin-top: 3%;
-        margin-left: 42%;
+        margin-top: 10%;
+        /* margin-left: 42%; */
+    }
+    #more-btn {
+        width: 100%;
+        margin-bottom: 10%;
+        /* width: 90% !important; */
     }
 }

@@ -90,18 +90,6 @@
                                 -o-border-radius: 20px;
                             }
 
-                            .tgl {
-                                font-family: Nunito;
-                                font-weight: bold;
-                                color: #FDCD22;
-                                font-size: 13px;
-                                margin-top: -3% !important;
-                            }
-
-                            .fa-calendar-alt {
-                                color: #FDCD22;
-                            }
-
                             .title-img {
                                 color: #FDCD22;
                                 font-family: Nunito;
@@ -123,10 +111,6 @@
                                 display: block;
                                 max-width: 60% !important;
                                 text-align: center;
-                            }
-
-                            #date-week-mb {
-                                display: none;
                             }
 
                             #see-more-week {

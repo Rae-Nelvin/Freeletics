@@ -121,7 +121,7 @@
     -o-border-radius: 20px !important;
 }
 
-.more-events{
+.more-events {
     margin-top: 3%;
     margin-left: 40%;
 }
@@ -134,8 +134,7 @@
     .event-img {
         margin-top: 10% !important;
     }
-
-    .more-events{
+    .more-events {
         margin-top: 3%;
         margin-left: 42%;
     }
