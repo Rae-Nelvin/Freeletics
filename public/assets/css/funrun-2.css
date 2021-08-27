@@ -28,12 +28,13 @@ strong {
 }
 
 #swiper-container-run {
-    max-width: 80%;
+    max-width: 80% !important;
     margin-top: -22%;
 }
 
 #swiper-slide-run {
     max-width: 100%;
+    text-align: center;
     max-height: 100%;
 }
 
@@ -236,7 +237,7 @@ figure {
         max-height: 100% !important;
     }
     #swiper-container-run {
-        max-width: 80%;
+        max-width: 90% !important;
         margin-top: -10%;
     }
     #see-more-funrun {
@@ -279,7 +280,7 @@ figure {
 
 @media all and (min-width: 300px) and (max-width:400px) {
     #swiper-container-run {
-        max-width: 85%;
+        /* max-width: 100%; */
         margin-top: -10% !important;
     }
     #swiper-slide-run img {

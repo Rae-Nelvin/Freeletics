@@ -29,6 +29,7 @@
 
     #swiper-container-mask {
         max-width: 82%;
+        max-height: 100%;
         margin-top: 0%;
     }
 
@@ -71,10 +72,6 @@
         margin-top: -3%;
     }
 
-    .fa-calendar-alt {
-        color: #FDCD22;
-    }
-
     #see-more-mask {
         width: 20%;
         margin-top: 5%;
@@ -88,7 +85,7 @@
 
     #btn-mask {
         color: #FDCD22;
-        margin-top: 7%;
+        margin-top: 0%;
     }
     /* Table Mode */
 
@@ -145,7 +142,7 @@
         }
         #btn-mask {
             color: #fff;
-            margin-top: 34% !important;
+            margin-top: -3% !important;
             position: absolute;
         }
         #swiper-container-mask {

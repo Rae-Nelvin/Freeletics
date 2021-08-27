@@ -31,6 +31,9 @@
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/blog.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset( 'assets/css/event.css') }}">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <title>Freeletics</title>
 </head>
 
@@ -111,16 +114,15 @@
             </div>
             <div class="row align-items-start" id="mass-swipper">
                 <div class="col-xl" id="img-swipper">
+                    <div class="col-12 text-center">
+                        <p class="lead font-weight-normal text-center mass-p">
+                            @foreach ($caption_massworkout as $caption)
+                            {!! $caption['captions'] !!}
+                            @endforeach
+                        </p>
+                    </div>
                     <!-- Swiper -->
-                    <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiper"
-                        id="swiper-container-mask">
-                        <div class="col-12 text-center">
-                            <p class="lead font-weight-normal text-center mass-p">
-                                @foreach ($caption_massworkout as $caption)
-                                {!! $caption['captions'] !!}
-                                @endforeach
-                            </p>
-                        </div>
+                    <div class="swiper mySwiper" id="swiper-container-mask">
                         <div class="swiper-wrapper">
                             @foreach ($massworkout as $massworkout)
                             <div class="swiper-slide" id="swiper-slide-mask">
@@ -165,8 +167,7 @@
             <div class="d-flex justify-content-center">
                 <div class="box" id="box-fun"></div>
             </div>
-            <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperr"
-                id="swiper-container-run">
+            <div class="swiper mySwiperr" id="swiper-container-run">
                 <div class="swiper-wrapper">
                     @foreach ($funrun as $funrun)
                     <div class="swiper-slide" id="swiper-slide-run">
@@ -209,8 +210,7 @@
             <div class="d-flex justify-content-center">
                 <div class="box" id="box-week"></div>
             </div>
-            <div class="swiper-container h-56 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events mySwiperrr"
-                id="swiper-container-week">
+            <div class="swiper mySwiperrr" id="swiper-container-week">
                 <div class="swiper-wrapper">
                     @foreach ($weeks12 as $weeks12)
                     <div class="swiper-slide" id="swiper-slide-week">
@@ -344,6 +344,7 @@
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!-- Initialize Swiper -->
     <!-- Swiper JS -->
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="{{ asset('assets/js/funrun.js')}}"></script>
     <script src="{{ asset('assets/js/12weeks.js')}}"></script>
@@ -352,7 +353,9 @@
     <script src="{{ asset('assets/js/12weeks.js')}}"></script>
 
     <!-- Initialize Swiper -->
-    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -362,4 +365,6 @@
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
     </script>
 </body>
+
+
 </html>
